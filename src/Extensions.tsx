@@ -4,7 +4,7 @@ import { byKey, isExtensionInfo, toNavLink } from './utils';
 
 const styles: Pick<INavStyles, 'root'> = {
   root: {
-    maxHeight: 'calc(100vh - 45px)',
+    maxHeight: 'calc(100vh - 88px)',
   },
 };
 

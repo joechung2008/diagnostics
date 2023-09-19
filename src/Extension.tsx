@@ -4,7 +4,7 @@ import StageDefinition from './StageDefinition';
 
 const styles: IStackStyles = {
   root: {
-    maxHeight: 'calc(100vh - 45px)',
+    maxHeight: 'calc(100vh - 88px)',
     overflowY: 'auto',
   },
 };
