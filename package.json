@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fluentui/react": "^8.112.9",
+    "@fluentui/react": "^8.117.4",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
-    "@types/node": "^18.18.11",
-    "@types/react": "^17.0.71",
-    "@types/react-dom": "^17.0.24",
-    "@types/react-test-renderer": "^17.0.8",
+    "@types/node": "^18.19.31",
+    "@types/react": "^17.0.80",
+    "@types/react-dom": "^17.0.25",
+    "@types/react-test-renderer": "^17.0.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.1",
@@ -44,7 +44,7 @@
     ]
   },
   "engines": {
-    "node": "18",
-    "npm": "9"
+    "node": ">=18",
+    "npm": ">=10"
   }
 }
