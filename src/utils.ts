@@ -1,7 +1,7 @@
 import type { KeyedNavLink } from './types';
 
-export function isExtensionInfo(value: Extension): value is ExtensionInfo {
-  return 'extensionName' in value;
+export function isExtensionInfo(value: Extension | undefined): value is ExtensionInfo {
+  return value !== undefined && 'extensionName' in value;
 }
 
 export function byKey(a: KeyedNavLink, b: KeyedNavLink): number {
@@ -14,4 +14,8 @@ export function toNavLink({ extensionName }: ExtensionInfo): KeyedNavLink {
     name: extensionName,
     url: '',
   };
+}
+
+export function when<T>(condition: boolean, ...args: T[]): T[] {
+  return condition ? args : [];
 }

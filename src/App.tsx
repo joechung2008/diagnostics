@@ -13,7 +13,7 @@ import Extension from './Extension';
 import Extensions from './Extensions';
 import ServerInfo from './ServerInfo';
 import type { KeyedNavLink } from './types';
-import { isExtensionInfo } from './utils';
+import { isExtensionInfo, when } from './utils';
 
 initializeIcons();
 
@@ -42,6 +42,11 @@ const App: React.FC = () => {
         return 'Select environment';
     }
   }, [environment]);
+
+  const showPaasServerless = useMemo(
+    () => isExtensionInfo(diagnostics?.extensions['paasserverless']),
+    [diagnostics?.extensions]
+  );
 
   const environments = useMemo<ICommandBarItemProps[]>(
     () => [
@@ -83,8 +88,28 @@ const App: React.FC = () => {
         },
         text: environmentName,
       },
+      ...when(showPaasServerless, {
+        key: 'paasserverless',
+        onClick: () => {
+          const paasserverless = diagnostics?.extensions['paasserverless'];
+          if (isExtensionInfo(paasserverless)) {
+            setExtension(paasserverless);
+          }
+        },
+        text: 'paasserverless',
+      }),
+      {
+        key: 'websites',
+        onClick: () => {
+          const websites = diagnostics?.extensions['websites'];
+          if (isExtensionInfo(websites)) {
+            setExtension(websites);
+          }
+        },
+        text: 'websites',
+      },
     ],
-    [environment, environmentName]
+    [diagnostics?.extensions, environment, environmentName, showPaasServerless]
   );
 
   useEffect(() => {
