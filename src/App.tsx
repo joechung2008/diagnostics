@@ -1,6 +1,7 @@
 import {
   CommandBar,
   ICommandBarItemProps,
+  ICommandBarStyles,
   initializeIcons,
   Pivot,
   PivotItem,
@@ -22,6 +23,12 @@ const enum Environment {
   Fairfax = 'https://hosting.azureportal.usgovcloudapi.net/api/diagnostics',
   Mooncake = 'https://hosting.azureportal.chinacloudapi.cn/api/diagnostics',
 }
+
+const commandBarStyles: ICommandBarStyles = {
+  root: {
+    marginBottom: '-6px',
+  },
+};
 
 const App: React.FC = () => {
   const [diagnostics, setDiagnostics] = useState<Diagnostics>();
@@ -138,7 +145,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <CommandBar items={environments} />
+      <CommandBar items={environments} styles={commandBarStyles} />
       <Pivot>
         <PivotItem headerText="Extensions">
           <Stack horizontal tokens={{ childrenGap: '1rem' }}>
