@@ -1,25 +1,11 @@
 import {
-  DetailsList,
-  DetailsListLayoutMode,
-  IColumn,
-  SelectionMode,
-} from '@fluentui/react';
-
-const columns: IColumn[] = [
-  {
-    key: 'name',
-    fieldName: 'name',
-    minWidth: 200,
-    name: 'Name',
-  },
-  {
-    key: 'value',
-    fieldName: 'value',
-    flexGrow: 1,
-    minWidth: 0,
-    name: 'Value',
-  },
-];
+  Table,
+  TableHeader,
+  TableRow,
+  TableHeaderCell,
+  TableBody,
+  TableCell,
+} from '@fluentui/react-components';
 
 const ServerInfo: React.FC<ServerInfoProps> = ({
   deploymentId,
@@ -57,13 +43,22 @@ const ServerInfo: React.FC<ServerInfoProps> = ({
   ];
 
   return (
-    <DetailsList
-      columns={columns}
-      isHeaderVisible={false}
-      layoutMode={DetailsListLayoutMode.fixedColumns}
-      items={items}
-      selectionMode={SelectionMode.none}
-    />
+    <Table aria-label="Server Info">
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Value</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {items.map((item, idx) => (
+          <TableRow key={idx}>
+            <TableCell>{item.name}</TableCell>
+            <TableCell>{item.value}</TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
   );
 };
 

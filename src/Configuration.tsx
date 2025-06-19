@@ -1,47 +1,38 @@
 import {
-  DetailsList,
-  DetailsListLayoutMode,
-  IColumn,
-  SelectionMode,
+  Table,
+  TableHeader,
+  TableRow,
+  TableHeaderCell,
+  TableBody,
+  TableCell,
   Text,
-} from '@fluentui/react';
-
-const columns: IColumn[] = [
-  {
-    key: 'key',
-    fieldName: 'key',
-    flexGrow: 1,
-    isResizable: true,
-    minWidth: 0,
-    name: 'Key',
-  },
-  {
-    key: 'value',
-    fieldName: 'value',
-    flexGrow: 1,
-    isResizable: true,
-    minWidth: 0,
-    name: 'Value',
-  },
-];
+} from '@fluentui/react-components';
 
 const Configuration: React.FC<ConfigurationProps> = ({ config }) => {
-  const items = Object.entries(config).reduce<KeyValuePair<string>[]>(
-    (previous, [key, value]) => [...previous, { key, value }],
-    []
-  );
+  const items = Object.entries(config).reduce<KeyValuePair<string>[]>
+    ( (previous, [key, value]) => [...previous, { key, value }],
+      []
+    );
 
   return (
     <div>
-      <Text variant="large">Configuration</Text>
-      <DetailsList
-        columns={columns}
-        compact
-        isHeaderVisible={false}
-        items={items}
-        layoutMode={DetailsListLayoutMode.fixedColumns}
-        selectionMode={SelectionMode.none}
-      />
+      <Text size={400} weight="semibold">Configuration</Text>
+      <Table aria-label="Configuration">
+        <TableHeader>
+          <TableRow>
+            <TableHeaderCell>Key</TableHeaderCell>
+            <TableHeaderCell>Value</TableHeaderCell>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {items.map((item, idx) => (
+            <TableRow key={idx}>
+              <TableCell>{item.key}</TableCell>
+              <TableCell>{item.value}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
     </div>
   );
 };

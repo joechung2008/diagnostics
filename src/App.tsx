@@ -1,22 +1,34 @@
 import {
-  CommandBar,
-  ICommandBarItemProps,
-  ICommandBarStyles,
-  initializeIcons,
-  Pivot,
-  PivotItem,
-  Stack,
-} from '@fluentui/react';
+  Tab,
+  TabList,
+  Toolbar,
+  ToolbarButton,
+  ToolbarDivider,
+  makeStyles,
+  shorthands,
+  tokens,
+} from '@fluentui/react-components';
 import { useEffect, useMemo, useState } from 'react';
-import '../node_modules/@fluentui/react/dist/css/fabric.min.css';
 import BuildInfo from './BuildInfo';
 import Extension from './Extension';
 import Extensions from './Extensions';
 import ServerInfo from './ServerInfo';
 import type { KeyedNavLink } from './types';
-import { isExtensionInfo, when } from './utils';
+import { isExtensionInfo } from './utils';
 
-initializeIcons();
+const useStyles = makeStyles({
+  tabPanel: {
+    ...shorthands.padding(tokens.spacingHorizontalL),
+  },
+  stack: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: '1rem',
+  },
+  grow: {
+    flexGrow: 1,
+  },
+});
 
 const enum Environment {
   Public = 'https://hosting.portal.azure.net/api/diagnostics',
@@ -24,18 +36,14 @@ const enum Environment {
   Mooncake = 'https://hosting.azureportal.chinacloudapi.cn/api/diagnostics',
 }
 
-const commandBarStyles: ICommandBarStyles = {
-  root: {
-    marginBottom: '-6px',
-  },
-};
-
 const App: React.FC = () => {
+  const styles = useStyles();
   const [diagnostics, setDiagnostics] = useState<Diagnostics>();
   const [extension, setExtension] = useState<ExtensionInfo>();
   const [environment, setEnvironment] = useState<Environment>(
     Environment.Public
   );
+  const [selectedTab, setSelectedTab] = useState<string>('extensions');
 
   const environmentName = useMemo(() => {
     switch (environment) {
@@ -55,68 +63,37 @@ const App: React.FC = () => {
     [diagnostics?.extensions]
   );
 
-  const environments = useMemo<ICommandBarItemProps[]>(
+  const environments = useMemo(
     () => [
       {
-        key: 'environment',
-        subMenuProps: {
-          items: [
-            {
-              key: 'public',
-              canCheck: true,
-              checked: environment === Environment.Public,
-              onClick: () => {
-                setEnvironment(Environment.Public);
-                setExtension(undefined);
-              },
-              text: 'Public Cloud',
-            },
-            {
-              key: 'fairfax',
-              canCheck: true,
-              checked: environment === Environment.Fairfax,
-              onClick: () => {
-                setEnvironment(Environment.Fairfax);
-                setExtension(undefined);
-              },
-              text: 'Fairfax',
-            },
-            {
-              key: 'mooncake',
-              canCheck: true,
-              checked: environment === Environment.Mooncake,
-              onClick: () => {
-                setEnvironment(Environment.Mooncake);
-                setExtension(undefined);
-              },
-              text: 'Mooncake',
-            },
-          ],
+        key: 'public',
+        text: 'Public Cloud',
+        selected: environment === Environment.Public,
+        onClick: () => {
+          setEnvironment(Environment.Public);
+          setExtension(undefined);
         },
-        text: environmentName,
       },
-      ...when(showPaasServerless, {
-        key: 'paasserverless',
-        onClick: () => {
-          const paasserverless = diagnostics?.extensions['paasserverless'];
-          if (isExtensionInfo(paasserverless)) {
-            setExtension(paasserverless);
-          }
-        },
-        text: 'paasserverless',
-      }),
       {
-        key: 'websites',
+        key: 'fairfax',
+        text: 'Fairfax',
+        selected: environment === Environment.Fairfax,
         onClick: () => {
-          const websites = diagnostics?.extensions['websites'];
-          if (isExtensionInfo(websites)) {
-            setExtension(websites);
-          }
+          setEnvironment(Environment.Fairfax);
+          setExtension(undefined);
         },
-        text: 'websites',
+      },
+      {
+        key: 'mooncake',
+        text: 'Mooncake',
+        selected: environment === Environment.Mooncake,
+        onClick: () => {
+          setEnvironment(Environment.Mooncake);
+          setExtension(undefined);
+        },
       },
     ],
-    [diagnostics?.extensions, environment, environmentName, showPaasServerless]
+    [environment]
   );
 
   useEffect(() => {
@@ -124,7 +101,6 @@ const App: React.FC = () => {
       const response = await fetch(environment);
       setDiagnostics(await response.json());
     };
-
     getDiagnostics();
   }, [environment]);
 
@@ -145,28 +121,76 @@ const App: React.FC = () => {
 
   return (
     <>
-      <CommandBar items={environments} styles={commandBarStyles} />
-      <Pivot>
-        <PivotItem headerText="Extensions">
-          <Stack horizontal tokens={{ childrenGap: '1rem' }}>
-            <Stack.Item>
+      <Toolbar>
+        {environments.map(env => (
+          <ToolbarButton
+            key={env.key}
+            appearance={env.selected ? 'primary' : 'subtle'}
+            onClick={env.onClick}
+            value={env.key}
+          >
+            {env.text}
+          </ToolbarButton>
+        ))}
+        <ToolbarDivider />
+        {showPaasServerless && (
+          <ToolbarButton
+            key="paasserverless"
+            onClick={() => {
+              const paasserverless = diagnostics?.extensions['paasserverless'];
+              if (isExtensionInfo(paasserverless)) {
+                setExtension(paasserverless);
+              }
+            }}
+          >
+            paasserverless
+          </ToolbarButton>
+        )}
+        <ToolbarButton
+          key="websites"
+          onClick={() => {
+            const websites = diagnostics?.extensions['websites'];
+            if (isExtensionInfo(websites)) {
+              setExtension(websites);
+            }
+          }}
+        >
+          websites
+        </ToolbarButton>
+      </Toolbar>
+      <TabList
+        selectedValue={selectedTab}
+        onTabSelect={(_, data) => setSelectedTab(data.value as string)}
+      >
+        <Tab value="extensions">Extensions</Tab>
+        <Tab value="build">Build Information</Tab>
+        <Tab value="server">Server Information</Tab>
+      </TabList>
+      {selectedTab === 'extensions' && (
+        <div className={styles.tabPanel}>
+          <div className={styles.stack}>
+            <div>
               <Extensions
                 extensions={extensions}
                 onLinkClick={handleLinkClick}
               />
-            </Stack.Item>
-            <Stack.Item grow>
+            </div>
+            <div className={styles.grow}>
               {extension && <Extension {...extension} />}
-            </Stack.Item>
-          </Stack>
-        </PivotItem>
-        <PivotItem headerText="Build Information">
+            </div>
+          </div>
+        </div>
+      )}
+      {selectedTab === 'build' && (
+        <div className={styles.tabPanel}>
           <BuildInfo {...buildInfo} />
-        </PivotItem>
-        <PivotItem headerText="Server Information">
+        </div>
+      )}
+      {selectedTab === 'server' && (
+        <div className={styles.tabPanel}>
           <ServerInfo {...serverInfo} />
-        </PivotItem>
-      </Pivot>
+        </div>
+      )}
     </>
   );
 };

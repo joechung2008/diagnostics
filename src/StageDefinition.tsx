@@ -1,32 +1,12 @@
 import {
-  DetailsList,
-  DetailsListLayoutMode,
-  IColumn,
-  SelectionMode,
+  Table,
+  TableHeader,
+  TableRow,
+  TableHeaderCell,
+  TableBody,
+  TableCell,
   Text,
-} from '@fluentui/react';
-
-const columns: IColumn[] = [
-  {
-    key: 'key',
-    fieldName: 'key',
-    flexGrow: 1,
-    isResizable: true,
-    minWidth: 0,
-    name: 'Key',
-  },
-  {
-    key: 'value',
-    fieldName: 'value',
-    flexGrow: 1,
-    isResizable: true,
-    minWidth: 0,
-    name: 'Value',
-    onRender({ value }) {
-      return value.join(', ');
-    },
-  },
-];
+} from '@fluentui/react-components';
 
 const StageDefinition: React.FC<StageDefinitionProps> = ({
   stageDefinition,
@@ -37,15 +17,25 @@ const StageDefinition: React.FC<StageDefinitionProps> = ({
 
   return (
     <div>
-      <Text variant="large">Stage Definitions</Text>
-      <DetailsList
-        columns={columns}
-        compact
-        isHeaderVisible={false}
-        items={items}
-        layoutMode={DetailsListLayoutMode.fixedColumns}
-        selectionMode={SelectionMode.none}
-      />
+      <Text size={400} weight="semibold">
+        Stage Definitions
+      </Text>
+      <Table aria-label="Stage Definitions">
+        <TableHeader>
+          <TableRow>
+            <TableHeaderCell>Key</TableHeaderCell>
+            <TableHeaderCell>Value</TableHeaderCell>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {items.map((item, idx) => (
+            <TableRow key={idx}>
+              <TableCell>{item.key}</TableCell>
+              <TableCell>{item.value.join(', ')}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
     </div>
   );
 };
