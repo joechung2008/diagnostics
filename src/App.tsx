@@ -1,9 +1,15 @@
 import {
+  Button,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  MenuPopover,
+  MenuTrigger,
   Tab,
   TabList,
   Toolbar,
   ToolbarButton,
-  ToolbarDivider,
   makeStyles,
   shorthands,
   tokens,
@@ -122,17 +128,25 @@ const App: React.FC = () => {
   return (
     <>
       <Toolbar>
-        {environments.map(env => (
-          <ToolbarButton
-            key={env.key}
-            appearance={env.selected ? 'primary' : 'subtle'}
-            onClick={env.onClick}
-            value={env.key}
-          >
-            {env.text}
-          </ToolbarButton>
-        ))}
-        <ToolbarDivider />
+        <Menu>
+          <MenuTrigger disableButtonEnhancement>
+            <MenuButton>{environmentName}</MenuButton>
+          </MenuTrigger>
+          <MenuPopover>
+            <MenuList>
+              {environments.map(env => (
+                <MenuItem
+                  key={env.key}
+                  onClick={env.onClick}
+                  aria-checked={env.selected}
+                  role="menuitemradio"
+                >
+                  {env.text}
+                </MenuItem>
+              ))}
+            </MenuList>
+          </MenuPopover>
+        </Menu>
         {showPaasServerless && (
           <ToolbarButton
             key="paasserverless"
