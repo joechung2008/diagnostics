@@ -1,0 +1,57 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BuildInfo > matches snapshot 1`] = `
+<DocumentFragment>
+  <table
+    aria-label="Build Info"
+    class="fui-Table ___422ui00_e7lxxb0 fgkb47j fhovq9v f1w4nmp0 fmrv4ls fly5x3f f14m3nip"
+  >
+    <thead
+      class="fui-TableHeader ___1gw3ddd_19kkhse f1tp1avn"
+    >
+      <tr
+        class="fui-TableRow ___ktc86j0_5zdzqp0 f19n0e5 f1ewtqcl f1jazu75 f1xeqee6 f1dxfoyt f2krc9w f1facbz3 f1u0rzck"
+      >
+        <th
+          class="fui-TableHeaderCell ___zddznz0_a5pc7o0 figsok6 f3gpkru f14ym4q2 f1euou18 f10pi13n f15pt5es fmrv4ls"
+        >
+          <div
+            class="fui-TableHeaderCell__button ___1g9gf5i_12fejcs fq6nmtn f1e4lqlz f1u2r49w f1ym3bx4 f1mo0ibp fjoy568 fytdu2e f1gl81tg f1mk8lai f3bhgqh fgusgyc f10pi13n fly5x3f f22iagw f1l02sjl f122n59 fkln5zr f1nxs5xn f1izfyrr f1s6fcnf"
+            role="presentation"
+          >
+            Name
+          </div>
+        </th>
+        <th
+          class="fui-TableHeaderCell ___zddznz0_a5pc7o0 figsok6 f3gpkru f14ym4q2 f1euou18 f10pi13n f15pt5es fmrv4ls"
+        >
+          <div
+            class="fui-TableHeaderCell__button ___1g9gf5i_12fejcs fq6nmtn f1e4lqlz f1u2r49w f1ym3bx4 f1mo0ibp fjoy568 fytdu2e f1gl81tg f1mk8lai f3bhgqh fgusgyc f10pi13n fly5x3f f22iagw f1l02sjl f122n59 fkln5zr f1nxs5xn f1izfyrr f1s6fcnf"
+            role="presentation"
+          >
+            Value
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="fui-TableBody ___1gw3ddd_19kkhse f1tp1avn"
+    >
+      <tr
+        class="fui-TableRow ___1195ssy_2eyo590 f19n0e5 f1ewtqcl f1jazu75 f1xeqee6 f1dxfoyt f2krc9w f1wfn5kd f1g4hkjv f15ngxrw fjbbrdp f1t94bn6 feu1g3u f1uorfem fw60kww f4xjyn1 ff1wgvm fiob0tu f1j6scgf f1x4h75k f1facbz3 f1u0rzck"
+      >
+        <td
+          class="fui-TableCell ___mwjzo80_69n7eg0 f10pi13n f3gpkru f1dxfoyt f2krc9w f15pt5es fmrv4ls f1ft4266"
+        >
+          Build Version
+        </td>
+        <td
+          class="fui-TableCell ___mwjzo80_69n7eg0 f10pi13n f3gpkru f1dxfoyt f2krc9w f15pt5es fmrv4ls f1ft4266"
+        >
+          1.2.3
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
