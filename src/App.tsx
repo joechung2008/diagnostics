@@ -11,8 +11,6 @@ import {
   Toolbar,
   ToolbarButton,
   makeStyles,
-  shorthands,
-  tokens,
 } from '@fluentui/react-components';
 import { useEffect, useMemo, useState } from 'react';
 import BuildInfo from './BuildInfo';
@@ -24,7 +22,7 @@ import { isExtensionInfo } from './utils';
 
 const useStyles = makeStyles({
   tabPanel: {
-    ...shorthands.padding(tokens.spacingHorizontalL),
+    padding: '10px',
   },
   stack: {
     display: 'flex',
