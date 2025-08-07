@@ -6,5 +6,9 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
+    coverage: {
+      exclude: ['src/reportWebVitals.ts', 'src/**/*.d.ts'],
+      include: ['src/**/*.{ts,tsx}'],
+    },
   },
 });
