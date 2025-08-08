@@ -9,14 +9,16 @@ import {
 } from '@fluentui/react-components';
 
 const Configuration: React.FC<ConfigurationProps> = ({ config }) => {
-  const items = Object.entries(config).reduce<KeyValuePair<string>[]>
-    ( (previous, [key, value]) => [...previous, { key, value }],
-      []
-    );
+  const items = Object.entries(config).reduce<KeyValuePair<string>[]>(
+    (previous, [key, value]) => [...previous, { key, value }],
+    []
+  );
 
   return (
     <div>
-      <Text size={400} weight="semibold">Configuration</Text>
+      <Text size={400} weight="semibold">
+        Configuration
+      </Text>
       <Table aria-label="Configuration">
         <TableHeader>
           <TableRow>
