@@ -2,6 +2,7 @@
   "name": "diagnostics",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@fluentui/react-components": "^9.68.2",
     "@fluentui/react-theme": "^9.2.0",
@@ -12,15 +13,14 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
+    "format": "prettier --write .",
+    "lint": "npm-run-all lint:*",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --check .",
     "start": "vite",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
   },
   "browserslist": {
     "production": [
@@ -47,9 +47,14 @@
     "@types/react-test-renderer": "^18.3.1",
     "@vitejs/plugin-react": "^4.7.0",
     "@vitest/coverage-v8": "^3.2.4",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
     "jsdom": "^26.1.0",
+    "prettier": "^3.6.2",
     "react-test-renderer": "^18.3.1",
     "typescript": "^5.9.2",
+    "typescript-eslint": "^8.39.1",
     "vite": "^7.0.6",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4"

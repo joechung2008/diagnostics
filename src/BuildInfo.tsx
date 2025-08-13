@@ -5,12 +5,12 @@ import {
   TableHeaderCell,
   TableBody,
   TableCell,
-} from '@fluentui/react-components';
+} from "@fluentui/react-components";
 
 const BuildInfo: React.FC<BuildInfoProps> = ({ buildVersion }) => {
   const items = [
     {
-      name: 'Build Version',
+      name: "Build Version",
       value: buildVersion,
     },
   ];

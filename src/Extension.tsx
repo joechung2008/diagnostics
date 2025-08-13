@@ -1,14 +1,14 @@
-import { Text, makeStyles } from '@fluentui/react-components';
-import Configuration from './Configuration';
-import StageDefinition from './StageDefinition';
+import { Text, makeStyles } from "@fluentui/react-components";
+import Configuration from "./Configuration";
+import StageDefinition from "./StageDefinition";
 
 const useStyles = makeStyles({
   root: {
-    maxHeight: 'calc(100vh - 116px)',
-    overflowY: 'auto',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '1rem',
+    maxHeight: "calc(100vh - 116px)",
+    overflowY: "auto",
+    display: "flex",
+    flexDirection: "column",
+    gap: "1rem",
   },
 });
 

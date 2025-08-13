@@ -1,5 +1,4 @@
 import {
-  Button,
   Menu,
   MenuButton,
   MenuItem,
@@ -11,23 +10,22 @@ import {
   Toolbar,
   ToolbarButton,
   makeStyles,
-} from '@fluentui/react-components';
-import { useEffect, useMemo, useState } from 'react';
-import BuildInfo from './BuildInfo';
-import Extension from './Extension';
-import Extensions from './Extensions';
-import ServerInfo from './ServerInfo';
-import type { KeyedNavLink } from './types';
-import { isExtensionInfo } from './utils';
+} from "@fluentui/react-components";
+import { useEffect, useMemo, useState } from "react";
+import BuildInfo from "./BuildInfo";
+import Extension from "./Extension";
+import Extensions from "./Extensions";
+import ServerInfo from "./ServerInfo";
+import { isExtensionInfo } from "./utils";
 
 const useStyles = makeStyles({
   tabPanel: {
-    padding: '10px',
+    padding: "10px",
   },
   stack: {
-    display: 'flex',
-    flexDirection: 'row',
-    gap: '1rem',
+    display: "flex",
+    flexDirection: "row",
+    gap: "1rem",
   },
   grow: {
     flexGrow: 1,
@@ -35,9 +33,9 @@ const useStyles = makeStyles({
 });
 
 const enum Environment {
-  Public = 'https://hosting.portal.azure.net/api/diagnostics',
-  Fairfax = 'https://hosting.azureportal.usgovcloudapi.net/api/diagnostics',
-  Mooncake = 'https://hosting.azureportal.chinacloudapi.cn/api/diagnostics',
+  Public = "https://hosting.portal.azure.net/api/diagnostics",
+  Fairfax = "https://hosting.azureportal.usgovcloudapi.net/api/diagnostics",
+  Mooncake = "https://hosting.azureportal.chinacloudapi.cn/api/diagnostics",
 }
 
 const App: React.FC = () => {
@@ -47,31 +45,31 @@ const App: React.FC = () => {
   const [environment, setEnvironment] = useState<Environment>(
     Environment.Public
   );
-  const [selectedTab, setSelectedTab] = useState<string>('extensions');
+  const [selectedTab, setSelectedTab] = useState<string>("extensions");
 
   const environmentName = useMemo(() => {
     switch (environment) {
       case Environment.Public:
-        return 'Public Cloud';
+        return "Public Cloud";
       case Environment.Fairfax:
-        return 'Fairfax';
+        return "Fairfax";
       case Environment.Mooncake:
-        return 'Mooncake';
+        return "Mooncake";
       default:
-        return 'Select environment';
+        return "Select environment";
     }
   }, [environment]);
 
   const showPaasServerless = useMemo(
-    () => isExtensionInfo(diagnostics?.extensions['paasserverless']),
+    () => isExtensionInfo(diagnostics?.extensions["paasserverless"]),
     [diagnostics?.extensions]
   );
 
   const environments = useMemo(
     () => [
       {
-        key: 'public',
-        text: 'Public Cloud',
+        key: "public",
+        text: "Public Cloud",
         selected: environment === Environment.Public,
         onClick: () => {
           setEnvironment(Environment.Public);
@@ -79,8 +77,8 @@ const App: React.FC = () => {
         },
       },
       {
-        key: 'fairfax',
-        text: 'Fairfax',
+        key: "fairfax",
+        text: "Fairfax",
         selected: environment === Environment.Fairfax,
         onClick: () => {
           setEnvironment(Environment.Fairfax);
@@ -88,8 +86,8 @@ const App: React.FC = () => {
         },
       },
       {
-        key: 'mooncake',
-        text: 'Mooncake',
+        key: "mooncake",
+        text: "Mooncake",
         selected: environment === Environment.Mooncake,
         onClick: () => {
           setEnvironment(Environment.Mooncake);
@@ -132,7 +130,7 @@ const App: React.FC = () => {
           </MenuTrigger>
           <MenuPopover>
             <MenuList>
-              {environments.map(env => (
+              {environments.map((env) => (
                 <MenuItem
                   key={env.key}
                   onClick={env.onClick}
@@ -149,7 +147,7 @@ const App: React.FC = () => {
           <ToolbarButton
             key="paasserverless"
             onClick={() => {
-              const paasserverless = diagnostics?.extensions['paasserverless'];
+              const paasserverless = diagnostics?.extensions["paasserverless"];
               if (isExtensionInfo(paasserverless)) {
                 setExtension(paasserverless);
               }
@@ -161,7 +159,7 @@ const App: React.FC = () => {
         <ToolbarButton
           key="websites"
           onClick={() => {
-            const websites = diagnostics?.extensions['websites'];
+            const websites = diagnostics?.extensions["websites"];
             if (isExtensionInfo(websites)) {
               setExtension(websites);
             }
@@ -178,7 +176,7 @@ const App: React.FC = () => {
         <Tab value="build">Build Information</Tab>
         <Tab value="server">Server Information</Tab>
       </TabList>
-      {selectedTab === 'extensions' && (
+      {selectedTab === "extensions" && (
         <div className={styles.tabPanel}>
           <div className={styles.stack}>
             <div>
@@ -193,12 +191,12 @@ const App: React.FC = () => {
           </div>
         </div>
       )}
-      {selectedTab === 'build' && (
+      {selectedTab === "build" && (
         <div className={styles.tabPanel}>
           <BuildInfo {...buildInfo} />
         </div>
       )}
-      {selectedTab === 'server' && (
+      {selectedTab === "server" && (
         <div className={styles.tabPanel}>
           <ServerInfo {...serverInfo} />
         </div>

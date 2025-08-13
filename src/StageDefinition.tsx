@@ -6,7 +6,7 @@ import {
   TableBody,
   TableCell,
   Text,
-} from '@fluentui/react-components';
+} from "@fluentui/react-components";
 
 const StageDefinition: React.FC<StageDefinitionProps> = ({
   stageDefinition,
@@ -31,7 +31,7 @@ const StageDefinition: React.FC<StageDefinitionProps> = ({
           {items.map((item, idx) => (
             <TableRow key={idx}>
               <TableCell>{item.key}</TableCell>
-              <TableCell>{item.value.join(', ')}</TableCell>
+              <TableCell>{item.value.join(", ")}</TableCell>
             </TableRow>
           ))}
         </TableBody>

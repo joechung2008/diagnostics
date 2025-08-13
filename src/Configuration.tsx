@@ -6,7 +6,7 @@ import {
   TableBody,
   TableCell,
   Text,
-} from '@fluentui/react-components';
+} from "@fluentui/react-components";
 
 const Configuration: React.FC<ConfigurationProps> = ({ config }) => {
   const items = Object.entries(config).reduce<KeyValuePair<string>[]>(

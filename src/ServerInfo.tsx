@@ -5,7 +5,7 @@ import {
   TableHeaderCell,
   TableBody,
   TableCell,
-} from '@fluentui/react-components';
+} from "@fluentui/react-components";
 
 const ServerInfo: React.FC<ServerInfoProps> = ({
   deploymentId,
@@ -17,27 +17,27 @@ const ServerInfo: React.FC<ServerInfoProps> = ({
 }) => {
   const items = [
     {
-      name: 'Hostname',
+      name: "Hostname",
       value: hostname,
     },
     {
-      name: 'Uptime',
+      name: "Uptime",
       value: uptime,
     },
     {
-      name: 'Server ID',
+      name: "Server ID",
       value: serverId,
     },
     {
-      name: 'Deployment ID',
+      name: "Deployment ID",
       value: deploymentId,
     },
     {
-      name: 'Node Versions',
+      name: "Node Versions",
       value: nodeVersions,
     },
     {
-      name: 'Extension Sync | Total Sync All Count',
+      name: "Extension Sync | Total Sync All Count",
       value: extensionSync.totalSyncAllCount,
     },
   ];
