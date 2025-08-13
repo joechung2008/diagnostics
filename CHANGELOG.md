@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## 2025-08-13
 
+- Rename configuration and build files for consistency
+- Add "jiti" and "npm-run-all" to devDependencies in package.json
+
+## 2025-08-13
+
 - Update ESLint configuration and related code
 - Add unit tests for utils.ts
 
