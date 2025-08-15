@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@fluentui/react-components": "^9.68.2",
+    "@fluentui/react-components": "^9.68.3",
     "@fluentui/react-theme": "^9.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -41,7 +41,7 @@
   "devDependencies": {
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
-    "@types/node": "^22.16.5",
+    "@types/node": "^22.17.2",
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",
     "@types/react-test-renderer": "^18.3.1",
@@ -57,7 +57,7 @@
     "react-test-renderer": "^18.3.1",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.39.1",
-    "vite": "^7.0.6",
+    "vite": "^7.1.2",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4"
   }

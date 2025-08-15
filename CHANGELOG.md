@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2025-08-15
+
+- Upgrade @vitejs/plugin-react from 4.7 to 5.0. No config changes required for default usage.
+
 ## 2025-08-13
 
 - Rename configuration and build files for consistency
