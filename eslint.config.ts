@@ -1,4 +1,3 @@
-import js from "@eslint/js";
 import reactHooksPlugin from "eslint-plugin-react-hooks";
 import reactRefreshPlugin from "eslint-plugin-react-refresh";
 import { globalIgnores } from "eslint/config";
@@ -10,7 +9,6 @@ export default tseslint.config([
   {
     files: ["**/*.ts", "**/*.tsx"],
     extends: [
-      js.configs.recommended,
       tseslint.configs.recommended,
       reactHooksPlugin.configs["recommended-latest"],
       reactRefreshPlugin.configs.vite,
