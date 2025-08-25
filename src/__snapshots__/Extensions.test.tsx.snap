@@ -4,16 +4,16 @@ exports[`Extensions > matches snapshot 1`] = `
 <DocumentFragment>
   <nav
     aria-label="Extensions"
-    class="___1nyw5d8_0000000 fnzshpt f5zp4f f22iagw f1vx9l62 f1cf1sex"
+    class="extension-root"
   >
     <button
-      class="fui-Button r1alrhcs ___11sokn7_qeyxw70 fhovq9v f1p3nwhy f11589ue f1q5o8ev f1pdflbu fkfq4zb f1t94bn6 f1s2uweq fr80ssc f1ukrpxl fecsdlb fnwyq0v ft1hn21 fuxngvv fy5bs14 fsv2rcd f1h0usnq fs4ktlq f16h9ulv fx2bmrt f1omzyqd f1dfjoow f1j98vj9 fj8yq94 f4xjyn1 f1et0tmh f9ddjv3 f1wi8ngl fbhxue7 f1o700av fly5x3f fw1ys26 f1ewtqcl"
+      class="fui-Button r1alrhcs extension-nav-button ___d2pn320_1mvkxdu fhovq9v f1p3nwhy f11589ue f1q5o8ev f1pdflbu fkfq4zb f1t94bn6 f1s2uweq fr80ssc f1ukrpxl fecsdlb fnwyq0v ft1hn21 fuxngvv fy5bs14 fsv2rcd f1h0usnq fs4ktlq f16h9ulv fx2bmrt f1omzyqd f1dfjoow f1j98vj9 fj8yq94 f4xjyn1 f1et0tmh f9ddjv3 f1wi8ngl fbhxue7 f1o700av fly5x3f f17g7q2o f1ewtqcl"
       type="button"
     >
       Extension 1
     </button>
     <button
-      class="fui-Button r1alrhcs ___11sokn7_qeyxw70 fhovq9v f1p3nwhy f11589ue f1q5o8ev f1pdflbu fkfq4zb f1t94bn6 f1s2uweq fr80ssc f1ukrpxl fecsdlb fnwyq0v ft1hn21 fuxngvv fy5bs14 fsv2rcd f1h0usnq fs4ktlq f16h9ulv fx2bmrt f1omzyqd f1dfjoow f1j98vj9 fj8yq94 f4xjyn1 f1et0tmh f9ddjv3 f1wi8ngl fbhxue7 f1o700av fly5x3f fw1ys26 f1ewtqcl"
+      class="fui-Button r1alrhcs extension-nav-button ___d2pn320_1mvkxdu fhovq9v f1p3nwhy f11589ue f1q5o8ev f1pdflbu fkfq4zb f1t94bn6 f1s2uweq fr80ssc f1ukrpxl fecsdlb fnwyq0v ft1hn21 fuxngvv fy5bs14 fsv2rcd f1h0usnq fs4ktlq f16h9ulv fx2bmrt f1omzyqd f1dfjoow f1j98vj9 fj8yq94 f4xjyn1 f1et0tmh f9ddjv3 f1wi8ngl fbhxue7 f1o700av fly5x3f f17g7q2o f1ewtqcl"
       type="button"
     >
       Extension 2

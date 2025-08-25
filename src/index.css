@@ -6,3 +6,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.extension-root {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: calc(100vh - 104px);
+  overflow-y: auto;
+}
+
+/* Firefox cannot use max-content: https://caniuse.com/?search=max-content */
+@media all and (min-height: -moz-available) {
+  .extension-nav-button {
+    max-height: -moz-available;
+  }
+}

@@ -3,7 +3,7 @@
 exports[`Extension > matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="___1795vqk_0000000 fnzshpt f5zp4f f22iagw f1vx9l62 fn8u6d3"
+    class="extension-root"
   >
     <span
       class="fui-Text ___7xffiy0_wrqr9g0 fk6fouc f1x0m3f5 fb86gi6 fl43uef fpgzoln ftgm304 f6juhto f1gl81tg f2jf649"
