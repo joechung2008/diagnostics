@@ -8,7 +8,7 @@ const Extension: React.FC<ExtensionProps> = ({
   stageDefinition,
 }) => {
   return (
-    <div className="extension-root">
+    <div className="extension-root grow">
       <Text size={600} weight="semibold" block>
         {extensionName}
       </Text>
