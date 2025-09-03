@@ -51,8 +51,8 @@ const ServerInfo: React.FC<ServerInfoProps> = ({
         </TableRow>
       </TableHeader>
       <TableBody>
-        {items.map((item, idx) => (
-          <TableRow key={idx}>
+        {items.map((item) => (
+          <TableRow key={item.name}>
             <TableCell>{item.name}</TableCell>
             <TableCell>{item.value}</TableCell>
           </TableRow>
