@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## 2025-09-03
 
-- Add ESLint plugins for React and React DOM
+- Add ESLint plugins for Prettier, React, and React DOM
 - Fix lint configuration and update typescript-eslint
 - Fix mock data in ServerInfo.test.tsx
 
