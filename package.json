@@ -11,7 +11,9 @@
     "web-vitals": "^5.1.0"
   },
   "scripts": {
-    "build": "vite build",
+    "build": "npm-run-all build:*",
+    "build:tsc": "tsc -b",
+    "build:vite": "vite build",
     "dev": "vite",
     "format": "prettier --write .",
     "lint": "npm-run-all lint:*",
