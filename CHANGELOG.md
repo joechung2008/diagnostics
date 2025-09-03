@@ -2,9 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
-## 2025-08-15
+## 2025-08-25
 
-- Upgrade @vitejs/plugin-react from 4.7 to 5.0. No config changes required for default usage.
+- Use flexbox layout
+
+## 2025-08-24
+
+- Use max-height: max-content for nav buttons
+- Disable @eslint/js
+
+## 2025-08-20
+
+- Recommend VS Code extensions
 
 ## 2025-08-13
 
@@ -34,26 +43,6 @@ All notable changes to this project will be documented in this file.
 - Clean up index.css
 - Remove Static Web App CI/CD
 
-## 2025-07-28
-
-- Update dependencies
-
-## 2025-07-25
-
-- Update vite to 7.0.6
-
-## 2025-07-19
-
-- Update dependencies
-
-## 2025-07-11
-
-- Update dependencies
-
-## 2025-07-03
-
-- Update npm packages except for React 18
-
 ## 2025-06-24
 
 - Remove %PUBLIC_URL% references in index.html
@@ -66,18 +55,8 @@ All notable changes to this project will be documented in this file.
 
 ## 2025-06-19
 
-- Remove jest
-- Use vitest for testing
-- Migrate to Fluent UI 9 (2)
+- Replace jest with vitest for testing
 - Migrate to Fluent UI 9
-
-## 2025-06-13
-
-- Update npm packages to address security vulnerabilities
-
-## 2025-01-29
-
-- npm audit fix
 
 ## 2024-07-31
 
@@ -94,64 +73,10 @@ All notable changes to this project will be documented in this file.
 ## 2024-04-10
 
 - Add paasserverless and websites shortcuts to menu
-- Update dependencies
-
-## 2023-11-21
-
-- npm audit fix
-- Update dependencies
 
 ## 2023-09-19
 
 - Add environment selector
-
-## 2023-09-07
-
-- Update dependencies
-
-## 2023-08-27
-
-- Update dependencies
-
-## 2023-07-22
-
-- Update dependencies
-
-## 2023-07-04
-
-- Update dependencies
-
-## 2023-06-17
-
-- Update dependencies
-
-## 2022-11-04
-
-- Update dependencies
-
-## 2022-09-27
-
-- Update dependencies
-
-## 2022-08-25
-
-- Update dependencies
-
-## 2022-08-16
-
-- Update dependencies
-
-## 2022-08-13
-
-- Update dependencies
-
-## 2022-07-26
-
-- Update dependencies
-
-## 2022-06-14
-
-- Update dependencies
 
 ## 2022-05-20
 
