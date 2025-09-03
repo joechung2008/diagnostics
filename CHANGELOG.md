@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2025-09-03
+
+- Fix lint configuration and update typescript-eslint
+- Fix mock data in ServerInfo.test.tsx
+
 ## 2025-08-25
 
 - Use flexbox layout
