@@ -7,7 +7,9 @@ All notable changes to this project will be documented in this file.
 - Add tests for reportWebVitals
 - Clean up code
 - Consolidate vite and vitest config
+- Implement Suspense-enabled hook to fetch diagnostics
 - Update tsconfig.json to align with recommended defaults
+- Use radio menu items in environment menu
 
 ## 2025-09-03
 
