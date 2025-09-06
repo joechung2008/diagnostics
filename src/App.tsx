@@ -1,7 +1,7 @@
 import {
   Menu,
   MenuButton,
-  MenuItem,
+  MenuItemRadio,
   MenuList,
   MenuPopover,
   MenuTrigger,
@@ -9,6 +9,8 @@ import {
   TabList,
   Toolbar,
   ToolbarButton,
+  type MenuCheckedValueChangeData,
+  type MenuCheckedValueChangeEvent,
 } from "@fluentui/react-components";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import BuildInfo from "./BuildInfo";
@@ -25,87 +27,78 @@ const Environment = {
   Mooncake: "https://hosting.azureportal.chinacloudapi.cn/api/diagnostics",
 } as const;
 
+async function fetchDiagnosticsData(environment: string): Promise<Diagnostics> {
+  const response = await fetch(environment);
+  return response.json();
+}
+
+function getEnvironnmentName(environment: Environment | undefined): string {
+  switch (environment) {
+    case Environment.Public:
+      return "Public Cloud";
+    case Environment.Fairfax:
+      return "Fairfax";
+    case Environment.Mooncake:
+      return "Mooncake";
+    default:
+      return "Select environment";
+  }
+}
+
 const App: React.FC = () => {
   const [diagnostics, setDiagnostics] = useState<Diagnostics>();
+  const [environments, setEnvironments] = useState<
+    Record<string, Environment[]>
+  >({
+    environment: [Environment.Public],
+  });
   const [extension, setExtension] = useState<ExtensionInfo>();
-  const [environment, setEnvironment] = useState<Environment>(
-    Environment.Public
-  );
   const [selectedTab, setSelectedTab] = useState<string>("extensions");
 
-  const buildInfo = useMemo(() => diagnostics?.buildInfo, [diagnostics]);
-  const extensions = useMemo(() => diagnostics?.extensions, [diagnostics]);
-  const serverInfo = useMemo(() => diagnostics?.serverInfo, [diagnostics]);
-
-  const handleLinkClick = useCallback(
-    (_?: React.MouseEvent, item?: KeyedNavLink) => {
+  const handleLinkClick: ExtensionsProps["onLinkClick"] = useCallback(
+    (_, item) => {
       if (item) {
-        const $extension = extensions?.[item.key];
+        const $extension = diagnostics?.extensions[item.key];
         if (isExtensionInfo($extension)) {
           setExtension($extension);
         }
       }
     },
-    [extensions]
+    [diagnostics?.extensions]
   );
-
-  const environmentName = useMemo(() => {
-    switch (environment) {
-      case Environment.Public:
-        return "Public Cloud";
-      case Environment.Fairfax:
-        return "Fairfax";
-      case Environment.Mooncake:
-        return "Mooncake";
-      default:
-        return "Select environment";
-    }
-  }, [environment]);
 
   const showPaasServerless = useMemo(
     () => isExtensionInfo(diagnostics?.extensions["paasserverless"]),
     [diagnostics?.extensions]
   );
 
-  const environments = useMemo(
-    () => [
-      {
-        key: "public",
-        text: "Public Cloud",
-        selected: environment === Environment.Public,
-        onClick: () => {
-          setEnvironment(Environment.Public);
-          setExtension(undefined);
-        },
-      },
-      {
-        key: "fairfax",
-        text: "Fairfax",
-        selected: environment === Environment.Fairfax,
-        onClick: () => {
-          setEnvironment(Environment.Fairfax);
-          setExtension(undefined);
-        },
-      },
-      {
-        key: "mooncake",
-        text: "Mooncake",
-        selected: environment === Environment.Mooncake,
-        onClick: () => {
-          setEnvironment(Environment.Mooncake);
-          setExtension(undefined);
-        },
-      },
-    ],
+  const environment = useMemo<Environment>(
+    () => environments.environment[0],
+    [environments.environment]
+  );
+
+  const environmentName = useMemo(
+    () => getEnvironnmentName(environment),
     [environment]
   );
 
+  const handleEnvironmentChange = useCallback(
+    (_: MenuCheckedValueChangeEvent, data: MenuCheckedValueChangeData) => {
+      if (data.checkedItems?.length ?? 0 > 0) {
+        setEnvironments((previous) => ({
+          ...previous,
+          [data.name]: data.checkedItems as Environment[],
+        }));
+        setExtension(undefined);
+      }
+    },
+    []
+  );
+
   useEffect(() => {
-    const getDiagnostics = async () => {
-      const response = await fetch(environment);
-      setDiagnostics(await response.json());
-    };
-    getDiagnostics();
+    (async () => {
+      setDiagnostics(await fetchDiagnosticsData(environment));
+    })();
   }, [environment]);
 
   if (!diagnostics) {
@@ -115,21 +108,19 @@ const App: React.FC = () => {
   return (
     <div className="flexbox">
       <Toolbar>
-        <Menu>
+        <Menu
+          checkedValues={environments}
+          onCheckedValueChange={handleEnvironmentChange}
+        >
           <MenuTrigger disableButtonEnhancement>
             <MenuButton>{environmentName}</MenuButton>
           </MenuTrigger>
           <MenuPopover>
             <MenuList>
-              {environments.map((env) => (
-                <MenuItem
-                  key={env.key}
-                  onClick={env.onClick}
-                  aria-checked={env.selected}
-                  role="menuitemradio"
-                >
-                  {env.text}
-                </MenuItem>
+              {Object.entries(Environment).map(([key, value]) => (
+                <MenuItemRadio key={key} name="environment" value={value}>
+                  {getEnvironnmentName(value)}
+                </MenuItemRadio>
               ))}
             </MenuList>
           </MenuPopover>
@@ -167,22 +158,25 @@ const App: React.FC = () => {
         <Tab value="build">Build Information</Tab>
         <Tab value="server">Server Information</Tab>
       </TabList>
-      {selectedTab === "extensions" && extensions && (
+      {selectedTab === "extensions" && diagnostics?.extensions && (
         <div className="tab-panel">
           <div className="stack">
-            <Extensions extensions={extensions} onLinkClick={handleLinkClick} />
+            <Extensions
+              extensions={diagnostics.extensions}
+              onLinkClick={handleLinkClick}
+            />
             {extension && <Extension {...extension} />}
           </div>
         </div>
       )}
-      {selectedTab === "build" && buildInfo && (
+      {selectedTab === "build" && diagnostics?.buildInfo && (
         <div className="tab-panel">
-          <BuildInfo {...buildInfo} />
+          <BuildInfo {...diagnostics.buildInfo} />
         </div>
       )}
-      {selectedTab === "server" && serverInfo && (
+      {selectedTab === "server" && diagnostics?.serverInfo && (
         <div className="tab-panel">
-          <ServerInfo {...serverInfo} />
+          <ServerInfo {...diagnostics.serverInfo} />
         </div>
       )}
     </div>
