@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import StageDefinition from "./StageDefinition";
+import StageDefinition from "../StageDefinition";
 
 const mockStageDefinition = {
   build: ["compile", "test"],

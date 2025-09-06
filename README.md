@@ -137,18 +137,20 @@ REACT_APP_API_URL=https://api.example.com
 
 ```
 src/
-├── components/          # React components
-├── types/              # TypeScript type definitions
-├── utils/              # Utility functions
-├── index.tsx           # Application entry point
-├── index.css           # Global styles
-└── App.tsx            # Main application component
+├── __tests__/           # Test files
+│   └── __snapshots__/   # Snapshot tests
+├── types.d.ts           # TypeScript type definitions
+├── utils.ts             # Utility functions
+├── vite-env.d.ts        # Vite type definitions
+├── index.tsx            # Application entry point
+├── index.css            # Global styles
+└── App.tsx              # Main application component
 
 public/
-├── index.html          # HTML template
-├── manifest.json       # Web app manifest
-├── robots.txt          # Search engine crawling instructions
-└── favicon.ico         # Application favicon
+├── index.html           # HTML template
+├── manifest.json        # Web app manifest
+├── robots.txt           # Search engine crawling instructions
+└── favicon.ico          # Application favicon
 ```
 
 ## Dependencies

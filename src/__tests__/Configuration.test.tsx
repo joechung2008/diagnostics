@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import Configuration from "./Configuration";
+import Configuration from "../Configuration";
 
 const mockConfig = {
   apiUrl: "https://api.example.com",

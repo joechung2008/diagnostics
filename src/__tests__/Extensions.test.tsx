@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import Extensions from "./Extensions";
+import Extensions from "../Extensions";
 
 const mockExtensions = {
   ext1: { extensionName: "Extension 1" },

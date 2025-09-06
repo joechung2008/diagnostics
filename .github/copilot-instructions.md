@@ -5,6 +5,7 @@
 - This is a Vite-based React (TypeScript) SPA for diagnostics tooling, using Fluent UI v9 for UI components.
 - The main entry point is `src/index.tsx`, which renders the `App` component inside a FluentProvider.
 - The app fetches diagnostics data from different Azure environments (Public, Fairfax, Mooncake) and displays build info, server info, and extension details.
+- Type definitions are consolidated in `src/types.d.ts` with Vite-specific types in `src/vite-env.d.ts`.
 
 ## Key Components & Data Flow
 
@@ -12,7 +13,7 @@
 - Diagnostics data is fetched from the selected environment's API endpoint and split into `buildInfo`, `extensions`, and `serverInfo`.
 - `Extensions.tsx` lists available extensions; clicking an extension shows its details via the `Extension` component.
 - `BuildInfo.tsx` and `ServerInfo.tsx` display build and server metadata, respectively.
-- All types and utility functions are in `src/types.ts` and `src/utils.ts`.
+- All types and utility functions are in `src/types.d.ts` and `src/utils.ts`.
 
 ## Developer Workflows
 
@@ -34,7 +35,7 @@
 
 - Diagnostics data is fetched via REST from Azure endpoints; see `App.tsx` for URLs.
 - No backend/server code in this repo; all logic is client-side.
-- Test files are colocated with components and use `.test.tsx` suffix; snapshot tests are in `__snapshots__/`.
+- Test files are located in `src/__tests__/` and use `.test.tsx` suffix; snapshot tests are in `__snapshots__/`.
 - Do not introduce Redux or other state management libraries; use React state/hooks only.
 
 ## Examples

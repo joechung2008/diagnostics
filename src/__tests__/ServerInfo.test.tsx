@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import ServerInfo from "./ServerInfo";
+import ServerInfo from "../ServerInfo";
 
 const mockProps: ServerInfoProps = {
   deploymentId: "deploy-123",

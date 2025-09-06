@@ -10,7 +10,7 @@ vi.mock("react-dom/client", () => ({
 }));
 
 const reportWebVitalsMock = vi.fn();
-vi.mock("./reportWebVitals", () => ({
+vi.mock("../reportWebVitals", () => ({
   __esModule: true,
   default: reportWebVitalsMock,
 }));
@@ -27,13 +27,13 @@ describe("index.tsx", () => {
   });
 
   it("renders App without crashing", async () => {
-    await import("./index");
+    await import("../index");
     expect(createRootMock).toHaveBeenCalled();
     expect(renderMock).toHaveBeenCalled();
   });
 
   it("calls reportWebVitals", async () => {
-    await import("./index");
+    await import("../index");
     expect(reportWebVitalsMock).toHaveBeenCalledWith(console.log);
   });
 });
