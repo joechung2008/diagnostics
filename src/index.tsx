@@ -11,7 +11,9 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <FluentProvider theme={webLightTheme}>
-      <App />
+      <React.Suspense fallback={null}>
+        <App />
+      </React.Suspense>
     </FluentProvider>
   </React.StrictMode>
 );

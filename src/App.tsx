@@ -12,11 +12,12 @@ import {
   type MenuCheckedValueChangeData,
   type MenuCheckedValueChangeEvent,
 } from "@fluentui/react-components";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { startTransition, useCallback, useMemo, useState } from "react";
 import BuildInfo from "./BuildInfo";
 import Extension from "./Extension";
 import Extensions from "./Extensions";
 import ServerInfo from "./ServerInfo";
+import { clearCache, useDiagnostics } from "./useDiagnostics";
 import { isExtensionInfo } from "./utils";
 
 type Environment = (typeof Environment)[keyof typeof Environment];
@@ -26,11 +27,6 @@ const Environment = {
   Fairfax: "https://hosting.azureportal.usgovcloudapi.net/api/diagnostics",
   Mooncake: "https://hosting.azureportal.chinacloudapi.cn/api/diagnostics",
 } as const;
-
-async function fetchDiagnosticsData(environment: string): Promise<Diagnostics> {
-  const response = await fetch(environment);
-  return response.json();
-}
 
 function getEnvironnmentName(environment: Environment | undefined): string {
   switch (environment) {
@@ -46,12 +42,16 @@ function getEnvironnmentName(environment: Environment | undefined): string {
 }
 
 const App: React.FC = () => {
-  const [diagnostics, setDiagnostics] = useState<Diagnostics>();
   const [environments, setEnvironments] = useState<
     Record<string, Environment[]>
   >({
     environment: [Environment.Public],
   });
+  const environment = useMemo<Environment>(
+    () => environments.environment[0],
+    [environments.environment]
+  );
+  const diagnostics = useDiagnostics(environment);
   const [extension, setExtension] = useState<ExtensionInfo>();
   const [selectedTab, setSelectedTab] = useState<string>("extensions");
 
@@ -72,11 +72,6 @@ const App: React.FC = () => {
     [diagnostics?.extensions]
   );
 
-  const environment = useMemo<Environment>(
-    () => environments.environment[0],
-    [environments.environment]
-  );
-
   const environmentName = useMemo(
     () => getEnvironnmentName(environment),
     [environment]
@@ -85,21 +80,18 @@ const App: React.FC = () => {
   const handleEnvironmentChange = useCallback(
     (_: MenuCheckedValueChangeEvent, data: MenuCheckedValueChangeData) => {
       if (data.checkedItems?.length ?? 0 > 0) {
-        setEnvironments((previous) => ({
-          ...previous,
-          [data.name]: data.checkedItems as Environment[],
-        }));
-        setExtension(undefined);
+        startTransition(() => {
+          setEnvironments((previous) => ({
+            ...previous,
+            [data.name]: data.checkedItems as Environment[],
+          }));
+          setExtension(undefined);
+        });
+        clearCache();
       }
     },
     []
   );
-
-  useEffect(() => {
-    (async () => {
-      setDiagnostics(await fetchDiagnosticsData(environment));
-    })();
-  }, [environment]);
 
   if (!diagnostics) {
     return null;

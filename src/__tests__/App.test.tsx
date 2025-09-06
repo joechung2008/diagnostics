@@ -1,7 +1,9 @@
 import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { Suspense } from "react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import App from "../App";
+import { clearCache } from "../useDiagnostics";
 
 const mockDiagnostics = {
   buildInfo: { buildVersion: "1.2.3" },
@@ -26,19 +28,31 @@ const mockDiagnosticsNoPaas = {
   },
 };
 
+const mockResponse = {
+  ok: true,
+  json: vi.fn(),
+};
+
 describe("App", () => {
   afterEach(() => {
     vi.unstubAllGlobals();
     vi.restoreAllMocks();
+    clearCache();
   });
 
   it("renders after a mocked fetch resolves", async () => {
-    const fetchMock = vi.fn().mockResolvedValue({
-      json: vi.fn().mockResolvedValue(mockDiagnostics),
-    });
+    const response = {
+      ...mockResponse,
+      json: vi.fn().mockReturnValue(mockDiagnostics),
+    };
+    const fetchMock = vi.fn().mockReturnValue(Promise.resolve(response));
     vi.stubGlobal("fetch", fetchMock as unknown as typeof fetch);
 
-    render(<App />);
+    render(
+      <Suspense fallback={<div>Loading...</div>}>
+        <App />
+      </Suspense>
+    );
 
     // Wait for the component to render after the fetch completes
     await screen.findByRole("button", { name: "Public Cloud" });
@@ -62,12 +76,18 @@ describe("App", () => {
 
   it("switches environments via menu, resets selected extension, and refetches diagnostics", async () => {
     const user = userEvent.setup();
-    const fetchMock = vi.fn().mockResolvedValue({
-      json: vi.fn().mockResolvedValue(mockDiagnostics),
-    });
+    const response = {
+      ...mockResponse,
+      json: vi.fn().mockReturnValue(mockDiagnostics),
+    };
+    const fetchMock = vi.fn().mockReturnValue(Promise.resolve(response));
     vi.stubGlobal("fetch", fetchMock as unknown as typeof fetch);
 
-    render(<App />);
+    render(
+      <Suspense fallback={<div>Loading...</div>}>
+        <App />
+      </Suspense>
+    );
 
     await screen.findByRole("button", { name: "Public Cloud" });
 
@@ -100,12 +120,18 @@ describe("App", () => {
   });
 
   it("hides the paasserverless toolbar button when that extension is not present", async () => {
-    const fetchMock = vi.fn().mockResolvedValue({
-      json: vi.fn().mockResolvedValue(mockDiagnosticsNoPaas),
-    });
+    const response = {
+      ...mockResponse,
+      json: vi.fn().mockReturnValue(mockDiagnosticsNoPaas),
+    };
+    const fetchMock = vi.fn().mockReturnValue(Promise.resolve(response));
     vi.stubGlobal("fetch", fetchMock as unknown as typeof fetch);
 
-    render(<App />);
+    render(
+      <Suspense fallback={<div>Loading...</div>}>
+        <App />
+      </Suspense>
+    );
 
     await screen.findByRole("button", { name: "Public Cloud" });
 
@@ -122,14 +148,18 @@ describe("App", () => {
 
   it("selects an extension from the navigation list and shows its details", async () => {
     const user = userEvent.setup();
-    vi.stubGlobal(
-      "fetch",
-      vi.fn().mockResolvedValue({
-        json: vi.fn().mockResolvedValue(mockDiagnostics),
-      }) as unknown as typeof fetch
-    );
+    const response = {
+      ...mockResponse,
+      json: vi.fn().mockReturnValue(mockDiagnostics),
+    };
+    const fetchMock = vi.fn().mockReturnValue(Promise.resolve(response));
+    vi.stubGlobal("fetch", fetchMock as unknown as typeof fetch);
 
-    render(<App />);
+    render(
+      <Suspense fallback={<div>Loading...</div>}>
+        <App />
+      </Suspense>
+    );
 
     await screen.findByRole("button", { name: "Public Cloud" });
 
@@ -149,14 +179,18 @@ describe("App", () => {
 
   it("navigates tabs and renders Build and Server info tables", async () => {
     const user = userEvent.setup();
-    vi.stubGlobal(
-      "fetch",
-      vi.fn().mockResolvedValue({
-        json: vi.fn().mockResolvedValue(mockDiagnostics),
-      }) as unknown as typeof fetch
-    );
+    const response = {
+      ...mockResponse,
+      json: vi.fn().mockReturnValue(mockDiagnostics),
+    };
+    const fetchMock = vi.fn().mockReturnValue(Promise.resolve(response));
+    vi.stubGlobal("fetch", fetchMock as unknown as typeof fetch);
 
-    render(<App />);
+    render(
+      <Suspense fallback={<div>Loading...</div>}>
+        <App />
+      </Suspense>
+    );
 
     await screen.findByRole("button", { name: "Public Cloud" });
 
@@ -171,14 +205,18 @@ describe("App", () => {
 
   it("selects the paasserverless extension via toolbar and shows its details", async () => {
     const user = userEvent.setup();
-    vi.stubGlobal(
-      "fetch",
-      vi.fn().mockResolvedValue({
-        json: vi.fn().mockResolvedValue(mockDiagnostics),
-      }) as unknown as typeof fetch
-    );
+    const response = {
+      ...mockResponse,
+      json: vi.fn().mockReturnValue(mockDiagnostics),
+    };
+    const fetchMock = vi.fn().mockReturnValue(Promise.resolve(response));
+    vi.stubGlobal("fetch", fetchMock as unknown as typeof fetch);
 
-    render(<App />);
+    render(
+      <Suspense fallback={<div>Loading...</div>}>
+        <App />
+      </Suspense>
+    );
 
     await screen.findByRole("button", { name: "Public Cloud" });
 
@@ -199,12 +237,18 @@ describe("App", () => {
 
   it("switches to Fairfax and back to Public via menu, refetches, updates label, and clears selection", async () => {
     const user = userEvent.setup();
-    const fetchMock = vi.fn().mockResolvedValue({
-      json: vi.fn().mockResolvedValue(mockDiagnostics),
-    });
+    const response = {
+      ...mockResponse,
+      json: vi.fn().mockReturnValue(mockDiagnostics),
+    };
+    const fetchMock = vi.fn().mockReturnValue(Promise.resolve(response));
     vi.stubGlobal("fetch", fetchMock as unknown as typeof fetch);
 
-    render(<App />);
+    render(
+      <Suspense fallback={<div>Loading...</div>}>
+        <App />
+      </Suspense>
+    );
 
     // Initial environment label
     await screen.findByRole("button", { name: "Public Cloud" });
