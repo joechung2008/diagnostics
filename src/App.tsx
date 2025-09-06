@@ -10,18 +10,20 @@ import {
   Toolbar,
   ToolbarButton,
 } from "@fluentui/react-components";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import BuildInfo from "./BuildInfo";
 import Extension from "./Extension";
 import Extensions from "./Extensions";
 import ServerInfo from "./ServerInfo";
 import { isExtensionInfo } from "./utils";
 
-const enum Environment {
-  Public = "https://hosting.portal.azure.net/api/diagnostics",
-  Fairfax = "https://hosting.azureportal.usgovcloudapi.net/api/diagnostics",
-  Mooncake = "https://hosting.azureportal.chinacloudapi.cn/api/diagnostics",
-}
+type Environment = (typeof Environment)[keyof typeof Environment];
+
+const Environment = {
+  Public: "https://hosting.portal.azure.net/api/diagnostics",
+  Fairfax: "https://hosting.azureportal.usgovcloudapi.net/api/diagnostics",
+  Mooncake: "https://hosting.azureportal.chinacloudapi.cn/api/diagnostics",
+} as const;
 
 const App: React.FC = () => {
   const [diagnostics, setDiagnostics] = useState<Diagnostics>();
@@ -30,6 +32,22 @@ const App: React.FC = () => {
     Environment.Public
   );
   const [selectedTab, setSelectedTab] = useState<string>("extensions");
+
+  const buildInfo = useMemo(() => diagnostics?.buildInfo, [diagnostics]);
+  const extensions = useMemo(() => diagnostics?.extensions, [diagnostics]);
+  const serverInfo = useMemo(() => diagnostics?.serverInfo, [diagnostics]);
+
+  const handleLinkClick = useCallback(
+    (_?: React.MouseEvent, item?: KeyedNavLink) => {
+      if (item) {
+        const $extension = extensions?.[item.key];
+        if (isExtensionInfo($extension)) {
+          setExtension($extension);
+        }
+      }
+    },
+    [extensions]
+  );
 
   const environmentName = useMemo(() => {
     switch (environment) {
@@ -94,17 +112,6 @@ const App: React.FC = () => {
     return null;
   }
 
-  const { buildInfo, extensions, serverInfo } = diagnostics;
-
-  const handleLinkClick = (_?: React.MouseEvent, item?: KeyedNavLink) => {
-    if (item) {
-      const extension = extensions[item.key];
-      if (isExtensionInfo(extension)) {
-        setExtension(extension);
-      }
-    }
-  };
-
   return (
     <div className="flexbox">
       <Toolbar>
@@ -160,7 +167,7 @@ const App: React.FC = () => {
         <Tab value="build">Build Information</Tab>
         <Tab value="server">Server Information</Tab>
       </TabList>
-      {selectedTab === "extensions" && (
+      {selectedTab === "extensions" && extensions && (
         <div className="tab-panel">
           <div className="stack">
             <Extensions extensions={extensions} onLinkClick={handleLinkClick} />
@@ -168,12 +175,12 @@ const App: React.FC = () => {
           </div>
         </div>
       )}
-      {selectedTab === "build" && (
+      {selectedTab === "build" && buildInfo && (
         <div className="tab-panel">
           <BuildInfo {...buildInfo} />
         </div>
       )}
-      {selectedTab === "server" && (
+      {selectedTab === "server" && serverInfo && (
         <div className="tab-panel">
           <ServerInfo {...serverInfo} />
         </div>
