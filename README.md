@@ -112,27 +112,6 @@ Coverage reports will exclude:
 - `src/reportWebVitals.ts`
 - All TypeScript declaration files (`*.d.ts`)
 
-## Environment Configuration
-
-### Development Server
-
-The development server supports the following configuration options:
-
-- `HOST`: Server host (default: `0.0.0.0`)
-- `PORT`: Server port (default: `3000`)
-- `HTTPS`: Enable HTTPS (default: false)
-- `SSL_CRT_FILE`: Path to SSL certificate file for HTTPS
-- `SSL_KEY_FILE`: Path to SSL key file for HTTPS
-
-### Environment Variables
-
-Use `REACT_APP_` prefixed variables to expose environment variables to your React application:
-
-```sh
-# .env file
-REACT_APP_API_URL=https://api.example.com
-```
-
 ## Project Structure
 
 ```
@@ -148,7 +127,6 @@ src/
 
 public/
 ├── index.html           # HTML template
-├── manifest.json        # Web app manifest
 ├── robots.txt           # Search engine crawling instructions
 └── favicon.ico          # Application favicon
 ```

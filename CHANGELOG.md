@@ -2,11 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2025-09-06
+
+- Add tests for reportWebVitals
+- Clean up code
+- Consolidate vite and vitest config
+- Update tsconfig.json to align with recommended defaults
+
 ## 2025-09-03
 
 - Add ESLint plugins for Prettier, React, and React DOM
+- Add README.md
 - Fix lint configuration and update typescript-eslint
 - Fix mock data in ServerInfo.test.tsx
+- Update browserslist queries
 
 ## 2025-08-25
 
@@ -14,8 +23,8 @@ All notable changes to this project will be documented in this file.
 
 ## 2025-08-24
 
-- Use max-height: max-content for nav buttons
 - Disable @eslint/js
+- Use max-height: max-content for nav buttons
 
 ## 2025-08-20
 
@@ -23,24 +32,24 @@ All notable changes to this project will be documented in this file.
 
 ## 2025-08-13
 
-- Rename configuration and build files for consistency
 - Add "jiti" and "npm-run-all" to devDependencies in package.json
+- Rename configuration and build files for consistency
 
 ## 2025-08-13
 
-- Update ESLint configuration and related code
 - Add unit tests for utils.ts
+- Update ESLint configuration and related code
 
 ## 2025-08-07
 
+- Add test coverage reporting
 - Prettier check
 - Re-enable continuous integration but with Vercel instead of Azure
-- Add test coverage reporting
 
 ## 2025-08-06
 
-- Remove deprecated Fluent UI references
 - Fix web-vitals code
+- Remove deprecated Fluent UI references
 - Update dependencies
 
 ## 2025-08-05
@@ -61,15 +70,15 @@ All notable changes to this project will be documented in this file.
 
 ## 2025-06-19
 
-- Replace jest with vitest for testing
 - Migrate to Fluent UI 9
+- Replace jest with vitest for testing
 
 ## 2024-07-31
 
-- Use ES Modules for Vite config
 - Fix unnecessary scrollbar
-- Move packages from dependencies to devDependencies
 - Migrate to vite
+- Move packages from dependencies to devDependencies
+- Use ES Modules for Vite config
 
 ## 2024-05-08
 
@@ -86,20 +95,20 @@ All notable changes to this project will be documented in this file.
 
 ## 2022-05-20
 
-- Undo demo Web App YAML
 - Add or update the Azure App Service build and deployment workflow config
+- Undo demo Web App YAML
 
 ## 2022-05-01
 
+- Add or update the Azure App Service build and deployment workflow config
+- Add process.json deployment step
 - Remove the Azure App Service build and deployment workflow config
 - Fix echoed JSON
-- Add process.json deployment step
-- Add or update the Azure App Service build and deployment workflow config
 
 ## 2022-04-30
 
-- Use public npm
 - Add staging configuration
-- ema-diagnostics
 - ci: add Azure Static Web Apps workflow file on-behalf-of: @Azure opensource@microsoft.com
+- ema-diagnostics
 - Initialize project using Create React App
+- Use public npm
