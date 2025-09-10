@@ -17,11 +17,11 @@
 
 ## Developer Workflows
 
-- **Start dev server:** `npm run dev` (or `npm start`)
-- **Build for production:** `npm run build`
-- **Run tests:** `npm run test` (uses Vitest)
-- **Watch tests:** `npm run test:watch`
-- **Type checking:** TypeScript is enforced; use `tsc --noEmit` for manual checks.
+See [README.md](../README.md) for detailed setup instructions, prerequisites, and full list of scripts (e.g., `npm run dev`, `npm run build`, `npm run test`).
+
+Key AI-specific notes:
+- TypeScript is enforced; use `tsc --noEmit` for manual type checks (beyond the build process).
+- All workflows are client-side only; no backend or server code in this repo.
 
 ## Project Conventions
 
