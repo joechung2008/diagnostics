@@ -1,185 +1,96 @@
 # diagnostics
 
-A modern React TypeScript application for diagnostics and monitoring.
+Azure Portal Extensions Dashboard implemented in React 18 with Fluent UI 9.
 
-## Prerequisites
+## Quick start
 
+Prerequisites:
 - Node.js >= 22
 - npm >= 10
 
-## Getting Started
+Install dependencies and run locally:
 
-### Installation
-
-```sh
+```bash
 npm install
-```
-
-### Development
-
-Start the development server:
-
-```sh
 npm run dev
 ```
 
-The application will be available at `http://localhost:3000` and will automatically open in your browser.
+Open http://localhost:3000 in your browser. The dev server supports hot module replacement.
 
-Alternatively, you can use the start command:
+## Features
 
-```sh
-npm start
+- Environment switching (select from configured Azure environments)
+- View build information, server metadata, and loaded extensions
+- Lightweight UI using Fluent UI v9
+- Frontend-only — no backend server included in this repo
+
+## Project layout
+
+Top-level structure (relevant files):
+
+- `src/` — application source code
+  - `index.tsx` — app entry
+  - `App.tsx` — main application component (environment selection, data fetching, tabs)
+  - `Extensions.tsx`, `Extension.tsx` — extension listing and details
+  - `BuildInfo.tsx`, `ServerInfo.tsx` — UI for build and server metadata
+  - `useDiagnostics.ts` — data-fetching hook
+  - `utils.ts`, `types.d.ts` — helpers and type definitions
+- `public/` — static assets (HTML template, favicon, robots)
+- `index.html` — HTML template
+
+## Scripts
+
+Common scripts available in `package.json`:
+
+```text
+npm run dev           # start development server
+npm run build         # build for production
+npm start             # alias for dev
+npm run lint          # run ESLint
+npm run format        # run Prettier
+npm run test          # run tests once
+npm run test:watch    # run tests in watch mode
+npm run test:coverage # run tests with coverage
 ```
 
-## Building
+## Building for production
 
-### Production Build
-
-Build the application for production:
-
-```sh
+```bash
 npm run build
 ```
 
-This command will:
-
-1. Type-check the code using TypeScript
-2. Bundle and optimize the application using Vite
-
-The built files will be output to the `build` directory (configurable via `BUILD_PATH` environment variable).
-
-### Environment Variables
-
-You can customize the build process using the following environment variables:
-
-- `BUILD_PATH`: Output directory for built files (default: `build`)
-- `GENERATE_SOURCEMAP`: Generate source maps for production build (default: false)
-- `PUBLIC_URL`: Base URL for the application (default: based on package.json homepage)
-
-## Formatting
-
-Format code using Prettier:
-
-```sh
-npm run format
-```
-
-This will format all JavaScript, TypeScript, JSON, and markdown files in the project using the configuration from `.prettierrc`.
-
-## Linting
-
-Lint the codebase using ESLint:
-
-```sh
-npm run lint
-```
-
-ESLint is configured to check TypeScript and React files with:
-
-- TypeScript ESLint recommendations
-- React specific rules
-- Prettier integration for code style consistency
-- Hot module replacement compatible rules
+The build step runs TypeScript checks and produces static files in the `build` directory by default.
 
 ## Testing
 
-### Run Tests
+Run tests:
 
-Run the test suite once:
-
-```sh
+```bash
 npm run test
 ```
 
-### Watch Mode
+Watch mode:
 
-Run tests in watch mode (re-runs on file changes):
-
-```sh
+```bash
 npm run test:watch
 ```
 
-### Coverage Report
+Coverage report:
 
-Run tests with coverage report:
-
-```sh
+```bash
 npm run test:coverage
 ```
 
-Coverage reports will exclude:
+## Formatting & linting
 
-- `src/reportWebVitals.ts`
-- All TypeScript declaration files (`*.d.ts`)
+Format with Prettier:
 
-## Project Structure
-
-```
-src/
-├── __tests__/           # Test files
-│   └── __snapshots__/   # Snapshot tests
-├── types.d.ts           # TypeScript type definitions
-├── utils.ts             # Utility functions
-├── vite-env.d.ts        # Vite type definitions
-├── index.tsx            # Application entry point
-├── index.css            # Global styles
-└── App.tsx              # Main application component
-
-public/
-├── index.html           # HTML template
-├── robots.txt           # Search engine crawling instructions
-└── favicon.ico          # Application favicon
+```bash
+npm run format
 ```
 
-## Dependencies
+Lint with ESLint:
 
-### Runtime Dependencies
-
-- React 18
-- @fluentui/react-components - UI component library
-- @fluentui/react-theme - Theme system
-
-### Development Dependencies
-
-- TypeScript - Type checking
-- Vite - Build tool and dev server
-- Vitest - Testing framework
-- ESLint - Code linting
-- Prettier - Code formatting
-- Testing Library - React testing utilities
-
-## Scripts Overview
-
-| Command                 | Description                              |
-| ----------------------- | ---------------------------------------- |
-| `npm run dev`           | Start development server                 |
-| `npm run build`         | Build for production                     |
-| `npm run start`         | Start development server (alias for dev) |
-| `npm run lint`          | Lint code using ESLint                   |
-| `npm run format`        | Format code using Prettier               |
-| `npm run test`          | Run tests once                           |
-| `npm run test:watch`    | Run tests in watch mode                  |
-| `npm run test:coverage` | Run tests with coverage                  |
-
-## Browser Support
-
-### Production
-
-- Chrome: > 0.2% usage
-- Firefox: > 0.2% usage
-- Safari: > 0.2% usage
-- Edge: > 0.2% usage
-- Not Opera Mini
-
-### Development
-
-- Latest Chrome
-- Latest Firefox
-- Latest Safari
-
-## Contributing
-
-1. Follow the coding standards enforced by ESLint and Prettier
-2. Write tests for new features
-3. Ensure all tests pass before submitting changes
-4. Format code before committing using `npm run format`
+```bash
+npm run lint
+```
