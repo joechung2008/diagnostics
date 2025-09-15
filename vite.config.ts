@@ -4,11 +4,7 @@ import { defineConfig } from "vitest/config";
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    rollupOptions: {
-      output: {
-        dir: "build",
-      },
-    },
+    outDir: "build",
   },
   plugins: [react()],
   test: {
