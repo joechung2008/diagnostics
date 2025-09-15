@@ -15,6 +15,13 @@ vi.mock("../reportWebVitals", () => ({
   default: reportWebVitalsMock,
 }));
 
+// Mock the real App to avoid running its async logic (fetch/Suspense) during
+// module import. This keeps the test deterministic and fast.
+vi.mock("../App", () => ({
+  __esModule: true,
+  default: () => null,
+}));
+
 describe("index.tsx", () => {
   beforeEach(() => {
     vi.resetModules();
