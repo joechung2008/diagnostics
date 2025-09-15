@@ -5,6 +5,7 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
   build: {
     outDir: "build",
+    target: "es2022",
   },
   plugins: [react()],
   test: {
