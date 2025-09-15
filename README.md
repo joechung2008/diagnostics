@@ -5,6 +5,7 @@ Azure Portal Extensions Dashboard implemented in React 18 with Fluent UI 9.
 ## Quick start
 
 Prerequisites:
+
 - Node.js >= 22
 - npm >= 10
 

@@ -86,8 +86,8 @@ const App: React.FC = () => {
             [data.name]: data.checkedItems as Environment[],
           }));
           setExtension(undefined);
+          clearCache();
         });
-        clearCache();
       }
     },
     []

@@ -20,6 +20,7 @@
 See [README.md](../README.md) for detailed setup instructions, prerequisites, and full list of scripts (e.g., `npm run dev`, `npm run build`, `npm run test`).
 
 Key AI-specific notes:
+
 - TypeScript is enforced; use `tsc --noEmit` for manual type checks (beyond the build process).
 - All workflows are client-side only; no backend or server code in this repo.
 
