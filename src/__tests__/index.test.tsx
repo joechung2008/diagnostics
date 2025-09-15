@@ -1,15 +1,19 @@
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
+// Set up spies
 const renderMock = vi.fn();
+
 const createRootMock = vi.fn(() => ({
   render: renderMock,
 }));
 
+const reportWebVitalsMock = vi.fn();
+
+// Set up module mocks
 vi.mock("react-dom/client", () => ({
   createRoot: createRootMock,
 }));
 
-const reportWebVitalsMock = vi.fn();
 vi.mock("../reportWebVitals", () => ({
   __esModule: true,
   default: reportWebVitalsMock,
@@ -23,12 +27,18 @@ vi.mock("../App", () => ({
 }));
 
 describe("index.tsx", () => {
-  beforeEach(() => {
+  afterEach(() => {
+    vi.restoreAllMocks();
     vi.resetModules();
+  });
+
+  beforeEach(() => {
+    // Clear spies
     createRootMock.mockClear();
     renderMock.mockClear();
     reportWebVitalsMock.mockClear();
-    vi.restoreAllMocks();
+
+    // Set up DOM spy
     const container = document.createElement("div");
     vi.spyOn(document, "getElementById").mockReturnValue(container);
   });
