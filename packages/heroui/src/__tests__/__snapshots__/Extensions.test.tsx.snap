@@ -1,0 +1,10 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Extensions > matches snapshot 1`] = `
+<DocumentFragment>
+  <nav
+    aria-label="Extensions"
+    class="flex flex-col gap-1 max-h-max overflow-y-auto p-0.5"
+  />
+</DocumentFragment>
+`;

@@ -1,0 +1,296 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ServerInfo > matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-col relative gap-4 w-full"
+  >
+    <div
+      class="p-4 z-0 flex flex-col relative justify-between gap-4 bg-content1 overflow-auto shadow-small rounded-large w-full"
+    >
+      <table
+        aria-describedby=""
+        aria-label="Server Information"
+        class="min-w-full h-auto table-auto w-full"
+        data-collection="react-aria-«r1»"
+        id="react-aria-«r0»"
+        role="table"
+        tabindex="0"
+      >
+        <thead
+          class="[&>tr]:first:rounded-lg"
+          role="rowgroup"
+        >
+          <tr
+            class="group/tr outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            role="row"
+          >
+            <th
+              aria-colindex="1"
+              class="group/th px-3 h-10 align-middle bg-default-100 whitespace-nowrap text-foreground-500 text-tiny font-semibold first:rounded-s-lg last:rounded-e-lg data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start"
+              data-collection="react-aria-«r1»"
+              data-key="$.0"
+              data-react-aria-pressable="true"
+              id="server-name-header"
+              role="columnheader"
+              scope="col"
+              tabindex="-1"
+            >
+              Name
+            </th>
+            <th
+              aria-colindex="2"
+              class="group/th px-3 h-10 align-middle bg-default-100 whitespace-nowrap text-foreground-500 text-tiny font-semibold first:rounded-s-lg last:rounded-e-lg data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start"
+              data-collection="react-aria-«r1»"
+              data-key="$.1"
+              data-react-aria-pressable="true"
+              id="server-value-header"
+              role="columnheader"
+              scope="col"
+              tabindex="-1"
+            >
+              Value
+            </th>
+          </tr>
+          <tr
+            aria-hidden="true"
+            class="w-px h-px block"
+            style="margin-left: 0.25rem; margin-top: 0.25rem;"
+            tabindex="-1"
+          />
+        </thead>
+        <tbody
+          class="after:block"
+          role="rowgroup"
+        >
+          <tr
+            aria-labelledby="react-aria-«r0»-Hostname-$.0"
+            class="group/tr outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            data-collection="react-aria-«r1»"
+            data-first="true"
+            data-key="Hostname"
+            id="react-aria-«r5»"
+            role="row"
+            tabindex="-1"
+          >
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:pointer-events-none before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-collection="react-aria-«r1»"
+              data-key="Hostname.0"
+              headers="server-name-header"
+              id="react-aria-«r0»-Hostname-$.0"
+              role="cell"
+              tabindex="-1"
+            >
+              <span>
+                Hostname
+              </span>
+            </td>
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:pointer-events-none before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-collection="react-aria-«r1»"
+              data-key="Hostname.1"
+              headers="server-value-header"
+              id="react-aria-«r7»"
+              role="cell"
+              tabindex="-1"
+            >
+              <span>
+                localhost
+              </span>
+            </td>
+          </tr>
+          <tr
+            aria-labelledby="react-aria-«r0»-Uptime-$.0"
+            class="group/tr outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            data-collection="react-aria-«r1»"
+            data-key="Uptime"
+            data-middle="true"
+            data-odd="true"
+            id="react-aria-«r8»"
+            role="row"
+            tabindex="-1"
+          >
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:pointer-events-none before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-collection="react-aria-«r1»"
+              data-key="Uptime.0"
+              headers="server-name-header"
+              id="react-aria-«r0»-Uptime-$.0"
+              role="cell"
+              tabindex="-1"
+            >
+              <span>
+                Uptime
+              </span>
+            </td>
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:pointer-events-none before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-collection="react-aria-«r1»"
+              data-key="Uptime.1"
+              headers="server-value-header"
+              id="react-aria-«ra»"
+              role="cell"
+              tabindex="-1"
+            >
+              <span>
+                12345
+              </span>
+            </td>
+          </tr>
+          <tr
+            aria-labelledby="react-aria-«r0»-ServerID-$.0"
+            class="group/tr outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            data-collection="react-aria-«r1»"
+            data-key="Server ID"
+            data-middle="true"
+            id="react-aria-«rb»"
+            role="row"
+            tabindex="-1"
+          >
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:pointer-events-none before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-collection="react-aria-«r1»"
+              data-key="Server ID.0"
+              headers="server-name-header"
+              id="react-aria-«r0»-ServerID-$.0"
+              role="cell"
+              tabindex="-1"
+            >
+              <span>
+                Server ID
+              </span>
+            </td>
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:pointer-events-none before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-collection="react-aria-«r1»"
+              data-key="Server ID.1"
+              headers="server-value-header"
+              id="react-aria-«rd»"
+              role="cell"
+              tabindex="-1"
+            >
+              <span>
+                test-server
+              </span>
+            </td>
+          </tr>
+          <tr
+            aria-labelledby="react-aria-«r0»-DeploymentID-$.0"
+            class="group/tr outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            data-collection="react-aria-«r1»"
+            data-key="Deployment ID"
+            data-middle="true"
+            data-odd="true"
+            id="react-aria-«re»"
+            role="row"
+            tabindex="-1"
+          >
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:pointer-events-none before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-collection="react-aria-«r1»"
+              data-key="Deployment ID.0"
+              headers="server-name-header"
+              id="react-aria-«r0»-DeploymentID-$.0"
+              role="cell"
+              tabindex="-1"
+            >
+              <span>
+                Deployment ID
+              </span>
+            </td>
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:pointer-events-none before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-collection="react-aria-«r1»"
+              data-key="Deployment ID.1"
+              headers="server-value-header"
+              id="react-aria-«rg»"
+              role="cell"
+              tabindex="-1"
+            >
+              <span>
+                test-deployment
+              </span>
+            </td>
+          </tr>
+          <tr
+            aria-labelledby="react-aria-«r0»-NodeVersions-$.0"
+            class="group/tr outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            data-collection="react-aria-«r1»"
+            data-key="Node Versions"
+            data-middle="true"
+            id="react-aria-«rh»"
+            role="row"
+            tabindex="-1"
+          >
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:pointer-events-none before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-collection="react-aria-«r1»"
+              data-key="Node Versions.0"
+              headers="server-name-header"
+              id="react-aria-«r0»-NodeVersions-$.0"
+              role="cell"
+              tabindex="-1"
+            >
+              <span>
+                Node Versions
+              </span>
+            </td>
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:pointer-events-none before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-collection="react-aria-«r1»"
+              data-key="Node Versions.1"
+              headers="server-value-header"
+              id="react-aria-«rj»"
+              role="cell"
+              tabindex="-1"
+            >
+              <span>
+                v18.0.0
+              </span>
+            </td>
+          </tr>
+          <tr
+            aria-labelledby="react-aria-«r0»-ExtensionSync|TotalSyncAllCount-$.0"
+            class="group/tr outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+            data-collection="react-aria-«r1»"
+            data-key="Extension Sync | Total Sync All Count"
+            data-last="true"
+            data-odd="true"
+            id="react-aria-«rk»"
+            role="row"
+            tabindex="-1"
+          >
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:pointer-events-none before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-collection="react-aria-«r1»"
+              data-key="Extension Sync | Total Sync All Count.0"
+              headers="server-name-header"
+              id="react-aria-«r0»-ExtensionSync|TotalSyncAllCount-$.0"
+              role="cell"
+              tabindex="-1"
+            >
+              <span>
+                Extension Sync | Total Sync All Count
+              </span>
+            </td>
+            <td
+              class="py-2 px-3 relative align-middle whitespace-normal text-small font-normal [&>*]:z-1 [&>*]:relative outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:pointer-events-none before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start"
+              data-collection="react-aria-«r1»"
+              data-key="Extension Sync | Total Sync All Count.1"
+              headers="server-value-header"
+              id="react-aria-«rm»"
+              role="cell"
+              tabindex="-1"
+            >
+              <span>
+                0
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;

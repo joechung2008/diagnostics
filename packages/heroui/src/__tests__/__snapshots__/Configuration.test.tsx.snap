@@ -1,0 +1,78 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Configuration > matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h2
+      class="text-2xl font-semibold"
+      id="configurations"
+    >
+      Configuration
+    </h2>
+    <div
+      class="flex flex-col relative gap-4 w-full"
+    >
+      <div
+        class="p-4 z-0 flex flex-col relative justify-between gap-4 bg-content1 overflow-auto shadow-small rounded-large w-full"
+      >
+        <table
+          aria-describedby=""
+          aria-labelledby="configurations"
+          class="min-w-full h-auto table-auto w-full"
+          id="react-aria-«r0»"
+          role="table"
+          tabindex="0"
+        >
+          <thead
+            class="[&>tr]:first:rounded-lg"
+            role="rowgroup"
+          >
+            <tr
+              class="group/tr outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+              role="row"
+            >
+              <th
+                aria-colindex="1"
+                class="group/th px-3 h-10 align-middle bg-default-100 whitespace-nowrap text-foreground-500 text-tiny font-semibold first:rounded-s-lg last:rounded-e-lg data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start"
+                data-collection="react-aria-«r1»"
+                data-key="$.0"
+                data-react-aria-pressable="true"
+                id="config-key-header"
+                role="columnheader"
+                scope="col"
+                tabindex="-1"
+              >
+                Key
+              </th>
+              <th
+                aria-colindex="2"
+                class="group/th px-3 h-10 align-middle bg-default-100 whitespace-nowrap text-foreground-500 text-tiny font-semibold first:rounded-s-lg last:rounded-e-lg data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start"
+                data-collection="react-aria-«r1»"
+                data-key="$.1"
+                data-react-aria-pressable="true"
+                id="config-value-header"
+                role="columnheader"
+                scope="col"
+                tabindex="-1"
+              >
+                Value
+              </th>
+            </tr>
+            <tr
+              aria-hidden="true"
+              class="w-px h-px block"
+              style="margin-left: 0.25rem; margin-top: 0.25rem;"
+              tabindex="-1"
+            />
+          </thead>
+          <tbody
+            class="after:block"
+            data-empty="true"
+            role="rowgroup"
+          />
+        </table>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
