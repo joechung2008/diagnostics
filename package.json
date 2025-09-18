@@ -4,13 +4,17 @@
   },
   "name": "diagnostics",
   "packageManager": "pnpm@10.17.0",
+  "pnpm": {
+    "overrides": {
+      "vitest>jsdom": "26.1.0"
+    }
+  },
   "private": true,
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo dev",
     "lint": "turbo run lint",
-    "start": "turbo run start",
-    "test": "turbo run test --filter=!@diagnostics/material"
+    "start": "turbo run start"
   },
   "type": "module",
   "version": "0.1.0",

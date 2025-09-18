@@ -5,7 +5,13 @@ export default defineConfig({
     coverage: {
       include: ["src/**/*.{ts,tsx}"],
     },
+    dir: "./src",
     environment: "jsdom",
+    root: __dirname,
     setupFiles: ["./setupTests.ts"],
+    snapshotFormat: {
+      escapeString: false,
+      printBasicPrototype: false,
+    },
   },
 });
