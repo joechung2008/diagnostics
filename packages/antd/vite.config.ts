@@ -15,19 +15,19 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           if (
-            id.includes("node_modules/antd/es/config-provider") ||
-            id.includes("node_modules/antd/es/theme")
+            id.includes("node_modules/antd/lib/config-provider") ||
+            id.includes("node_modules/antd/lib/theme")
           ) {
             return "antd_config_provider_theme";
-          } else if (id.includes("node_modules/antd/es/flex")) {
+          } else if (id.includes("node_modules/antd/lib/flex")) {
             return "antd_flex";
-          } else if (id.includes("node_modules/antd/es/menu")) {
+          } else if (id.includes("node_modules/antd/lib/menu")) {
             return "antd_menu";
-          } else if (id.includes("node_modules/antd/es/table")) {
+          } else if (id.includes("node_modules/antd/lib/table")) {
             return "antd_table";
-          } else if (id.includes("node_modules/antd/es/tabs")) {
+          } else if (id.includes("node_modules/antd/lib/tabs")) {
             return "antd_tabs";
-          } else if (id.includes("node_modules/antd/es/typography")) {
+          } else if (id.includes("node_modules/antd/lib/typography")) {
             return "antd_typography";
           } else {
             return null;
