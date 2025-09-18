@@ -60,8 +60,6 @@ import reportWebVitals from "~/utils/reportWebVitals"
 import "vfonts/Lato.css"
 import "vfonts/FiraCode.css"
 
-type Environment = (typeof Environment)[keyof typeof Environment]
-
 const Environment = {
   Public: "https://hosting.portal.azure.net/api/diagnostics",
   Fairfax: "https://hosting.azureportal.usgovcloudapi.net/api/diagnostics",
