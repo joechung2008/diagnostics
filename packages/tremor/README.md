@@ -1,4 +1,4 @@
-# diagnostics-tremor
+# @diagnostics/tremor
 
 Azure Portal Extensions Dashboard implemented in React 18 with Tremor
 
@@ -91,3 +91,4 @@ npm run format
 
 - This README keeps the project-specific commands and developer workflow. For environment-specific needs (Node version, editor settings), check the repository root files.
 - The app is intentionally small; most of the behavior lives under `src/`. If you need to extend data sources or add APIs, prefer adding a clear, small integration with tests.
+- This package includes a local TypeScript declaration shim at `src/types/remixicon.d.ts`. It exists to work around typing incompatibilities between the `@remixicon/react` package's exported icon types and the project's `@types/react` typings. The shim declares the named icon exports as generic `React.ComponentType` components so they can be used in JSX without type errors. This is a package-local workaround (keeps the rest of the workspace untouched) — see the root README for more context.
