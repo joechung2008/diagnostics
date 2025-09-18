@@ -1,0 +1,8 @@
+{
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "files.associations": {
+    "*.vue": "vue"
+  }
+}

@@ -15,10 +15,10 @@
       "@parcel/watcher",
       "@swc/core",
       "@tailwindcss/oxide",
-      "carbon-components-svelte",
       "esbuild",
       "lmdb",
-      "msgpackr-extract"
+      "msgpackr-extract",
+      "vue-demi"
     ]
   },
   "private": true,
