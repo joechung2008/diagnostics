@@ -1,0 +1,113 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`app/components/StageDefinition.vue > should render empty table when no stageDefinition is provided 1`] = `
+"<div id="test-wrapper">
+  <h3 class="text-lg font-semibold mb-4">Stage Definitions</h3>
+  <div class="relative overflow-auto">
+    <table class="min-w-full overflow-clip">
+      <!--v-if-->
+      <thead class="relative">
+        <tr class="data-[selected=true]:bg-elevated/50">
+          <th data-pinned="false" scope="col" class="px-4 py-3.5 text-sm text-highlighted text-left rtl:text-right font-semibold [&amp;:has([role=checkbox])]:pe-0">Key</th>
+          <th data-pinned="false" scope="col" class="px-4 py-3.5 text-sm text-highlighted text-left rtl:text-right font-semibold [&amp;:has([role=checkbox])]:pe-0">Value</th>
+        </tr>
+        <tr class="absolute z-[1] left-0 w-full h-px bg-(--ui-border-accented)"></tr>
+      </thead>
+      <tbody class="divide-y divide-default [&amp;>tr]:data-[selectable=true]:hover:bg-elevated/50 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-primary">
+        <tr>
+          <td colspan="2" class="py-6 text-center text-sm text-muted">No data</td>
+        </tr>
+      </tbody>
+      <!--v-if-->
+    </table>
+  </div>
+</div>"
+`;
+
+exports[`app/components/StageDefinition.vue > should render font-mono class for key data 1`] = `
+"<div id="test-wrapper">
+  <h3 class="text-lg font-semibold mb-4">Stage Definitions</h3>
+  <div class="relative overflow-auto">
+    <table class="min-w-full overflow-clip">
+      <!--v-if-->
+      <thead class="relative">
+        <tr class="data-[selected=true]:bg-elevated/50">
+          <th data-pinned="false" scope="col" class="px-4 py-3.5 text-sm text-highlighted text-left rtl:text-right font-semibold [&amp;:has([role=checkbox])]:pe-0">Key</th>
+          <th data-pinned="false" scope="col" class="px-4 py-3.5 text-sm text-highlighted text-left rtl:text-right font-semibold [&amp;:has([role=checkbox])]:pe-0">Value</th>
+        </tr>
+        <tr class="absolute z-[1] left-0 w-full h-px bg-(--ui-border-accented)"></tr>
+      </thead>
+      <tbody class="divide-y divide-default [&amp;>tr]:data-[selectable=true]:hover:bg-elevated/50 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-primary">
+        <tr data-selected="false" data-selectable="false" data-expanded="false" class="data-[selected=true]:bg-elevated/50">
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">key</td>
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">value</td>
+        </tr>
+        <!--v-if-->
+      </tbody>
+      <!--v-if-->
+    </table>
+  </div>
+</div>"
+`;
+
+exports[`app/components/StageDefinition.vue > should render single value as string 1`] = `
+"<div id="test-wrapper">
+  <h3 class="text-lg font-semibold mb-4">Stage Definitions</h3>
+  <div class="relative overflow-auto">
+    <table class="min-w-full overflow-clip">
+      <!--v-if-->
+      <thead class="relative">
+        <tr class="data-[selected=true]:bg-elevated/50">
+          <th data-pinned="false" scope="col" class="px-4 py-3.5 text-sm text-highlighted text-left rtl:text-right font-semibold [&amp;:has([role=checkbox])]:pe-0">Key</th>
+          <th data-pinned="false" scope="col" class="px-4 py-3.5 text-sm text-highlighted text-left rtl:text-right font-semibold [&amp;:has([role=checkbox])]:pe-0">Value</th>
+        </tr>
+        <tr class="absolute z-[1] left-0 w-full h-px bg-(--ui-border-accented)"></tr>
+      </thead>
+      <tbody class="divide-y divide-default [&amp;>tr]:data-[selectable=true]:hover:bg-elevated/50 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-primary">
+        <tr data-selected="false" data-selectable="false" data-expanded="false" class="data-[selected=true]:bg-elevated/50">
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">version</td>
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">1.0</td>
+        </tr>
+        <!--v-if-->
+        <tr data-selected="false" data-selectable="false" data-expanded="false" class="data-[selected=true]:bg-elevated/50">
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">name</td>
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">test</td>
+        </tr>
+        <!--v-if-->
+      </tbody>
+      <!--v-if-->
+    </table>
+  </div>
+</div>"
+`;
+
+exports[`app/components/StageDefinition.vue > should render table with stage definition data 1`] = `
+"<div id="test-wrapper">
+  <h3 class="text-lg font-semibold mb-4">Stage Definitions</h3>
+  <div class="relative overflow-auto">
+    <table class="min-w-full overflow-clip">
+      <!--v-if-->
+      <thead class="relative">
+        <tr class="data-[selected=true]:bg-elevated/50">
+          <th data-pinned="false" scope="col" class="px-4 py-3.5 text-sm text-highlighted text-left rtl:text-right font-semibold [&amp;:has([role=checkbox])]:pe-0">Key</th>
+          <th data-pinned="false" scope="col" class="px-4 py-3.5 text-sm text-highlighted text-left rtl:text-right font-semibold [&amp;:has([role=checkbox])]:pe-0">Value</th>
+        </tr>
+        <tr class="absolute z-[1] left-0 w-full h-px bg-(--ui-border-accented)"></tr>
+      </thead>
+      <tbody class="divide-y divide-default [&amp;>tr]:data-[selectable=true]:hover:bg-elevated/50 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-primary">
+        <tr data-selected="false" data-selectable="false" data-expanded="false" class="data-[selected=true]:bg-elevated/50">
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">stages</td>
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">stage1, stage2</td>
+        </tr>
+        <!--v-if-->
+        <tr data-selected="false" data-selectable="false" data-expanded="false" class="data-[selected=true]:bg-elevated/50">
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">steps</td>
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">step1, step2, step3</td>
+        </tr>
+        <!--v-if-->
+      </tbody>
+      <!--v-if-->
+    </table>
+  </div>
+</div>"
+`;

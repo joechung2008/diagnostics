@@ -18,6 +18,7 @@
       "esbuild",
       "lmdb",
       "msgpackr-extract",
+      "sharp",
       "vue-demi"
     ]
   },

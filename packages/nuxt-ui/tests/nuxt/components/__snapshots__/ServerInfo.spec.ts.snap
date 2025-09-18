@@ -1,0 +1,91 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`app/components/ServerInfo.vue > should render server info with optional fields 1`] = `
+"<div id="test-wrapper">
+  <div class="relative overflow-auto">
+    <table class="min-w-full overflow-clip">
+      <!--v-if-->
+      <thead class="relative">
+        <tr class="data-[selected=true]:bg-elevated/50">
+          <th data-pinned="false" scope="col" class="px-4 py-3.5 text-sm text-highlighted text-left rtl:text-right font-semibold [&amp;:has([role=checkbox])]:pe-0">Name</th>
+          <th data-pinned="false" scope="col" class="px-4 py-3.5 text-sm text-highlighted text-left rtl:text-right font-semibold [&amp;:has([role=checkbox])]:pe-0">Value</th>
+        </tr>
+        <tr class="absolute z-[1] left-0 w-full h-px bg-(--ui-border-accented)"></tr>
+      </thead>
+      <tbody class="divide-y divide-default [&amp;>tr]:data-[selectable=true]:hover:bg-elevated/50 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-primary">
+        <tr data-selected="false" data-selectable="false" data-expanded="false" class="data-[selected=true]:bg-elevated/50">
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">Hostname</td>
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">staging-server-02</td>
+        </tr>
+        <!--v-if-->
+        <tr data-selected="false" data-selectable="false" data-expanded="false" class="data-[selected=true]:bg-elevated/50">
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">Uptime</td>
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">123456789</td>
+        </tr>
+        <!--v-if-->
+        <tr data-selected="false" data-selectable="false" data-expanded="false" class="data-[selected=true]:bg-elevated/50">
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">Server ID</td>
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">srv-stage-002</td>
+        </tr>
+        <!--v-if-->
+        <tr data-selected="false" data-selectable="false" data-expanded="false" class="data-[selected=true]:bg-elevated/50">
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">Deployment ID</td>
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">deploy-staging-v1.4</td>
+        </tr>
+        <!--v-if-->
+        <tr data-selected="false" data-selectable="false" data-expanded="false" class="data-[selected=true]:bg-elevated/50">
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">Node Versions</td>
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">18.17.0 LTS</td>
+        </tr>
+        <!--v-if-->
+        <tr data-selected="false" data-selectable="false" data-expanded="false" class="data-[selected=true]:bg-elevated/50">
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">Extension Sync | Total Sync All Count</td>
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">25</td>
+        </tr>
+        <!--v-if-->
+      </tbody>
+      <!--v-if-->
+    </table>
+  </div>
+</div>"
+`;
+
+exports[`app/components/ServerInfo.vue > should render server info with required fields 1`] = `
+"<div id="test-wrapper">
+  <div class="relative overflow-auto">
+    <table class="min-w-full overflow-clip">
+      <!--v-if-->
+      <thead class="relative">
+        <tr class="data-[selected=true]:bg-elevated/50">
+          <th data-pinned="false" scope="col" class="px-4 py-3.5 text-sm text-highlighted text-left rtl:text-right font-semibold [&amp;:has([role=checkbox])]:pe-0">Name</th>
+          <th data-pinned="false" scope="col" class="px-4 py-3.5 text-sm text-highlighted text-left rtl:text-right font-semibold [&amp;:has([role=checkbox])]:pe-0">Value</th>
+        </tr>
+        <tr class="absolute z-[1] left-0 w-full h-px bg-(--ui-border-accented)"></tr>
+      </thead>
+      <tbody class="divide-y divide-default [&amp;>tr]:data-[selectable=true]:hover:bg-elevated/50 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-primary">
+        <tr data-selected="false" data-selectable="false" data-expanded="false" class="data-[selected=true]:bg-elevated/50">
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">Hostname</td>
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">production-server-01</td>
+        </tr>
+        <!--v-if-->
+        <tr data-selected="false" data-selectable="false" data-expanded="false" class="data-[selected=true]:bg-elevated/50">
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">Server ID</td>
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">srv-2024-001</td>
+        </tr>
+        <!--v-if-->
+        <tr data-selected="false" data-selectable="false" data-expanded="false" class="data-[selected=true]:bg-elevated/50">
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">Deployment ID</td>
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">deploy-v3.2.1</td>
+        </tr>
+        <!--v-if-->
+        <tr data-selected="false" data-selectable="false" data-expanded="false" class="data-[selected=true]:bg-elevated/50">
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">Extension Sync | Total Sync All Count</td>
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">42</td>
+        </tr>
+        <!--v-if-->
+      </tbody>
+      <!--v-if-->
+    </table>
+  </div>
+</div>"
+`;

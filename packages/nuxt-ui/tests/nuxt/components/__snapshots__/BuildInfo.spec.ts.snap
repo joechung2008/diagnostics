@@ -1,0 +1,26 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`app/components/BuildInfo.vue > should render build info 1`] = `
+"<div id="test-wrapper">
+  <div class="relative overflow-auto">
+    <table class="min-w-full overflow-clip">
+      <!--v-if-->
+      <thead class="relative">
+        <tr class="data-[selected=true]:bg-elevated/50">
+          <th data-pinned="false" scope="col" class="px-4 py-3.5 text-sm text-highlighted text-left rtl:text-right font-semibold [&amp;:has([role=checkbox])]:pe-0">Name</th>
+          <th data-pinned="false" scope="col" class="px-4 py-3.5 text-sm text-highlighted text-left rtl:text-right font-semibold [&amp;:has([role=checkbox])]:pe-0">Value</th>
+        </tr>
+        <tr class="absolute z-[1] left-0 w-full h-px bg-(--ui-border-accented)"></tr>
+      </thead>
+      <tbody class="divide-y divide-default [&amp;>tr]:data-[selectable=true]:hover:bg-elevated/50 [&amp;>tr]:data-[selectable=true]:focus-visible:outline-primary">
+        <tr data-selected="false" data-selectable="false" data-expanded="false" class="data-[selected=true]:bg-elevated/50">
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">Build Version</td>
+          <td data-pinned="false" class="p-4 text-sm text-muted whitespace-nowrap [&amp;:has([role=checkbox])]:pe-0">1.2.3</td>
+        </tr>
+        <!--v-if-->
+      </tbody>
+      <!--v-if-->
+    </table>
+  </div>
+</div>"
+`;

@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`app/components/ExtensionItems.vue > should render extension items 1`] = `
+"<div id="test-wrapper">
+  <div class="extension-root">
+    <!---->
+    <!---->
+    <nav data-collapsed="false" class="relative flex gap-1.5 [&amp;>div]:min-w-0 flex-col" aria-label="Main" data-orientation="vertical" dir="ltr" data-reka-navigation-menu="">
+      <ul class="isolate min-w-0">
+        <li data-state="closed" data-orientation="vertical" class="min-w-0"><button type="button" data-reka-collection-item="" class="group relative w-full flex items-center gap-1.5 font-medium text-sm before:absolute before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-2 focus-visible:before:ring-primary flex-row px-2.5 py-1.5 before:inset-y-px before:inset-x-0 text-muted hover:text-highlighted hover:before:bg-elevated/50 transition-colors before:transition-colors">
+            <!--v-if--><span class="truncate">Database Extension<!--v-if--></span>
+            <!--v-if-->
+          </button>
+          <!--v-if-->
+          <!--v-if-->
+        </li>
+      </ul>
+      <!--v-if-->
+      <!--v-if-->
+    </nav>
+  </div>
+</div>"
+`;
