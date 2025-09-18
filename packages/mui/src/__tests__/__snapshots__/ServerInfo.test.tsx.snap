@@ -1,0 +1,119 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ServerInfo > matches snapshot 1`] = `
+<div>
+  <table
+    aria-label="Server Info"
+    class="MuiTable-root css-1xwxv7r-MuiTable-root"
+  >
+    <thead
+      class="MuiTableHead-root css-1a7iywq-MuiTableHead-root"
+    >
+      <tr
+        class="MuiTableRow-root MuiTableRow-head css-1xtozoh-MuiTableRow-root"
+      >
+        <th
+          class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1orzuox-MuiTableCell-root"
+          scope="col"
+        >
+          Name
+        </th>
+        <th
+          class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1orzuox-MuiTableCell-root"
+          scope="col"
+        >
+          Value
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+    >
+      <tr
+        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+        >
+          Hostname
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+        >
+          localhost
+        </td>
+      </tr>
+      <tr
+        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+        >
+          Uptime
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+        >
+          100
+        </td>
+      </tr>
+      <tr
+        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+        >
+          Server ID
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+        >
+          server-1
+        </td>
+      </tr>
+      <tr
+        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+        >
+          Deployment ID
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+        >
+          deploy-1
+        </td>
+      </tr>
+      <tr
+        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+        >
+          Node Versions
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+        >
+          v18.0.0
+        </td>
+      </tr>
+      <tr
+        class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+      >
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+        >
+          Extension Sync | Total Sync All Count
+        </td>
+        <td
+          class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+        >
+          1
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

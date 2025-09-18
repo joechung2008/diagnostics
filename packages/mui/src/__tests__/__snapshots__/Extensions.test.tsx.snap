@@ -1,0 +1,236 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Extensions > calls onLinkClick when a link is clicked 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto extension-root css-1hef13s-MuiGrid-root"
+  >
+    <ul
+      aria-label="Extensions"
+      class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
+    >
+      <li
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary nav-button css-5kypzc-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          ext1
+        </button>
+      </li>
+      <li
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary nav-button css-5kypzc-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          ext2
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Extensions > matches snapshot with ExtensionError 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto extension-root css-1hef13s-MuiGrid-root"
+  >
+    <ul
+      aria-label="Extensions"
+      class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
+    >
+      <li
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary nav-button css-5kypzc-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          ext1
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Extensions > matches snapshot with config 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto extension-root css-1hef13s-MuiGrid-root"
+  >
+    <ul
+      aria-label="Extensions"
+      class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
+    >
+      <li
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary nav-button css-5kypzc-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          ext1
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Extensions > matches snapshot with config and stageDefinition 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto extension-root css-1hef13s-MuiGrid-root"
+  >
+    <ul
+      aria-label="Extensions"
+      class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
+    >
+      <li
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary nav-button css-5kypzc-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          ext1
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Extensions > matches snapshot with minimal extension 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto extension-root css-1hef13s-MuiGrid-root"
+  >
+    <ul
+      aria-label="Extensions"
+      class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
+    >
+      <li
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary nav-button css-5kypzc-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          ext1
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Extensions > matches snapshot with mixed ExtensionInfo and ExtensionError 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto extension-root css-1hef13s-MuiGrid-root"
+  >
+    <ul
+      aria-label="Extensions"
+      class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
+    >
+      <li
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary nav-button css-5kypzc-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          ext1
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Extensions > matches snapshot with multiple extensions 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto extension-root css-1hef13s-MuiGrid-root"
+  >
+    <ul
+      aria-label="Extensions"
+      class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
+    >
+      <li
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary nav-button css-5kypzc-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          ext1
+        </button>
+      </li>
+      <li
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary nav-button css-5kypzc-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          ext2
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Extensions > matches snapshot with no extensions 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto extension-root css-1hef13s-MuiGrid-root"
+  >
+    <ul
+      aria-label="Extensions"
+      class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
+    />
+  </div>
+</div>
+`;
+
+exports[`Extensions > matches snapshot with stageDefinition 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-auto extension-root css-1hef13s-MuiGrid-root"
+  >
+    <ul
+      aria-label="Extensions"
+      class="MuiList-root MuiList-padding css-b7dj7n-MuiList-root"
+    >
+      <li
+        class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-cfd5wn-MuiListItem-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary nav-button css-5kypzc-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          ext1
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

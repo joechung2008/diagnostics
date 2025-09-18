@@ -1,0 +1,271 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Extension > matches snapshot 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow extension-root css-1ynczkt-MuiGrid-root"
+  >
+    <h2
+      class="MuiTypography-root MuiTypography-h2 css-866djt-MuiTypography-root"
+    >
+      ext
+    </h2>
+  </div>
+</div>
+`;
+
+exports[`Extension > renders Configuration when config is provided 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow extension-root css-1ynczkt-MuiGrid-root"
+  >
+    <h2
+      class="MuiTypography-root MuiTypography-h2 css-866djt-MuiTypography-root"
+    >
+      ext
+    </h2>
+    <div>
+      <h3
+        class="MuiTypography-root MuiTypography-h3 css-1lw8d58-MuiTypography-root"
+      >
+        Configuration
+      </h3>
+      <table
+        aria-label="Configuration"
+        class="MuiTable-root css-1xwxv7r-MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root css-1a7iywq-MuiTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head css-1xtozoh-MuiTableRow-root"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1orzuox-MuiTableCell-root"
+              scope="col"
+            >
+              Key
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1orzuox-MuiTableCell-root"
+              scope="col"
+            >
+              Value
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+            >
+              foo
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+            >
+              bar
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Extension > renders StageDefinition when stageDefinition is provided 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow extension-root css-1ynczkt-MuiGrid-root"
+  >
+    <h2
+      class="MuiTypography-root MuiTypography-h2 css-866djt-MuiTypography-root"
+    >
+      ext
+    </h2>
+    <div>
+      <h3
+        class="MuiTypography-root MuiTypography-h3 css-1lw8d58-MuiTypography-root"
+      >
+        Stage Definitions
+      </h3>
+      <table
+        aria-label="Stage Definitions"
+        class="MuiTable-root css-1xwxv7r-MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root css-1a7iywq-MuiTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head css-1xtozoh-MuiTableRow-root"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1orzuox-MuiTableCell-root"
+              scope="col"
+            >
+              Key
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1orzuox-MuiTableCell-root"
+              scope="col"
+            >
+              Value
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+            >
+              name
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+            >
+              Stage1
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Extension > renders both Configuration and StageDefinition when both props are provided 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow extension-root css-1ynczkt-MuiGrid-root"
+  >
+    <h2
+      class="MuiTypography-root MuiTypography-h2 css-866djt-MuiTypography-root"
+    >
+      ext
+    </h2>
+    <div>
+      <h3
+        class="MuiTypography-root MuiTypography-h3 css-1lw8d58-MuiTypography-root"
+      >
+        Configuration
+      </h3>
+      <table
+        aria-label="Configuration"
+        class="MuiTable-root css-1xwxv7r-MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root css-1a7iywq-MuiTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head css-1xtozoh-MuiTableRow-root"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1orzuox-MuiTableCell-root"
+              scope="col"
+            >
+              Key
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1orzuox-MuiTableCell-root"
+              scope="col"
+            >
+              Value
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+            >
+              foo
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+            >
+              bar
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h3
+        class="MuiTypography-root MuiTypography-h3 css-1lw8d58-MuiTypography-root"
+      >
+        Stage Definitions
+      </h3>
+      <table
+        aria-label="Stage Definitions"
+        class="MuiTable-root css-1xwxv7r-MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root css-1a7iywq-MuiTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head css-1xtozoh-MuiTableRow-root"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1orzuox-MuiTableCell-root"
+              scope="col"
+            >
+              Key
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1orzuox-MuiTableCell-root"
+              scope="col"
+            >
+              Value
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root css-gmh7jj-MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root css-1xtozoh-MuiTableRow-root"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+            >
+              name
+            </td>
+            <td
+              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1dc80h3-MuiTableCell-root"
+            >
+              Stage1
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Extension > renders extensionName as heading 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-direction-xs-row MuiGrid-grid-xs-grow extension-root css-1ynczkt-MuiGrid-root"
+  >
+    <h2
+      class="MuiTypography-root MuiTypography-h2 css-866djt-MuiTypography-root"
+    >
+      TestExt
+    </h2>
+  </div>
+</div>
+`;
