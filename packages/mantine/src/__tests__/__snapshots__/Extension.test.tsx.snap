@@ -1,0 +1,37 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Extension > should render Configuration if config is provided 1`] = `
+<style
+  data-mantine-styles="true"
+>
+  
+
+
+
+
+</style>
+`;
+
+exports[`Extension > should render StageDefinition if stageDefinition is provided 1`] = `
+<style
+  data-mantine-styles="true"
+>
+  
+
+
+
+
+</style>
+`;
+
+exports[`Extension > should render the extension name 1`] = `
+<style
+  data-mantine-styles="true"
+>
+  
+
+
+
+
+</style>
+`;

@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Extensions > should render buttons for ExtensionInfo 1`] = `
+<style
+  data-mantine-styles="true"
+>
+  
+
+
+
+
+</style>
+`;
