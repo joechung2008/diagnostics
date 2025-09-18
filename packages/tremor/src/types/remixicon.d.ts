@@ -5,7 +5,7 @@ declare module "@remixicon/react" {
     size?: string | number;
     color?: string;
     // allow arbitrary additional props
-    [key: string]: any;
+    [key: string]: unknown;
   };
 
   // Commonly-used named exports in this repo — typed as generic React components
@@ -17,6 +17,6 @@ declare module "@remixicon/react" {
   export const RiRadioButtonFill: React.ComponentType<RemixiconProps>;
 
   // Fallback for any other named export
-  const _default: { [key: string]: React.ComponentType<any> };
+  const _default: Record<string, React.ComponentType<unknown>>;
   export default _default;
 }
