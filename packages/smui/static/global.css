@@ -1,0 +1,43 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th,
+td {
+	padding-left: 16px;
+	padding-right: 16px;
+	height: 52px;
+	vertical-align: middle;
+	text-align: left;
+}
+
+th {
+	height: 56px;
+	font-weight: 500;
+	font-size: 1rem;
+}
+
+tr:last-child td {
+	border-bottom: none;
+}
+
+td:not(:last-child),
+th:not(:last-child) {
+	padding-right: 32px;
+}
