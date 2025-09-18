@@ -1,0 +1,157 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App.vue > renders tabs 1`] = `
+"<div data-v-7a7a37b1="" class="v-application v-theme--light v-layout v-layout--full-height v-locale--is-ltr flexbox">
+  <div class="v-application__wrap">
+    <header data-v-7a7a37b1="" class="v-toolbar v-toolbar--density-default v-theme--light v-locale--is-ltr">
+      <!---->
+      <div class="v-toolbar__content" style="height: 64px;">
+        <!---->
+        <!----><button data-v-7a7a37b1="" type="button" class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" aria-haspopup="menu" aria-expanded="false" aria-controls="v-menu-v-0"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+          <!----><span class="v-btn__content" data-no-activator="">Public Cloud <i data-v-7a7a37b1="" class="mdi-chevron-down mdi v-icon notranslate v-theme--light v-icon--size-default" aria-hidden="true"></i></span>
+          <!---->
+          <!---->
+        </button>
+        <!---->
+        <!--v-if--><button data-v-7a7a37b1="" type="button" class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+          <!----><span class="v-btn__content" data-no-activator=""> websites </span>
+          <!---->
+          <!---->
+        </button>
+        <!---->
+      </div>
+      <transition-stub name="expand-transition" appear="false" persisted="false" css="true">
+        <!---->
+      </transition-stub>
+    </header>
+    <div class="v-slide-group v-slide-group--mobile v-tabs v-tabs--horizontal v-tabs--align-tabs-start v-tabs--density-default" tabindex="0" role="tablist" data-v-7a7a37b1="">
+      <!---->
+      <div class="v-slide-group__container">
+        <div class="v-slide-group__content"><button data-v-7a7a37b1="" type="button" class="v-btn v-tab-item--selected v-tab--selected v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text v-tab" tabindex="-1" role="tab" aria-selected="false" value="extensions"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+            <!----><span class="v-btn__content" data-no-activator="">Extensions<div class="v-tab__slider"></div></span>
+            <!---->
+            <!---->
+          </button><button data-v-7a7a37b1="" type="button" class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text v-tab" tabindex="-1" role="tab" aria-selected="false" value="build"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+            <!----><span class="v-btn__content" data-no-activator="">Build Information<div class="v-tab__slider"></div></span>
+            <!---->
+            <!---->
+          </button><button data-v-7a7a37b1="" type="button" class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text v-tab" tabindex="-1" role="tab" aria-selected="false" value="server"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+            <!----><span class="v-btn__content" data-no-activator="">Server Information<div class="v-tab__slider"></div></span>
+            <!---->
+            <!---->
+          </button></div>
+      </div>
+      <!---->
+    </div>
+    <!---->
+    <div data-v-7a7a37b1="" class="tab-panel">
+      <div data-v-7a7a37b1="" class="v-window v-theme--light">
+        <div class="v-window__container">
+          <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
+            <div class="v-window-item v-window-item--active">
+              <div data-v-7a7a37b1="" class="stack">
+                <div data-v-7a7a37b1="" class="extensions">
+                  <!--v-if-->
+                </div>
+                <div data-v-7a7a37b1="" class="extension">
+                  <!--v-if-->
+                </div>
+              </div>
+            </div>
+          </transition-stub>
+          <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
+            <div class="v-window-item" style="display: none;">
+              <!---->
+            </div>
+          </transition-stub>
+          <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
+            <div class="v-window-item" style="display: none;">
+              <!---->
+            </div>
+          </transition-stub>
+          <!---->
+        </div>
+        <!---->
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`App.vue > renders without crashing 1`] = `
+"<div data-v-7a7a37b1="" class="v-application v-theme--light v-layout v-layout--full-height v-locale--is-ltr flexbox">
+  <div class="v-application__wrap">
+    <header data-v-7a7a37b1="" class="v-toolbar v-toolbar--density-default v-theme--light v-locale--is-ltr">
+      <!---->
+      <div class="v-toolbar__content" style="height: 64px;">
+        <!---->
+        <!----><button data-v-7a7a37b1="" type="button" class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text" aria-haspopup="menu" aria-expanded="false" aria-controls="v-menu-v-0"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+          <!----><span class="v-btn__content" data-no-activator="">Public Cloud <i data-v-7a7a37b1="" class="mdi-chevron-down mdi v-icon notranslate v-theme--light v-icon--size-default" aria-hidden="true"></i></span>
+          <!---->
+          <!---->
+        </button>
+        <!---->
+        <!--v-if--><button data-v-7a7a37b1="" type="button" class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+          <!----><span class="v-btn__content" data-no-activator=""> websites </span>
+          <!---->
+          <!---->
+        </button>
+        <!---->
+      </div>
+      <transition-stub name="expand-transition" appear="false" persisted="false" css="true">
+        <!---->
+      </transition-stub>
+    </header>
+    <div class="v-slide-group v-slide-group--mobile v-tabs v-tabs--horizontal v-tabs--align-tabs-start v-tabs--density-default" tabindex="0" role="tablist" data-v-7a7a37b1="">
+      <!---->
+      <div class="v-slide-group__container">
+        <div class="v-slide-group__content"><button data-v-7a7a37b1="" type="button" class="v-btn v-tab-item--selected v-tab--selected v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text v-tab" tabindex="-1" role="tab" aria-selected="false" value="extensions"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+            <!----><span class="v-btn__content" data-no-activator="">Extensions<div class="v-tab__slider"></div></span>
+            <!---->
+            <!---->
+          </button><button data-v-7a7a37b1="" type="button" class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text v-tab" tabindex="-1" role="tab" aria-selected="false" value="build"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+            <!----><span class="v-btn__content" data-no-activator="">Build Information<div class="v-tab__slider"></div></span>
+            <!---->
+            <!---->
+          </button><button data-v-7a7a37b1="" type="button" class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text v-tab" tabindex="-1" role="tab" aria-selected="false" value="server"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+            <!----><span class="v-btn__content" data-no-activator="">Server Information<div class="v-tab__slider"></div></span>
+            <!---->
+            <!---->
+          </button></div>
+      </div>
+      <!---->
+    </div>
+    <!---->
+    <div data-v-7a7a37b1="" class="tab-panel">
+      <div data-v-7a7a37b1="" class="v-window v-theme--light">
+        <div class="v-window__container">
+          <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
+            <div class="v-window-item v-window-item--active">
+              <div data-v-7a7a37b1="" class="stack">
+                <div data-v-7a7a37b1="" class="extensions">
+                  <!--v-if-->
+                </div>
+                <div data-v-7a7a37b1="" class="extension">
+                  <!--v-if-->
+                </div>
+              </div>
+            </div>
+          </transition-stub>
+          <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
+            <div class="v-window-item" style="display: none;">
+              <!---->
+            </div>
+          </transition-stub>
+          <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
+            <div class="v-window-item" style="display: none;">
+              <!---->
+            </div>
+          </transition-stub>
+          <!---->
+        </div>
+        <!---->
+      </div>
+    </div>
+  </div>
+</div>"
+`;

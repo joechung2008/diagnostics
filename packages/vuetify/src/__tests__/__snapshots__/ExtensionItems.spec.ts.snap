@@ -1,0 +1,32 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ExtensionItems > renders extension buttons 1`] = `
+"<nav class="v-list v-theme--light v-list--density-default v-list--one-line" tabindex="0" role="navigation" aria-label="Extensions">
+  <div class="v-list-item v-theme--light v-list-item--density-default v-list-item--one-line rounded-0 v-list-item--variant-text" role="listitem">
+    <!----><span class="v-list-item__underlay"></span>
+    <!---->
+    <div class="v-list-item__content" data-no-activator="">
+      <!---->
+      <!----><button type="button" class="v-btn v-btn--block v-btn--elevated v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-elevated justify-start"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+        <!----><span class="v-btn__content" data-no-activator="">Alpha</span>
+        <!---->
+        <!---->
+      </button>
+    </div>
+    <!---->
+  </div>
+  <div class="v-list-item v-theme--light v-list-item--density-default v-list-item--one-line rounded-0 v-list-item--variant-text" role="listitem">
+    <!----><span class="v-list-item__underlay"></span>
+    <!---->
+    <div class="v-list-item__content" data-no-activator="">
+      <!---->
+      <!----><button type="button" class="v-btn v-btn--block v-btn--elevated v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-elevated justify-start"><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span>
+        <!----><span class="v-btn__content" data-no-activator="">Beta</span>
+        <!---->
+        <!---->
+      </button>
+    </div>
+    <!---->
+  </div>
+</nav>"
+`;

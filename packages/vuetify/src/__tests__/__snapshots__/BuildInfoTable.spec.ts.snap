@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BuildInfoTable > renders without crashing 1`] = `
+"<div class="v-table v-theme--light v-table--density-default">
+  <!---->
+  <div class="v-table__wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Build Version</td>
+          <td>1.0.0</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!---->
+</div>"
+`;
