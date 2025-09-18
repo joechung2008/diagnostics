@@ -1,0 +1,151 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Configuration > matches snapshot with empty config 1`] = `
+<DocumentFragment>
+  <div>
+    <h2
+      class="text-lg font-semibold"
+    >
+      Configuration
+    </h2>
+    <div
+      class="relative w-full overflow-x-auto"
+      data-slot="table-container"
+    >
+      <table
+        aria-label="Configuration"
+        class="w-full caption-bottom text-sm"
+        data-slot="table"
+      >
+        <thead
+          class="[&_tr]:border-b"
+          data-slot="table-header"
+        >
+          <tr
+            class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+            data-slot="table-row"
+          >
+            <th
+              class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+              data-slot="table-head"
+            >
+              Key
+            </th>
+            <th
+              class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+              data-slot="table-head"
+            >
+              Value
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="[&_tr:last-child]:border-0"
+          data-slot="table-body"
+        />
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Configuration > matches snapshot with multiple config entries 1`] = `
+<DocumentFragment>
+  <div>
+    <h2
+      class="text-lg font-semibold"
+    >
+      Configuration
+    </h2>
+    <div
+      class="relative w-full overflow-x-auto"
+      data-slot="table-container"
+    >
+      <table
+        aria-label="Configuration"
+        class="w-full caption-bottom text-sm"
+        data-slot="table"
+      >
+        <thead
+          class="[&_tr]:border-b"
+          data-slot="table-header"
+        >
+          <tr
+            class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+            data-slot="table-row"
+          >
+            <th
+              class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+              data-slot="table-head"
+            >
+              Key
+            </th>
+            <th
+              class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+              data-slot="table-head"
+            >
+              Value
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="[&_tr:last-child]:border-0"
+          data-slot="table-body"
+        >
+          <tr
+            class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+            data-slot="table-row"
+          >
+            <td
+              class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+              data-slot="table-cell"
+            >
+              API_URL
+            </td>
+            <td
+              class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+              data-slot="table-cell"
+            >
+              https://api.example.com
+            </td>
+          </tr>
+          <tr
+            class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+            data-slot="table-row"
+          >
+            <td
+              class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+              data-slot="table-cell"
+            >
+              FEATURE_FLAG_X
+            </td>
+            <td
+              class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+              data-slot="table-cell"
+            >
+              true
+            </td>
+          </tr>
+          <tr
+            class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+            data-slot="table-row"
+          >
+            <td
+              class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+              data-slot="table-cell"
+            >
+              TIMEOUT_MS
+            </td>
+            <td
+              class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+              data-slot="table-cell"
+            >
+              5000
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;

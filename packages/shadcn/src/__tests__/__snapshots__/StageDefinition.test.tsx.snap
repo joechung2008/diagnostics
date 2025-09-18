@@ -1,0 +1,134 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`StageDefinition > matches snapshot with empty data 1`] = `
+<DocumentFragment>
+  <div>
+    <h2
+      class="text-lg font-semibold"
+    >
+      Stage Definitions
+    </h2>
+    <div
+      class="relative w-full overflow-x-auto"
+      data-slot="table-container"
+    >
+      <table
+        aria-label="Stage Definitions"
+        class="w-full caption-bottom text-sm"
+        data-slot="table"
+      >
+        <thead
+          class="[&_tr]:border-b"
+          data-slot="table-header"
+        >
+          <tr
+            class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+            data-slot="table-row"
+          >
+            <th
+              class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+              data-slot="table-head"
+            >
+              Key
+            </th>
+            <th
+              class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+              data-slot="table-head"
+            >
+              Value
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="[&_tr:last-child]:border-0"
+          data-slot="table-body"
+        />
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`StageDefinition > matches snapshot with sample data 1`] = `
+<DocumentFragment>
+  <div>
+    <h2
+      class="text-lg font-semibold"
+    >
+      Stage Definitions
+    </h2>
+    <div
+      class="relative w-full overflow-x-auto"
+      data-slot="table-container"
+    >
+      <table
+        aria-label="Stage Definitions"
+        class="w-full caption-bottom text-sm"
+        data-slot="table"
+      >
+        <thead
+          class="[&_tr]:border-b"
+          data-slot="table-header"
+        >
+          <tr
+            class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+            data-slot="table-row"
+          >
+            <th
+              class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+              data-slot="table-head"
+            >
+              Key
+            </th>
+            <th
+              class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+              data-slot="table-head"
+            >
+              Value
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="[&_tr:last-child]:border-0"
+          data-slot="table-body"
+        >
+          <tr
+            class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+            data-slot="table-row"
+          >
+            <td
+              class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+              data-slot="table-cell"
+            >
+              build
+            </td>
+            <td
+              class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+              data-slot="table-cell"
+            >
+              compile, test
+            </td>
+          </tr>
+          <tr
+            class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+            data-slot="table-row"
+          >
+            <td
+              class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+              data-slot="table-cell"
+            >
+              deploy
+            </td>
+            <td
+              class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+              data-slot="table-cell"
+            >
+              staging, production
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
