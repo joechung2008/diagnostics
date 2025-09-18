@@ -7,7 +7,17 @@
   "pnpm": {
     "overrides": {
       "vitest>jsdom": "26.1.0"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@heroui/shared-utils",
+      "@parcel/watcher",
+      "@swc/core",
+      "@tailwindcss/oxide",
+      "esbuild",
+      "lmdb",
+      "msgpackr-extract",
+      "unrs-resolver"
+    ]
   },
   "private": true,
   "scripts": {
