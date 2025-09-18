@@ -13,10 +13,10 @@
       "@parcel/watcher",
       "@swc/core",
       "@tailwindcss/oxide",
+      "carbon-components-svelte",
       "esbuild",
       "lmdb",
-      "msgpackr-extract",
-      "unrs-resolver"
+      "msgpackr-extract"
     ]
   },
   "private": true,

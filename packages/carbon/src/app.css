@@ -1,0 +1,26 @@
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.extension-root {
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+}
+
+.grow {
+	flex: 1;
+}
