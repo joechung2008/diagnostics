@@ -30,7 +30,7 @@
     "vite": "^7.1.6",
     "vitest": "^3.2.4"
   },
-  "name": "diagnostics-ant",
+  "name": "@diagnostics/ant",
   "private": true,
   "scripts": {
     "build": "run-s build:*",
