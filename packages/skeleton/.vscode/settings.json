@@ -1,0 +1,13 @@
+{
+	"[svelte]": {
+		"editor.defaultFormatter": "svelte.svelte-vscode"
+	},
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	"tailwindCSS.includeLanguages": {
+		"svelte": "html",
+		"vue-html": "html",
+		"plaintext": "html"
+	}
+}

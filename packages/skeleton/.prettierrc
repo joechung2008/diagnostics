@@ -1,0 +1,16 @@
+{
+	"endOfLine": "auto",
+	"singleQuote": true,
+	"trailingComma": "none",
+	"useTabs": true,
+	"plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
+	"overrides": [
+		{
+			"files": "*.svelte",
+			"options": {
+				"parser": "svelte"
+			}
+		}
+	],
+	"tailwindStylesheet": "./src/app.css"
+}
