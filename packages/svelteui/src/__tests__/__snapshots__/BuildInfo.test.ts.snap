@@ -1,0 +1,93 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BuildInfo > should render build version correctly 1`] = `
+<div>
+  <div
+    class="table-container svelte-1dur3k8"
+  >
+    <table
+      aria-label="Build Information"
+      class="svelte-1dur3k8"
+    >
+      <thead>
+        <tr>
+          <th
+            class="svelte-1dur3k8"
+          >
+            Name
+          </th>
+           
+          <th
+            class="svelte-1dur3k8"
+          >
+            Value
+          </th>
+        </tr>
+      </thead>
+       
+      <tbody>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Build Version
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            1.2.3
+          </td>
+           
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`BuildInfo > should render different build version 1`] = `
+<div>
+  <div
+    class="table-container svelte-1dur3k8"
+  >
+    <table
+      aria-label="Build Information"
+      class="svelte-1dur3k8"
+    >
+      <thead>
+        <tr>
+          <th
+            class="svelte-1dur3k8"
+          >
+            Name
+          </th>
+           
+          <th
+            class="svelte-1dur3k8"
+          >
+            Value
+          </th>
+        </tr>
+      </thead>
+       
+      <tbody>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Build Version
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            2.0.0-beta.1
+          </td>
+           
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

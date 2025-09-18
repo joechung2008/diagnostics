@@ -1,0 +1,193 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Configuration > should render configuration with multiple key-value pairs 1`] = `
+<div>
+  <div>
+    <h2
+      class="svelte-1riupzq"
+      id="configuration"
+    >
+      Configuration
+    </h2>
+     
+    <div
+      class="table-container svelte-1riupzq"
+    >
+      <table
+        aria-labelledby="configuration"
+        class="svelte-1riupzq"
+      >
+        <thead>
+          <tr>
+            <th
+              class="svelte-1riupzq"
+            >
+              Key
+            </th>
+             
+            <th
+              class="svelte-1riupzq"
+            >
+              Value
+            </th>
+          </tr>
+        </thead>
+         
+        <tbody>
+          <tr>
+            <td
+              class="svelte-1riupzq"
+            >
+              app.name
+            </td>
+             
+            <td
+              class="svelte-1riupzq"
+            >
+              MyApp
+            </td>
+             
+          </tr>
+          <tr>
+            <td
+              class="svelte-1riupzq"
+            >
+              app.version
+            </td>
+             
+            <td
+              class="svelte-1riupzq"
+            >
+              1.0.0
+            </td>
+             
+          </tr>
+          <tr>
+            <td
+              class="svelte-1riupzq"
+            >
+              database.url
+            </td>
+             
+            <td
+              class="svelte-1riupzq"
+            >
+              postgresql://localhost:5432/mydb
+            </td>
+             
+          </tr>
+          <tr>
+            <td
+              class="svelte-1riupzq"
+            >
+              features.logging
+            </td>
+             
+            <td
+              class="svelte-1riupzq"
+            >
+              true
+            </td>
+             
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Configuration > should render configuration with single key-value pair 1`] = `
+<div>
+  <div>
+    <h2
+      class="svelte-1riupzq"
+      id="configuration"
+    >
+      Configuration
+    </h2>
+     
+    <div
+      class="table-container svelte-1riupzq"
+    >
+      <table
+        aria-labelledby="configuration"
+        class="svelte-1riupzq"
+      >
+        <thead>
+          <tr>
+            <th
+              class="svelte-1riupzq"
+            >
+              Key
+            </th>
+             
+            <th
+              class="svelte-1riupzq"
+            >
+              Value
+            </th>
+          </tr>
+        </thead>
+         
+        <tbody>
+          <tr>
+            <td
+              class="svelte-1riupzq"
+            >
+              app.name
+            </td>
+             
+            <td
+              class="svelte-1riupzq"
+            >
+              MyApp
+            </td>
+             
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Configuration > should render empty configuration 1`] = `
+<div>
+  <div>
+    <h2
+      class="svelte-1riupzq"
+      id="configuration"
+    >
+      Configuration
+    </h2>
+     
+    <div
+      class="table-container svelte-1riupzq"
+    >
+      <table
+        aria-labelledby="configuration"
+        class="svelte-1riupzq"
+      >
+        <thead>
+          <tr>
+            <th
+              class="svelte-1riupzq"
+            >
+              Key
+            </th>
+             
+            <th
+              class="svelte-1riupzq"
+            >
+              Value
+            </th>
+          </tr>
+        </thead>
+         
+        <tbody />
+      </table>
+    </div>
+  </div>
+</div>
+`;

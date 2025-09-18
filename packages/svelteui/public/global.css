@@ -1,0 +1,40 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+ * Chevron rotation using CSS attribute selectors instead of Svelte state:
+ * - SvelteUI Menu manages aria-expanded internally, not on slotted controls
+ * - CSS [aria-expanded] selector provides reliable state detection
+ * - Direct SVG targeting ensures smooth transforms without layout issues
+ */
+.chevron {
+  transition: transform 0.2s ease;
+  transform: rotate(0deg);
+}
+
+.menu-trigger[aria-expanded='true'] .chevron {
+  transform: rotate(180deg);
+}
+
+.extension-link {
+  justify-content: flex-start;
+  padding: 1rem 0.5rem !important;
+  width: 100%;
+}

@@ -1,0 +1,219 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Extensions > should filter out extension errors and only show extension infos 1`] = `
+<div>
+  <nav
+    aria-label="Extensions"
+    class="svelte-4iy04k"
+  >
+    
+    
+     
+    <button
+      class="extension-link svelteui-c-jlBcFc svelteui-Button-root svelteui-c-jlBcFc-cWGvDy-variation-subtle svelteui-c-jlBcFc-iPJLV-css svelte-5xpm5q"
+      tabindex="0"
+    >
+       
+      AnotherGoodExtension
+       
+       
+       
+    </button>
+    
+    
+    
+     
+    <button
+      class="extension-link svelteui-c-jlBcFc svelteui-Button-root svelteui-c-jlBcFc-cWGvDy-variation-subtle svelteui-c-jlBcFc-iPJLV-css svelte-5xpm5q"
+      tabindex="0"
+    >
+       
+      GoodExtension
+       
+       
+       
+    </button>
+    
+  </nav>
+</div>
+`;
+
+exports[`Extensions > should handle extensions with special characters in names 1`] = `
+<div>
+  <nav
+    aria-label="Extensions"
+    class="svelte-4iy04k"
+  >
+    
+    
+     
+    <button
+      class="extension-link svelteui-c-jlBcFc svelteui-Button-root svelteui-c-jlBcFc-cWGvDy-variation-subtle svelteui-c-jlBcFc-iPJLV-css svelte-5xpm5q"
+      tabindex="0"
+    >
+       
+      Another@Special#Extension
+       
+       
+       
+    </button>
+    
+    
+    
+     
+    <button
+      class="extension-link svelteui-c-jlBcFc svelteui-Button-root svelteui-c-jlBcFc-cWGvDy-variation-subtle svelteui-c-jlBcFc-iPJLV-css svelte-5xpm5q"
+      tabindex="0"
+    >
+       
+      Special_Extension-v2.1.0
+       
+       
+       
+    </button>
+    
+  </nav>
+</div>
+`;
+
+exports[`Extensions > should handle onLinkClick prop 1`] = `
+<div>
+  <nav
+    aria-label="Extensions"
+    class="svelte-4iy04k"
+  >
+    
+    
+     
+    <button
+      class="extension-link svelteui-c-jlBcFc svelteui-Button-root svelteui-c-jlBcFc-cWGvDy-variation-subtle svelteui-c-jlBcFc-iPJLV-css svelte-5xpm5q"
+      tabindex="0"
+    >
+       
+      ClickableExtension
+       
+       
+       
+    </button>
+    
+  </nav>
+</div>
+`;
+
+exports[`Extensions > should render empty extensions object 1`] = `
+<div>
+  <nav
+    aria-label="Extensions"
+    class="svelte-4iy04k"
+  />
+</div>
+`;
+
+exports[`Extensions > should render extensions with full extension info including config and stage definition 1`] = `
+<div>
+  <nav
+    aria-label="Extensions"
+    class="svelte-4iy04k"
+  >
+    
+    
+     
+    <button
+      class="extension-link svelteui-c-jlBcFc svelteui-Button-root svelteui-c-jlBcFc-cWGvDy-variation-subtle svelteui-c-jlBcFc-iPJLV-css svelte-5xpm5q"
+      tabindex="0"
+    >
+       
+      FullExtension
+       
+       
+       
+    </button>
+    
+  </nav>
+</div>
+`;
+
+exports[`Extensions > should render multiple extension infos sorted alphabetically 1`] = `
+<div>
+  <nav
+    aria-label="Extensions"
+    class="svelte-4iy04k"
+  >
+    
+    
+     
+    <button
+      class="extension-link svelteui-c-jlBcFc svelteui-Button-root svelteui-c-jlBcFc-cWGvDy-variation-subtle svelteui-c-jlBcFc-iPJLV-css svelte-5xpm5q"
+      tabindex="0"
+    >
+       
+      AlphaExtension
+       
+       
+       
+    </button>
+    
+    
+    
+     
+    <button
+      class="extension-link svelteui-c-jlBcFc svelteui-Button-root svelteui-c-jlBcFc-cWGvDy-variation-subtle svelteui-c-jlBcFc-iPJLV-css svelte-5xpm5q"
+      tabindex="0"
+    >
+       
+      BetaExtension
+       
+       
+       
+    </button>
+    
+    
+    
+     
+    <button
+      class="extension-link svelteui-c-jlBcFc svelteui-Button-root svelteui-c-jlBcFc-cWGvDy-variation-subtle svelteui-c-jlBcFc-iPJLV-css svelte-5xpm5q"
+      tabindex="0"
+    >
+       
+      ZebraExtension
+       
+       
+       
+    </button>
+    
+  </nav>
+</div>
+`;
+
+exports[`Extensions > should render only extension errors (no visible links) 1`] = `
+<div>
+  <nav
+    aria-label="Extensions"
+    class="svelte-4iy04k"
+  />
+</div>
+`;
+
+exports[`Extensions > should render single extension info 1`] = `
+<div>
+  <nav
+    aria-label="Extensions"
+    class="svelte-4iy04k"
+  >
+    
+    
+     
+    <button
+      class="extension-link svelteui-c-jlBcFc svelteui-Button-root svelteui-c-jlBcFc-cWGvDy-variation-subtle svelteui-c-jlBcFc-iPJLV-css svelte-5xpm5q"
+      tabindex="0"
+    >
+       
+      TestExtension
+       
+       
+       
+    </button>
+    
+  </nav>
+</div>
+`;

@@ -1,0 +1,349 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ServerInfo > should render server information correctly 1`] = `
+<div>
+  <div
+    class="table-container svelte-1dur3k8"
+  >
+    <table
+      aria-label="Server Information"
+      class="svelte-1dur3k8"
+    >
+      <thead>
+        <tr>
+          <th
+            class="svelte-1dur3k8"
+          >
+            Name
+          </th>
+           
+          <th
+            class="svelte-1dur3k8"
+          >
+            Value
+          </th>
+        </tr>
+      </thead>
+       
+      <tbody>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Hostname
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            web-server-01
+          </td>
+           
+        </tr>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Uptime
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            3600
+          </td>
+           
+        </tr>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Server ID
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            srv-abc123
+          </td>
+           
+        </tr>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Deployment ID
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            deploy-12345
+          </td>
+           
+        </tr>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Node Versions
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            v18.17.0
+          </td>
+           
+        </tr>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Extension Sync | Total Sync All Count
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            42
+          </td>
+           
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`ServerInfo > should render with different values 1`] = `
+<div>
+  <div
+    class="table-container svelte-1dur3k8"
+  >
+    <table
+      aria-label="Server Information"
+      class="svelte-1dur3k8"
+    >
+      <thead>
+        <tr>
+          <th
+            class="svelte-1dur3k8"
+          >
+            Name
+          </th>
+           
+          <th
+            class="svelte-1dur3k8"
+          >
+            Value
+          </th>
+        </tr>
+      </thead>
+       
+      <tbody>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Hostname
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            api-gateway-02
+          </td>
+           
+        </tr>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Uptime
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            86400
+          </td>
+           
+        </tr>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Server ID
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            srv-def456
+          </td>
+           
+        </tr>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Deployment ID
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            prod-deploy-v2.1
+          </td>
+           
+        </tr>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Node Versions
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            v20.5.1
+          </td>
+           
+        </tr>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Extension Sync | Total Sync All Count
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            156
+          </td>
+           
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`ServerInfo > should render with zero uptime 1`] = `
+<div>
+  <div
+    class="table-container svelte-1dur3k8"
+  >
+    <table
+      aria-label="Server Information"
+      class="svelte-1dur3k8"
+    >
+      <thead>
+        <tr>
+          <th
+            class="svelte-1dur3k8"
+          >
+            Name
+          </th>
+           
+          <th
+            class="svelte-1dur3k8"
+          >
+            Value
+          </th>
+        </tr>
+      </thead>
+       
+      <tbody>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Hostname
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            localhost
+          </td>
+           
+        </tr>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Uptime
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            0
+          </td>
+           
+        </tr>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Server ID
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            srv-test001
+          </td>
+           
+        </tr>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Deployment ID
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            test-deploy
+          </td>
+           
+        </tr>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Node Versions
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            v19.8.1
+          </td>
+           
+        </tr>
+        <tr>
+          <td
+            class="svelte-1dur3k8"
+          >
+            Extension Sync | Total Sync All Count
+          </td>
+           
+          <td
+            class="svelte-1dur3k8"
+          >
+            0
+          </td>
+           
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

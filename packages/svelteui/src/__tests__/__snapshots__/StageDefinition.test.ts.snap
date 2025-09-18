@@ -1,0 +1,262 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`StageDefinition > should render empty stage definition 1`] = `
+<div>
+  <div>
+    <h2
+      class="svelte-1riupzq"
+      id="stage-definition"
+    >
+      Stage Definitions
+    </h2>
+     
+    <div
+      class="table-container svelte-1riupzq"
+    >
+      <table
+        aria-labelledby="stage-definition"
+        class="svelte-1riupzq"
+      >
+        <thead>
+          <tr>
+            <th
+              class="svelte-1riupzq"
+            >
+              Key
+            </th>
+             
+            <th
+              class="svelte-1riupzq"
+            >
+              Value
+            </th>
+          </tr>
+        </thead>
+         
+        <tbody />
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StageDefinition > should render stage definition with empty arrays 1`] = `
+<div>
+  <div>
+    <h2
+      class="svelte-1riupzq"
+      id="stage-definition"
+    >
+      Stage Definitions
+    </h2>
+     
+    <div
+      class="table-container svelte-1riupzq"
+    >
+      <table
+        aria-labelledby="stage-definition"
+        class="svelte-1riupzq"
+      >
+        <thead>
+          <tr>
+            <th
+              class="svelte-1riupzq"
+            >
+              Key
+            </th>
+             
+            <th
+              class="svelte-1riupzq"
+            >
+              Value
+            </th>
+          </tr>
+        </thead>
+         
+        <tbody>
+          <tr>
+            <td
+              class="svelte-1riupzq"
+            >
+              development
+            </td>
+             
+            <td
+              class="svelte-1riupzq"
+            >
+              
+            </td>
+             
+          </tr>
+          <tr>
+            <td
+              class="svelte-1riupzq"
+            >
+              staging
+            </td>
+             
+            <td
+              class="svelte-1riupzq"
+            >
+              
+            </td>
+             
+          </tr>
+          <tr>
+            <td
+              class="svelte-1riupzq"
+            >
+              production
+            </td>
+             
+            <td
+              class="svelte-1riupzq"
+            >
+              example.com
+            </td>
+             
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StageDefinition > should render stage definition with multiple stages 1`] = `
+<div>
+  <div>
+    <h2
+      class="svelte-1riupzq"
+      id="stage-definition"
+    >
+      Stage Definitions
+    </h2>
+     
+    <div
+      class="table-container svelte-1riupzq"
+    >
+      <table
+        aria-labelledby="stage-definition"
+        class="svelte-1riupzq"
+      >
+        <thead>
+          <tr>
+            <th
+              class="svelte-1riupzq"
+            >
+              Key
+            </th>
+             
+            <th
+              class="svelte-1riupzq"
+            >
+              Value
+            </th>
+          </tr>
+        </thead>
+         
+        <tbody>
+          <tr>
+            <td
+              class="svelte-1riupzq"
+            >
+              development
+            </td>
+             
+            <td
+              class="svelte-1riupzq"
+            >
+              localhost, dev.example.com
+            </td>
+             
+          </tr>
+          <tr>
+            <td
+              class="svelte-1riupzq"
+            >
+              staging
+            </td>
+             
+            <td
+              class="svelte-1riupzq"
+            >
+              staging.example.com, api-staging.example.com
+            </td>
+             
+          </tr>
+          <tr>
+            <td
+              class="svelte-1riupzq"
+            >
+              production
+            </td>
+             
+            <td
+              class="svelte-1riupzq"
+            >
+              example.com, api.example.com, cdn.example.com
+            </td>
+             
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StageDefinition > should render stage definition with single stage 1`] = `
+<div>
+  <div>
+    <h2
+      class="svelte-1riupzq"
+      id="stage-definition"
+    >
+      Stage Definitions
+    </h2>
+     
+    <div
+      class="table-container svelte-1riupzq"
+    >
+      <table
+        aria-labelledby="stage-definition"
+        class="svelte-1riupzq"
+      >
+        <thead>
+          <tr>
+            <th
+              class="svelte-1riupzq"
+            >
+              Key
+            </th>
+             
+            <th
+              class="svelte-1riupzq"
+            >
+              Value
+            </th>
+          </tr>
+        </thead>
+         
+        <tbody>
+          <tr>
+            <td
+              class="svelte-1riupzq"
+            >
+              development
+            </td>
+             
+            <td
+              class="svelte-1riupzq"
+            >
+              localhost, dev.example.com
+            </td>
+             
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;

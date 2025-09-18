@@ -1,0 +1,523 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Extension > should render extension with empty config object 1`] = `
+<div>
+  <div
+    class="extension svelte-19guq2i"
+    role="tabpanel"
+    tabindex="0"
+  >
+    <h1
+      class="title svelte-19guq2i"
+    >
+      EmptyConfigExtension
+    </h1>
+     
+    <div
+      class="content svelte-19guq2i"
+    >
+      <div>
+        <h2
+          class="svelte-1riupzq"
+          id="configuration"
+        >
+          Configuration
+        </h2>
+         
+        <div
+          class="table-container svelte-1riupzq"
+        >
+          <table
+            aria-labelledby="configuration"
+            class="svelte-1riupzq"
+          >
+            <thead>
+              <tr>
+                <th
+                  class="svelte-1riupzq"
+                >
+                  Key
+                </th>
+                 
+                <th
+                  class="svelte-1riupzq"
+                >
+                  Value
+                </th>
+              </tr>
+            </thead>
+             
+            <tbody />
+          </table>
+        </div>
+      </div>
+       
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Extension > should render extension with empty stage definition object 1`] = `
+<div>
+  <div
+    class="extension svelte-19guq2i"
+    role="tabpanel"
+    tabindex="0"
+  >
+    <h1
+      class="title svelte-19guq2i"
+    >
+      EmptyStageExtension
+    </h1>
+     
+    <div
+      class="content svelte-19guq2i"
+    >
+       
+      <div>
+        <h2
+          class="svelte-1riupzq"
+          id="stage-definition"
+        >
+          Stage Definitions
+        </h2>
+         
+        <div
+          class="table-container svelte-1riupzq"
+        >
+          <table
+            aria-labelledby="stage-definition"
+            class="svelte-1riupzq"
+          >
+            <thead>
+              <tr>
+                <th
+                  class="svelte-1riupzq"
+                >
+                  Key
+                </th>
+                 
+                <th
+                  class="svelte-1riupzq"
+                >
+                  Value
+                </th>
+              </tr>
+            </thead>
+             
+            <tbody />
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Extension > should render extension with name and config 1`] = `
+<div>
+  <div
+    class="extension svelte-19guq2i"
+    role="tabpanel"
+    tabindex="0"
+  >
+    <h1
+      class="title svelte-19guq2i"
+    >
+      DatabaseExtension
+    </h1>
+     
+    <div
+      class="content svelte-19guq2i"
+    >
+      <div>
+        <h2
+          class="svelte-1riupzq"
+          id="configuration"
+        >
+          Configuration
+        </h2>
+         
+        <div
+          class="table-container svelte-1riupzq"
+        >
+          <table
+            aria-labelledby="configuration"
+            class="svelte-1riupzq"
+          >
+            <thead>
+              <tr>
+                <th
+                  class="svelte-1riupzq"
+                >
+                  Key
+                </th>
+                 
+                <th
+                  class="svelte-1riupzq"
+                >
+                  Value
+                </th>
+              </tr>
+            </thead>
+             
+            <tbody>
+              <tr>
+                <td
+                  class="svelte-1riupzq"
+                >
+                  db.host
+                </td>
+                 
+                <td
+                  class="svelte-1riupzq"
+                >
+                  localhost
+                </td>
+                 
+              </tr>
+              <tr>
+                <td
+                  class="svelte-1riupzq"
+                >
+                  db.port
+                </td>
+                 
+                <td
+                  class="svelte-1riupzq"
+                >
+                  5432
+                </td>
+                 
+              </tr>
+              <tr>
+                <td
+                  class="svelte-1riupzq"
+                >
+                  db.name
+                </td>
+                 
+                <td
+                  class="svelte-1riupzq"
+                >
+                  myapp
+                </td>
+                 
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+       
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Extension > should render extension with name and stage definition 1`] = `
+<div>
+  <div
+    class="extension svelte-19guq2i"
+    role="tabpanel"
+    tabindex="0"
+  >
+    <h1
+      class="title svelte-19guq2i"
+    >
+      ApiExtension
+    </h1>
+     
+    <div
+      class="content svelte-19guq2i"
+    >
+       
+      <div>
+        <h2
+          class="svelte-1riupzq"
+          id="stage-definition"
+        >
+          Stage Definitions
+        </h2>
+         
+        <div
+          class="table-container svelte-1riupzq"
+        >
+          <table
+            aria-labelledby="stage-definition"
+            class="svelte-1riupzq"
+          >
+            <thead>
+              <tr>
+                <th
+                  class="svelte-1riupzq"
+                >
+                  Key
+                </th>
+                 
+                <th
+                  class="svelte-1riupzq"
+                >
+                  Value
+                </th>
+              </tr>
+            </thead>
+             
+            <tbody>
+              <tr>
+                <td
+                  class="svelte-1riupzq"
+                >
+                  development
+                </td>
+                 
+                <td
+                  class="svelte-1riupzq"
+                >
+                  localhost:3000, dev.api.com
+                </td>
+                 
+              </tr>
+              <tr>
+                <td
+                  class="svelte-1riupzq"
+                >
+                  production
+                </td>
+                 
+                <td
+                  class="svelte-1riupzq"
+                >
+                  api.com, api.example.com
+                </td>
+                 
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Extension > should render extension with name, config, and stage definition 1`] = `
+<div>
+  <div
+    class="extension svelte-19guq2i"
+    role="tabpanel"
+    tabindex="0"
+  >
+    <h1
+      class="title svelte-19guq2i"
+    >
+      FullFeaturedExtension
+    </h1>
+     
+    <div
+      class="content svelte-19guq2i"
+    >
+      <div>
+        <h2
+          class="svelte-1riupzq"
+          id="configuration"
+        >
+          Configuration
+        </h2>
+         
+        <div
+          class="table-container svelte-1riupzq"
+        >
+          <table
+            aria-labelledby="configuration"
+            class="svelte-1riupzq"
+          >
+            <thead>
+              <tr>
+                <th
+                  class="svelte-1riupzq"
+                >
+                  Key
+                </th>
+                 
+                <th
+                  class="svelte-1riupzq"
+                >
+                  Value
+                </th>
+              </tr>
+            </thead>
+             
+            <tbody>
+              <tr>
+                <td
+                  class="svelte-1riupzq"
+                >
+                  api.version
+                </td>
+                 
+                <td
+                  class="svelte-1riupzq"
+                >
+                  v1
+                </td>
+                 
+              </tr>
+              <tr>
+                <td
+                  class="svelte-1riupzq"
+                >
+                  auth.enabled
+                </td>
+                 
+                <td
+                  class="svelte-1riupzq"
+                >
+                  true
+                </td>
+                 
+              </tr>
+              <tr>
+                <td
+                  class="svelte-1riupzq"
+                >
+                  rate.limit
+                </td>
+                 
+                <td
+                  class="svelte-1riupzq"
+                >
+                  1000
+                </td>
+                 
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+       
+      <div>
+        <h2
+          class="svelte-1riupzq"
+          id="stage-definition"
+        >
+          Stage Definitions
+        </h2>
+         
+        <div
+          class="table-container svelte-1riupzq"
+        >
+          <table
+            aria-labelledby="stage-definition"
+            class="svelte-1riupzq"
+          >
+            <thead>
+              <tr>
+                <th
+                  class="svelte-1riupzq"
+                >
+                  Key
+                </th>
+                 
+                <th
+                  class="svelte-1riupzq"
+                >
+                  Value
+                </th>
+              </tr>
+            </thead>
+             
+            <tbody>
+              <tr>
+                <td
+                  class="svelte-1riupzq"
+                >
+                  development
+                </td>
+                 
+                <td
+                  class="svelte-1riupzq"
+                >
+                  localhost:8080
+                </td>
+                 
+              </tr>
+              <tr>
+                <td
+                  class="svelte-1riupzq"
+                >
+                  staging
+                </td>
+                 
+                <td
+                  class="svelte-1riupzq"
+                >
+                  staging-api.com
+                </td>
+                 
+              </tr>
+              <tr>
+                <td
+                  class="svelte-1riupzq"
+                >
+                  production
+                </td>
+                 
+                <td
+                  class="svelte-1riupzq"
+                >
+                  api.production.com, api-backup.production.com
+                </td>
+                 
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Extension > should render extension with only name 1`] = `
+<div>
+  <div
+    class="extension svelte-19guq2i"
+    role="tabpanel"
+    tabindex="0"
+  >
+    <h1
+      class="title svelte-19guq2i"
+    >
+      TestExtension
+    </h1>
+     
+    <div
+      class="content svelte-19guq2i"
+    >
+       
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Extension > should render extension with special characters in name 1`] = `
+<div>
+  <div
+    class="extension svelte-19guq2i"
+    role="tabpanel"
+    tabindex="0"
+  >
+    <h1
+      class="title svelte-19guq2i"
+    >
+      Test_Extension-v2.1.0
+    </h1>
+     
+    <div
+      class="content svelte-19guq2i"
+    >
+       
+    </div>
+  </div>
+</div>
+`;
