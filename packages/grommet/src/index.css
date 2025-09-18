@@ -1,0 +1,44 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.extension-root {
+  display: flex;
+  flex-direction: column;
+  max-height: max-content;
+  overflow-y: auto;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100vh;
+}
+
+.grow {
+  flex: 1;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.stack {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  height: 100%;
+}
+
+.tab-panel {
+  flex: 1;
+  overflow-y: auto;
+}

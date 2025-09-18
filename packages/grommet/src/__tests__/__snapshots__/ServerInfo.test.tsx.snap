@@ -1,0 +1,119 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ServerInfo > matches snapshot 1`] = `
+<div>
+  <table
+    aria-label="Server Info"
+    class="StyledTable-sc-1m3u5g-6 jlczSm"
+  >
+    <thead
+      class="StyledTable__StyledTableHeader-sc-1m3u5g-4"
+    >
+      <tr
+        class="StyledTable__StyledTableRow-sc-1m3u5g-2"
+      >
+        <th
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
+          scope="col"
+        >
+          Name
+        </th>
+        <th
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
+          scope="col"
+        >
+          Value
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="StyledTable__StyledTableBody-sc-1m3u5g-3"
+    >
+      <tr
+        class="StyledTable__StyledTableRow-sc-1m3u5g-2"
+      >
+        <td
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+        >
+          Hostname
+        </td>
+        <td
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+        >
+          localhost
+        </td>
+      </tr>
+      <tr
+        class="StyledTable__StyledTableRow-sc-1m3u5g-2"
+      >
+        <td
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+        >
+          Uptime
+        </td>
+        <td
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+        >
+          123456
+        </td>
+      </tr>
+      <tr
+        class="StyledTable__StyledTableRow-sc-1m3u5g-2"
+      >
+        <td
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+        >
+          Server ID
+        </td>
+        <td
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+        >
+          srv-001
+        </td>
+      </tr>
+      <tr
+        class="StyledTable__StyledTableRow-sc-1m3u5g-2"
+      >
+        <td
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+        >
+          Deployment ID
+        </td>
+        <td
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+        >
+          dev-123
+        </td>
+      </tr>
+      <tr
+        class="StyledTable__StyledTableRow-sc-1m3u5g-2"
+      >
+        <td
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+        >
+          Node Versions
+        </td>
+        <td
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+        >
+          node: 18.0.0, npm: 9.0.0
+        </td>
+      </tr>
+      <tr
+        class="StyledTable__StyledTableRow-sc-1m3u5g-2"
+      >
+        <td
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+        >
+          Extension Sync | Total Sync All Count
+        </td>
+        <td
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+        >
+          5
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
