@@ -1,0 +1,18 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Vitest Tests",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm", // or "yarn", "pnpm"
+      "runtimeArgs": ["run", "test"], // Replace "test" with your actual test script name in package.json
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
