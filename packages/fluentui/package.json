@@ -35,6 +35,9 @@
     "npm": ">=10"
   },
   "name": "@diagnostics/fluentui",
+  "overrides": {
+    "scheduler": "0.26.0"
+  },
   "private": true,
   "scripts": {
     "build": "run-s build:tsc build:vite",
