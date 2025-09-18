@@ -1,8 +1,15 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vitest/config";
+import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      // point imports of 'antd' to the package's main lib entry to avoid resolution issues
+      antd: path.resolve(__dirname, "node_modules/antd/lib/index.js"),
+    },
+  },
   build: {
     rollupOptions: {
       output: {
