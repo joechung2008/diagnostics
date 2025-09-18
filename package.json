@@ -28,7 +28,8 @@
     "build": "turbo run build",
     "dev": "turbo dev",
     "lint": "turbo run lint",
-    "start": "turbo run start"
+    "start": "turbo run start",
+    "test": "turbo run test"
   },
   "type": "module",
   "version": "0.1.0",
