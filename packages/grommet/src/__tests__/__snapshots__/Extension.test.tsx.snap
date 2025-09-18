@@ -6,19 +6,19 @@ exports[`Extension > renders with extensionName and config 1`] = `
     class="extension-root grow"
   >
     <h2
-      class="StyledHeading-sc-1rdh4aw-0 bfBFnV"
+      class="StyledHeading-sc-1rdh4aw-0 fEbPmv"
     >
       TestExtension
     </h2>
     <div>
       <h3
-        class="StyledHeading-sc-1rdh4aw-0 chLmqp"
+        class="StyledHeading-sc-1rdh4aw-0 hrdewH"
       >
         Configuration
       </h3>
       <table
         aria-label="Configuration"
-        class="StyledTable-sc-1m3u5g-6 jlczSm"
+        class="StyledTable-sc-1m3u5g-6 wtbPz"
       >
         <thead
           class="StyledTable__StyledTableHeader-sc-1m3u5g-4"
@@ -27,13 +27,13 @@ exports[`Extension > renders with extensionName and config 1`] = `
             class="StyledTable__StyledTableRow-sc-1m3u5g-2"
           >
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 cYkJuW"
               scope="col"
             >
               Key
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 cYkJuW"
               scope="col"
             >
               Value
@@ -47,12 +47,12 @@ exports[`Extension > renders with extensionName and config 1`] = `
             class="StyledTable__StyledTableRow-sc-1m3u5g-2"
           >
             <td
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
             >
               apiUrl
             </td>
             <td
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
             >
               https://example.com
             </td>
@@ -70,19 +70,19 @@ exports[`Extension > renders with extensionName and stageDefinition 1`] = `
     class="extension-root grow"
   >
     <h2
-      class="StyledHeading-sc-1rdh4aw-0 bfBFnV"
+      class="StyledHeading-sc-1rdh4aw-0 fEbPmv"
     >
       TestExtension
     </h2>
     <div>
       <h3
-        class="StyledHeading-sc-1rdh4aw-0 chLmqp"
+        class="StyledHeading-sc-1rdh4aw-0 hrdewH"
       >
         Stage Definitions
       </h3>
       <table
         aria-label="Stage Definitions"
-        class="StyledTable-sc-1m3u5g-6 jlczSm"
+        class="StyledTable-sc-1m3u5g-6 wtbPz"
       >
         <thead
           class="StyledTable__StyledTableHeader-sc-1m3u5g-4"
@@ -91,13 +91,13 @@ exports[`Extension > renders with extensionName and stageDefinition 1`] = `
             class="StyledTable__StyledTableRow-sc-1m3u5g-2"
           >
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 cYkJuW"
               scope="col"
             >
               Key
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 cYkJuW"
               scope="col"
             >
               Value
@@ -111,12 +111,12 @@ exports[`Extension > renders with extensionName and stageDefinition 1`] = `
             class="StyledTable__StyledTableRow-sc-1m3u5g-2"
           >
             <td
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
             >
               build
             </td>
             <td
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
             >
               compile
             </td>
@@ -134,19 +134,19 @@ exports[`Extension > renders with extensionName, config, and stageDefinition 1`]
     class="extension-root grow"
   >
     <h2
-      class="StyledHeading-sc-1rdh4aw-0 bfBFnV"
+      class="StyledHeading-sc-1rdh4aw-0 fEbPmv"
     >
       TestExtension
     </h2>
     <div>
       <h3
-        class="StyledHeading-sc-1rdh4aw-0 chLmqp"
+        class="StyledHeading-sc-1rdh4aw-0 hrdewH"
       >
         Configuration
       </h3>
       <table
         aria-label="Configuration"
-        class="StyledTable-sc-1m3u5g-6 jlczSm"
+        class="StyledTable-sc-1m3u5g-6 wtbPz"
       >
         <thead
           class="StyledTable__StyledTableHeader-sc-1m3u5g-4"
@@ -155,13 +155,13 @@ exports[`Extension > renders with extensionName, config, and stageDefinition 1`]
             class="StyledTable__StyledTableRow-sc-1m3u5g-2"
           >
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 cYkJuW"
               scope="col"
             >
               Key
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 cYkJuW"
               scope="col"
             >
               Value
@@ -175,12 +175,12 @@ exports[`Extension > renders with extensionName, config, and stageDefinition 1`]
             class="StyledTable__StyledTableRow-sc-1m3u5g-2"
           >
             <td
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
             >
               apiUrl
             </td>
             <td
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
             >
               https://example.com
             </td>
@@ -190,13 +190,13 @@ exports[`Extension > renders with extensionName, config, and stageDefinition 1`]
     </div>
     <div>
       <h3
-        class="StyledHeading-sc-1rdh4aw-0 chLmqp"
+        class="StyledHeading-sc-1rdh4aw-0 hrdewH"
       >
         Stage Definitions
       </h3>
       <table
         aria-label="Stage Definitions"
-        class="StyledTable-sc-1m3u5g-6 jlczSm"
+        class="StyledTable-sc-1m3u5g-6 wtbPz"
       >
         <thead
           class="StyledTable__StyledTableHeader-sc-1m3u5g-4"
@@ -205,13 +205,13 @@ exports[`Extension > renders with extensionName, config, and stageDefinition 1`]
             class="StyledTable__StyledTableRow-sc-1m3u5g-2"
           >
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 cYkJuW"
               scope="col"
             >
               Key
             </th>
             <th
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 cYkJuW"
               scope="col"
             >
               Value
@@ -225,12 +225,12 @@ exports[`Extension > renders with extensionName, config, and stageDefinition 1`]
             class="StyledTable__StyledTableRow-sc-1m3u5g-2"
           >
             <td
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
             >
               build
             </td>
             <td
-              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
             >
               compile
             </td>
@@ -248,7 +248,7 @@ exports[`Extension > renders with only extensionName 1`] = `
     class="extension-root grow"
   >
     <h2
-      class="StyledHeading-sc-1rdh4aw-0 bfBFnV"
+      class="StyledHeading-sc-1rdh4aw-0 fEbPmv"
     >
       TestExtension
     </h2>

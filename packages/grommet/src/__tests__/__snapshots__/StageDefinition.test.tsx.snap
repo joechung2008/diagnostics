@@ -4,13 +4,13 @@ exports[`StageDefinition > matches snapshot 1`] = `
 <div>
   <div>
     <h3
-      class="StyledHeading-sc-1rdh4aw-0 chLmqp"
+      class="StyledHeading-sc-1rdh4aw-0 hrdewH"
     >
       Stage Definitions
     </h3>
     <table
       aria-label="Stage Definitions"
-      class="StyledTable-sc-1m3u5g-6 jlczSm"
+      class="StyledTable-sc-1m3u5g-6 wtbPz"
     >
       <thead
         class="StyledTable__StyledTableHeader-sc-1m3u5g-4"
@@ -19,13 +19,13 @@ exports[`StageDefinition > matches snapshot 1`] = `
           class="StyledTable__StyledTableRow-sc-1m3u5g-2"
         >
           <th
-            class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
+            class="StyledTable__StyledTableCell-sc-1m3u5g-0 cYkJuW"
             scope="col"
           >
             Key
           </th>
           <th
-            class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
+            class="StyledTable__StyledTableCell-sc-1m3u5g-0 cYkJuW"
             scope="col"
           >
             Value
@@ -39,12 +39,12 @@ exports[`StageDefinition > matches snapshot 1`] = `
           class="StyledTable__StyledTableRow-sc-1m3u5g-2"
         >
           <td
-            class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+            class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
           >
             build
           </td>
           <td
-            class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+            class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
           >
             compile, test
           </td>
@@ -53,12 +53,12 @@ exports[`StageDefinition > matches snapshot 1`] = `
           class="StyledTable__StyledTableRow-sc-1m3u5g-2"
         >
           <td
-            class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+            class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
           >
             deploy
           </td>
           <td
-            class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+            class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
           >
             upload, restart
           </td>
