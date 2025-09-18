@@ -1,0 +1,22 @@
+.extensions-root {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+  padding: 0.25rem;
+}
+
+.navButton {
+  font-weight: 500;
+  min-height: fit-content;
+  padding: 0.25rem 0;
+}
+
+.navButton:hover {
+  background-color: var(--spectrum-global-color-gray-200);
+}
+
+.navButton:focus {
+  outline: 2px solid var(--spectrum-global-color-blue-500);
+  outline-offset: 2px;
+}

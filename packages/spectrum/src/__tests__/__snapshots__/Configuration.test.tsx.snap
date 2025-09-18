@@ -1,0 +1,236 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Configuration > renders correctly 1`] = `
+<div
+  class="_t8qIa_spectrum kDKRXa_spectrum kDKRXa_i18nFontFamily YqfL3a_spectrum--light _1DrGeG_spectrum--large XhWg9q_spectrum XhWg9q_spectrum--dark XhWg9q_spectrum--darkest XhWg9q_spectrum--large XhWg9q_spectrum--light XhWg9q_spectrum--lightest XhWg9q_spectrum--medium"
+  dir="ltr"
+  lang="en-US"
+  style="isolation: isolate; color-scheme: light;"
+>
+  <div>
+    <h3
+      id="configuration"
+    >
+      Configuration
+    </h3>
+    <span
+      data-focus-scope-start="true"
+      hidden=""
+    />
+    <div
+      aria-colcount="2"
+      aria-describedby=""
+      aria-labelledby="configuration"
+      aria-rowcount="3"
+      class="hm005a_spectrum-Table hm005a_spectrum-Table--regular FsDyjq_react-spectrum-Table"
+      data-collection="react-aria-«r1»"
+      id="react-aria-«r0»"
+      role="grid"
+      style="width: 100%;"
+      tabindex="0"
+    >
+      <div
+        class="hm005a_spectrum-Table-headWrapper"
+        role="presentation"
+        style="height: 40px; overflow: hidden; position: relative; scroll-padding-inline-start: 0;"
+      >
+        <div
+          class="spectrum-Table-head"
+          role="rowgroup"
+          style="position: sticky; display: inline-block; overflow: visible; opacity: 1; z-index: 1; contain: size layout style; top: 0px; left: 0px; width: 18014398509481982px; height: 40px;"
+        >
+          <div
+            aria-rowindex="1"
+            role="row"
+            style="position: absolute; overflow: visible; opacity: 1; z-index: 0; contain: size layout style; top: 0px; left: 0px; width: 18014398509481982px; height: 40px;"
+          >
+            <div
+              class="hm005a_spectrum-Table-cellWrapper FsDyjq_react-spectrum-Table-cellWrapper"
+              role="presentation"
+              style="position: absolute; overflow: visible; opacity: 1; z-index: 3; contain: size layout style; top: 0px; left: 0px; width: 9007199254740991px; height: 40px;"
+            >
+              <div
+                aria-colindex="1"
+                class="hm005a_spectrum-Table-headCell FsDyjq_react-spectrum-Table-cell"
+                data-collection="react-aria-«r1»"
+                data-key="$.0"
+                data-react-aria-pressable="true"
+                id="react-aria-«r0»-$.0"
+                role="columnheader"
+                tabindex="-1"
+              >
+                <div
+                  class="hm005a_spectrum-Table-headCellContents"
+                >
+                  Key
+                </div>
+              </div>
+            </div>
+            <div
+              class="hm005a_spectrum-Table-cellWrapper FsDyjq_react-spectrum-Table-cellWrapper"
+              role="presentation"
+              style="position: absolute; overflow: visible; opacity: 1; z-index: 2; contain: size layout style; top: 0px; left: 9007199254740991px; width: 9007199254740991px; height: 40px;"
+            >
+              <div
+                aria-colindex="2"
+                class="hm005a_spectrum-Table-headCell FsDyjq_react-spectrum-Table-cell"
+                data-collection="react-aria-«r1»"
+                data-key="$.1"
+                data-react-aria-pressable="true"
+                id="react-aria-«r0»-$.1"
+                role="columnheader"
+                tabindex="-1"
+              >
+                <div
+                  class="hm005a_spectrum-Table-headCellContents"
+                >
+                  Value
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="hm005a_spectrum-Table-body FsDyjq_react-spectrum-Table-body"
+        role="rowgroup"
+        style="padding: 0px; flex: 1 1 0%; scroll-padding-inline-start: 0; overflow: auto;"
+        tabindex="-1"
+      >
+        <div
+          role="presentation"
+          style="width: 18014398509481982px; height: 102px; pointer-events: auto; position: relative; overflow: visible;"
+        >
+          <div
+            role="presentation"
+            style="position: absolute; overflow: visible; opacity: 1; z-index: 0; contain: size layout style; top: 0px; left: 0px; width: 18014398509481982px; height: 102px;"
+          >
+            <div
+              aria-labelledby="react-aria-«r0»-key1-$.0"
+              aria-rowindex="2"
+              class="hm005a_spectrum-Table-row hm005a_spectrum-Table-row--firstRow FsDyjq_react-spectrum-Table-row"
+              data-collection="react-aria-«r1»"
+              data-key="key1"
+              data-react-aria-pressable="true"
+              id="react-aria-«r5»"
+              role="row"
+              style="position: absolute; overflow: visible; opacity: 1; z-index: 0; contain: size layout style; top: 0px; left: 0px; width: 18014398509481982px; height: 51px;"
+              tabindex="-1"
+            >
+              <div
+                class="hm005a_spectrum-Table-cellWrapper FsDyjq_react-spectrum-Table-cellWrapper"
+                role="presentation"
+                style="position: absolute; overflow: visible; opacity: 1; z-index: 1; contain: size layout style; top: 0px; left: 0px; width: 9007199254740991px; height: 50px;"
+              >
+                <div
+                  aria-colindex="1"
+                  aria-labelledby="react-aria-«r0»-key1-$.0"
+                  class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
+                  data-collection="react-aria-«r1»"
+                  data-key="key1.0"
+                  role="rowheader"
+                  tabindex="-1"
+                >
+                  <span
+                    class="hm005a_spectrum-Table-cellContents"
+                    id="react-aria-«r0»-key1-$.0"
+                  >
+                    key1
+                  </span>
+                </div>
+              </div>
+              <div
+                class="hm005a_spectrum-Table-cellWrapper FsDyjq_react-spectrum-Table-cellWrapper"
+                role="presentation"
+                style="position: absolute; overflow: visible; opacity: 1; z-index: 1; contain: size layout style; top: 0px; left: 9007199254740991px; width: 9007199254740991px; height: 50px;"
+              >
+                <div
+                  aria-colindex="2"
+                  aria-labelledby="react-aria-«r7»"
+                  class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
+                  data-collection="react-aria-«r1»"
+                  data-key="key1.1"
+                  role="gridcell"
+                  tabindex="-1"
+                >
+                  <span
+                    class="hm005a_spectrum-Table-cellContents"
+                    id="react-aria-«r7»"
+                  >
+                    value1
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              aria-labelledby="react-aria-«r0»-key2-$.0"
+              aria-rowindex="3"
+              class="hm005a_spectrum-Table-row hm005a_spectrum-Table-row--lastRow FsDyjq_react-spectrum-Table-row"
+              data-collection="react-aria-«r1»"
+              data-key="key2"
+              data-react-aria-pressable="true"
+              id="react-aria-«r8»"
+              role="row"
+              style="position: absolute; overflow: visible; opacity: 1; z-index: 0; contain: size layout style; top: 51px; left: 0px; width: 18014398509481982px; height: 51px;"
+              tabindex="-1"
+            >
+              <div
+                class="hm005a_spectrum-Table-cellWrapper FsDyjq_react-spectrum-Table-cellWrapper"
+                role="presentation"
+                style="position: absolute; overflow: visible; opacity: 1; z-index: 1; contain: size layout style; top: 0px; left: 0px; width: 9007199254740991px; height: 50px;"
+              >
+                <div
+                  aria-colindex="1"
+                  aria-labelledby="react-aria-«r0»-key2-$.0"
+                  class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
+                  data-collection="react-aria-«r1»"
+                  data-key="key2.0"
+                  role="rowheader"
+                  tabindex="-1"
+                >
+                  <span
+                    class="hm005a_spectrum-Table-cellContents"
+                    id="react-aria-«r0»-key2-$.0"
+                  >
+                    key2
+                  </span>
+                </div>
+              </div>
+              <div
+                class="hm005a_spectrum-Table-cellWrapper FsDyjq_react-spectrum-Table-cellWrapper"
+                role="presentation"
+                style="position: absolute; overflow: visible; opacity: 1; z-index: 1; contain: size layout style; top: 0px; left: 9007199254740991px; width: 9007199254740991px; height: 50px;"
+              >
+                <div
+                  aria-colindex="2"
+                  aria-labelledby="react-aria-«ra»"
+                  class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
+                  data-collection="react-aria-«r1»"
+                  data-key="key2.1"
+                  role="gridcell"
+                  tabindex="-1"
+                >
+                  <span
+                    class="hm005a_spectrum-Table-cellContents"
+                    id="react-aria-«ra»"
+                  >
+                    value2
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="hm005a_spectrum-Table-bodyResizeIndicator"
+            style="left: 0px; height: 102px; display: none;"
+          />
+        </div>
+      </div>
+    </div>
+    <span
+      data-focus-scope-end="true"
+      hidden=""
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,19 @@
+.flexbox {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0.5rem;
+}
+
+.stack {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  height: 100%;
+}
+
+.tab-panel {
+  flex: 1;
+  overflow-y: auto;
+}

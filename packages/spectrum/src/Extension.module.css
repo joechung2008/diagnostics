@@ -1,0 +1,10 @@
+.extension-root {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 0.25rem;
+}
+
+.grow {
+  flex: 1;
+}
