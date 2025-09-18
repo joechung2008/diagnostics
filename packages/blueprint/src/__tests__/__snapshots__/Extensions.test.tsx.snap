@@ -1,0 +1,40 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Extensions > matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="extension-root"
+  >
+    <div
+      class="bp6-tabs bp6-vertical"
+    >
+      <div
+        class="bp6-tab-list"
+        role="tablist"
+      >
+        <div
+          class="bp6-tab-indicator-wrapper"
+          style="height: 0px; transform: translateX(0px) translateY(0px); width: 0px; transition: none;"
+        >
+          <div
+            class="bp6-tab-indicator"
+          />
+        </div>
+        <div
+          aria-controls="bp6-tab-panel_undefined_SampleExtension"
+          aria-disabled="false"
+          aria-expanded="true"
+          aria-selected="true"
+          class="bp6-tab"
+          data-tab-id="SampleExtension"
+          id="bp6-tab-title_undefined_SampleExtension"
+          role="tab"
+          tabindex="0"
+        >
+          SampleExtension
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,69 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ServerInfo > matches snapshot 1`] = `
+<DocumentFragment>
+  <table
+    aria-label="Server Info"
+    class="bp6-html-table"
+  >
+    <thead>
+      <tr>
+        <th>
+          Name
+        </th>
+        <th>
+          Value
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Hostname
+        </td>
+        <td>
+          localhost
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Uptime
+        </td>
+        <td>
+          1000
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Server ID
+        </td>
+        <td>
+          server123
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Deployment ID
+        </td>
+        <td>
+          deploy123
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Node Versions
+        </td>
+        <td />
+      </tr>
+      <tr>
+        <td>
+          Extension Sync | Total Sync All Count
+        </td>
+        <td>
+          0
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

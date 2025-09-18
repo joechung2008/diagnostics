@@ -1,0 +1,31 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BuildInfo > matches snapshot 1`] = `
+<DocumentFragment>
+  <table
+    aria-label="Build Info"
+    class="bp6-html-table"
+  >
+    <thead>
+      <tr>
+        <th>
+          Name
+        </th>
+        <th>
+          Value
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Build Version
+        </td>
+        <td>
+          1.0.0
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

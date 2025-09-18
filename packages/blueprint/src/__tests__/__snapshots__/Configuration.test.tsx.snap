@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Configuration > matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h3
+      class="bp6-heading"
+    >
+      Configuration
+    </h3>
+    <table
+      aria-label="Configuration"
+      class="bp6-html-table"
+    >
+      <thead>
+        <tr>
+          <th>
+            Key
+          </th>
+          <th>
+            Value
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
+</DocumentFragment>
+`;
