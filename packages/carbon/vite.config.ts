@@ -1,10 +1,9 @@
 import { defineConfig } from 'vite';
 import devtoolsJson from 'vite-plugin-devtools-json';
 import { sveltekit } from '@sveltejs/kit/vite';
-import { optimizeCss } from 'carbon-preprocess-svelte';
 
 export default defineConfig({
-	plugins: [sveltekit(), optimizeCss(), devtoolsJson()],
+	plugins: [sveltekit(), devtoolsJson()],
 	resolve: { conditions: ['browser'] },
 	test: {
 		coverage: {
