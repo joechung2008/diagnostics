@@ -34,10 +34,10 @@
     "node": ">=22",
     "npm": ">=10"
   },
-  "name": "diagnostics",
+  "name": "@diagnostics/fluentui",
   "private": true,
   "scripts": {
-    "build": "run-s build:*",
+    "build": "run-s build:tsc build:vite",
     "build:tsc": "tsc -b",
     "build:vite": "vite build",
     "dev": "vite",
