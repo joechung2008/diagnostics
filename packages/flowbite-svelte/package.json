@@ -3,7 +3,7 @@
   "dependencies": {
     "@tanstack/svelte-query": "^5.89.0",
     "flowbite": "^3.1.2",
-    "flowbite-svelte": "^1.13.10",
+    "flowbite-svelte": "^1.13.9",
     "flowbite-svelte-icons": "^3.0.0"
   },
   "devDependencies": {
