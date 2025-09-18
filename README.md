@@ -10,3 +10,9 @@ Quick commands (pnpm):
 - Run tests: `pnpm run test`
 
 Each package lives under `packages/` and may provide its own scripts for `dev`, `build`, `test`, and `lint`.
+
+## Note about running tests
+
+Running `pnpm run test` from the repo root (Turbo) can sometimes fail for the Angular package because the spawned test process may not find a Chrome binary. If you hit this, run the package-local test instead:
+
+    cd packages/material && pnpm test
