@@ -17,8 +17,10 @@ export default [
   prettierConfig,
   {
     files: ["**/*.{ts,tsx}"],
-    parserOptions: {
-      parser: "@typescript-eslint/parser",
+    languageOptions: {
+      parserOptions: {
+        parser: "@typescript-eslint/parser",
+      },
     },
     plugins: {
       prettier: prettierPlugin,
