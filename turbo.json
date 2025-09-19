@@ -11,16 +11,10 @@
         "dist/**"
       ]
     },
-    "dev": {
-      "cache": false
-    },
     "format": {},
     "lint": {},
     "test": {
       "dependsOn": ["^build"]
-    },
-    "start": {
-      "cache": false
     }
   }
 }

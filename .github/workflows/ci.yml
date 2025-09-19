@@ -37,27 +37,15 @@ jobs:
 
       - name: Lint affected packages
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            pnpm turbo run lint --filter=...[origin/${{ github.base_ref }}]
-          else
-            pnpm turbo run lint --filter=...[HEAD^1]
-          fi
+          bash turbo-scope.sh lint
 
       - name: Run tests on affected packages
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            pnpm turbo run test --filter=...[origin/${{ github.base_ref }}]
-          else
-            pnpm turbo run test --filter=...[HEAD^1]
-          fi
+          bash turbo-scope.sh test
 
       - name: Build affected packages
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            pnpm turbo run build --filter=...[origin/${{ github.base_ref }}]
-          else
-            pnpm turbo run build --filter=...[HEAD^1]
-          fi
+          bash turbo-scope.sh build
 
   # Full build on main branch (weekly or on demand)
   full-build:

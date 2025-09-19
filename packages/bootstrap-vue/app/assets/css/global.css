@@ -1,0 +1,18 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#__nuxt {
+  height: 100%;
+}
+
+.opacity-0 {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}

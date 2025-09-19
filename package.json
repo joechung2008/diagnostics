@@ -26,10 +26,8 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo dev",
     "format": "turbo run format",
     "lint": "turbo run lint",
-    "start": "turbo run start",
     "test": "turbo run test"
   },
   "type": "module",
