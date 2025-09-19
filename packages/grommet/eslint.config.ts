@@ -19,6 +19,9 @@ const config: Config = [
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2020,
+      parserOptions: {
+        tsconfigRootDir: process.cwd(),
+      },
     },
     plugins: {
       prettier: prettierPlugin,

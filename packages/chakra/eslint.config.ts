@@ -19,6 +19,10 @@ export default [
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2020,
+      parserOptions: {
+        parser: "@typescript-eslint/parser",
+        tsconfigRootDir: process.cwd(),
+      },
     },
     plugins: {
       prettier: prettierPlugin,

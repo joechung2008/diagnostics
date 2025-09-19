@@ -22,6 +22,9 @@ export default [
     },
     languageOptions: {
       ecmaVersion: 2020,
+      parserOptions: {
+        tsconfigdir: process.cwd(),
+      },
     },
     rules: {
       "prettier/prettier": "error",

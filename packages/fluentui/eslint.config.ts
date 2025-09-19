@@ -20,8 +20,7 @@ export default [
     languageOptions: {
       ecmaVersion: 2020,
       parserOptions: {
-        project: ["tsconfig.json"],
-        tsconfigRootDir: __dirname,
+        tsconfigRootDir: process.cwd(),
       },
     },
     plugins: {
