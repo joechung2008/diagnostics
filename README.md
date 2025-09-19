@@ -1,19 +1,81 @@
-# Diagnostics monorepo
+# diagnostics
 
-This repository is set up as a Turborepo monorepo using pnpm workspaces.
+A Turborepo monorepo containing diagnostic implementations and examples for various UI component libraries and frameworks.
 
-Quick commands (pnpm):
+## Quick Start
 
-- Install deps (root, workspace install): `pnpm install`
-- Build all packages: `pnpm run build`
+```bash
+# Install dependencies
+pnpm install
 
-Each package lives under `packages/` and may provide its own scripts for `dev`, `build`, and `lint`.
+# Build all packages
+pnpm run build
 
-## PNPM / @types/react note
+# Test all packages
+pnpm run test
+```
 
-Some packages target React 18 and others React 19. pnpm may install multiple `@types/react` majors which breaks TypeScript composite builds (JSX type errors).
+## Packages
 
-Quick fixes:
+This monorepo includes diagnostic implementations for:
 
-- Package-local pin: add a suitable `@types/react` to the package that targets React 19 (example: `@types/react@19.1.12`).
-- Local type shim: add `src/types/*.d.ts` in a package to declare problematic modules (e.g. `@remixicon/react`) as `React.ComponentType`.
+### React
+
+- `antd/` - Ant Design components
+- `blueprint/` - Blueprint.js components
+- `carbon/` - IBM Carbon Design System
+- `chakra/` - Chakra UI components
+- `fluentui/` - Microsoft Fluent UI
+- `grommet/` - Grommet components
+- `heroui/` - Hero UI components
+- `mantine/` - Mantine components
+- `mui/` - MUI (Material-UI) v5+
+- `naive/` - Naive UI components
+- `next/` - Next.js components
+- `shadcn/` - shadcn/ui components
+- `solidjs-suid/` - SolidJS SUID components
+- `spectrum/` - Adobe Spectrum components
+- `tremor/` - Tremor components
+
+### Angular
+
+- `material/` - Material-UI components
+
+### Vue
+
+- `bootstrap/` - Bootstrap Vue components
+- `bootstrap-vue/` - Vue 2 Bootstrap components
+- `element-plus/` - Element Plus components
+- `nuxt-ui/` - Nuxt UI components
+- `vuetify/` - Vuetify components
+
+### Svelte
+
+- `flowbite-svelte/` - Flowbite Svelte components
+- `skeleton/` - Skeleton components
+- `svelteui/` - Svelte UI components
+- `smui/` - SMUI (Svelte Material UI)
+
+## Development
+
+Each package provides its own scripts:
+
+- `pnpm run dev` - Start development server
+- `pnpm run build` - Build for production
+- `pnpm run format` - Format code
+- `pnpm run lint` - Lint code
+
+## Deployments
+
+- [Flowbite Svelte Demo](https://diagnostics-0jjo.onrender.com/)
+
+## Troubleshooting
+
+### React Type Conflicts
+
+Some packages target React 18 and others React 19. pnpm may install multiple `@types/react` majors which breaks TypeScript composite builds.
+
+**Quick fixes:**
+
+- Add package-local `@types/react` pin to React 19 packages (e.g., `"@types/react": "19.1.12"`)
+- Add type shim in `src/types/*.d.ts` to declare problematic modules as `React.ComponentType`
