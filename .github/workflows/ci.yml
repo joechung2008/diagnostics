@@ -7,11 +7,13 @@ on:
     branches: [main]
   schedule:
     - cron: "0 2 * * 1" # Weekly on Monday at 2 AM UTC
+  workflow_dispatch:
 
 jobs:
   # Test and build only affected packages
   test-and-build:
     runs-on: ubuntu-latest
+    if: github.event_name != 'workflow_dispatch' && github.event_name != 'schedule'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
