@@ -24,14 +24,12 @@ This monorepo includes diagnostic implementations for:
 - `antd/` - Ant Design components
 - `blueprint/` - Blueprint.js components
 - `bootstrap/` - Bootstrap components
-- `carbon/` - IBM Carbon Design System
 - `chakra/` - Chakra UI components
 - `fluentui/` - Microsoft Fluent UI
 - `grommet/` - Grommet components
 - `heroui/` - Hero UI components
 - `mantine/` - Mantine components
 - `mui/` - MUI (Material-UI) v5+
-- `naive/` - Naive UI components
 - `next/` - Microsoft Fluent UI on Next.js
 - `shadcn/` - shadcn/ui components
 - `spectrum/` - Adobe Spectrum components
@@ -43,6 +41,7 @@ This monorepo includes diagnostic implementations for:
 
 ### Svelte
 
+- `carbon/` - IBM Carbon Design System
 - `flowbite-svelte/` - Flowbite Svelte components
 - `skeleton/` - Skeleton components
 - `svelteui/` - Svelte UI components
@@ -52,6 +51,7 @@ This monorepo includes diagnostic implementations for:
 
 - `bootstrap-vue/` - Vue 3 Bootstrap components
 - `element-plus/` - Element Plus components
+- `naive/` - Naive UI components
 - `nuxt-ui/` - Nuxt UI components
 - `vuetify/` - Vuetify components
 
@@ -69,7 +69,20 @@ Each package provides its own scripts:
 
 ## Deployments
 
+- [Adobe Spectrum](https://atdiagnostics-spectrum.onrender.com/)
+- [Ant Design](https://atdiagnostics-antd.onrender.com/)
+- [Blueprint.js](https://atdiagnostics-blueprint.onrender.com/)
+- [Bootstrap](https://atdiagnostics-bootstrap.onrender.com/)
+- [Chakra UI](https://atdiagnostics-chakra.onrender.com/)
 - [Flowbite Svelte](https://atdiagnostics-flowbite-svelte.onrender.com/)
+- [Fluent UI](https://atdiagnostics-fluentui.onrender.com/)
+- [Fluent UI (Next.js)](https://atdiagnostics-next.onrender.com/)
+- [Grommet](https://atdiagnostics-grommet.onrender.com/)
+- [Hero UI](https://atdiagnostics-heroui.onrender.com/)
+- [Mantine](https://atdiagnostics-mantine.onrender.com/)
+- [Material UI](https://atdiagnostics-mui.onrender.com/)
+- [shadcn/ui](https://atdiagnostics-shadcn.onrender.com/)
+- [Tremor](https://atdiagnostics-tremor.onrender.com/)
 - [Vuetify](https://atdiagnostics-vuetify.onrender.com/)
 
 ## Troubleshooting
