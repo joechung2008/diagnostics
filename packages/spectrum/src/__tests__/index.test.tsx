@@ -4,25 +4,39 @@ import { defaultTheme, Provider } from "@adobe/react-spectrum";
 import React from "react";
 import App from "../App";
 
+vi.mock("react-dom/client", () => ({
+  createRoot: vi.fn(() => ({
+    render: vi.fn(),
+  })),
+}));
+
+vi.mock("../App", () => ({
+  default: vi.fn(() => <div>Mock App</div>),
+}));
+
+vi.mock("../reportWebVitals", () => ({
+  default: vi.fn(),
+}));
+
 describe("index.tsx", () => {
-  afterEach(() => {
-    vi.resetAllMocks();
+  beforeEach(() => {
+    // Clean up any existing root element
+    const existingRoot = document.getElementById("root");
+    if (existingRoot) {
+      existingRoot.remove();
+    }
   });
 
-  beforeEach(() => {
-    vi.mock("react-dom/client", () => ({
-      createRoot: vi.fn(() => ({
-        render: vi.fn(),
-      })),
-    }));
-
-    vi.mock("../App", () => ({
-      default: vi.fn(() => <div>Mock App</div>),
-    }));
-
-    vi.mock("../reportWebVitals", () => ({
-      default: vi.fn(),
-    }));
+  afterEach(() => {
+    // Clean up root element after each test
+    const root = document.getElementById("root");
+    if (root) {
+      root.remove();
+    }
+    // Reset all mocks
+    vi.resetAllMocks();
+    // Clear module cache to ensure fresh imports
+    vi.resetModules();
   });
 
   it("renders the app with Provider and StrictMode", async () => {

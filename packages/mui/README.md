@@ -95,9 +95,9 @@ Project structure
 Important files and folders:
 
 - `src/` — application source code
-	- `.tsx` UI components (e.g. `BuildInfo.tsx`, `Extensions.tsx`)
-	- `*.types.d.ts` — component prop types
-	- `__tests__/` — unit tests and snapshots
+  - `.tsx` UI components (e.g. `BuildInfo.tsx`, `Extensions.tsx`)
+  - `*.types.d.ts` — component prop types
+  - `__tests__/` — unit tests and snapshots
 - `index.html` — Vite entry HTML
 - `vite.config.ts` — Vite configuration
 - `package.json` — scripts and dependencies

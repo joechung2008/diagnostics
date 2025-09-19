@@ -1,4 +1,12 @@
-import { describe, expect, it, type Mock, vi } from "vitest";
+import {
+  afterEach,
+  beforeEach,
+  describe,
+  expect,
+  it,
+  type Mock,
+  vi,
+} from "vitest";
 
 vi.mock("react-dom/client", () => ({
   createRoot: vi.fn(() => ({
@@ -27,6 +35,26 @@ import { createRoot } from "react-dom/client";
 import reportWebVitals from "./reportWebVitals.ts";
 
 describe("main.tsx", () => {
+  beforeEach(() => {
+    // Clean up any existing root element
+    const existingRoot = document.getElementById("root");
+    if (existingRoot) {
+      existingRoot.remove();
+    }
+  });
+
+  afterEach(() => {
+    // Clean up root element after each test
+    const root = document.getElementById("root");
+    if (root) {
+      root.remove();
+    }
+    // Reset all mocks
+    vi.resetAllMocks();
+    // Clear module cache to ensure fresh imports
+    vi.resetModules();
+  });
+
   it("renders ThemedApp and calls reportWebVitals", async () => {
     const existing = document.getElementById("root");
     if (!existing) {

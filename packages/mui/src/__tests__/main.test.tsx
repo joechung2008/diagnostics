@@ -33,6 +33,10 @@ describe("main entry point", () => {
     if (rootElem) {
       rootElem.remove();
     }
+    // Reset all mocks
+    vi.resetAllMocks();
+    // Clear module cache to ensure fresh imports
+    vi.resetModules();
   });
 
   it("renders without crashing", async () => {

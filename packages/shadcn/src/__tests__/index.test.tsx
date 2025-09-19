@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 vi.mock("@/App", () => ({
   __esModule: true,
@@ -6,6 +6,26 @@ vi.mock("@/App", () => ({
 }));
 
 describe("index.tsx", () => {
+  beforeEach(() => {
+    // Clean up any existing root element
+    const existingRoot = document.getElementById("root");
+    if (existingRoot) {
+      existingRoot.remove();
+    }
+  });
+
+  afterEach(() => {
+    // Clean up root element after each test
+    const root = document.getElementById("root");
+    if (root) {
+      root.remove();
+    }
+    // Reset all mocks
+    vi.resetAllMocks();
+    // Clear module cache to ensure fresh imports
+    vi.resetModules();
+  });
+
   it("renders App without crashing", async () => {
     // Simulate root element
     const root = document.createElement("div");
