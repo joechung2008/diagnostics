@@ -1,8 +1,6 @@
 packages:
   - packages/*
 
-packageExtensions:
-
 onlyBuiltDependencies:
   - '@heroui/shared-utils'
   - '@parcel/watcher'
