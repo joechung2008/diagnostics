@@ -23,6 +23,7 @@ This monorepo includes diagnostic implementations for:
 
 - `antd/` - Ant Design components
 - `blueprint/` - Blueprint.js components
+- `bootstrap/` - Bootstrap components
 - `carbon/` - IBM Carbon Design System
 - `chakra/` - Chakra UI components
 - `fluentui/` - Microsoft Fluent UI
@@ -33,7 +34,6 @@ This monorepo includes diagnostic implementations for:
 - `naive/` - Naive UI components
 - `next/` - Next.js components
 - `shadcn/` - shadcn/ui components
-- `solidjs-suid/` - SolidJS SUID components
 - `spectrum/` - Adobe Spectrum components
 - `tremor/` - Tremor components
 
@@ -41,20 +41,22 @@ This monorepo includes diagnostic implementations for:
 
 - `material/` - Material-UI components
 
-### Vue
-
-- `bootstrap/` - Bootstrap Vue components
-- `bootstrap-vue/` - Vue 2 Bootstrap components
-- `element-plus/` - Element Plus components
-- `nuxt-ui/` - Nuxt UI components
-- `vuetify/` - Vuetify components
-
 ### Svelte
 
 - `flowbite-svelte/` - Flowbite Svelte components
 - `skeleton/` - Skeleton components
 - `svelteui/` - Svelte UI components
 - `smui/` - SMUI (Svelte Material UI)
+
+### Vue
+
+- `bootstrap-vue/` - Vue 3 Bootstrap components
+- `element-plus/` - Element Plus components
+- `nuxt-ui/` - Nuxt UI components
+- `vuetify/` - Vuetify components
+
+### SolidJS
+- `solidjs-suid/` - SolidJS SUID components
 
 ## Development
 
