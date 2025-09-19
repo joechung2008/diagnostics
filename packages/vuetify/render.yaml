@@ -1,0 +1,13 @@
+services:
+  - type: static
+    name: "@diagnostics/vuetify"
+    runtime: static
+    buildCommand: |
+      corepack enable
+      corepack prepare pnpm@10.17.0 --activate
+      pnpm install --frozen-lockfile
+      pnpm run build
+    publishDirectory: ./dist
+    envVars:
+      - key: NODE_VERSION
+        value: 22.16.0
