@@ -1,6 +1,12 @@
 packages:
   - packages/*
 
+packageExtensions:
+  # Force chakra package to use specific @types/react version
+  "@chakra-ui/react@*":
+    dependencies:
+      "@types/react": "19.1.12"
+
 onlyBuiltDependencies:
   - '@heroui/shared-utils'
   - '@parcel/watcher'
