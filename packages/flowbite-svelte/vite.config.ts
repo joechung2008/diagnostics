@@ -6,6 +6,11 @@ import devtoolsJson from "vite-plugin-devtools-json";
 
 export default defineConfig(({ mode }) => ({
   plugins: [tailwindcss(), sveltekit(), devtoolsJson()],
+  preview: {
+    allowedHosts: ["diagnostics-0jjo.onrender.com"],
+    host: "0.0.0.0",
+    port: 10000
+  },
   resolve: {
     conditions: mode === "test" ? ["browser"] : undefined
   },
