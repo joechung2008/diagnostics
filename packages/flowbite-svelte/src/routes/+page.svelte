@@ -134,34 +134,28 @@
           {/each}
         </Dropdown>
         {#if showPaasServerless}
-          <NavLi>
-            <button
-              type="button"
-              class="w-full cursor-pointer text-left"
-              onclick={() => {
-                const paasserverless = extensions["paasserverless"];
-                if (isExtensionInfo(paasserverless)) {
-                  extension = paasserverless;
-                }
-              }}
-            >
-              paasserverless
-            </button>
-          </NavLi>
-        {/if}
-        <NavLi>
-          <button
-            type="button"
-            class="w-full cursor-pointer text-left"
+          <NavLi
+            class="cursor-pointer"
             onclick={() => {
-              const websites = extensions["websites"];
-              if (isExtensionInfo(websites)) {
-                extension = websites;
+              const paasserverless = extensions["paasserverless"];
+              if (isExtensionInfo(paasserverless)) {
+                extension = paasserverless;
               }
             }}
           >
-            websites
-          </button>
+            paasserverless
+          </NavLi>
+        {/if}
+        <NavLi
+          class="cursor-pointer"
+          onclick={() => {
+            const websites = extensions["websites"];
+            if (isExtensionInfo(websites)) {
+              extension = websites;
+            }
+          }}
+        >
+          websites
         </NavLi>
       </NavUl>
       <div class="flex">
