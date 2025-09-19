@@ -21,28 +21,28 @@ This monorepo includes diagnostic implementations for:
 
 ### React
 
-- `antd/` - Ant Design components
-- `blueprint/` - Blueprint.js components
-- `bootstrap/` - Bootstrap components
-- `chakra/` - Chakra UI components
-- `fluentui/` - Microsoft Fluent UI
-- `grommet/` - Grommet components
-- `heroui/` - Hero UI components
-- `mantine/` - Mantine components
-- `mui/` - MUI (Material-UI) v5+
-- `next/` - Microsoft Fluent UI on Next.js
-- `shadcn/` - shadcn/ui components
-- `spectrum/` - Adobe Spectrum components
-- `tremor/` - Tremor components
+- `antd/` - Ant Design components [🔗](https://atdiagnostics-antd.onrender.com/)
+- `blueprint/` - Blueprint.js components [🔗](https://atdiagnostics-blueprint.onrender.com/)
+- `bootstrap/` - Bootstrap components [🔗](https://atdiagnostics-bootstrap.onrender.com/)
+- `chakra/` - Chakra UI components [🔗](https://atdiagnostics-chakra.onrender.com/)
+- `fluentui/` - Microsoft Fluent UI [🔗](https://atdiagnostics-fluentui.onrender.com/)
+- `grommet/` - Grommet components [🔗](https://atdiagnostics-grommet.onrender.com/)
+- `heroui/` - Hero UI components [🔗](https://atdiagnostics-heroui.onrender.com/)
+- `mantine/` - Mantine components [🔗](https://atdiagnostics-mantine.onrender.com/)
+- `mui/` - MUI (Material-UI) v5+ [🔗](https://atdiagnostics-mui.onrender.com/)
+- `next/` - Microsoft Fluent UI on Next.js [🔗](https://atdiagnostics-next.onrender.com/)
+- `shadcn/` - shadcn/ui components [🔗](https://atdiagnostics-shadcn.onrender.com/)
+- `spectrum/` - Adobe Spectrum components [🔗](https://atdiagnostics-spectrum.onrender.com/)
+- `tremor/` - Tremor components [🔗](https://atdiagnostics-tremor.onrender.com/)
 
 ### Angular
 
-- `material/` - Material-UI components
+- `material/` - Material-UI components [🔗](https://atdiagnostics-material.onrender.com/)
 
 ### Svelte
 
 - `carbon/` - IBM Carbon Design System
-- `flowbite-svelte/` - Flowbite Svelte components
+- `flowbite-svelte/` - Flowbite Svelte components [🔗](https://atdiagnostics-flowbite-svelte.onrender.com/)
 - `skeleton/` - Skeleton components
 - `svelteui/` - Svelte UI components
 - `smui/` - SMUI (Svelte Material UI) components
@@ -53,10 +53,10 @@ This monorepo includes diagnostic implementations for:
 - `element-plus/` - Element Plus components
 - `naive/` - Naive UI components
 - `nuxt-ui/` - Nuxt UI components
-- `vuetify/` - Vuetify components
+- `vuetify/` - Vuetify components [🔗](https://atdiagnostics-vuetify.onrender.com/)
 
 ### SolidJS
-- `solidjs-suid/` - SolidJS SUID components
+- `solidjs-suid/` - SolidJS SUID components [🔗](https://atdiagnostics-solidjs-suid.onrender.com/)
 
 ## Development
 
@@ -66,25 +66,6 @@ Each package provides its own scripts:
 - `pnpm run build` - Build for production
 - `pnpm run format` - Format code
 - `pnpm run lint` - Lint code
-
-## Deployments
-
-- [Adobe Spectrum](https://atdiagnostics-spectrum.onrender.com/)
-- [Ant Design](https://atdiagnostics-antd.onrender.com/)
-- [Blueprint.js](https://atdiagnostics-blueprint.onrender.com/)
-- [Bootstrap](https://atdiagnostics-bootstrap.onrender.com/)
-- [Chakra UI](https://atdiagnostics-chakra.onrender.com/)
-- [Flowbite Svelte](https://atdiagnostics-flowbite-svelte.onrender.com/)
-- [Fluent UI](https://atdiagnostics-fluentui.onrender.com/)
-- [Fluent UI (Next.js)](https://atdiagnostics-next.onrender.com/)
-- [Grommet](https://atdiagnostics-grommet.onrender.com/)
-- [Hero UI](https://atdiagnostics-heroui.onrender.com/)
-- [Mantine](https://atdiagnostics-mantine.onrender.com/)
-- [Material UI (Angular)](https://atdiagnostics-material.onrender.com/)
-- [Material UI (React)](https://atdiagnostics-mui.onrender.com/)
-- [shadcn/ui](https://atdiagnostics-shadcn.onrender.com/)
-- [Tremor](https://atdiagnostics-tremor.onrender.com/)
-- [Vuetify](https://atdiagnostics-vuetify.onrender.com/)
 
 ## Troubleshooting
 
