@@ -69,7 +69,8 @@ Each package provides its own scripts:
 
 ## Deployments
 
-- [Flowbite Svelte Demo](https://diagnostics-0jjo.onrender.com/)
+- [Flowbite Svelte](https://atdiagnostics-flowbite-svelte.onrender.com/)
+- [Vuetify](https://atdiagnostics-vuetify.onrender.com/)
 
 ## Troubleshooting
 
