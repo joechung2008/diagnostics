@@ -32,7 +32,7 @@ This monorepo includes diagnostic implementations for:
 - `mantine/` - Mantine components
 - `mui/` - MUI (Material-UI) v5+
 - `naive/` - Naive UI components
-- `next/` - Next.js components
+- `next/` - Microsoft Fluent UI on Next.js
 - `shadcn/` - shadcn/ui components
 - `spectrum/` - Adobe Spectrum components
 - `tremor/` - Tremor components
@@ -46,7 +46,7 @@ This monorepo includes diagnostic implementations for:
 - `flowbite-svelte/` - Flowbite Svelte components
 - `skeleton/` - Skeleton components
 - `svelteui/` - Svelte UI components
-- `smui/` - SMUI (Svelte Material UI)
+- `smui/` - SMUI (Svelte Material UI) components
 
 ### Vue
 
