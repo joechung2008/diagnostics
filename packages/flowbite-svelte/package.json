@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "@eslint/compat": "^1.3.2",
-    "@sveltejs/adapter-auto": "^6.1.0",
+    "@sveltejs/adapter-node": "^5.3.2",
     "@sveltejs/kit": "^2.42.2",
     "@sveltejs/vite-plugin-svelte": "^6.2.0",
     "@tailwindcss/postcss": "^4.1.13",
@@ -47,11 +47,9 @@
   "private": true,
   "scripts": {
     "build": "vite build",
-    "check": "run-s check:sync check:type",
+    "check": "run-s check:*",
     "check:sync": "svelte-kit sync",
     "check:type": "svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "run-s check:sync check:watch:type",
-    "check:watch:type": "svelte-check --tsconfig ./tsconfig.json --watch",
     "dev": "vite dev",
     "format": "prettier --write .",
     "lint": "run-s lint:*",
@@ -59,9 +57,13 @@
     "lint:prettier": "prettier --check .",
     "prepare": "svelte-kit sync || echo ''",
     "preview": "vite preview",
+    "start": "node --env-file=.env build/index.js",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "test:watch": "vitest --watch"
+    "test:watch": "vitest --watch",
+    "watch": "run-s watch:*",
+    "watch:sync": "svelte-kit sync",
+    "watch:type": "svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "type": "module",
   "version": "0.0.1"
