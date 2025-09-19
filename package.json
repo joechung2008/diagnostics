@@ -16,11 +16,11 @@
       "@parcel/watcher",
       "@swc/core",
       "@tailwindcss/oxide",
+      "carbon-components-svelte",
       "esbuild",
       "lmdb",
       "msgpackr-extract",
-      "sharp",
-      "vue-demi"
+      "unrs-resolver"
     ]
   },
   "private": true,
