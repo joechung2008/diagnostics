@@ -9,9 +9,7 @@ const config = {
     script: true
   }),
   kit: {
-    adapter: adapter({
-      port: 10000
-    }),
+    adapter: adapter(),
     alias: {
       "@": "src"
     }
