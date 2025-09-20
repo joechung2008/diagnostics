@@ -25,16 +25,25 @@ describe('StageDefinition', () => {
       props: { stageDefinition },
     });
 
-    const table = wrapper.findComponent({ name: 'q-table' });
-    expect(table.exists()).toBe(true);
+    expect(wrapper.findComponent({ name: 'q-markup-table' }).exists()).toBe(true);
 
-    const rows = table.props('rows');
+    const rows = wrapper.findAll('tbody tr');
     expect(rows).toHaveLength(3);
-    expect(rows).toEqual([
-      { key: 'build', value: 'compile, test, package' },
-      { key: 'deploy', value: 'upload, restart' },
-      { key: 'cleanup', value: 'remove-temp-files' },
-    ]);
+
+    // Check first row
+    const firstRowCells = rows[0]?.findAll('td');
+    expect(firstRowCells?.[0]?.text()).toBe('build');
+    expect(firstRowCells?.[1]?.text()).toBe('compile, test, package');
+
+    // Check second row
+    const secondRowCells = rows[1]?.findAll('td');
+    expect(secondRowCells?.[0]?.text()).toBe('deploy');
+    expect(secondRowCells?.[1]?.text()).toBe('upload, restart');
+
+    // Check third row
+    const thirdRowCells = rows[2]?.findAll('td');
+    expect(thirdRowCells?.[0]?.text()).toBe('cleanup');
+    expect(thirdRowCells?.[1]?.text()).toBe('remove-temp-files');
   });
 
   it('should handle single-item arrays', () => {
@@ -46,10 +55,15 @@ describe('StageDefinition', () => {
       props: { stageDefinition },
     });
 
-    const table = wrapper.findComponent({ name: 'q-table' });
-    const rows = table.props('rows');
+    const table = wrapper.findComponent({ name: 'q-markup-table' });
+    expect(table.exists()).toBe(true);
 
-    expect(rows).toEqual([{ key: 'single', value: 'only-step' }]);
+    const rows = wrapper.findAll('tbody tr');
+    expect(rows).toHaveLength(1);
+
+    const cells = rows[0]?.findAll('td');
+    expect(cells?.[0]?.text()).toBe('single');
+    expect(cells?.[1]?.text()).toBe('only-step');
   });
 
   it('should handle empty arrays', () => {
@@ -61,10 +75,14 @@ describe('StageDefinition', () => {
       props: { stageDefinition },
     });
 
-    const table = wrapper.findComponent({ name: 'q-table' });
-    const rows = table.props('rows');
+    expect(wrapper.findComponent({ name: 'q-markup-table' }).exists()).toBe(true);
 
-    expect(rows).toEqual([{ key: 'empty', value: '' }]);
+    const rows = wrapper.findAll('tbody tr');
+    expect(rows).toHaveLength(1);
+
+    const cells = rows[0]?.findAll('td');
+    expect(cells?.[0]?.text()).toBe('empty');
+    expect(cells?.[1]?.text()).toBe('');
   });
 
   it('should handle empty stageDefinition object', () => {
@@ -74,33 +92,24 @@ describe('StageDefinition', () => {
       },
     });
 
-    const table = wrapper.findComponent({ name: 'q-table' });
-    const rows = table.props('rows');
-    expect(rows).toEqual([]);
+    expect(wrapper.findComponent({ name: 'q-markup-table' }).exists()).toBe(true);
+
+    const rows = wrapper.findAll('tbody tr');
+    expect(rows).toHaveLength(0);
   });
 
-  it('should have correct column configuration', () => {
+  it('should have correct table headers', () => {
     const wrapper = mount(StageDefinition, {
       props: {
         stageDefinition: { test: ['step'] },
       },
     });
 
-    const table = wrapper.findComponent({ name: 'q-table' });
-    const columns = table.props('columns');
+    expect(wrapper.findComponent({ name: 'q-markup-table' }).exists()).toBe(true);
 
-    expect(columns).toHaveLength(2);
-    expect(columns[0]).toEqual({
-      name: 'key',
-      label: 'Key',
-      field: 'key',
-      align: 'left',
-    });
-    expect(columns[1]).toEqual({
-      name: 'value',
-      label: 'Value',
-      field: 'value',
-      align: 'left',
-    });
+    const headers = wrapper.findAll('thead th');
+    expect(headers).toHaveLength(2);
+    expect(headers[0]?.text()).toBe('Key');
+    expect(headers[1]?.text()).toBe('Value');
   });
 });

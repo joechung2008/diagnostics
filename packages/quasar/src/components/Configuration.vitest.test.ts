@@ -25,16 +25,26 @@ describe('Configuration', () => {
       props: { config },
     });
 
-    const table = wrapper.findComponent({ name: 'q-table' });
+    const table = wrapper.findComponent({ name: 'q-markup-table' });
     expect(table.exists()).toBe(true);
 
-    const rows = table.props('rows');
+    const rows = wrapper.findAll('tbody tr');
     expect(rows).toHaveLength(3);
-    expect(rows).toEqual([
-      { key: 'apiUrl', value: 'https://api.example.com' },
-      { key: 'timeout', value: '5000' },
-      { key: 'debug', value: 'true' },
-    ]);
+
+    // Check first row
+    const firstRowCells = rows[0]?.findAll('td');
+    expect(firstRowCells?.[0]?.text()).toBe('apiUrl');
+    expect(firstRowCells?.[1]?.text()).toBe('https://api.example.com');
+
+    // Check second row
+    const secondRowCells = rows[1]?.findAll('td');
+    expect(secondRowCells?.[0]?.text()).toBe('timeout');
+    expect(secondRowCells?.[1]?.text()).toBe('5000');
+
+    // Check third row
+    const thirdRowCells = rows[2]?.findAll('td');
+    expect(thirdRowCells?.[0]?.text()).toBe('debug');
+    expect(thirdRowCells?.[1]?.text()).toBe('true');
   });
 
   it('should handle empty config object', () => {
@@ -44,33 +54,26 @@ describe('Configuration', () => {
       },
     });
 
-    const table = wrapper.findComponent({ name: 'q-table' });
-    const rows = table.props('rows');
-    expect(rows).toEqual([]);
+    const table = wrapper.findComponent({ name: 'q-markup-table' });
+    expect(table.exists()).toBe(true);
+
+    const rows = wrapper.findAll('tbody tr');
+    expect(rows).toHaveLength(0);
   });
 
-  it('should have correct column configuration', () => {
+  it('should have correct table headers', () => {
     const wrapper = mount(Configuration, {
       props: {
         config: { key: 'value' },
       },
     });
 
-    const table = wrapper.findComponent({ name: 'q-table' });
-    const columns = table.props('columns');
+    const table = wrapper.findComponent({ name: 'q-markup-table' });
+    expect(table.exists()).toBe(true);
 
-    expect(columns).toHaveLength(2);
-    expect(columns[0]).toEqual({
-      name: 'key',
-      label: 'Key',
-      field: 'key',
-      align: 'left',
-    });
-    expect(columns[1]).toEqual({
-      name: 'value',
-      label: 'Value',
-      field: 'value',
-      align: 'left',
-    });
+    const headers = wrapper.findAll('thead th');
+    expect(headers).toHaveLength(2);
+    expect(headers[0]?.text()).toBe('Key');
+    expect(headers[1]?.text()).toBe('Value');
   });
 });

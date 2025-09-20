@@ -1,6 +1,19 @@
 <template>
   <div>
-    <q-table :rows="rows" :columns="columns" flat />
+    <q-markup-table flat>
+      <thead>
+        <tr>
+          <th class="text-left">Name</th>
+          <th class="text-left">Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="row in rows" :key="row.name">
+          <td>{{ row.name }}</td>
+          <td>{{ row.value }}</td>
+        </tr>
+      </tbody>
+    </q-markup-table>
   </div>
 </template>
 
@@ -9,11 +22,6 @@ import { computed } from 'vue';
 import type { BuildInfoProps } from './models';
 
 const props = defineProps<BuildInfoProps>();
-
-const columns = [
-  { name: 'name', label: 'Name', field: 'name', align: 'left' as const },
-  { name: 'value', label: 'Value', field: 'value', align: 'left' as const },
-];
 
 const rows = computed(() => [{ name: 'Build Version', value: props.buildVersion }]);
 </script>

@@ -17,17 +17,29 @@ describe('ServerInfo', () => {
       props: baseProps,
     });
 
-    const table = wrapper.findComponent({ name: 'q-table' });
+    const table = wrapper.findComponent({ name: 'q-markup-table' });
     expect(table.exists()).toBe(true);
     expect(table.props('flat')).toBe(true);
 
-    const rows = table.props('rows');
-    expect(rows).toEqual([
-      { name: 'Hostname', value: 'server.example.com' },
-      { name: 'Server ID', value: 'srv-123' },
-      { name: 'Deployment ID', value: 'dep-456' },
-      { name: 'Extension Sync | Total Sync All Count', value: '42' },
-    ]);
+    const rows = wrapper.findAll('tbody tr');
+    expect(rows).toHaveLength(4);
+
+    // Check each row
+    const hostnameCells = rows[0]?.findAll('td');
+    expect(hostnameCells?.[0]?.text()).toBe('Hostname');
+    expect(hostnameCells?.[1]?.text()).toBe('server.example.com');
+
+    const serverIdCells = rows[1]?.findAll('td');
+    expect(serverIdCells?.[0]?.text()).toBe('Server ID');
+    expect(serverIdCells?.[1]?.text()).toBe('srv-123');
+
+    const deploymentIdCells = rows[2]?.findAll('td');
+    expect(deploymentIdCells?.[0]?.text()).toBe('Deployment ID');
+    expect(deploymentIdCells?.[1]?.text()).toBe('dep-456');
+
+    const extensionSyncCells = rows[3]?.findAll('td');
+    expect(extensionSyncCells?.[0]?.text()).toBe('Extension Sync | Total Sync All Count');
+    expect(extensionSyncCells?.[1]?.text()).toBe('42');
   });
 
   it('should include uptime when provided', () => {
@@ -38,11 +50,16 @@ describe('ServerInfo', () => {
       },
     });
 
-    const table = wrapper.findComponent({ name: 'q-table' });
-    const rows = table.props('rows');
+    expect(wrapper.findComponent({ name: 'q-markup-table' }).exists()).toBe(true);
 
-    expect(rows).toContainEqual({ name: 'Uptime', value: '3600' });
+    const rows = wrapper.findAll('tbody tr');
     expect(rows).toHaveLength(5);
+
+    // Check that uptime row exists
+    const uptimeRow = rows.find((row) => row.findAll('td')[0]?.text() === 'Uptime');
+    expect(uptimeRow).toBeDefined();
+    const uptimeCells = uptimeRow?.findAll('td');
+    expect(uptimeCells?.[1]?.text()).toBe('3600');
   });
 
   it('should include node versions when provided', () => {
@@ -53,11 +70,16 @@ describe('ServerInfo', () => {
       },
     });
 
-    const table = wrapper.findComponent({ name: 'q-table' });
-    const rows = table.props('rows');
+    expect(wrapper.findComponent({ name: 'q-markup-table' }).exists()).toBe(true);
 
-    expect(rows).toContainEqual({ name: 'Node Versions', value: 'v18.17.0' });
+    const rows = wrapper.findAll('tbody tr');
     expect(rows).toHaveLength(5);
+
+    // Check that node versions row exists
+    const nodeVersionsRow = rows.find((row) => row.findAll('td')[0]?.text() === 'Node Versions');
+    expect(nodeVersionsRow).toBeDefined();
+    const nodeVersionCells = nodeVersionsRow?.findAll('td');
+    expect(nodeVersionCells?.[1]?.text()).toBe('v18.17.0');
   });
 
   it('should include both uptime and node versions when both provided', () => {
@@ -69,12 +91,21 @@ describe('ServerInfo', () => {
       },
     });
 
-    const table = wrapper.findComponent({ name: 'q-table' });
-    const rows = table.props('rows');
+    expect(wrapper.findComponent({ name: 'q-markup-table' }).exists()).toBe(true);
 
+    const rows = wrapper.findAll('tbody tr');
     expect(rows).toHaveLength(6);
-    expect(rows).toContainEqual({ name: 'Uptime', value: '7200' });
-    expect(rows).toContainEqual({ name: 'Node Versions', value: 'v20.5.0' });
+
+    // Check that both optional rows exist
+    const uptimeRow = rows.find((row) => row.findAll('td')[0]?.text() === 'Uptime');
+    expect(uptimeRow).toBeDefined();
+    const uptimeCells = uptimeRow?.findAll('td');
+    expect(uptimeCells?.[1]?.text()).toBe('7200');
+
+    const nodeVersionsRow = rows.find((row) => row.findAll('td')[0]?.text() === 'Node Versions');
+    expect(nodeVersionsRow).toBeDefined();
+    const nodeVersionCells = nodeVersionsRow?.findAll('td');
+    expect(nodeVersionCells?.[1]?.text()).toBe('v20.5.0');
   });
 
   it('should exclude optional fields when not provided', () => {
@@ -82,34 +113,27 @@ describe('ServerInfo', () => {
       props: baseProps,
     });
 
-    const table = wrapper.findComponent({ name: 'q-table' });
-    const rows = table.props('rows') as Array<{ name: string; value: string }>;
+    expect(wrapper.findComponent({ name: 'q-markup-table' }).exists()).toBe(true);
 
+    const rows = wrapper.findAll('tbody tr');
     expect(rows).toHaveLength(4); // hostname, serverId, deploymentId, extensionSync
-    expect(rows.some((row) => row.name === 'Uptime')).toBe(false);
-    expect(rows.some((row) => row.name === 'Node Versions')).toBe(false);
+
+    // Check that optional fields are not present
+    const rowTexts = rows.map((row) => row.findAll('td')[0]?.text());
+    expect(rowTexts).not.toContain('Uptime');
+    expect(rowTexts).not.toContain('Node Versions');
   });
 
-  it('should have correct column configuration', () => {
+  it('should have correct table headers', () => {
     const wrapper = mount(ServerInfo, {
       props: baseProps,
     });
 
-    const table = wrapper.findComponent({ name: 'q-table' });
-    const columns = table.props('columns');
+    expect(wrapper.findComponent({ name: 'q-markup-table' }).exists()).toBe(true);
 
-    expect(columns).toHaveLength(2);
-    expect(columns[0]).toEqual({
-      name: 'name',
-      label: 'Name',
-      field: 'name',
-      align: 'left',
-    });
-    expect(columns[1]).toEqual({
-      name: 'value',
-      label: 'Value',
-      field: 'value',
-      align: 'left',
-    });
+    const headers = wrapper.findAll('thead th');
+    expect(headers).toHaveLength(2);
+    expect(headers[0]?.text()).toBe('Name');
+    expect(headers[1]?.text()).toBe('Value');
   });
 });

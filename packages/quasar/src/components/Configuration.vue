@@ -1,7 +1,20 @@
 <template>
   <div>
     <h2>Configuration</h2>
-    <q-table :rows="rows" :columns="columns" flat />
+    <q-markup-table flat>
+      <thead>
+        <tr>
+          <th class="text-left">Key</th>
+          <th class="text-left">Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="[key, value] in configEntries" :key="key">
+          <td>{{ key }}</td>
+          <td>{{ value }}</td>
+        </tr>
+      </tbody>
+    </q-markup-table>
   </div>
 </template>
 
@@ -11,12 +24,5 @@ import type { ConfigurationProps } from './models';
 
 const props = defineProps<ConfigurationProps>();
 
-const columns = [
-  { name: 'key', label: 'Key', field: 'key', align: 'left' as const },
-  { name: 'value', label: 'Value', field: 'value', align: 'left' as const },
-];
-
-const rows = computed(() =>
-  Object.entries(props.config ?? {}).map(([key, value]) => ({ key, value })),
-);
+const configEntries = computed(() => Object.entries(props.config ?? {}));
 </script>
