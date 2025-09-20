@@ -18,32 +18,43 @@
       <UButton @click="selectExtension('websites')">websites</UButton>
     </UButtonGroup>
 
-    <UTabs v-model="selectedTab" :items="tabs" justify="start" variant="link" />
+    <UProgress v-if="pending" mode="indeterminate" />
 
-    <div v-if="selectedTab === 'extensions'" class="tab-panel">
-      <div class="stack">
-        <ExtensionItems
-          v-if="diagnostics?.extensions"
-          :extensions="diagnostics?.extensions"
-          :on-link-click="handleLinkClick"
-        />
-        <ExtensionItem v-if="selectedExtension" v-bind="selectedExtension" />
+    <UAlert v-else-if="error" color="error" :title="error.message" />
+
+    <template v-else>
+      <UTabs
+        v-model="selectedTab"
+        :items="tabs"
+        justify="start"
+        variant="link"
+      />
+
+      <div v-if="selectedTab === 'extensions'" class="tab-panel">
+        <div class="stack">
+          <ExtensionItems
+            v-if="diagnostics?.extensions"
+            :extensions="diagnostics?.extensions"
+            :on-link-click="handleLinkClick"
+          />
+          <ExtensionItem v-if="selectedExtension" v-bind="selectedExtension" />
+        </div>
       </div>
-    </div>
 
-    <div v-if="selectedTab === 'build'" class="tab-panel">
-      <BuildInfo
-        v-if="diagnostics?.buildInfo"
-        v-bind="diagnostics?.buildInfo"
-      />
-    </div>
+      <div v-else-if="selectedTab === 'build'" class="tab-panel">
+        <BuildInfo
+          v-if="diagnostics?.buildInfo"
+          v-bind="diagnostics?.buildInfo"
+        />
+      </div>
 
-    <div v-if="selectedTab === 'server'" class="tab-panel">
-      <ServerInfo
-        v-if="diagnostics?.serverInfo"
-        v-bind="diagnostics?.serverInfo"
-      />
-    </div>
+      <div v-else-if="selectedTab === 'server'" class="tab-panel">
+        <ServerInfo
+          v-if="diagnostics?.serverInfo"
+          v-bind="diagnostics?.serverInfo"
+        />
+      </div>
+    </template>
   </div>
 </template>
 
@@ -63,11 +74,18 @@ const Environments = {
   Mooncake: "https://hosting.azureportal.chinacloudapi.cn/api/diagnostics",
 } as const;
 
-const diagnostics = ref<Diagnostics>();
 const selectedExtension = ref<ExtensionInfo>();
 const currentEnvironment = ref<Environment>(Environments.Public);
 const selectedTab = ref<string>("extensions");
 const mounted = ref(false);
+
+const diagnosticsUrl = computed(() => currentEnvironment.value);
+
+const {
+  data: diagnostics,
+  pending,
+  error,
+} = useFetch<Diagnostics>(diagnosticsUrl);
 
 const environmentName = computed(() => {
   switch (currentEnvironment.value) {
@@ -107,20 +125,12 @@ const tabs = computed<TabsItem[]>(() => [
   { label: "Server Information", value: "server" },
 ]);
 
-async function switchEnvironment(env: Environment) {
+function switchEnvironment(env: Environment) {
   currentEnvironment.value = env;
   selectedExtension.value = undefined;
-  await fetchDiagnostics();
-}
-
-async function fetchDiagnostics() {
-  const response = await fetch(currentEnvironment.value);
-  diagnostics.value = await response.json();
 }
 
 function handleLinkClick(_: MouseEvent, item?: KeyedNavLink) {
-  console.log("Link clicked:", item);
-
   if (item && diagnostics.value?.extensions) {
     const extension = diagnostics.value.extensions[item.key];
     if (isExtensionInfo(extension)) {
@@ -136,14 +146,7 @@ function selectExtension(key: string) {
   }
 }
 
-onMounted(async () => {
-  await fetchDiagnostics();
+onMounted(() => {
   mounted.value = true;
 });
 </script>
-
-<style type="css">
-#__nuxt {
-  height: 100%;
-}
-</style>

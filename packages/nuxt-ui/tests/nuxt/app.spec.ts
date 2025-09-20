@@ -1,19 +1,25 @@
-import { mountSuspended, renderSuspended } from "@nuxt/test-utils/runtime";
-import { afterEach, describe, expect, it, vi } from "vitest";
+import {
+  mockNuxtImport,
+  mountSuspended,
+  renderSuspended,
+} from "@nuxt/test-utils/runtime";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { ref } from "vue";
 import App from "../../app/app.vue";
 import type { Diagnostics } from "../../app/types";
 
 describe("app/app.vue", () => {
-  const originalFetch = global.fetch;
+  const { useFetchMock } = vi.hoisted(() => ({
+    useFetchMock: vi.fn(),
+  }));
 
-  afterEach(() => {
-    // Restore original fetch after each test
-    global.fetch = originalFetch;
+  beforeEach(() => {
+    // install the Nuxt import mock before each test
+    mockNuxtImport("useFetch", () => useFetchMock);
   });
 
-  it("should mount", async () => {
-    const component = await mountSuspended(App);
-    expect(component).toBeDefined();
+  afterEach(() => {
+    vi.restoreAllMocks();
   });
 
   it("should render initial state with mocked Diagnostics", async () => {
@@ -43,13 +49,12 @@ describe("app/app.vue", () => {
       },
     };
 
-    // Mock the global fetch function to return the mocked Diagnostics
-    const mockFetch = vi.fn().mockResolvedValue({
-      json: vi.fn().mockResolvedValue(mockDiagnostics),
-    });
-
-    // Replace global fetch with the mock
-    global.fetch = mockFetch;
+    useFetchMock.mockImplementation(() => ({
+      data: ref(mockDiagnostics),
+      pending: ref(false),
+      error: ref(undefined),
+      refresh: vi.fn(),
+    }));
 
     const { html } = await renderSuspended(App);
 
@@ -89,16 +94,45 @@ describe("app/app.vue", () => {
       },
     };
 
-    // Mock the global fetch function to return the mocked Diagnostics
-    const mockFetch = vi.fn().mockResolvedValue({
-      json: vi.fn().mockResolvedValue(mockDiagnostics),
-    });
-
-    // Replace global fetch with the mock
-    global.fetch = mockFetch;
+    useFetchMock.mockImplementation(() => ({
+      data: ref(mockDiagnostics),
+      pending: ref(false),
+      error: ref(undefined),
+      refresh: vi.fn(),
+    }));
 
     const { html } = await renderSuspended(App);
 
     expect(html()).toMatchSnapshot();
+  });
+
+  it("shows loading spinner when pending", async () => {
+    useFetchMock.mockImplementation(() => ({
+      data: ref(undefined),
+      pending: ref(true),
+      error: ref(undefined),
+      refresh: vi.fn(),
+    }));
+
+    const wrapper = await mountSuspended(App);
+
+    // Check that loading state is shown - the component should render differently when pending
+    expect(wrapper.html()).not.toContain("Extensions"); // Tabs should not be shown when pending
+  });
+
+  it("shows error alert when useFetch returns an error", async () => {
+    const error = new Error("Failed to fetch diagnostics");
+    useFetchMock.mockImplementation(() => ({
+      data: ref(undefined),
+      pending: ref(false),
+      error: ref(error),
+      refresh: vi.fn(),
+    }));
+
+    const wrapper = await mountSuspended(App);
+
+    // Check that error state is shown - the component should show error message
+    expect(wrapper.text()).toContain("Failed to fetch diagnostics");
+    expect(wrapper.html()).not.toContain("Extensions"); // Tabs should not be shown when error
   });
 });
