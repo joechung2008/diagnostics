@@ -7,6 +7,7 @@ export interface ExtensionsProps {
 
 export interface ExtensionInfo {
   extensionName: string
+  managedSdpEnabled: boolean
   config?: Record<string, string>
   stageDefinition?: Record<string, string[]>
 }

@@ -7,7 +7,12 @@ defineProps<ExtensionInfo>()
 </script>
 
 <template>
-  <h1 class="text-h3">
+  <v-badge v-if="managedSdpEnabled" color="primary" content="SDP Enabled" inline>
+    <h1 class="text-h3">
+      {{ extensionName }}
+    </h1>
+  </v-badge>
+  <h1 v-else class="text-h3">
     {{ extensionName }}
   </h1>
   <ConfigurationTable v-if="config" :config="config" />
