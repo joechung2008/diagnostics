@@ -1,5 +1,6 @@
 {
   "$schema": "https://turborepo.com/schema.v2.json",
+  "globalPassThroughEnv": ["CHROME_BIN"],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
