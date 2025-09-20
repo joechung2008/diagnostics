@@ -60,6 +60,10 @@ export default defineConfigWithVueTs(
         chrome: 'readonly', // BEX related
         browser: 'readonly', // BEX related
       },
+
+      parserOptions: {
+        tsconfigRootDir: process.cwd(),
+      },
     },
 
     // add your custom rules here
