@@ -7,6 +7,8 @@ import {
   MenuList,
   MenuPopover,
   MenuTrigger,
+  MessageBar,
+  Spinner,
   Tab,
   TabList,
   Toolbar,
@@ -59,7 +61,11 @@ const App: React.FC = () => {
 
   const environment = environments.environment?.[0];
 
-  const { data: diagnostics } = useSWR(environment, fetchDiagnostics);
+  const {
+    data: diagnostics,
+    error,
+    isLoading,
+  } = useSWR(environment, fetchDiagnostics);
 
   const environmentName = getEnvironmentName(environment);
 
@@ -72,12 +78,13 @@ const App: React.FC = () => {
     { checkedItems, name }: MenuCheckedValueChangeData
   ) => {
     if (checkedItems.length > 0) {
+      setExtension(undefined);
+
       startTransition(() => {
         setEnvironments((previous) => ({
           ...previous,
           [name]: checkedItems as Environment[],
         }));
-        setExtension(undefined);
       });
     }
   };
@@ -90,10 +97,6 @@ const App: React.FC = () => {
       }
     }
   };
-
-  if (!diagnostics) {
-    return null;
-  }
 
   return (
     <div className="flexbox">
@@ -148,27 +151,57 @@ const App: React.FC = () => {
         <Tab value="build">Build Information</Tab>
         <Tab value="server">Server Information</Tab>
       </TabList>
-      {selectedTab === "extensions" && diagnostics?.extensions && (
-        <div className="tab-panel">
-          <div className="stack">
-            <Extensions
-              extensions={diagnostics.extensions}
-              onLinkClick={handleLinkClick}
-            />
-            {extension && <Extension {...extension} />}
-          </div>
-        </div>
-      )}
-      {selectedTab === "build" && diagnostics?.buildInfo && (
-        <div className="tab-panel">
-          <BuildInfo {...diagnostics.buildInfo} />
-        </div>
-      )}
-      {selectedTab === "server" && diagnostics?.serverInfo && (
-        <div className="tab-panel">
-          <ServerInfo {...diagnostics.serverInfo} />
-        </div>
-      )}
+      {(() => {
+        if (isLoading) {
+          return (
+            <div className="tab-panel pending">
+              <Spinner size="extra-large" aria-label="Loading diagnostics..." />
+            </div>
+          );
+        }
+
+        if (error) {
+          return (
+            <div className="tab-panel">
+              <MessageBar intent="error">
+                Error loading diagnostics: {error.message}
+              </MessageBar>
+            </div>
+          );
+        }
+
+        if (selectedTab === "extensions" && diagnostics?.extensions) {
+          return (
+            <div className="tab-panel">
+              <div className="stack">
+                <Extensions
+                  extensions={diagnostics.extensions}
+                  onLinkClick={handleLinkClick}
+                />
+                {extension && <Extension {...extension} />}
+              </div>
+            </div>
+          );
+        }
+
+        if (selectedTab === "build" && diagnostics?.buildInfo) {
+          return (
+            <div className="tab-panel">
+              <BuildInfo {...diagnostics.buildInfo} />
+            </div>
+          );
+        }
+
+        if (selectedTab === "server" && diagnostics?.serverInfo) {
+          return (
+            <div className="tab-panel">
+              <ServerInfo {...diagnostics.serverInfo} />
+            </div>
+          );
+        }
+
+        return null;
+      })()}
     </div>
   );
 };

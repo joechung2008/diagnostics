@@ -97,8 +97,16 @@ describe("App", () => {
       </TestWrapper>
     );
 
-    // Should render nothing while loading
-    expect(screen.queryByText("Extensions")).not.toBeInTheDocument();
+    // Should show tabs but display loading spinner in tab content
+    expect(screen.getByText("Extensions")).toBeInTheDocument();
+    expect(screen.getByRole("tab", { name: "Extensions" })).toBeInTheDocument();
+    expect(
+      screen.getByRole("tab", { name: "Build Information" })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("tab", { name: "Server Information" })
+    ).toBeInTheDocument();
+    expect(screen.getByLabelText("Loading diagnostics...")).toBeInTheDocument();
   });
 
   it("renders main tabs after data loads", async () => {

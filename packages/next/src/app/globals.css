@@ -56,3 +56,10 @@ body {
   flex: 1;
   overflow-y: auto;
 }
+
+.tab-panel.pending {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
