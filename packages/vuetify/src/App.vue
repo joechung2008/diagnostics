@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from 'vue'
+import { useFetch } from '@vueuse/core'
+import { computed, ref, watch } from 'vue'
 import { VIcon } from 'vuetify/components'
 import type { Diagnostics } from './App.types'
 import BuildInfoTable from './BuildInfoTable.vue'
@@ -21,11 +22,14 @@ const Environments = {
   Mooncake: 'https://hosting.azureportal.chinacloudapi.cn/api/diagnostics' as Environment,
 } as const
 
-const diagnostics = ref<Diagnostics | undefined>(undefined)
 const extension = ref<ExtensionInfo | undefined>(undefined)
 const environment = ref<Environment>(Environments.Public)
 const selectedTab = ref('extensions')
 const menuOpen = ref(false)
+
+const { data: diagnosticsData } = useFetch(environment, { refetch: true }).json<Diagnostics>()
+
+const diagnostics = computed(() => diagnosticsData.value)
 
 const environmentName = computed(() => {
   switch (environment.value) {
@@ -62,17 +66,9 @@ const environments = [
   },
 ]
 
-const fetchDiagnostics = async () => {
-  const response = await fetch(environment.value)
-  diagnostics.value = await response.json()
-}
-
 watch(environment, () => {
   extension.value = undefined
-  fetchDiagnostics()
 })
-
-onMounted(fetchDiagnostics)
 
 const handleLinkClick = (_: KeyboardEvent | MouseEvent, link: KeyedNavLink) => {
   if (link) {
