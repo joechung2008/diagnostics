@@ -133,8 +133,8 @@ const selectExtension = (key: string) => {
       <v-tab value="server">Server Information</v-tab>
     </v-tabs>
     <div class="tab-panel">
-      <v-window v-model="selectedTab">
-        <v-window-item value="extensions">
+      <v-tabs-window v-model="selectedTab">
+        <v-tabs-window-item value="extensions">
           <div class="stack">
             <div class="extensions">
               <ExtensionItems
@@ -147,14 +147,14 @@ const selectExtension = (key: string) => {
               <ExtensionItem v-if="extension" v-bind="extension" />
             </div>
           </div>
-        </v-window-item>
-        <v-window-item value="build">
+        </v-tabs-window-item>
+        <v-tabs-window-item value="build">
           <BuildInfoTable v-if="diagnostics?.buildInfo" v-bind="diagnostics.buildInfo" />
-        </v-window-item>
-        <v-window-item value="server">
+        </v-tabs-window-item>
+        <v-tabs-window-item value="server">
           <ServerInfoTable v-if="diagnostics?.serverInfo" v-bind="diagnostics.serverInfo" />
-        </v-window-item>
-      </v-window>
+        </v-tabs-window-item>
+      </v-tabs-window>
     </div>
   </v-app>
 </template>
