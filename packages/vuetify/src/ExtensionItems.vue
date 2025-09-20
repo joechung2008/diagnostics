@@ -12,14 +12,16 @@ const links = computed(() =>
 
 <template>
   <v-list aria-label="Extensions" role="navigation" tag="nav">
-    <v-list-item v-for="link in links" :key="link.key">
-      <v-btn
-        block
-        class="justify-start"
-        @click="(e: KeyboardEvent | MouseEvent) => props.onLinkClick?.(e, link)"
-      >
-        {{ link.name }}
-      </v-btn>
-    </v-list-item>
+    <div role="list">
+      <v-list-item v-for="link in links" :key="link.key">
+        <v-btn
+          block
+          class="justify-start"
+          @click="(e: KeyboardEvent | MouseEvent) => props.onLinkClick?.(e, link)"
+        >
+          {{ link.name }}
+        </v-btn>
+      </v-list-item>
+    </div>
   </v-list>
 </template>
