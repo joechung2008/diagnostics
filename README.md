@@ -53,6 +53,7 @@ This monorepo includes diagnostic implementations for:
 - `element-plus/` - Element Plus components
 - `naive/` - Naive UI components
 - `nuxt-ui/` - Nuxt UI components
+- `quasar/` - Quasar components
 - `vuetify/` - Vuetify components [🔗](https://atdiagnostics-vuetify.onrender.com/)
 
 ### SolidJS
