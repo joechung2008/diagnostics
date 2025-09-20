@@ -13,11 +13,11 @@ import {
   type MenuCheckedValueChangeEvent,
 } from "@fluentui/react-components";
 import { startTransition, useCallback, useMemo, useState } from "react";
+import useSWR from "swr";
 import BuildInfo from "./BuildInfo";
 import Extension from "./Extension";
 import Extensions from "./Extensions";
 import ServerInfo from "./ServerInfo";
-import { clearCache, useDiagnostics } from "./useDiagnostics";
 import { isExtensionInfo } from "./utils";
 
 type Environment = (typeof Environment)[keyof typeof Environment];
@@ -51,7 +51,24 @@ const App: React.FC = () => {
     () => environments.environment[0],
     [environments.environment]
   );
-  const diagnostics = useDiagnostics(environment);
+  const {
+    data: diagnostics,
+    error,
+    isLoading,
+  } = useSWR(
+    environment,
+    async (url: string) => {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch diagnostics: ${response.statusText}`);
+      }
+      return response.json();
+    },
+    {
+      suspense: true,
+    }
+  );
+
   const [extension, setExtension] = useState<ExtensionInfo>();
   const [selectedTab, setSelectedTab] = useState<string>("extensions");
 
@@ -86,12 +103,19 @@ const App: React.FC = () => {
             [data.name]: data.checkedItems as Environment[],
           }));
           setExtension(undefined);
-          clearCache();
         });
       }
     },
     []
   );
+
+  if (isLoading) {
+    return <div>Loading diagnostics...</div>;
+  }
+
+  if (error) {
+    return <div>Error loading diagnostics: {error.message}</div>;
+  }
 
   if (!diagnostics) {
     return null;
