@@ -4,7 +4,7 @@ export interface ServerInfoProps {
     totalSyncAllCount: number
   }
   hostname: string
-  nodeVersions: string
+  nodeVersions?: string
   serverId: string
-  uptime: number
+  uptime?: number
 }
