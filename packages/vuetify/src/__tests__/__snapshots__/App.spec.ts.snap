@@ -45,10 +45,10 @@ exports[`App.vue > renders tabs 1`] = `
     </div>
     <!---->
     <div data-v-7a7a37b1="" class="tab-panel">
-      <div data-v-7a7a37b1="" class="v-window v-theme--light">
+      <div data-v-7a7a37b1="" class="v-window v-theme--light v-tabs-window">
         <div class="v-window__container">
           <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
-            <div class="v-window-item v-window-item--active">
+            <div class="v-window-item v-window-item--active v-tabs-window-item">
               <div data-v-7a7a37b1="" class="stack">
                 <div data-v-7a7a37b1="" class="extensions">
                   <!--v-if-->
@@ -60,12 +60,12 @@ exports[`App.vue > renders tabs 1`] = `
             </div>
           </transition-stub>
           <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
-            <div class="v-window-item" style="display: none;">
+            <div class="v-window-item v-tabs-window-item" style="display: none;">
               <!---->
             </div>
           </transition-stub>
           <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
-            <div class="v-window-item" style="display: none;">
+            <div class="v-window-item v-tabs-window-item" style="display: none;">
               <!---->
             </div>
           </transition-stub>
@@ -123,10 +123,10 @@ exports[`App.vue > renders without crashing 1`] = `
     </div>
     <!---->
     <div data-v-7a7a37b1="" class="tab-panel">
-      <div data-v-7a7a37b1="" class="v-window v-theme--light">
+      <div data-v-7a7a37b1="" class="v-window v-theme--light v-tabs-window">
         <div class="v-window__container">
           <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
-            <div class="v-window-item v-window-item--active">
+            <div class="v-window-item v-window-item--active v-tabs-window-item">
               <div data-v-7a7a37b1="" class="stack">
                 <div data-v-7a7a37b1="" class="extensions">
                   <!--v-if-->
@@ -138,12 +138,12 @@ exports[`App.vue > renders without crashing 1`] = `
             </div>
           </transition-stub>
           <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
-            <div class="v-window-item" style="display: none;">
+            <div class="v-window-item v-tabs-window-item" style="display: none;">
               <!---->
             </div>
           </transition-stub>
           <transition-stub data-v-7a7a37b1="" name="" appear="false" persisted="false" css="true">
-            <div class="v-window-item" style="display: none;">
+            <div class="v-window-item v-tabs-window-item" style="display: none;">
               <!---->
             </div>
           </transition-stub>

@@ -1,5 +1,65 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`ExtensionItem > does not render SDP badge when managedSdpEnabled is false 1`] = `
+"<h1 class="text-h3">Test Extension</h1>
+<!--v-if-->
+<!--v-if-->"
+`;
+
+exports[`ExtensionItem > renders SDP enabled badge when managedSdpEnabled is true 1`] = `
+"<div class="v-badge v-badge--inline">
+  <div class="v-badge__wrapper">
+    <h1 class="text-h3">Test Extension</h1>
+    <transition-stub name="scale-rotate-transition" appear="false" persisted="false" css="true"><span class="v-badge__badge v-theme--light bg-primary" aria-atomic="true" aria-label="Badge" aria-live="polite" role="status">SDP Enabled</span></transition-stub>
+  </div>
+</div>
+<h2 class="text-h4">Configuration</h2>
+<div class="v-table v-table--has-top v-table--has-bottom v-theme--light v-table--density-default v-data-table">
+  <!---->
+  <div class="v-table__wrapper">
+    <table>
+      <!---->
+      <thead>
+        <tr>
+          <th class="v-data-table__td v-data-table-column--align-start v-data-table__th" colspan="1" rowspan="1">
+            <div class="v-data-table-header__content"><span>Key</span>
+              <!---->
+              <!---->
+            </div>
+          </th>
+          <th class="v-data-table__td v-data-table-column--align-start v-data-table__th" colspan="1" rowspan="1">
+            <div class="v-data-table-header__content"><span>Value</span>
+              <!---->
+              <!---->
+            </div>
+          </th>
+        </tr>
+        <!---->
+      </thead>
+      <!---->
+      <tbody>
+        <!---->
+        <tr class="v-data-table__tr">
+          <td class="v-data-table__td v-data-table-column--align-start">foo</td>
+          <td class="v-data-table__td v-data-table-column--align-start">bar</td>
+        </tr>
+        <!---->
+        <tr class="v-data-table__tr">
+          <td class="v-data-table__td v-data-table-column--align-start">baz</td>
+          <td class="v-data-table__td v-data-table-column--align-start">qux</td>
+        </tr>
+        <!---->
+        <!---->
+      </tbody>
+      <!---->
+      <!---->
+    </table>
+  </div>
+  <!---->
+</div>
+<!--v-if-->"
+`;
+
 exports[`ExtensionItem > renders extension name and config 1`] = `
 "<h1 class="text-h3">Test Extension</h1>
 <h2 class="text-h4">Configuration</h2>

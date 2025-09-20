@@ -6,8 +6,8 @@ import ExtensionItems from '../ExtensionItems.vue'
 describe('ExtensionItems', () => {
   it('renders extension buttons', () => {
     const extensions = {
-      ext1: { extensionName: 'Alpha' },
-      ext2: { extensionName: 'Beta' },
+      ext1: { extensionName: 'Alpha', managedSdpEnabled: false },
+      ext2: { extensionName: 'Beta', managedSdpEnabled: true },
     }
     const onLinkClick = vi.fn()
     const wrapper = mount(ExtensionItems, {
