@@ -5,12 +5,13 @@ import {
   MenuList,
   MenuPopover,
   MenuTrigger,
+  MessageBar,
+  Spinner,
   Tab,
   TabList,
   Toolbar,
   ToolbarButton,
-  type MenuCheckedValueChangeData,
-  type MenuCheckedValueChangeEvent,
+  type MenuProps,
 } from "@fluentui/react-components";
 import { startTransition, useCallback, useMemo, useState } from "react";
 import useSWR from "swr";
@@ -55,19 +56,13 @@ const App: React.FC = () => {
     data: diagnostics,
     error,
     isLoading,
-  } = useSWR(
-    environment,
-    async (url: string) => {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error(`Failed to fetch diagnostics: ${response.statusText}`);
-      }
-      return response.json();
-    },
-    {
-      suspense: true,
+  } = useSWR(environment, async (url: string) => {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch diagnostics: ${response.statusText}`);
     }
-  );
+    return response.json();
+  });
 
   const [extension, setExtension] = useState<ExtensionInfo>();
   const [selectedTab, setSelectedTab] = useState<string>("extensions");
@@ -94,32 +89,19 @@ const App: React.FC = () => {
     [environment]
   );
 
-  const handleEnvironmentChange = useCallback(
-    (_: MenuCheckedValueChangeEvent, data: MenuCheckedValueChangeData) => {
-      if (data.checkedItems?.length ?? 0 > 0) {
-        startTransition(() => {
-          setEnvironments((previous) => ({
-            ...previous,
-            [data.name]: data.checkedItems as Environment[],
-          }));
-          setExtension(undefined);
-        });
-      }
-    },
-    []
-  );
-
-  if (isLoading) {
-    return <div>Loading diagnostics...</div>;
-  }
-
-  if (error) {
-    return <div>Error loading diagnostics: {error.message}</div>;
-  }
-
-  if (!diagnostics) {
-    return null;
-  }
+  const handleEnvironmentChange = useCallback<
+    Exclude<MenuProps["onCheckedValueChange"], undefined>
+  >((_, data) => {
+    if (data.checkedItems?.length ?? 0 > 0) {
+      startTransition(() => {
+        setEnvironments((previous) => ({
+          ...previous,
+          [data.name]: data.checkedItems as Environment[],
+        }));
+        setExtension(undefined);
+      });
+    }
+  }, []);
 
   return (
     <div className="flexbox">
@@ -174,27 +156,57 @@ const App: React.FC = () => {
         <Tab value="build">Build Information</Tab>
         <Tab value="server">Server Information</Tab>
       </TabList>
-      {selectedTab === "extensions" && diagnostics?.extensions && (
-        <div className="tab-panel">
-          <div className="stack">
-            <Extensions
-              extensions={diagnostics.extensions}
-              onLinkClick={handleLinkClick}
-            />
-            {extension && <Extension {...extension} />}
-          </div>
-        </div>
-      )}
-      {selectedTab === "build" && diagnostics?.buildInfo && (
-        <div className="tab-panel">
-          <BuildInfo {...diagnostics.buildInfo} />
-        </div>
-      )}
-      {selectedTab === "server" && diagnostics?.serverInfo && (
-        <div className="tab-panel">
-          <ServerInfo {...diagnostics.serverInfo} />
-        </div>
-      )}
+      {(() => {
+        if (isLoading) {
+          return (
+            <div className="tab-panel pending">
+              <Spinner size="extra-large" aria-label="Loading diagnostics..." />
+            </div>
+          );
+        }
+
+        if (error) {
+          return (
+            <div className="tab-panel">
+              <MessageBar intent="error">
+                Error loading diagnostics: {error.message}
+              </MessageBar>
+            </div>
+          );
+        }
+
+        if (selectedTab === "extensions" && diagnostics?.extensions) {
+          return (
+            <div className="tab-panel">
+              <div className="stack">
+                <Extensions
+                  extensions={diagnostics.extensions}
+                  onLinkClick={handleLinkClick}
+                />
+                {extension && <Extension {...extension} />}
+              </div>
+            </div>
+          );
+        }
+
+        if (selectedTab === "build" && diagnostics?.buildInfo) {
+          return (
+            <div className="tab-panel">
+              <BuildInfo {...diagnostics.buildInfo} />
+            </div>
+          );
+        }
+
+        if (selectedTab === "server" && diagnostics?.serverInfo) {
+          return (
+            <div className="tab-panel">
+              <ServerInfo {...diagnostics.serverInfo} />
+            </div>
+          );
+        }
+
+        return null;
+      })()}
     </div>
   );
 };
