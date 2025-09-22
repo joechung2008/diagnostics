@@ -24,14 +24,14 @@ jobs:
           version: 10.17.0
           run_install: false
 
-      - name: Setup Node.js
+      - name: Use Node.js 22.x 
         uses: actions/setup-node@v4
         with:
           node-version: "22"
           cache: "pnpm"
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Install dependencies for affected packages
+        run: bash install-scope.sh
 
       - name: Lint affected packages
         run: |
@@ -59,7 +59,7 @@ jobs:
           version: 10.17.0
           run_install: false
 
-      - name: Setup Node.js
+      - name: Use Node.js 22.x
         uses: actions/setup-node@v4
         with:
           node-version: "22"
