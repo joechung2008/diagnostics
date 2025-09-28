@@ -10,7 +10,7 @@ function getSystemTheme() {
 }
 
 export function useSystemTheme(): string {
-  const [theme, setTheme] = useState<string>(getSystemTheme());
+  const [theme, setTheme] = useState(() => getSystemTheme());
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-color-scheme: dark)");
