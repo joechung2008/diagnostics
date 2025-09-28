@@ -1,3 +1,179 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`App > matches snapshot 1`] = `<DocumentFragment />`;
+exports[`App > matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flexbox"
+  >
+    <div
+      class="bp6-button-group"
+    >
+      <button
+        class="bp6-button bp6-active bp6-minimal"
+        type="button"
+      >
+        <span
+          class="bp6-button-text"
+        >
+          Public Cloud
+        </span>
+      </button>
+      <button
+        class="bp6-button bp6-minimal"
+        type="button"
+      >
+        <span
+          class="bp6-button-text"
+        >
+          Fairfax
+        </span>
+      </button>
+      <button
+        class="bp6-button bp6-minimal"
+        type="button"
+      >
+        <span
+          class="bp6-button-text"
+        >
+          Mooncake
+        </span>
+      </button>
+      <span
+        style="margin: 0px 8px; border-left: 1px solid rgb(204, 204, 204); height: 24px; align-self: center;"
+      />
+      <button
+        class="bp6-button bp6-minimal"
+        type="button"
+      >
+        <span
+          class="bp6-button-text"
+        >
+          paasserverless
+        </span>
+      </button>
+      <button
+        class="bp6-button bp6-minimal"
+        type="button"
+      >
+        <span
+          class="bp6-button-text"
+        >
+          websites
+        </span>
+      </button>
+    </div>
+    <div
+      class="bp6-tabs"
+    >
+      <div
+        class="bp6-tab-list bp6-large"
+        role="tablist"
+      >
+        <div
+          class="bp6-tab-indicator-wrapper"
+          style="height: 0px; transform: translateX(0px) translateY(0px); width: 0px; transition: none;"
+        >
+          <div
+            class="bp6-tab-indicator"
+          />
+        </div>
+        <div
+          aria-controls="bp6-tab-panel_undefined_extensions"
+          aria-disabled="false"
+          aria-expanded="true"
+          aria-selected="true"
+          class="bp6-tab"
+          data-tab-id="extensions"
+          id="bp6-tab-title_undefined_extensions"
+          role="tab"
+          tabindex="0"
+        >
+          Extensions
+        </div>
+        <div
+          aria-controls="bp6-tab-panel_undefined_build"
+          aria-disabled="false"
+          aria-expanded="false"
+          aria-selected="false"
+          class="bp6-tab"
+          data-tab-id="build"
+          id="bp6-tab-title_undefined_build"
+          role="tab"
+          tabindex="-1"
+        >
+          Build Information
+        </div>
+        <div
+          aria-controls="bp6-tab-panel_undefined_server"
+          aria-disabled="false"
+          aria-expanded="false"
+          aria-selected="false"
+          class="bp6-tab"
+          data-tab-id="server"
+          id="bp6-tab-title_undefined_server"
+          role="tab"
+          tabindex="-1"
+        >
+          Server Information
+        </div>
+      </div>
+    </div>
+    <div
+      class="tab-panel"
+      id="extensions-tab"
+    >
+      <div
+        class="stack"
+      >
+        <div
+          class="extension-root"
+        >
+          <div
+            class="bp6-tabs bp6-vertical"
+          >
+            <div
+              class="bp6-tab-list"
+              role="tablist"
+            >
+              <div
+                class="bp6-tab-indicator-wrapper"
+                style="height: 0px; transform: translateX(0px) translateY(0px); width: 0px; transition: none;"
+              >
+                <div
+                  class="bp6-tab-indicator"
+                />
+              </div>
+              <div
+                aria-controls="bp6-tab-panel_undefined_paasserverless"
+                aria-disabled="false"
+                aria-expanded="true"
+                aria-selected="true"
+                class="bp6-tab"
+                data-tab-id="paasserverless"
+                id="bp6-tab-title_undefined_paasserverless"
+                role="tab"
+                tabindex="0"
+              >
+                paasserverless
+              </div>
+              <div
+                aria-controls="bp6-tab-panel_undefined_websites"
+                aria-disabled="false"
+                aria-expanded="false"
+                aria-selected="false"
+                class="bp6-tab"
+                data-tab-id="websites"
+                id="bp6-tab-title_undefined_websites"
+                role="tab"
+                tabindex="-1"
+              >
+                websites
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

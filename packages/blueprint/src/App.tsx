@@ -124,9 +124,17 @@ const App: React.FC = () => {
         size="large"
         onChange={(tabId) => setSelectedTab(tabId as string)}
       >
-        <Tab aria-controls="extensions-tab" title="Extensions" />
-        <Tab aria-controls="build-tab" title="Build Information" />
-        <Tab aria-controls="server-tab" title="Server Information" />
+        <Tab
+          id="extensions"
+          aria-controls="extensions-tab"
+          title="Extensions"
+        />
+        <Tab id="build" aria-controls="build-tab" title="Build Information" />
+        <Tab
+          id="server"
+          aria-controls="server-tab"
+          title="Server Information"
+        />
       </Tabs>
       {selectedTab === "extensions" && (
         <div id="extensions-tab" className="tab-panel">
