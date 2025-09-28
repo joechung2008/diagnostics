@@ -9,10 +9,13 @@ if [ -z "$CHANGED_PACKAGES" ]; then
     exit 0
 fi
 
-# Format for turbo filter
-FILTER=$(echo "$CHANGED_PACKAGES" | sed 's/^/@diagnostics\//' | tr '\n' ' ' | sed 's/ $//')
+# Format for turbo filter as multiple --filter args
+FILTER_ARGS=()
+for pkg in $CHANGED_PACKAGES; do
+  FILTER_ARGS+=(--filter=@diagnostics/$pkg)
+done
 
-echo "Changed packages: $FILTER"
+echo "Changed packages: ${FILTER_ARGS[*]}"
 
 # Run turbo with the changed packages
 # First argument is the task, rest are turbo options
@@ -20,4 +23,4 @@ TASK=$1
 shift
 TURBO_ARGS="$@"
 
-pnpm turbo run $TASK $TURBO_ARGS --filter="$FILTER"
+pnpm turbo run $TASK $TURBO_ARGS "${FILTER_ARGS[@]}"
