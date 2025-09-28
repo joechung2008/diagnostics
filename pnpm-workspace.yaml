@@ -7,6 +7,9 @@ packageExtensions:
     dependencies:
       "@types/react": "19.1.12"
 
+publicHoistPattern:
+  - '@vue/compiler-dom'
+
 onlyBuiltDependencies:
   - '@heroui/shared-utils'
   - '@parcel/watcher'
