@@ -1,4 +1,4 @@
-import "@testing-library/jest-dom";
+import "@testing-library/jest-dom/vitest";
 
 /**
  * Mock window.matchMedia for Ant Design and jsdom tests.
