@@ -144,8 +144,8 @@ importers:
         specifier: ^5.5.4
         version: 5.5.4(eslint-config-prettier@10.1.8(eslint@9.36.0(jiti@2.6.0)))(eslint@9.36.0(jiti@2.6.0))(prettier@3.6.2)
       eslint-plugin-react-dom:
-        specifier: ^1.53.1
-        version: 1.53.1(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.2)
+        specifier: ^2.0.1
+        version: 2.0.1(eslint@9.36.0(jiti@2.6.0))(typescript@5.9.2)
       eslint-plugin-react-hooks:
         specifier: ^5.2.0
         version: 5.2.0(eslint@9.36.0(jiti@2.6.0))
