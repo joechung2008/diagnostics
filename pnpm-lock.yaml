@@ -8,9 +8,8 @@ overrides:
   cookie: '>=0.7.0'
   esbuild: ^0.25.10
   scheduler: '>=0.26.0'
-  vitest>jsdom: 26.1.0
 
-packageExtensionsChecksum: sha256-FxI2pVKXzk3ZdWnmE8fUtymSRgT5RPwyYQMNpJGKZNY=
+packageExtensionsChecksum: sha256-fBt1UubxRbiwhQYb8MsdvWsk1vDrIUTfVnPGGV1Zoho=
 
 importers:
 
@@ -16325,7 +16324,7 @@ packages:
       '@vitest/browser': 3.2.4
       '@vitest/ui': 3.2.4
       happy-dom: '*'
-      jsdom: 26.1.0
+      jsdom: '*'
     peerDependenciesMeta:
       '@edge-runtime/vm':
         optional: true

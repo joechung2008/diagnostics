@@ -8,20 +8,8 @@
     "overrides": {
       "cookie": ">=0.7.0",
       "esbuild": "^0.25.10",
-      "scheduler": ">=0.26.0",
-      "vitest>jsdom": "26.1.0"
-    },
-    "onlyBuiltDependencies": [
-      "@heroui/shared-utils",
-      "@parcel/watcher",
-      "@swc/core",
-      "@tailwindcss/oxide",
-      "esbuild",
-      "lmdb",
-      "msgpackr-extract",
-      "sharp",
-      "vue-demi"
-    ]
+      "scheduler": ">=0.26.0"
+    }
   },
   "private": true,
   "scripts": {
