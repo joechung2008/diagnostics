@@ -4,7 +4,7 @@ exports[`BuildInfo > matches snapshot 1`] = `
 <div>
   <table
     aria-label="Build Info"
-    class="StyledTable-sc-1m3u5g-6 wtbPz"
+    class="StyledTable-sc-1m3u5g-6 jlczSm"
   >
     <thead
       class="StyledTable__StyledTableHeader-sc-1m3u5g-4"
@@ -13,13 +13,13 @@ exports[`BuildInfo > matches snapshot 1`] = `
         class="StyledTable__StyledTableRow-sc-1m3u5g-2"
       >
         <th
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 cYkJuW"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
           scope="col"
         >
           Name
         </th>
         <th
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 cYkJuW"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
           scope="col"
         >
           Value
@@ -33,12 +33,12 @@ exports[`BuildInfo > matches snapshot 1`] = `
         class="StyledTable__StyledTableRow-sc-1m3u5g-2"
       >
         <td
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
         >
           Build Version
         </td>
         <td
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
         >
           1.2.3
         </td>

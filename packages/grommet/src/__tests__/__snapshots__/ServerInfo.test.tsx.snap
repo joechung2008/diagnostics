@@ -4,7 +4,7 @@ exports[`ServerInfo > matches snapshot 1`] = `
 <div>
   <table
     aria-label="Server Info"
-    class="StyledTable-sc-1m3u5g-6 wtbPz"
+    class="StyledTable-sc-1m3u5g-6 jlczSm"
   >
     <thead
       class="StyledTable__StyledTableHeader-sc-1m3u5g-4"
@@ -13,13 +13,13 @@ exports[`ServerInfo > matches snapshot 1`] = `
         class="StyledTable__StyledTableRow-sc-1m3u5g-2"
       >
         <th
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 cYkJuW"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
           scope="col"
         >
           Name
         </th>
         <th
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 cYkJuW"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
           scope="col"
         >
           Value
@@ -33,12 +33,12 @@ exports[`ServerInfo > matches snapshot 1`] = `
         class="StyledTable__StyledTableRow-sc-1m3u5g-2"
       >
         <td
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
         >
           Hostname
         </td>
         <td
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
         >
           localhost
         </td>
@@ -47,12 +47,12 @@ exports[`ServerInfo > matches snapshot 1`] = `
         class="StyledTable__StyledTableRow-sc-1m3u5g-2"
       >
         <td
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
         >
           Uptime
         </td>
         <td
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
         >
           123456
         </td>
@@ -61,12 +61,12 @@ exports[`ServerInfo > matches snapshot 1`] = `
         class="StyledTable__StyledTableRow-sc-1m3u5g-2"
       >
         <td
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
         >
           Server ID
         </td>
         <td
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
         >
           srv-001
         </td>
@@ -75,12 +75,12 @@ exports[`ServerInfo > matches snapshot 1`] = `
         class="StyledTable__StyledTableRow-sc-1m3u5g-2"
       >
         <td
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
         >
           Deployment ID
         </td>
         <td
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
         >
           dev-123
         </td>
@@ -89,12 +89,12 @@ exports[`ServerInfo > matches snapshot 1`] = `
         class="StyledTable__StyledTableRow-sc-1m3u5g-2"
       >
         <td
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
         >
           Node Versions
         </td>
         <td
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
         >
           node: 18.0.0, npm: 9.0.0
         </td>
@@ -103,12 +103,12 @@ exports[`ServerInfo > matches snapshot 1`] = `
         class="StyledTable__StyledTableRow-sc-1m3u5g-2"
       >
         <td
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
         >
           Extension Sync | Total Sync All Count
         </td>
         <td
-          class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
+          class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
         >
           5
         </td>

@@ -4,13 +4,13 @@ exports[`Configuration > matches snapshot 1`] = `
 <div>
   <div>
     <h3
-      class="StyledHeading-sc-1rdh4aw-0 hrdewH"
+      class="StyledHeading-sc-1rdh4aw-0 chLmqp"
     >
       Configuration
     </h3>
     <table
       aria-label="Configuration"
-      class="StyledTable-sc-1m3u5g-6 wtbPz"
+      class="StyledTable-sc-1m3u5g-6 jlczSm"
     >
       <thead
         class="StyledTable__StyledTableHeader-sc-1m3u5g-4"
@@ -19,13 +19,13 @@ exports[`Configuration > matches snapshot 1`] = `
           class="StyledTable__StyledTableRow-sc-1m3u5g-2"
         >
           <th
-            class="StyledTable__StyledTableCell-sc-1m3u5g-0 cYkJuW"
+            class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
             scope="col"
           >
             Key
           </th>
           <th
-            class="StyledTable__StyledTableCell-sc-1m3u5g-0 cYkJuW"
+            class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
             scope="col"
           >
             Value
@@ -39,12 +39,12 @@ exports[`Configuration > matches snapshot 1`] = `
           class="StyledTable__StyledTableRow-sc-1m3u5g-2"
         >
           <td
-            class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
+            class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
           >
             apiUrl
           </td>
           <td
-            class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
+            class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
           >
             https://example.com
           </td>
@@ -53,12 +53,12 @@ exports[`Configuration > matches snapshot 1`] = `
           class="StyledTable__StyledTableRow-sc-1m3u5g-2"
         >
           <td
-            class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
+            class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
           >
             theme
           </td>
           <td
-            class="StyledTable__StyledTableCell-sc-1m3u5g-0 gBRlEM"
+            class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
           >
             dark
           </td>
