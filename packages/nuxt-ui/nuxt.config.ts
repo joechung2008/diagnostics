@@ -36,7 +36,6 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxt/ui",
     "@nuxt/test-utils/module",
-    "@nuxt/image",
     "@nuxt/scripts",
   ],
   typescript: {

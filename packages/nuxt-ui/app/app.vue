@@ -3,7 +3,7 @@
     class="flex flex-col h-screen transition-opacity"
     :class="{ 'opacity-0': !mounted }"
   >
-    <UButtonGroup class="p-1">
+    <UFieldGroup class="p-1">
       <UDropdownMenu :items="environments" mode="click">
         <UButton color="neutral" icon="i-lucide-chevron-down" variant="outline">
           {{ environmentName }}
@@ -16,7 +16,7 @@
         paasserverless
       </UButton>
       <UButton @click="selectExtension('websites')">websites</UButton>
-    </UButtonGroup>
+    </UFieldGroup>
 
     <UProgress v-if="pending" mode="indeterminate" />
 
