@@ -46,7 +46,7 @@
 		"lint:prettier": "prettier --check .",
 		"prepare": "svelte-kit sync || echo ''",
 		"preview": "vite preview",
-        "start": "node build",
+		"start": "node build",
 		"test": "vitest run",
 		"test:coverage": "vitest run --coverage",
 		"test:watch": "vitest",
