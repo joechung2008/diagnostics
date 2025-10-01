@@ -37,6 +37,7 @@
     "lint:prettier": "prettier --check .",
     "postinstall": "nuxt prepare",
     "preview": "nuxt preview",
+    "start": "node .output/server/index.mjs",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest watch",

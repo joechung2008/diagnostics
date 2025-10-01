@@ -48,6 +48,7 @@
 		"lint:eslint": "eslint --concurrency=auto .",
 		"prepare": "svelte-kit sync || echo ''",
 		"preview": "vite preview",
+        "start": "node build",
 		"smui-theme-prepare": "npm-run-all smui-theme-prepare:*",
 		"smui-theme-prepare:dark": "smui-theme compile static/smui-dark.css -i src/theme/dark",
 		"smui-theme-prepare:light": "smui-theme compile static/smui.css -i src/theme",
