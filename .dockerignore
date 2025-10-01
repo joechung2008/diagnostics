@@ -1,0 +1,56 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Logs
+*.log
+pnpm-debug.log*
+
+# Environment variables
+.env*
+
+# IDE
+.vscode
+.idea
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+
+# Build outputs
+build
+dist
+.next
+.nuxt
+.svelte-kit
+out
+
+# Coverage
+coverage
+
+# Cache
+.cache
+.parcel-cache
+.rpt2_cache
+.rts2_cache_cjs
+.rts2_cache_es
+.rts2_cache_umd
+
+# Temporary
+tmp
+temp
+
+# Documentation
+README.md
+CHANGELOG.md
+docs
+
+# CI/CD
+.github
+
+# Docker files
+Dockerfile*
+docker-compose*
