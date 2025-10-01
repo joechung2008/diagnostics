@@ -31,6 +31,10 @@ out
 # Coverage
 coverage
 
+# Playwright
+test-results
+playwright-report
+
 # Cache
 .cache
 .parcel-cache

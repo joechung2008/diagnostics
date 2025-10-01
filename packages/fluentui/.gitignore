@@ -10,6 +10,9 @@ out/
 
 # testing
 /coverage
+test-results/
+playwright-report/
+.cache/
 
 # production
 /build

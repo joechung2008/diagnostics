@@ -8,7 +8,13 @@ import { globalIgnores } from "eslint/config";
 import tseslint from "typescript-eslint";
 
 export default [
-  globalIgnores(["build", "coverage", "dist", "src/**/*.d.ts", "*.config.ts"]),
+  globalIgnores([
+    "build",
+    "coverage",
+    "playwright-report",
+    "test-results",
+    "src/**/*.d.ts",
+  ]),
   ...tseslint.configs.recommended,
   reactPlugin.configs["recommended-typescript"],
   reactDomPlugin.configs.recommended,
