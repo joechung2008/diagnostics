@@ -15,6 +15,7 @@ export default defineConfig({
       provider: "v8",
     },
     environment: "jsdom",
+    exclude: ["tests/**"],
     globals: true,
   },
 });
