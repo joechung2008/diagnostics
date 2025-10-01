@@ -49,9 +49,11 @@ npm run build         # build for production
 npm start             # alias for dev
 npm run lint          # run ESLint
 npm run format        # run Prettier
-npm run test          # run tests once
-npm run test:watch    # run tests in watch mode
-npm run test:coverage # run tests with coverage
+npm run test          # run unit tests once
+npm run test:watch    # run unit tests in watch mode
+npm run test:coverage # run unit tests with coverage
+npm run test:e2e      # run e2e tests
+npm run test:e2e:ui   # run e2e tests in interactive UI mode
 ```
 
 ## Building for production
@@ -63,6 +65,8 @@ npm run build
 The build step runs TypeScript checks and produces static files in the `build` directory by default.
 
 ## Testing
+
+### Unit Tests
 
 Run tests:
 
@@ -80,6 +84,26 @@ Coverage report:
 
 ```bash
 npm run test:coverage
+```
+
+### End-to-End Tests
+
+The project includes Playwright e2e tests. First, install Playwright browsers:
+
+```bash
+pnpm exec playwright install --with-deps
+```
+
+Then run the e2e tests:
+
+```bash
+npm run test:e2e
+```
+
+For interactive test development:
+
+```bash
+npm run test:e2e:ui
 ```
 
 ## Formatting & linting
