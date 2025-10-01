@@ -17,8 +17,10 @@ onlyBuiltDependencies:
   - "@parcel/watcher"
   - "@swc/core"
   - "@tailwindcss/oxide"
+  - carbon-components-svelte
   - esbuild
   - lmdb
   - msgpackr-extract
   - sharp
+  - unrs-resolver
   - vue-demi
