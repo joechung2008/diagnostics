@@ -22,9 +22,9 @@ exports[`App > should render app with default environment 1`] = `
           data-part="trigger"
           data-scope="menu"
           data-state="closed"
-          data-uid="«r0»"
+          data-uid="_r_2_"
           dir="ltr"
-          id="menu:«r0»:trigger"
+          id="menu:_r_2_:trigger"
           type="button"
         >
           Public Cloud
@@ -96,7 +96,7 @@ exports[`App > should render app with default environment 1`] = `
       data-part="root"
       data-scope="tabs"
       dir="ltr"
-      id="tabs:«r1»"
+      id="tabs:_r_3_"
     >
       <div
         aria-orientation="horizontal"
@@ -105,7 +105,7 @@ exports[`App > should render app with default environment 1`] = `
         data-part="list"
         data-scope="tabs"
         dir="ltr"
-        id="tabs:«r1»:list"
+        id="tabs:_r_3_:list"
         role="tablist"
       >
         <button
@@ -114,14 +114,13 @@ exports[`App > should render app with default environment 1`] = `
           class="chakra-tabs__trigger css-19t98pl"
           data-focus=""
           data-orientation="horizontal"
-          data-ownedby="tabs:«r1»:list"
+          data-ownedby="tabs:_r_3_:list"
           data-part="trigger"
           data-scope="tabs"
           data-selected=""
-          data-ssr=""
           data-value="extensions"
           dir="ltr"
-          id="tabs:«r1»:trigger-extensions"
+          id="tabs:_r_3_:trigger-extensions"
           role="tab"
           tabindex="0"
           type="button"
@@ -133,13 +132,12 @@ exports[`App > should render app with default environment 1`] = `
           aria-selected="false"
           class="chakra-tabs__trigger css-19t98pl"
           data-orientation="horizontal"
-          data-ownedby="tabs:«r1»:list"
+          data-ownedby="tabs:_r_3_:list"
           data-part="trigger"
           data-scope="tabs"
-          data-ssr=""
           data-value="build"
           dir="ltr"
-          id="tabs:«r1»:trigger-build"
+          id="tabs:_r_3_:trigger-build"
           role="tab"
           tabindex="-1"
           type="button"
@@ -151,19 +149,56 @@ exports[`App > should render app with default environment 1`] = `
           aria-selected="false"
           class="chakra-tabs__trigger css-19t98pl"
           data-orientation="horizontal"
-          data-ownedby="tabs:«r1»:list"
+          data-ownedby="tabs:_r_3_:list"
           data-part="trigger"
           data-scope="tabs"
-          data-ssr=""
           data-value="server"
           dir="ltr"
-          id="tabs:«r1»:trigger-server"
+          id="tabs:_r_3_:trigger-server"
           role="tab"
           tabindex="-1"
           type="button"
         >
           Server Information
         </button>
+      </div>
+    </div>
+    <div
+      class="css-1dwgpej"
+      style="display: none;"
+    >
+      <span
+        aria-label="Loading..."
+        class="chakra-spinner css-11t4vt7"
+      />
+    </div>
+    <div
+      class="css-1dwgpej"
+      style="display: none;"
+    >
+      <div
+        class="chakra-alert__root css-1mc1tb4"
+      >
+        <span
+          class="css-13gnd3a"
+        >
+          <svg
+            class="css-126y6n1"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 15H13V17H11V15ZM11 7H13V13H11V7Z"
+            />
+          </svg>
+        </span>
+        <div
+          class="chakra-alert__title css-1kctzi1"
+        >
+          Error
+        </div>
+        <div
+          class="chakra-alert__description css-t6kp1r"
+        />
       </div>
     </div>
     <div
@@ -198,6 +233,170 @@ exports[`App > should render app with default environment 1`] = `
           </button>
         </nav>
       </div>
+    </div>
+    <div
+      class="css-177dxab"
+      id="build-tab"
+      role="tabpanel"
+      style="display: none;"
+    >
+      <table
+        class="chakra-table__root css-a2tetu"
+      >
+        <thead
+          class="chakra-table__header"
+        >
+          <tr
+            class="chakra-table__row css-11ot24d"
+          >
+            <th
+              class="chakra-table__columnHeader css-kim7sg"
+            >
+              Name
+            </th>
+            <th
+              class="chakra-table__columnHeader css-kim7sg"
+            >
+              Value
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="chakra-table__body"
+        >
+          <tr
+            class="chakra-table__row css-11ot24d"
+          >
+            <td
+              class="chakra-table__cell css-1luypx0"
+            >
+              Build Version
+            </td>
+            <td
+              class="chakra-table__cell css-1luypx0"
+            >
+              1.2.3
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="css-177dxab"
+      id="server-tab"
+      role="tabpanel"
+      style="display: none;"
+    >
+      <table
+        class="chakra-table__root css-a2tetu"
+      >
+        <thead
+          class="chakra-table__header"
+        >
+          <tr
+            class="chakra-table__row css-11ot24d"
+          >
+            <th
+              class="chakra-table__columnHeader css-kim7sg"
+            >
+              Name
+            </th>
+            <th
+              class="chakra-table__columnHeader css-kim7sg"
+            >
+              Value
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="chakra-table__body"
+        >
+          <tr
+            class="chakra-table__row css-11ot24d"
+          >
+            <td
+              class="chakra-table__cell css-1luypx0"
+            >
+              Hostname
+            </td>
+            <td
+              class="chakra-table__cell css-1luypx0"
+            >
+              server.example.com
+            </td>
+          </tr>
+          <tr
+            class="chakra-table__row css-11ot24d"
+          >
+            <td
+              class="chakra-table__cell css-1luypx0"
+            >
+              Uptime
+            </td>
+            <td
+              class="chakra-table__cell css-1luypx0"
+            >
+              1234567890
+            </td>
+          </tr>
+          <tr
+            class="chakra-table__row css-11ot24d"
+          >
+            <td
+              class="chakra-table__cell css-1luypx0"
+            >
+              Server ID
+            </td>
+            <td
+              class="chakra-table__cell css-1luypx0"
+            >
+              server-456
+            </td>
+          </tr>
+          <tr
+            class="chakra-table__row css-11ot24d"
+          >
+            <td
+              class="chakra-table__cell css-1luypx0"
+            >
+              Deployment ID
+            </td>
+            <td
+              class="chakra-table__cell css-1luypx0"
+            >
+              deploy-123
+            </td>
+          </tr>
+          <tr
+            class="chakra-table__row css-11ot24d"
+          >
+            <td
+              class="chakra-table__cell css-1luypx0"
+            >
+              Node Versions
+            </td>
+            <td
+              class="chakra-table__cell css-1luypx0"
+            >
+              v18.17.0
+            </td>
+          </tr>
+          <tr
+            class="chakra-table__row css-11ot24d"
+          >
+            <td
+              class="chakra-table__cell css-1luypx0"
+            >
+              Extension Sync | Total Sync All Count
+            </td>
+            <td
+              class="chakra-table__cell css-1luypx0"
+            >
+              42
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </DocumentFragment>

@@ -3,12 +3,25 @@ import { ColorModeButton } from "@/components/ui/ColorMode";
 import Extension from "@/Extension";
 import Extensions from "@/Extensions";
 import ServerInfo from "@/ServerInfo";
-import { clearCache, useDiagnostics } from "@/useDiagnostics";
 import { isExtensionInfo } from "@/utils";
-import { Box, Button, Flex, Menu, Portal, Tabs } from "@chakra-ui/react";
-import { startTransition, useCallback, useMemo, useState } from "react";
-
-type Environment = (typeof Environment)[keyof typeof Environment];
+import {
+  Box,
+  Button,
+  Flex,
+  Menu,
+  Portal,
+  Tabs,
+  Alert,
+  Spinner,
+} from "@chakra-ui/react";
+import {
+  startTransition,
+  useCallback,
+  useMemo,
+  useState,
+  Activity,
+} from "react";
+import useSWR from "swr";
 
 const Environment = {
   Public: "https://hosting.portal.azure.net/api/diagnostics",
@@ -16,7 +29,9 @@ const Environment = {
   Mooncake: "https://hosting.azureportal.chinacloudapi.cn/api/diagnostics",
 } as const;
 
-function getEnvironnmentName(environment: Environment | undefined): string {
+type EnvironmentUrl = (typeof Environment)[keyof typeof Environment];
+
+function getEnvironnmentName(environment: EnvironmentUrl | undefined): string {
   switch (environment) {
     case Environment.Public:
       return "Public Cloud";
@@ -31,15 +46,26 @@ function getEnvironnmentName(environment: Environment | undefined): string {
 
 const App: React.FC = () => {
   const [environments, setEnvironments] = useState<
-    Record<string, Environment[]>
+    Record<string, EnvironmentUrl[]>
   >({
     environment: [Environment.Public],
   });
-  const environment = useMemo<Environment>(
+  const environment = useMemo<EnvironmentUrl>(
     () => environments.environment[0],
     [environments.environment]
   );
-  const diagnostics = useDiagnostics(environment);
+  const {
+    data: diagnostics,
+    error,
+    isLoading,
+  } = useSWR(environment, async (url: string): Promise<Diagnostics> => {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch diagnostics: ${response.statusText}`);
+    }
+
+    return response.json();
+  });
   const [extension, setExtension] = useState<ExtensionInfo>();
   const [selectedTab, setSelectedTab] = useState<string>("extensions");
 
@@ -70,17 +96,13 @@ const App: React.FC = () => {
       startTransition(() => {
         setEnvironments((previous) => ({
           ...previous,
-          environment: [value as Environment],
+          environment: [value as EnvironmentUrl],
         }));
         setExtension(undefined);
+        setSelectedTab("extensions");
       });
-      clearCache();
     }
   }, []);
-
-  if (!diagnostics) {
-    return null;
-  }
 
   return (
     <Flex flexDirection="column" h="100vh" p="1">
@@ -106,7 +128,7 @@ const App: React.FC = () => {
               </Menu.Positioner>
             </Portal>
           </Menu.Root>
-          {showPaasServerless && (
+          <Activity mode={showPaasServerless ? "visible" : "hidden"}>
             <Button
               key="paasserverless"
               variant="ghost"
@@ -115,12 +137,13 @@ const App: React.FC = () => {
                   diagnostics?.extensions["paasserverless"];
                 if (isExtensionInfo(paasserverless)) {
                   setExtension(paasserverless);
+                  setSelectedTab("extensions");
                 }
               }}
             >
               paasserverless
             </Button>
-          )}
+          </Activity>
           <Button
             key="websites"
             variant="ghost"
@@ -128,6 +151,7 @@ const App: React.FC = () => {
               const websites = diagnostics?.extensions["websites"];
               if (isExtensionInfo(websites)) {
                 setExtension(websites);
+                setSelectedTab("extensions");
               }
             }}
           >
@@ -152,27 +176,73 @@ const App: React.FC = () => {
           </Tabs.Trigger>
         </Tabs.List>
       </Tabs.Root>
-      {selectedTab === "extensions" && diagnostics?.extensions && (
-        <Box id="extensions-tab" flex="1" overflowY="auto" role="tabpanel">
-          <Flex flexDirection="row" gap="4" h="100%">
-            <Extensions
-              extensions={diagnostics.extensions}
-              onLinkClick={handleLinkClick}
-            />
-            {extension && <Extension {...extension} />}
-          </Flex>
+      <Activity mode={isLoading && !error ? "visible" : "hidden"}>
+        <Box
+          alignItems="center"
+          display="flex"
+          flex="1"
+          justifyContent="center"
+        >
+          <Spinner aria-label="Loading..." />
         </Box>
-      )}
-      {selectedTab === "build" && diagnostics?.buildInfo && (
-        <Box id="build-tab" flex="1" overflowY="auto" role="tabpanel">
-          <BuildInfo {...diagnostics.buildInfo} />
+      </Activity>
+      <Activity mode={!isLoading && error ? "visible" : "hidden"}>
+        <Box
+          alignItems="center"
+          display="flex"
+          flex="1"
+          justifyContent="center"
+        >
+          <Alert.Root status="error" maxW="md">
+            <Alert.Indicator />
+            <Alert.Title>Error</Alert.Title>
+            <Alert.Description>{error?.message}</Alert.Description>
+          </Alert.Root>
         </Box>
-      )}
-      {selectedTab === "server" && diagnostics?.serverInfo && (
-        <Box id="server-tab" flex="1" overflowY="auto" role="tabpanel">
-          <ServerInfo {...diagnostics.serverInfo} />
-        </Box>
-      )}
+      </Activity>
+      <Activity
+        mode={
+          !isLoading && !error && selectedTab === "extensions"
+            ? "visible"
+            : "hidden"
+        }
+      >
+        {diagnostics?.extensions && (
+          <Box id="extensions-tab" flex="1" overflowY="auto" role="tabpanel">
+            <Flex flexDirection="row" gap="4" h="100%">
+              <Extensions
+                extensions={diagnostics.extensions}
+                onLinkClick={handleLinkClick}
+              />
+              {extension && <Extension {...extension} />}
+            </Flex>
+          </Box>
+        )}
+      </Activity>
+      <Activity
+        mode={
+          !isLoading && !error && selectedTab === "build" ? "visible" : "hidden"
+        }
+      >
+        {diagnostics?.buildInfo && (
+          <Box id="build-tab" flex="1" overflowY="auto" role="tabpanel">
+            <BuildInfo {...diagnostics.buildInfo} />
+          </Box>
+        )}
+      </Activity>
+      <Activity
+        mode={
+          !isLoading && !error && selectedTab === "server"
+            ? "visible"
+            : "hidden"
+        }
+      >
+        {diagnostics?.serverInfo && (
+          <Box id="server-tab" flex="1" overflowY="auto" role="tabpanel">
+            <ServerInfo {...diagnostics.serverInfo} />
+          </Box>
+        )}
+      </Activity>
     </Flex>
   );
 };

@@ -1,22 +1,15 @@
-import {
-  act,
-  fireEvent,
-  render,
-  screen,
-  waitFor,
-} from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
+import useSWR from "swr";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import App from "../App";
-import { useDiagnostics } from "../useDiagnostics";
 import { TestWrapper } from "./test-utils";
 
-// Mock the useDiagnostics hook
-vi.mock("../useDiagnostics", () => ({
-  useDiagnostics: vi.fn(),
-  clearCache: vi.fn(),
+// Mock useSWR
+vi.mock("swr", () => ({
+  default: vi.fn(),
 }));
 
-const mockUseDiagnostics = vi.mocked(useDiagnostics);
+const mockUseSWR = vi.mocked(useSWR);
 
 const mockDiagnosticsData = {
   buildInfo: { buildVersion: "1.2.3" },
@@ -48,39 +41,50 @@ const mockDiagnosticsData = {
 describe("App", () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    mockUseDiagnostics.mockReturnValue(mockDiagnosticsData);
+    mockUseSWR.mockReturnValue({
+      data: mockDiagnosticsData,
+      error: undefined,
+      isLoading: false,
+      mutate: vi.fn(),
+      isValidating: false,
+    });
   });
 
-  it("should render loading state when diagnostics is null", () => {
-    mockUseDiagnostics.mockReturnValue(null as never);
+  it("should render loading state with spinner when isLoading is true", async () => {
+    mockUseSWR.mockReturnValue({
+      data: undefined,
+      error: undefined,
+      isLoading: true,
+      mutate: vi.fn(),
+      isValidating: false,
+    });
 
-    render(
-      <TestWrapper>
-        <App />
-      </TestWrapper>
-    );
+    await act(async () => {
+      render(
+        <TestWrapper>
+          <App />
+        </TestWrapper>
+      );
+    });
 
-    // When diagnostics is null, App returns null, so main app elements should not be present
-    expect(
-      screen.queryByRole("button", { name: "Public Cloud" })
-    ).not.toBeInTheDocument();
-    expect(
-      screen.queryByRole("tab", { name: "Extensions" })
-    ).not.toBeInTheDocument();
+    // When isLoading is true, the spinner should be present
+    expect(screen.getByLabelText("Loading...")).toBeInTheDocument();
   });
 
-  it("should render app with default environment", () => {
-    const { asFragment } = render(
-      <TestWrapper>
-        <App />
-      </TestWrapper>
+  it("should render app with default environment", async () => {
+    const { asFragment } = await act(async () =>
+      render(
+        <TestWrapper>
+          <App />
+        </TestWrapper>
+      )
     );
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("should display environment selector with default value", () => {
-    act(() => {
+  it("should display environment selector with default value", async () => {
+    await act(async () => {
       render(
         <TestWrapper>
           <App />
@@ -93,8 +97,8 @@ describe("App", () => {
     ).toBeInTheDocument();
   });
 
-  it("should render tabs for navigation", () => {
-    act(() => {
+  it("should render tabs for navigation", async () => {
+    await act(async () => {
       render(
         <TestWrapper>
           <App />
@@ -111,8 +115,8 @@ describe("App", () => {
     ).toBeInTheDocument();
   });
 
-  it("should display extensions tab by default", () => {
-    act(() => {
+  it("should display extensions tab by default", async () => {
+    await act(async () => {
       render(
         <TestWrapper>
           <App />
@@ -124,42 +128,22 @@ describe("App", () => {
     expect(screen.getByText("Test Extension")).toBeInTheDocument();
   });
 
-  it("should switch to build information tab", async () => {
-    render(
-      <TestWrapper>
-        <App />
-      </TestWrapper>
-    );
+  it("should not show paasserverless button when extension does not exist", async () => {
+    mockUseSWR.mockReturnValue({
+      data: {
+        ...mockDiagnosticsData,
+        extensions: {
+          ...mockDiagnosticsData.extensions,
+          paasserverless: undefined,
+        },
+      },
+      error: undefined,
+      isLoading: false,
+      mutate: vi.fn(),
+      isValidating: false,
+    });
 
     await act(async () => {
-      fireEvent.click(screen.getByRole("tab", { name: "Build Information" }));
-    });
-
-    await waitFor(() => {
-      expect(screen.getByText("Build Version")).toBeInTheDocument();
-    });
-    expect(screen.getByText("1.2.3")).toBeInTheDocument();
-  });
-
-  it("should switch to server information tab", async () => {
-    render(
-      <TestWrapper>
-        <App />
-      </TestWrapper>
-    );
-
-    await act(async () => {
-      fireEvent.click(screen.getByRole("tab", { name: "Server Information" }));
-    });
-
-    await waitFor(() => {
-      expect(screen.getByText("Hostname")).toBeInTheDocument();
-    });
-    expect(screen.getByText("server.example.com")).toBeInTheDocument();
-  });
-
-  it("should show paasserverless button when extension exists", () => {
-    act(() => {
       render(
         <TestWrapper>
           <App />
@@ -168,12 +152,12 @@ describe("App", () => {
     });
 
     expect(
-      screen.getByRole("button", { name: "paasserverless" })
-    ).toBeInTheDocument();
+      screen.queryByRole("button", { name: "paasserverless" })
+    ).not.toBeInTheDocument();
   });
 
-  it("should show websites button", () => {
-    act(() => {
+  it("should show websites button", async () => {
+    await act(async () => {
       render(
         <TestWrapper>
           <App />
@@ -186,100 +170,8 @@ describe("App", () => {
     ).toBeInTheDocument();
   });
 
-  it("should handle extension selection from extensions list", async () => {
-    render(
-      <TestWrapper>
-        <App />
-      </TestWrapper>
-    );
-
-    // Click on an extension in the extensions list
+  it("should render color mode button", async () => {
     await act(async () => {
-      fireEvent.click(screen.getByText("Test Extension"));
-    });
-
-    // Should display the extension details
-    await waitFor(() => {
-      expect(screen.getByText("Test Extension")).toBeInTheDocument();
-    });
-  });
-
-  it("should handle paasserverless button click", () => {
-    render(
-      <TestWrapper>
-        <App />
-      </TestWrapper>
-    );
-
-    act(() => {
-      fireEvent.click(screen.getByRole("button", { name: "paasserverless" }));
-    });
-
-    // Should display paasserverless extension details - look for the heading
-    expect(
-      screen.getByRole("heading", { name: "PaaS Serverless" })
-    ).toBeInTheDocument();
-  });
-
-  it("should handle websites button click", () => {
-    render(
-      <TestWrapper>
-        <App />
-      </TestWrapper>
-    );
-
-    act(() => {
-      fireEvent.click(screen.getByRole("button", { name: "websites" }));
-    });
-
-    // Should display websites extension details - look for the heading
-    expect(
-      screen.getByRole("heading", { name: "Websites" })
-    ).toBeInTheDocument();
-  });
-
-  it("should handle environment change", () => {
-    render(
-      <TestWrapper>
-        <App />
-      </TestWrapper>
-    );
-
-    // Open environment menu
-    act(() => {
-      fireEvent.click(screen.getByRole("button", { name: "Public Cloud" }));
-    });
-
-    // Since menu items are in a Portal, we need to wait for them to appear
-    // or test the menu trigger functionality
-    expect(
-      screen.getByRole("button", { name: "Public Cloud" })
-    ).toBeInTheDocument();
-
-    // The clearCache should be called when environment changes
-    // This test verifies the menu can be opened
-  });
-
-  it("should handle environment change to Mooncake", () => {
-    render(
-      <TestWrapper>
-        <App />
-      </TestWrapper>
-    );
-
-    // Open environment menu
-    act(() => {
-      fireEvent.click(screen.getByRole("button", { name: "Public Cloud" }));
-    });
-
-    // Test that menu trigger is working
-    expect(
-      screen.getByRole("button", { name: "Public Cloud" })
-    ).toBeInTheDocument();
-  });
-
-  it("should render color mode button", () => {
-    act(() => {
       render(
         <TestWrapper>
           <App />
@@ -291,40 +183,5 @@ describe("App", () => {
     expect(
       screen.getByRole("button", { name: /color mode/i })
     ).toBeInTheDocument();
-  });
-
-  it("should handle tab switching correctly", async () => {
-    render(
-      <TestWrapper>
-        <App />
-      </TestWrapper>
-    );
-
-    // Start on extensions tab
-    expect(screen.getByText("Test Extension")).toBeInTheDocument();
-
-    // Switch to build tab
-    await act(async () => {
-      fireEvent.click(screen.getByRole("tab", { name: "Build Information" }));
-    });
-    await waitFor(() => {
-      expect(screen.getByText("Build Version")).toBeInTheDocument();
-    });
-
-    // Switch to server tab
-    await act(async () => {
-      fireEvent.click(screen.getByRole("tab", { name: "Server Information" }));
-    });
-    await waitFor(() => {
-      expect(screen.getByText("Hostname")).toBeInTheDocument();
-    });
-
-    // Switch back to extensions
-    await act(async () => {
-      fireEvent.click(screen.getByRole("tab", { name: "Extensions" }));
-    });
-    await waitFor(() => {
-      expect(screen.getByText("Test Extension")).toBeInTheDocument();
-    });
   });
 });

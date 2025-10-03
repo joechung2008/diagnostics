@@ -29,12 +29,7 @@ export function ColorModeIcon() {
   return colorMode === "dark" ? <LuMoon /> : <LuSun />;
 }
 
-export function ColorModeButton({
-  ref,
-  ...props
-}: Omit<IconButtonProps, "aria-label"> & {
-  ref?: React.Ref<HTMLButtonElement>;
-}) {
+export function ColorModeButton(props: Omit<IconButtonProps, "aria-label">) {
   const { toggleColorMode } = useColorMode();
   return (
     <ClientOnly fallback={<Skeleton boxSize="9" />}>
@@ -43,7 +38,6 @@ export function ColorModeButton({
         variant="ghost"
         aria-label="Toggle color mode"
         size="sm"
-        ref={ref}
         {...props}
         css={{
           _icon: {

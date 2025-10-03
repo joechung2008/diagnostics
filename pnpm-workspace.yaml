@@ -2,9 +2,6 @@ packages:
   - packages/*
 
 packageExtensions:
-  "@chakra-ui/react@*":
-    dependencies:
-      "@types/react": "19.1.12"
   "mui":
     dependencies:
       "jsdom": "26.1.0"
