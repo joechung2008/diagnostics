@@ -1,15 +1,19 @@
-import { useEffect, useMemo, useState } from "react";
-import { Button, ButtonGroup, Dropdown, Nav } from "react-bootstrap";
+import { Activity, useCallback, useMemo, useState } from "react";
+import useSWR from "swr";
+import {
+  Alert,
+  Button,
+  ButtonGroup,
+  Dropdown,
+  Nav,
+  Spinner,
+} from "react-bootstrap";
 import BuildInfo from "./BuildInfo";
 import Extension from "./Extension";
 import Extensions from "./Extensions";
 import ServerInfo from "./ServerInfo";
 import { isExtensionInfo } from "./utils";
-
-type Environment =
-  | "https://hosting.portal.azure.net/api/diagnostics"
-  | "https://hosting.azureportal.usgovcloudapi.net/api/diagnostics"
-  | "https://hosting.azureportal.chinacloudapi.cn/api/diagnostics";
+import { useSystemTheme } from "./useSystemTheme";
 
 const Environment = {
   Public: "https://hosting.portal.azure.net/api/diagnostics",
@@ -17,13 +21,30 @@ const Environment = {
   Mooncake: "https://hosting.azureportal.chinacloudapi.cn/api/diagnostics",
 } as const;
 
+type EnvironmentUrl = (typeof Environment)[keyof typeof Environment];
+
 const App: React.FC = () => {
-  const [diagnostics, setDiagnostics] = useState<Diagnostics>();
   const [extension, setExtension] = useState<ExtensionInfo>();
-  const [environment, setEnvironment] = useState<Environment>(
+  const [environment, setEnvironment] = useState<EnvironmentUrl>(
     Environment.Public
   );
   const [selectedTab, setSelectedTab] = useState<string>("extensions");
+
+  // Use system theme hook to set data-bs-theme on html element
+  useSystemTheme();
+
+  const {
+    data: diagnostics,
+    error,
+    isLoading,
+  } = useSWR<Diagnostics>(environment, async (environment: string) => {
+    const response = await fetch(environment);
+    if (!response.ok) {
+      throw new Error(`Error fetching diagnostics: ${response.statusText}`);
+    }
+
+    return response.json();
+  });
 
   const environmentName = useMemo(() => {
     switch (environment) {
@@ -38,11 +59,6 @@ const App: React.FC = () => {
     }
   }, [environment]);
 
-  const showPaasServerless = useMemo(
-    () => isExtensionInfo(diagnostics?.extensions["paasserverless"]),
-    [diagnostics?.extensions]
-  );
-
   const environments = useMemo(
     () => [
       {
@@ -52,6 +68,7 @@ const App: React.FC = () => {
         onClick: () => {
           setEnvironment(Environment.Public);
           setExtension(undefined);
+          setSelectedTab("extensions");
         },
       },
       {
@@ -61,6 +78,7 @@ const App: React.FC = () => {
         onClick: () => {
           setEnvironment(Environment.Fairfax);
           setExtension(undefined);
+          setSelectedTab("extensions");
         },
       },
       {
@@ -70,34 +88,29 @@ const App: React.FC = () => {
         onClick: () => {
           setEnvironment(Environment.Mooncake);
           setExtension(undefined);
+          setSelectedTab("extensions");
         },
       },
     ],
     [environment]
   );
 
-  useEffect(() => {
-    const getDiagnostics = async () => {
-      const response = await fetch(environment);
-      setDiagnostics(await response.json());
-    };
-    getDiagnostics();
-  }, [environment]);
+  const showPaasServerless = useMemo(
+    () => isExtensionInfo(diagnostics?.extensions?.["paasserverless"]),
+    [diagnostics]
+  );
 
-  if (!diagnostics) {
-    return null;
-  }
-
-  const { buildInfo, extensions, serverInfo } = diagnostics;
-
-  const handleLinkClick = (_?: React.MouseEvent, item?: KeyedNavLink) => {
-    if (item) {
-      const extension = extensions[item.key];
-      if (isExtensionInfo(extension)) {
-        setExtension(extension);
+  const handleLinkClick = useCallback(
+    (_?: React.MouseEvent, item?: KeyedNavLink) => {
+      if (item) {
+        const extension = diagnostics?.extensions[item.key];
+        if (isExtensionInfo(extension)) {
+          setExtension(extension);
+        }
       }
-    }
-  };
+    },
+    [diagnostics?.extensions]
+  );
 
   return (
     <div className="flexbox">
@@ -110,8 +123,8 @@ const App: React.FC = () => {
             {environments.map((env) => (
               <Dropdown.Item
                 key={env.key}
-                onClick={env.onClick}
                 active={env.selected}
+                onClick={env.onClick}
               >
                 {env.text}
               </Dropdown.Item>
@@ -125,6 +138,7 @@ const App: React.FC = () => {
               const paasserverless = diagnostics?.extensions["paasserverless"];
               if (isExtensionInfo(paasserverless)) {
                 setExtension(paasserverless);
+                setSelectedTab("extensions");
               }
             }}
           >
@@ -137,6 +151,7 @@ const App: React.FC = () => {
             const websites = diagnostics?.extensions["websites"];
             if (isExtensionInfo(websites)) {
               setExtension(websites);
+              setSelectedTab("extensions");
             }
           }}
         >
@@ -158,24 +173,61 @@ const App: React.FC = () => {
           <Nav.Link eventKey="server">Server Information</Nav.Link>
         </Nav.Item>
       </Nav>
-      {selectedTab === "extensions" && (
-        <div className="tab-panel">
-          <div className="stack">
-            <Extensions extensions={extensions} onLinkClick={handleLinkClick} />
-            {extension && <Extension {...extension} />}
+      <Activity mode={isLoading && !error ? "visible" : "hidden"}>
+        <div className="tab-panel centered">
+          <Spinner animation="border" />
+        </div>
+      </Activity>
+      <Activity mode={error ? "visible" : "hidden"}>
+        <div className="tab-panel centered">
+          <Alert variant="danger">
+            An error occurred while loading diagnostics.
+          </Alert>
+        </div>
+      </Activity>
+      <Activity
+        mode={
+          selectedTab === "extensions" && !error && !isLoading
+            ? "visible"
+            : "hidden"
+        }
+      >
+        {diagnostics?.extensions && (
+          <div className="tab-panel">
+            <div className="stack">
+              <Extensions
+                extensions={diagnostics.extensions}
+                onLinkClick={handleLinkClick}
+              />
+              {extension && <Extension {...extension} />}
+            </div>
           </div>
-        </div>
-      )}
-      {selectedTab === "build" && (
-        <div className="tab-panel">
-          <BuildInfo {...buildInfo} />
-        </div>
-      )}
-      {selectedTab === "server" && (
-        <div className="tab-panel">
-          <ServerInfo {...serverInfo} />
-        </div>
-      )}
+        )}
+      </Activity>
+      <Activity
+        mode={
+          selectedTab === "build" && !error && !isLoading ? "visible" : "hidden"
+        }
+      >
+        {diagnostics?.buildInfo && (
+          <div className="tab-panel">
+            <BuildInfo {...diagnostics.buildInfo} />
+          </div>
+        )}
+      </Activity>
+      <Activity
+        mode={
+          selectedTab === "server" && !error && !isLoading
+            ? "visible"
+            : "hidden"
+        }
+      >
+        {diagnostics?.serverInfo && (
+          <div className="tab-panel">
+            <ServerInfo {...diagnostics!.serverInfo} />
+          </div>
+        )}
+      </Activity>
     </div>
   );
 };

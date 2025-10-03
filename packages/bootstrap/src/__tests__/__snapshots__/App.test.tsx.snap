@@ -1,0 +1,420 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App > shows UI when diagnostics are loaded 1`] = `
+<div
+  class="flexbox"
+>
+  <div
+    class="w-auto align-self-start btn-group"
+    role="group"
+  >
+    <div
+      class="dropdown"
+    >
+      <button
+        aria-expanded="false"
+        class="dropdown-toggle btn btn-outline-primary"
+        id="environment-dropdown"
+        type="button"
+      >
+        Public Cloud
+      </button>
+    </div>
+    <button
+      class="btn btn-outline-secondary"
+      type="button"
+    >
+      paasserverless
+    </button>
+    <button
+      class="btn btn-outline-secondary"
+      type="button"
+    >
+      websites
+    </button>
+  </div>
+  <div
+    class="nav nav-tabs"
+  >
+    <div
+      class="nav-item"
+    >
+      <a
+        class="nav-link active"
+        data-rr-ui-event-key="extensions"
+        href="#"
+        role="button"
+        tabindex="0"
+      >
+        Extensions
+      </a>
+    </div>
+    <div
+      class="nav-item"
+    >
+      <a
+        class="nav-link"
+        data-rr-ui-event-key="build"
+        href="#"
+        role="button"
+        tabindex="0"
+      >
+        Build Information
+      </a>
+    </div>
+    <div
+      class="nav-item"
+    >
+      <a
+        class="nav-link"
+        data-rr-ui-event-key="server"
+        href="#"
+        role="button"
+        tabindex="0"
+      >
+        Server Information
+      </a>
+    </div>
+  </div>
+  <div
+    class="tab-panel centered"
+    style="display: none;"
+  >
+    <div
+      class="spinner-border"
+    />
+  </div>
+  <div
+    class="tab-panel centered"
+    style="display: none;"
+  >
+    <div
+      class="fade alert alert-danger show"
+      role="alert"
+    >
+      An error occurred while loading diagnostics.
+    </div>
+  </div>
+  <div
+    class="tab-panel"
+  >
+    <div
+      class="stack"
+    >
+      <div
+        class="extension-root overflow-x-hidden"
+      >
+        <div
+          aria-label="Extensions"
+          class="flex-column nav nav-pills"
+        >
+          <a
+            class="nav-link"
+            href="#"
+            role="button"
+            tabindex="0"
+          >
+            paasserverless
+          </a>
+          <a
+            class="nav-link"
+            href="#"
+            role="button"
+            tabindex="0"
+          >
+            testExt
+          </a>
+          <a
+            class="nav-link"
+            href="#"
+            role="button"
+            tabindex="0"
+          >
+            websites
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="tab-panel"
+    style="display: none;"
+  >
+    <table
+      class="table"
+    >
+      <thead>
+        <tr>
+          <th>
+            Name
+          </th>
+          <th>
+            Value
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Build Version
+          </td>
+          <td>
+            1.0.0
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div
+    class="tab-panel"
+    style="display: none;"
+  >
+    <table
+      class="table"
+    >
+      <thead>
+        <tr>
+          <th>
+            Name
+          </th>
+          <th>
+            Value
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Hostname
+          </td>
+          <td>
+            test-server
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Uptime
+          </td>
+          <td>
+            3600
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Server ID
+          </td>
+          <td>
+            server-1
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Deployment ID
+          </td>
+          <td>
+            123
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Node Versions
+          </td>
+          <td>
+            18.0.0
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Extension Sync | Total Sync All Count
+          </td>
+          <td>
+            5
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`App > shows error alert when diagnostics could not be loaded 1`] = `
+<div
+  class="flexbox"
+>
+  <div
+    class="w-auto align-self-start btn-group"
+    role="group"
+  >
+    <div
+      class="dropdown"
+    >
+      <button
+        aria-expanded="false"
+        class="dropdown-toggle btn btn-outline-primary"
+        id="environment-dropdown"
+        type="button"
+      >
+        Public Cloud
+      </button>
+    </div>
+    <button
+      class="btn btn-outline-secondary"
+      type="button"
+    >
+      websites
+    </button>
+  </div>
+  <div
+    class="nav nav-tabs"
+  >
+    <div
+      class="nav-item"
+    >
+      <a
+        class="nav-link active"
+        data-rr-ui-event-key="extensions"
+        href="#"
+        role="button"
+        tabindex="0"
+      >
+        Extensions
+      </a>
+    </div>
+    <div
+      class="nav-item"
+    >
+      <a
+        class="nav-link"
+        data-rr-ui-event-key="build"
+        href="#"
+        role="button"
+        tabindex="0"
+      >
+        Build Information
+      </a>
+    </div>
+    <div
+      class="nav-item"
+    >
+      <a
+        class="nav-link"
+        data-rr-ui-event-key="server"
+        href="#"
+        role="button"
+        tabindex="0"
+      >
+        Server Information
+      </a>
+    </div>
+  </div>
+  <div
+    class="tab-panel centered"
+    style="display: none;"
+  >
+    <div
+      class="spinner-border"
+    />
+  </div>
+  <div
+    class="tab-panel centered"
+  >
+    <div
+      class="fade alert alert-danger show"
+      role="alert"
+    >
+      An error occurred while loading diagnostics.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App > shows loading spinner while loading diagnostics 1`] = `
+<div
+  class="flexbox"
+>
+  <div
+    class="w-auto align-self-start btn-group"
+    role="group"
+  >
+    <div
+      class="dropdown"
+    >
+      <button
+        aria-expanded="false"
+        class="dropdown-toggle btn btn-outline-primary"
+        id="environment-dropdown"
+        type="button"
+      >
+        Public Cloud
+      </button>
+    </div>
+    <button
+      class="btn btn-outline-secondary"
+      type="button"
+    >
+      websites
+    </button>
+  </div>
+  <div
+    class="nav nav-tabs"
+  >
+    <div
+      class="nav-item"
+    >
+      <a
+        class="nav-link active"
+        data-rr-ui-event-key="extensions"
+        href="#"
+        role="button"
+        tabindex="0"
+      >
+        Extensions
+      </a>
+    </div>
+    <div
+      class="nav-item"
+    >
+      <a
+        class="nav-link"
+        data-rr-ui-event-key="build"
+        href="#"
+        role="button"
+        tabindex="0"
+      >
+        Build Information
+      </a>
+    </div>
+    <div
+      class="nav-item"
+    >
+      <a
+        class="nav-link"
+        data-rr-ui-event-key="server"
+        href="#"
+        role="button"
+        tabindex="0"
+      >
+        Server Information
+      </a>
+    </div>
+  </div>
+  <div
+    class="tab-panel centered"
+  >
+    <div
+      class="spinner-border"
+    />
+  </div>
+  <div
+    class="tab-panel centered"
+    style="display: none;"
+  >
+    <div
+      class="fade alert alert-danger show"
+      role="alert"
+    >
+      An error occurred while loading diagnostics.
+    </div>
+  </div>
+</div>
+`;

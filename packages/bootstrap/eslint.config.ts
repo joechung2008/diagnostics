@@ -18,8 +18,9 @@ export default [
   {
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
+      ecmaVersion: 2023,
       parserOptions: {
-        parser: "@typescript-eslint/parser",
+        tsconfigRootDir: process.cwd(),
       },
     },
     plugins: {
@@ -27,9 +28,6 @@ export default [
     },
     rules: {
       "prettier/prettier": "error",
-    },
-    languageOptions: {
-      ecmaVersion: 2020,
     },
   },
 ];
