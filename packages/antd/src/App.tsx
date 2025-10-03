@@ -1,34 +1,56 @@
-import { Flex, Menu, Tabs } from "antd";
-import { useEffect, useMemo, useState } from "react";
+import { Empty, Flex, Menu, Spin, Tabs } from "antd";
+import { Activity, useCallback, useMemo, useState } from "react";
+import useSWR from "swr";
 import BuildInfo from "./BuildInfo";
 import Extension from "./Extension";
 import Extensions from "./Extensions";
 import ServerInfo from "./ServerInfo";
-import { isExtensionInfo } from "./utils";
+import { isExtensionInfo, when } from "./utils";
 
 import "./App.css";
 
-const EnvironmentValues = {
+const Environment = {
   Public: "https://hosting.portal.azure.net/api/diagnostics",
   Fairfax: "https://hosting.azureportal.usgovcloudapi.net/api/diagnostics",
   Mooncake: "https://hosting.azureportal.chinacloudapi.cn/api/diagnostics",
 } as const;
 
+type EnvironmentUrl = (typeof Environment)[keyof typeof Environment];
+
+const items = [
+  { key: "extensions", label: "Extensions" },
+  { key: "build", label: "Build Information" },
+  { key: "server", label: "Server Information" },
+];
+
 const App: React.FC = () => {
-  const [diagnostics, setDiagnostics] = useState<Diagnostics>();
   const [extension, setExtension] = useState<ExtensionInfo>();
-  const [environment, setEnvironment] = useState<string>(
-    EnvironmentValues.Public
+  const [environment, setEnvironment] = useState<EnvironmentUrl>(
+    Environment.Public
   );
   const [selectedTab, setSelectedTab] = useState("extensions");
 
+  const {
+    data: diagnostics,
+    error,
+    isLoading,
+  } = useSWR<Diagnostics>(environment, async (environment: string) => {
+    const response = await fetch(environment);
+
+    if (!response.ok) {
+      throw new Error(`Error fetching diagnostics: ${response.statusText}`);
+    }
+
+    return response.json();
+  });
+
   const environmentName = useMemo(() => {
     switch (environment) {
-      case EnvironmentValues.Public:
+      case Environment.Public:
         return "Public Cloud";
-      case EnvironmentValues.Fairfax:
+      case Environment.Fairfax:
         return "Fairfax";
-      case EnvironmentValues.Mooncake:
+      case Environment.Mooncake:
         return "Mooncake";
       default:
         return "Select environment";
@@ -45,28 +67,31 @@ const App: React.FC = () => {
       {
         key: "public",
         text: "Public Cloud",
-        selected: environment === EnvironmentValues.Public,
+        selected: environment === Environment.Public,
         onClick: () => {
-          setEnvironment(EnvironmentValues.Public);
+          setEnvironment(Environment.Public);
           setExtension(undefined);
+          setSelectedTab("extensions");
         },
       },
       {
         key: "fairfax",
         text: "Fairfax",
-        selected: environment === EnvironmentValues.Fairfax,
+        selected: environment === Environment.Fairfax,
         onClick: () => {
-          setEnvironment(EnvironmentValues.Fairfax);
+          setEnvironment(Environment.Fairfax);
           setExtension(undefined);
+          setSelectedTab("extensions");
         },
       },
       {
         key: "mooncake",
         text: "Mooncake",
-        selected: environment === EnvironmentValues.Mooncake,
+        selected: environment === Environment.Mooncake,
         onClick: () => {
-          setEnvironment(EnvironmentValues.Mooncake);
+          setEnvironment(Environment.Mooncake);
           setExtension(undefined);
+          setSelectedTab("extensions");
         },
       },
     ],
@@ -84,21 +109,17 @@ const App: React.FC = () => {
           onClick: env.onClick,
         })),
       },
-      ...(showPaasServerless
-        ? [
-            {
-              key: "paasserverless",
-              label: "paasserverless",
-              onClick: () => {
-                const paasserverless =
-                  diagnostics?.extensions["paasserverless"];
-                if (isExtensionInfo(paasserverless)) {
-                  setExtension(paasserverless);
-                }
-              },
-            },
-          ]
-        : []),
+      ...when(showPaasServerless, {
+        key: "paasserverless",
+        label: "paasserverless",
+        onClick: () => {
+          const paasserverless = diagnostics?.extensions["paasserverless"];
+          if (isExtensionInfo(paasserverless)) {
+            setExtension(paasserverless);
+            setSelectedTab("extensions");
+          }
+        },
+      }),
       {
         key: "websites",
         label: "websites",
@@ -106,6 +127,7 @@ const App: React.FC = () => {
           const websites = diagnostics?.extensions["websites"];
           if (isExtensionInfo(websites)) {
             setExtension(websites);
+            setSelectedTab("extensions");
           }
         },
       },
@@ -113,28 +135,17 @@ const App: React.FC = () => {
     [environments, environmentName, showPaasServerless, diagnostics?.extensions]
   );
 
-  useEffect(() => {
-    const getDiagnostics = async () => {
-      const response = await fetch(environment);
-      setDiagnostics(await response.json());
-    };
-    getDiagnostics();
-  }, [environment]);
-
-  if (!diagnostics) {
-    return null;
-  }
-
-  const { buildInfo, extensions, serverInfo } = diagnostics;
-
-  const handleLinkClick = (_?: React.MouseEvent, item?: KeyedNavLink) => {
-    if (item) {
-      const extension = extensions[item.key];
-      if (isExtensionInfo(extension)) {
-        setExtension(extension);
+  const handleLinkClick = useCallback(
+    (_?: React.MouseEvent, item?: KeyedNavLink) => {
+      if (item) {
+        const extension = diagnostics?.extensions[item.key];
+        if (isExtensionInfo(extension)) {
+          setExtension(extension);
+        }
       }
-    }
-  };
+    },
+    [diagnostics?.extensions]
+  );
 
   return (
     <div className="flexbox">
@@ -142,31 +153,70 @@ const App: React.FC = () => {
       <Tabs
         activeKey={selectedTab}
         className="tab-list"
-        items={[
-          { key: "extensions", label: "Extensions" },
-          { key: "build", label: "Build Information" },
-          { key: "server", label: "Server Information" },
-        ]}
+        items={items}
         onChange={(key) => setSelectedTab(key)}
       />
-      {selectedTab === "extensions" && (
+      <Activity mode={isLoading ? "visible" : "hidden"}>
         <div className="tab-panel">
-          <Flex className="stack">
-            <Extensions extensions={extensions} onLinkClick={handleLinkClick} />
-            {extension && <Extension {...extension} />}
+          <Flex className="centered">
+            <Spin size="large" />
           </Flex>
         </div>
-      )}
-      {selectedTab === "build" && (
-        <div className="tab-panel">
-          <BuildInfo {...buildInfo} />
-        </div>
-      )}
-      {selectedTab === "server" && (
-        <div className="tab-panel">
-          <ServerInfo {...serverInfo} />
-        </div>
-      )}
+      </Activity>
+      <Activity mode={error && !isLoading ? "visible" : "hidden"}>
+        {error && (
+          <div className="tab-panel">
+            <Flex className="centered">
+              <Empty
+                description={`Error: ${error.message ?? "Unexpected error"}`}
+              />
+            </Flex>
+          </div>
+        )}
+      </Activity>
+      <Activity
+        mode={
+          !error && !isLoading && selectedTab === "extensions"
+            ? "visible"
+            : "hidden"
+        }
+      >
+        {diagnostics?.extensions && (
+          <div className="tab-panel">
+            <Flex className="stack">
+              <Extensions
+                extensions={diagnostics.extensions}
+                onLinkClick={handleLinkClick}
+              />
+              {extension && <Extension {...extension} />}
+            </Flex>
+          </div>
+        )}
+      </Activity>
+      <Activity
+        mode={
+          !error && !isLoading && selectedTab === "build" ? "visible" : "hidden"
+        }
+      >
+        {diagnostics?.buildInfo && (
+          <div className="tab-panel">
+            <BuildInfo {...diagnostics.buildInfo} />
+          </div>
+        )}
+      </Activity>
+      <Activity
+        mode={
+          !error && !isLoading && selectedTab === "server"
+            ? "visible"
+            : "hidden"
+        }
+      >
+        {diagnostics?.buildInfo && (
+          <div className="tab-panel">
+            <ServerInfo {...diagnostics.serverInfo} />
+          </div>
+        )}
+      </Activity>
     </div>
   );
 };

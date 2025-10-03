@@ -1,5 +1,5 @@
 import prettierConfig from "eslint-config-prettier";
-import prettierPlugin, { processors } from "eslint-plugin-prettier";
+import prettierPlugin from "eslint-plugin-prettier";
 import reactDomPlugin from "eslint-plugin-react-dom";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
