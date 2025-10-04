@@ -119,10 +119,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-/* Firefox cannot use max-content: https://caniuse.com/?search=max-content */
-@media all and (min-height: -moz-available) {
-  .extension-nav-button {
-    min-height: -moz-available;
-  }
-}
