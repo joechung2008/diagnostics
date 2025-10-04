@@ -6,39 +6,44 @@ Azure Portal Extensions Dashboard implemented in React with shadcn/ui
 
 Prerequisites: Node.js (LTS recommended) and pnpm.
 
-1. Install dependencies
+## Install dependencies
 
 ```bash
 pnpm --filter shadcn install --frozen-lockfile
 ```
 
-2. Development server (Vite)
+## Development server (Vite)
 
 ```bash
 pnpm --filter shadcn run dev
 ```
 
-3. Build for production
+## Build for production
 
 ```bash
 pnpm --filter shadcn run build
 ```
 
-4. Preview the production build
+## Preview the production build
 
 ```bash
 pnpm --filter shadcn run preview
 ```
 
-5. Run tests
+## Run tests
 
 ```bash
 pnpm --filter shadcn run test
 ```
 
-6. Lint / format
+## Formatting
+
+```bash
+pnpm --filter shadcn run format
+```
+
+## Linting
 
 ```bash
 pnpm --filter shadcn run lint
-pnpm --filter shadcn run format
 ```
