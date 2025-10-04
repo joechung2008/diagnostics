@@ -18,6 +18,7 @@ import BuildInfo from "./BuildInfo";
 import Extension from "./Extension";
 import Extensions from "./Extensions";
 import ServerInfo from "./ServerInfo";
+import { useSystemTheme } from "./hooks/useSystemTheme";
 import { isExtensionInfo } from "./utils";
 
 const enum Environment {
@@ -32,6 +33,9 @@ const App: React.FC = () => {
     Environment.Public
   );
   const [selectedTab, setSelectedTab] = useState<SelectedTab>("extensions");
+
+  // Use system theme hook to set body class
+  useSystemTheme();
 
   const environmentName = useMemo(() => {
     switch (environment) {

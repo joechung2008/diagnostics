@@ -2,6 +2,7 @@
 
 ## 2025-10-03
 
+- Add `useSystemTheme` hook for system color scheme detection
 - Use React 19.2 in heroui
 
 ## 2025-09-29

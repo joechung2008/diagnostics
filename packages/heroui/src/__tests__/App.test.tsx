@@ -8,6 +8,17 @@ vi.doMock("swr", () => ({
   default: mockUseSWR,
 }));
 
+// Mock window.matchMedia for useSystemTheme hook
+const mockMatchMedia = vi.fn(() => ({
+  matches: false,
+  addEventListener: vi.fn(),
+  removeEventListener: vi.fn(),
+}));
+Object.defineProperty(window, "matchMedia", {
+  writable: true,
+  value: mockMatchMedia,
+});
+
 describe("App", () => {
   it("matches snapshot", () => {
     mockUseSWR.mockReturnValue({
