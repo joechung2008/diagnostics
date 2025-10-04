@@ -23,8 +23,8 @@ exports[`StageDefinition > renders correctly 1`] = `
       aria-labelledby="stage-definnitions"
       aria-rowcount="3"
       class="hm005a_spectrum-Table hm005a_spectrum-Table--regular FsDyjq_react-spectrum-Table"
-      data-collection="react-aria-«r1»"
-      id="react-aria-«r0»"
+      data-collection="react-aria-_r_1_"
+      id="react-aria-_r_0_"
       role="grid"
       style="width: 100%;"
       tabindex="0"
@@ -52,10 +52,10 @@ exports[`StageDefinition > renders correctly 1`] = `
               <div
                 aria-colindex="1"
                 class="hm005a_spectrum-Table-headCell FsDyjq_react-spectrum-Table-cell"
-                data-collection="react-aria-«r1»"
+                data-collection="react-aria-_r_1_"
                 data-key="$.0"
                 data-react-aria-pressable="true"
-                id="react-aria-«r0»-$.0"
+                id="react-aria-_r_0_-$.0"
                 role="columnheader"
                 tabindex="-1"
               >
@@ -74,10 +74,10 @@ exports[`StageDefinition > renders correctly 1`] = `
               <div
                 aria-colindex="2"
                 class="hm005a_spectrum-Table-headCell FsDyjq_react-spectrum-Table-cell"
-                data-collection="react-aria-«r1»"
+                data-collection="react-aria-_r_1_"
                 data-key="$.1"
                 data-react-aria-pressable="true"
-                id="react-aria-«r0»-$.1"
+                id="react-aria-_r_0_-$.1"
                 role="columnheader"
                 tabindex="-1"
               >
@@ -106,13 +106,13 @@ exports[`StageDefinition > renders correctly 1`] = `
             style="position: absolute; overflow: visible; opacity: 1; z-index: 0; contain: size layout style; top: 0px; left: 0px; width: 18014398509481982px; height: 102px;"
           >
             <div
-              aria-labelledby="react-aria-«r0»-stage1-$.0"
+              aria-labelledby="react-aria-_r_0_-stage1-$.0"
               aria-rowindex="2"
               class="hm005a_spectrum-Table-row hm005a_spectrum-Table-row--firstRow FsDyjq_react-spectrum-Table-row"
-              data-collection="react-aria-«r1»"
+              data-collection="react-aria-_r_1_"
               data-key="stage1"
               data-react-aria-pressable="true"
-              id="react-aria-«r5»"
+              id="react-aria-_r_5_"
               role="row"
               style="position: absolute; overflow: visible; opacity: 1; z-index: 0; contain: size layout style; top: 0px; left: 0px; width: 18014398509481982px; height: 51px;"
               tabindex="-1"
@@ -124,16 +124,16 @@ exports[`StageDefinition > renders correctly 1`] = `
               >
                 <div
                   aria-colindex="1"
-                  aria-labelledby="react-aria-«r0»-stage1-$.0"
+                  aria-labelledby="react-aria-_r_0_-stage1-$.0"
                   class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
-                  data-collection="react-aria-«r1»"
+                  data-collection="react-aria-_r_1_"
                   data-key="stage1.0"
                   role="rowheader"
                   tabindex="-1"
                 >
                   <span
                     class="hm005a_spectrum-Table-cellContents"
-                    id="react-aria-«r0»-stage1-$.0"
+                    id="react-aria-_r_0_-stage1-$.0"
                   >
                     stage1
                   </span>
@@ -146,16 +146,16 @@ exports[`StageDefinition > renders correctly 1`] = `
               >
                 <div
                   aria-colindex="2"
-                  aria-labelledby="react-aria-«r7»"
+                  aria-labelledby="react-aria-_r_7_"
                   class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
-                  data-collection="react-aria-«r1»"
+                  data-collection="react-aria-_r_1_"
                   data-key="stage1.1"
                   role="gridcell"
                   tabindex="-1"
                 >
                   <span
                     class="hm005a_spectrum-Table-cellContents"
-                    id="react-aria-«r7»"
+                    id="react-aria-_r_7_"
                   >
                     step1, step2
                   </span>
@@ -163,13 +163,13 @@ exports[`StageDefinition > renders correctly 1`] = `
               </div>
             </div>
             <div
-              aria-labelledby="react-aria-«r0»-stage2-$.0"
+              aria-labelledby="react-aria-_r_0_-stage2-$.0"
               aria-rowindex="3"
               class="hm005a_spectrum-Table-row hm005a_spectrum-Table-row--lastRow FsDyjq_react-spectrum-Table-row"
-              data-collection="react-aria-«r1»"
+              data-collection="react-aria-_r_1_"
               data-key="stage2"
               data-react-aria-pressable="true"
-              id="react-aria-«r8»"
+              id="react-aria-_r_8_"
               role="row"
               style="position: absolute; overflow: visible; opacity: 1; z-index: 0; contain: size layout style; top: 51px; left: 0px; width: 18014398509481982px; height: 51px;"
               tabindex="-1"
@@ -181,16 +181,16 @@ exports[`StageDefinition > renders correctly 1`] = `
               >
                 <div
                   aria-colindex="1"
-                  aria-labelledby="react-aria-«r0»-stage2-$.0"
+                  aria-labelledby="react-aria-_r_0_-stage2-$.0"
                   class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
-                  data-collection="react-aria-«r1»"
+                  data-collection="react-aria-_r_1_"
                   data-key="stage2.0"
                   role="rowheader"
                   tabindex="-1"
                 >
                   <span
                     class="hm005a_spectrum-Table-cellContents"
-                    id="react-aria-«r0»-stage2-$.0"
+                    id="react-aria-_r_0_-stage2-$.0"
                   >
                     stage2
                   </span>
@@ -203,16 +203,16 @@ exports[`StageDefinition > renders correctly 1`] = `
               >
                 <div
                   aria-colindex="2"
-                  aria-labelledby="react-aria-«ra»"
+                  aria-labelledby="react-aria-_r_a_"
                   class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
-                  data-collection="react-aria-«r1»"
+                  data-collection="react-aria-_r_1_"
                   data-key="stage2.1"
                   role="gridcell"
                   tabindex="-1"
                 >
                   <span
                     class="hm005a_spectrum-Table-cellContents"
-                    id="react-aria-«ra»"
+                    id="react-aria-_r_a_"
                   >
                     step3
                   </span>

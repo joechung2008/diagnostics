@@ -17,8 +17,8 @@ exports[`ServerInfo > renders correctly 1`] = `
     aria-label="Server Info"
     aria-rowcount="7"
     class="hm005a_spectrum-Table hm005a_spectrum-Table--regular FsDyjq_react-spectrum-Table"
-    data-collection="react-aria-«r1»"
-    id="react-aria-«r0»"
+    data-collection="react-aria-_r_1_"
+    id="react-aria-_r_0_"
     role="grid"
     style="width: 100%;"
     tabindex="0"
@@ -46,10 +46,10 @@ exports[`ServerInfo > renders correctly 1`] = `
             <div
               aria-colindex="1"
               class="hm005a_spectrum-Table-headCell FsDyjq_react-spectrum-Table-cell"
-              data-collection="react-aria-«r1»"
+              data-collection="react-aria-_r_1_"
               data-key="$.0"
               data-react-aria-pressable="true"
-              id="react-aria-«r0»-$.0"
+              id="react-aria-_r_0_-$.0"
               role="columnheader"
               tabindex="-1"
             >
@@ -68,10 +68,10 @@ exports[`ServerInfo > renders correctly 1`] = `
             <div
               aria-colindex="2"
               class="hm005a_spectrum-Table-headCell FsDyjq_react-spectrum-Table-cell"
-              data-collection="react-aria-«r1»"
+              data-collection="react-aria-_r_1_"
               data-key="$.1"
               data-react-aria-pressable="true"
-              id="react-aria-«r0»-$.1"
+              id="react-aria-_r_0_-$.1"
               role="columnheader"
               tabindex="-1"
             >
@@ -100,13 +100,13 @@ exports[`ServerInfo > renders correctly 1`] = `
           style="position: absolute; overflow: visible; opacity: 1; z-index: 0; contain: size layout style; top: 0px; left: 0px; width: 18014398509481982px; height: 306px;"
         >
           <div
-            aria-labelledby="react-aria-«r0»-hostname-$.0"
+            aria-labelledby="react-aria-_r_0_-hostname-$.0"
             aria-rowindex="2"
             class="hm005a_spectrum-Table-row hm005a_spectrum-Table-row--firstRow FsDyjq_react-spectrum-Table-row"
-            data-collection="react-aria-«r1»"
+            data-collection="react-aria-_r_1_"
             data-key="hostname"
             data-react-aria-pressable="true"
-            id="react-aria-«r5»"
+            id="react-aria-_r_5_"
             role="row"
             style="position: absolute; overflow: visible; opacity: 1; z-index: 0; contain: size layout style; top: 0px; left: 0px; width: 18014398509481982px; height: 51px;"
             tabindex="-1"
@@ -118,16 +118,16 @@ exports[`ServerInfo > renders correctly 1`] = `
             >
               <div
                 aria-colindex="1"
-                aria-labelledby="react-aria-«r0»-hostname-$.0"
+                aria-labelledby="react-aria-_r_0_-hostname-$.0"
                 class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
-                data-collection="react-aria-«r1»"
+                data-collection="react-aria-_r_1_"
                 data-key="hostname.0"
                 role="rowheader"
                 tabindex="-1"
               >
                 <span
                   class="hm005a_spectrum-Table-cellContents"
-                  id="react-aria-«r0»-hostname-$.0"
+                  id="react-aria-_r_0_-hostname-$.0"
                 >
                   Hostname
                 </span>
@@ -140,16 +140,16 @@ exports[`ServerInfo > renders correctly 1`] = `
             >
               <div
                 aria-colindex="2"
-                aria-labelledby="react-aria-«r7»"
+                aria-labelledby="react-aria-_r_7_"
                 class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
-                data-collection="react-aria-«r1»"
+                data-collection="react-aria-_r_1_"
                 data-key="hostname.1"
                 role="gridcell"
                 tabindex="-1"
               >
                 <span
                   class="hm005a_spectrum-Table-cellContents"
-                  id="react-aria-«r7»"
+                  id="react-aria-_r_7_"
                 >
                   localhost
                 </span>
@@ -157,13 +157,13 @@ exports[`ServerInfo > renders correctly 1`] = `
             </div>
           </div>
           <div
-            aria-labelledby="react-aria-«r0»-uptime-$.0"
+            aria-labelledby="react-aria-_r_0_-uptime-$.0"
             aria-rowindex="3"
             class="hm005a_spectrum-Table-row FsDyjq_react-spectrum-Table-row"
-            data-collection="react-aria-«r1»"
+            data-collection="react-aria-_r_1_"
             data-key="uptime"
             data-react-aria-pressable="true"
-            id="react-aria-«r8»"
+            id="react-aria-_r_8_"
             role="row"
             style="position: absolute; overflow: visible; opacity: 1; z-index: 0; contain: size layout style; top: 51px; left: 0px; width: 18014398509481982px; height: 51px;"
             tabindex="-1"
@@ -175,16 +175,16 @@ exports[`ServerInfo > renders correctly 1`] = `
             >
               <div
                 aria-colindex="1"
-                aria-labelledby="react-aria-«r0»-uptime-$.0"
+                aria-labelledby="react-aria-_r_0_-uptime-$.0"
                 class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
-                data-collection="react-aria-«r1»"
+                data-collection="react-aria-_r_1_"
                 data-key="uptime.0"
                 role="rowheader"
                 tabindex="-1"
               >
                 <span
                   class="hm005a_spectrum-Table-cellContents"
-                  id="react-aria-«r0»-uptime-$.0"
+                  id="react-aria-_r_0_-uptime-$.0"
                 >
                   Uptime
                 </span>
@@ -197,16 +197,16 @@ exports[`ServerInfo > renders correctly 1`] = `
             >
               <div
                 aria-colindex="2"
-                aria-labelledby="react-aria-«ra»"
+                aria-labelledby="react-aria-_r_a_"
                 class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
-                data-collection="react-aria-«r1»"
+                data-collection="react-aria-_r_1_"
                 data-key="uptime.1"
                 role="gridcell"
                 tabindex="-1"
               >
                 <span
                   class="hm005a_spectrum-Table-cellContents"
-                  id="react-aria-«ra»"
+                  id="react-aria-_r_a_"
                 >
                   123456
                 </span>
@@ -214,13 +214,13 @@ exports[`ServerInfo > renders correctly 1`] = `
             </div>
           </div>
           <div
-            aria-labelledby="react-aria-«r0»-serverId-$.0"
+            aria-labelledby="react-aria-_r_0_-serverId-$.0"
             aria-rowindex="4"
             class="hm005a_spectrum-Table-row FsDyjq_react-spectrum-Table-row"
-            data-collection="react-aria-«r1»"
+            data-collection="react-aria-_r_1_"
             data-key="serverId"
             data-react-aria-pressable="true"
-            id="react-aria-«rb»"
+            id="react-aria-_r_b_"
             role="row"
             style="position: absolute; overflow: visible; opacity: 1; z-index: 0; contain: size layout style; top: 102px; left: 0px; width: 18014398509481982px; height: 51px;"
             tabindex="-1"
@@ -232,16 +232,16 @@ exports[`ServerInfo > renders correctly 1`] = `
             >
               <div
                 aria-colindex="1"
-                aria-labelledby="react-aria-«r0»-serverId-$.0"
+                aria-labelledby="react-aria-_r_0_-serverId-$.0"
                 class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
-                data-collection="react-aria-«r1»"
+                data-collection="react-aria-_r_1_"
                 data-key="serverId.0"
                 role="rowheader"
                 tabindex="-1"
               >
                 <span
                   class="hm005a_spectrum-Table-cellContents"
-                  id="react-aria-«r0»-serverId-$.0"
+                  id="react-aria-_r_0_-serverId-$.0"
                 >
                   Server ID
                 </span>
@@ -254,16 +254,16 @@ exports[`ServerInfo > renders correctly 1`] = `
             >
               <div
                 aria-colindex="2"
-                aria-labelledby="react-aria-«rd»"
+                aria-labelledby="react-aria-_r_d_"
                 class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
-                data-collection="react-aria-«r1»"
+                data-collection="react-aria-_r_1_"
                 data-key="serverId.1"
                 role="gridcell"
                 tabindex="-1"
               >
                 <span
                   class="hm005a_spectrum-Table-cellContents"
-                  id="react-aria-«rd»"
+                  id="react-aria-_r_d_"
                 >
                   srv-456
                 </span>
@@ -271,13 +271,13 @@ exports[`ServerInfo > renders correctly 1`] = `
             </div>
           </div>
           <div
-            aria-labelledby="react-aria-«r0»-deploymentId-$.0"
+            aria-labelledby="react-aria-_r_0_-deploymentId-$.0"
             aria-rowindex="5"
             class="hm005a_spectrum-Table-row FsDyjq_react-spectrum-Table-row"
-            data-collection="react-aria-«r1»"
+            data-collection="react-aria-_r_1_"
             data-key="deploymentId"
             data-react-aria-pressable="true"
-            id="react-aria-«re»"
+            id="react-aria-_r_e_"
             role="row"
             style="position: absolute; overflow: visible; opacity: 1; z-index: 0; contain: size layout style; top: 153px; left: 0px; width: 18014398509481982px; height: 51px;"
             tabindex="-1"
@@ -289,16 +289,16 @@ exports[`ServerInfo > renders correctly 1`] = `
             >
               <div
                 aria-colindex="1"
-                aria-labelledby="react-aria-«r0»-deploymentId-$.0"
+                aria-labelledby="react-aria-_r_0_-deploymentId-$.0"
                 class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
-                data-collection="react-aria-«r1»"
+                data-collection="react-aria-_r_1_"
                 data-key="deploymentId.0"
                 role="rowheader"
                 tabindex="-1"
               >
                 <span
                   class="hm005a_spectrum-Table-cellContents"
-                  id="react-aria-«r0»-deploymentId-$.0"
+                  id="react-aria-_r_0_-deploymentId-$.0"
                 >
                   Deployment ID
                 </span>
@@ -311,16 +311,16 @@ exports[`ServerInfo > renders correctly 1`] = `
             >
               <div
                 aria-colindex="2"
-                aria-labelledby="react-aria-«rg»"
+                aria-labelledby="react-aria-_r_g_"
                 class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
-                data-collection="react-aria-«r1»"
+                data-collection="react-aria-_r_1_"
                 data-key="deploymentId.1"
                 role="gridcell"
                 tabindex="-1"
               >
                 <span
                   class="hm005a_spectrum-Table-cellContents"
-                  id="react-aria-«rg»"
+                  id="react-aria-_r_g_"
                 >
                   dep-123
                 </span>
@@ -328,13 +328,13 @@ exports[`ServerInfo > renders correctly 1`] = `
             </div>
           </div>
           <div
-            aria-labelledby="react-aria-«r0»-nodeVersions-$.0"
+            aria-labelledby="react-aria-_r_0_-nodeVersions-$.0"
             aria-rowindex="6"
             class="hm005a_spectrum-Table-row FsDyjq_react-spectrum-Table-row"
-            data-collection="react-aria-«r1»"
+            data-collection="react-aria-_r_1_"
             data-key="nodeVersions"
             data-react-aria-pressable="true"
-            id="react-aria-«rh»"
+            id="react-aria-_r_h_"
             role="row"
             style="position: absolute; overflow: visible; opacity: 1; z-index: 0; contain: size layout style; top: 204px; left: 0px; width: 18014398509481982px; height: 51px;"
             tabindex="-1"
@@ -346,16 +346,16 @@ exports[`ServerInfo > renders correctly 1`] = `
             >
               <div
                 aria-colindex="1"
-                aria-labelledby="react-aria-«r0»-nodeVersions-$.0"
+                aria-labelledby="react-aria-_r_0_-nodeVersions-$.0"
                 class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
-                data-collection="react-aria-«r1»"
+                data-collection="react-aria-_r_1_"
                 data-key="nodeVersions.0"
                 role="rowheader"
                 tabindex="-1"
               >
                 <span
                   class="hm005a_spectrum-Table-cellContents"
-                  id="react-aria-«r0»-nodeVersions-$.0"
+                  id="react-aria-_r_0_-nodeVersions-$.0"
                 >
                   Node Versions
                 </span>
@@ -368,16 +368,16 @@ exports[`ServerInfo > renders correctly 1`] = `
             >
               <div
                 aria-colindex="2"
-                aria-labelledby="react-aria-«rj»"
+                aria-labelledby="react-aria-_r_j_"
                 class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
-                data-collection="react-aria-«r1»"
+                data-collection="react-aria-_r_1_"
                 data-key="nodeVersions.1"
                 role="gridcell"
                 tabindex="-1"
               >
                 <span
                   class="hm005a_spectrum-Table-cellContents"
-                  id="react-aria-«rj»"
+                  id="react-aria-_r_j_"
                 >
                   v18.0.0
                 </span>
@@ -385,13 +385,13 @@ exports[`ServerInfo > renders correctly 1`] = `
             </div>
           </div>
           <div
-            aria-labelledby="react-aria-«r0»-extensionSync-$.0"
+            aria-labelledby="react-aria-_r_0_-extensionSync-$.0"
             aria-rowindex="7"
             class="hm005a_spectrum-Table-row hm005a_spectrum-Table-row--lastRow FsDyjq_react-spectrum-Table-row"
-            data-collection="react-aria-«r1»"
+            data-collection="react-aria-_r_1_"
             data-key="extensionSync"
             data-react-aria-pressable="true"
-            id="react-aria-«rk»"
+            id="react-aria-_r_k_"
             role="row"
             style="position: absolute; overflow: visible; opacity: 1; z-index: 0; contain: size layout style; top: 255px; left: 0px; width: 18014398509481982px; height: 51px;"
             tabindex="-1"
@@ -403,16 +403,16 @@ exports[`ServerInfo > renders correctly 1`] = `
             >
               <div
                 aria-colindex="1"
-                aria-labelledby="react-aria-«r0»-extensionSync-$.0"
+                aria-labelledby="react-aria-_r_0_-extensionSync-$.0"
                 class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
-                data-collection="react-aria-«r1»"
+                data-collection="react-aria-_r_1_"
                 data-key="extensionSync.0"
                 role="rowheader"
                 tabindex="-1"
               >
                 <span
                   class="hm005a_spectrum-Table-cellContents"
-                  id="react-aria-«r0»-extensionSync-$.0"
+                  id="react-aria-_r_0_-extensionSync-$.0"
                 >
                   Extension Sync | Total Sync All Count
                 </span>
@@ -425,16 +425,16 @@ exports[`ServerInfo > renders correctly 1`] = `
             >
               <div
                 aria-colindex="2"
-                aria-labelledby="react-aria-«rm»"
+                aria-labelledby="react-aria-_r_m_"
                 class="hm005a_spectrum-Table-cell FsDyjq_react-spectrum-Table-cell"
-                data-collection="react-aria-«r1»"
+                data-collection="react-aria-_r_1_"
                 data-key="extensionSync.1"
                 role="gridcell"
                 tabindex="-1"
               >
                 <span
                   class="hm005a_spectrum-Table-cellContents"
-                  id="react-aria-«rm»"
+                  id="react-aria-_r_m_"
                 >
                   5
                 </span>
