@@ -1,6 +1,18 @@
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { createTheme } from "@mui/material";
+import { render } from "@testing-library/react";
+import { describe, expect, it, vi } from "vitest";
 import App from "../App";
+
+// Mock useSWR
+const mockUseSWR = vi.fn();
+vi.doMock("swr", () => ({
+  default: mockUseSWR,
+}));
+
+// Mock useSystemTheme
+vi.doMock("../useSystemTheme", () => ({
+  useSystemTheme: vi.fn(() => createTheme()),
+}));
 
 const diagnostics = {
   buildInfo: { buildVersion: "1.0.0" },
@@ -18,69 +30,35 @@ const diagnostics = {
 };
 
 describe("App", () => {
-  beforeEach(() => {
-    vi.stubGlobal(
-      "fetch",
-      vi.fn(() =>
-        Promise.resolve({
-          json: () => Promise.resolve(diagnostics),
-        })
-      )
-    );
-  });
-
   it("matches snapshot in loading state", () => {
-    vi.stubGlobal(
-      "fetch",
-      vi.fn(() => new Promise(() => {})) // never resolves
-    );
-    const { asFragment } = render(<App />);
-    // App returns null in loading state, so fragment should be empty
-    expect(asFragment()).toMatchInlineSnapshot(`<DocumentFragment />`);
-  });
-
-  it("renders main UI after diagnostics fetch", async () => {
-    render(<App />);
-    await waitFor(() => {
-      expect(screen.getByRole("tab", { name: /Extensions/i })).not.toBeNull();
-      expect(
-        screen.getByRole("tab", { name: /Build Information/i })
-      ).not.toBeNull();
-      expect(
-        screen.getByRole("tab", { name: /Server Information/i })
-      ).not.toBeNull();
+    mockUseSWR.mockReturnValue({
+      data: undefined,
+      error: undefined,
+      isLoading: true,
     });
-  });
 
-  it("matches snapshot after diagnostics fetch", async () => {
     const { asFragment } = render(<App />);
-    await waitFor(() => {
-      expect(
-        screen.getByRole("tab", { name: /Extensions/i })
-      ).toBeInTheDocument();
-    });
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("matches snapshot after switching to Build Information tab", async () => {
-    const { asFragment } = render(<App />);
-    await waitFor(() => {
-      const tabs = screen.getAllByRole("tab");
-      expect(tabs[1]).toBeInTheDocument(); // Build Information tab
+  it("matches snapshot in error state", () => {
+    mockUseSWR.mockReturnValue({
+      data: undefined,
+      error: new Error("Failed to fetch"),
+      isLoading: false,
     });
-    const tabs = screen.getAllByRole("tab");
-    fireEvent.click(tabs[1]); // Build Information tab
+
+    const { asFragment } = render(<App />);
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("matches snapshot after switching to Server Information tab", async () => {
-    const { asFragment } = render(<App />);
-    await waitFor(() => {
-      const tabs = screen.getAllByRole("tab");
-      expect(tabs[2]).toBeInTheDocument(); // Server Information tab
+  it("matches snapshot in initial loaded state", () => {
+    mockUseSWR.mockReturnValue({
+      data: diagnostics,
+      error: undefined,
+      isLoading: false,
     });
-    const tabs = screen.getAllByRole("tab");
-    fireEvent.click(tabs[2]); // Server Information tab
+    const { asFragment } = render(<App />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

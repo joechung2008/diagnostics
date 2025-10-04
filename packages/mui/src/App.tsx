@@ -1,6 +1,8 @@
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {
+  Alert,
   Button,
+  CircularProgress,
   Grid,
   Menu,
   MenuItem,
@@ -9,7 +11,8 @@ import {
   ThemeProvider,
   Toolbar,
 } from "@mui/material";
-import { useEffect, useMemo, useState } from "react";
+import { Activity, useCallback, useMemo, useState } from "react";
+import useSWR from "swr";
 import BuildInfo from "./BuildInfo";
 import Extension from "./Extension";
 import Extensions from "./Extensions";
@@ -29,25 +32,32 @@ const EnvironmentUrls = {
   Mooncake: "https://hosting.azureportal.chinacloudapi.cn/api/diagnostics",
 } as const;
 
-type Environment = (typeof EnvironmentUrls)[keyof typeof EnvironmentUrls];
+type EnvironmentUrl = (typeof EnvironmentUrls)[keyof typeof EnvironmentUrls];
 
 const App: React.FC = () => {
   const theme = useSystemTheme();
 
-  const [diagnostics, setDiagnostics] = useState<Diagnostics>();
   const [extension, setExtension] = useState<ExtensionInfo>();
-  const [environment, setEnvironment] = useState<Environment>(
+  const [environment, setEnvironment] = useState<EnvironmentUrl>(
     EnvironmentUrls.Public
   );
   const [envMenuAnchorEl, setEnvMenuAnchorEl] = useState<null | HTMLElement>(
     null
   );
-  const handleEnvMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
-    setEnvMenuAnchorEl(event.currentTarget);
-  };
-  const handleEnvMenuClose = () => {
-    setEnvMenuAnchorEl(null);
-  };
+
+  const {
+    data: diagnostics,
+    error,
+    isLoading,
+  } = useSWR<Diagnostics>(environment, async (environment: string) => {
+    const response = await fetch(environment);
+    if (!response.ok) {
+      throw new Error(`Error fetching diagnostics: ${response.statusText}`);
+    }
+
+    return response.json();
+  });
+
   const [selectedTab, setSelectedTab] = useState<string>("extensions");
 
   const showPaasServerless = useMemo(
@@ -64,6 +74,7 @@ const App: React.FC = () => {
         onClick: () => {
           setEnvironment(EnvironmentUrls.Public);
           setExtension(undefined);
+          setSelectedTab("extensions");
         },
       },
       {
@@ -73,6 +84,7 @@ const App: React.FC = () => {
         onClick: () => {
           setEnvironment(EnvironmentUrls.Fairfax);
           setExtension(undefined);
+          setSelectedTab("extensions");
         },
       },
       {
@@ -82,34 +94,35 @@ const App: React.FC = () => {
         onClick: () => {
           setEnvironment(EnvironmentUrls.Mooncake);
           setExtension(undefined);
+          setSelectedTab("extensions");
         },
       },
     ],
     [environment]
   );
 
-  useEffect(() => {
-    const getDiagnostics = async () => {
-      const response = await fetch(environment);
-      setDiagnostics(await response.json());
-    };
-    getDiagnostics();
-  }, [environment]);
+  const handleEnvMenuOpen = useCallback(
+    (event: React.MouseEvent<HTMLElement>) => {
+      setEnvMenuAnchorEl(event.currentTarget);
+    },
+    []
+  );
 
-  if (!diagnostics) {
-    return null;
-  }
+  const handleEnvMenuClose = useCallback(() => {
+    setEnvMenuAnchorEl(null);
+  }, []);
 
-  const { buildInfo, extensions, serverInfo } = diagnostics;
-
-  const handleLinkClick = (_?: React.MouseEvent, item?: KeyedNavLink) => {
-    if (item) {
-      const extension = extensions[item.key];
-      if (isExtensionInfo(extension)) {
-        setExtension(extension);
+  const handleLinkClick = useCallback(
+    (_?: React.MouseEvent, item?: KeyedNavLink) => {
+      if (item) {
+        const extension = diagnostics?.extensions[item.key];
+        if (isExtensionInfo(extension)) {
+          setExtension(extension);
+        }
       }
-    }
-  };
+    },
+    [diagnostics?.extensions]
+  );
 
   return (
     <ThemeProvider theme={theme}>
@@ -152,7 +165,7 @@ const App: React.FC = () => {
               </MenuItem>
             ))}
           </Menu>
-          {showPaasServerless && (
+          <Activity mode={showPaasServerless ? "visible" : "hidden"}>
             <Button
               key="paasserverless"
               onClick={() => {
@@ -160,18 +173,20 @@ const App: React.FC = () => {
                   diagnostics?.extensions["paasserverless"];
                 if (isExtensionInfo(paasserverless)) {
                   setExtension(paasserverless);
+                  setSelectedTab("extensions");
                 }
               }}
             >
               paasserverless
             </Button>
-          )}
+          </Activity>
           <Button
             key="websites"
             onClick={() => {
               const websites = diagnostics?.extensions["websites"];
               if (isExtensionInfo(websites)) {
                 setExtension(websites);
+                setSelectedTab("extensions");
               }
             }}
           >
@@ -187,27 +202,63 @@ const App: React.FC = () => {
           <Tab label="Build Information" value="build" />
           <Tab label="Server Information" value="server" />
         </Tabs>
-        {selectedTab === "extensions" && (
+        <Activity mode={!error && isLoading ? "visible" : "hidden"}>
           <Grid className="tab-panel" container>
-            <Grid className="stack" container gap="0.5rem">
-              <Extensions
-                extensions={extensions}
-                onLinkClick={handleLinkClick}
-              />
-              {extension && <Extension {...extension} />}
-            </Grid>
+            <CircularProgress aria-label="Loading..." />
           </Grid>
-        )}
-        {selectedTab === "build" && (
-          <div className="tab-panel">
-            <BuildInfo {...buildInfo} />
-          </div>
-        )}
-        {selectedTab === "server" && (
-          <div className="tab-panel">
-            <ServerInfo {...serverInfo} />
-          </div>
-        )}
+        </Activity>
+        <Activity mode={error && !isLoading ? "visible" : "hidden"}>
+          <Grid className="tab-panel" container>
+            <Alert severity="error">
+              Error loading diagnostics: {String(error)}
+            </Alert>
+          </Grid>
+        </Activity>
+        <Activity
+          mode={
+            !error && !isLoading && selectedTab === "extensions"
+              ? "visible"
+              : "hidden"
+          }
+        >
+          {diagnostics?.extensions && (
+            <Grid className="tab-panel" container>
+              <Grid className="stack" container gap="0.5rem">
+                <Extensions
+                  extensions={diagnostics.extensions}
+                  onLinkClick={handleLinkClick}
+                />
+                {extension && <Extension {...extension} />}
+              </Grid>
+            </Grid>
+          )}
+        </Activity>
+        <Activity
+          mode={
+            !error && !isLoading && selectedTab === "build"
+              ? "visible"
+              : "hidden"
+          }
+        >
+          {diagnostics?.buildInfo && (
+            <div className="tab-panel">
+              <BuildInfo {...diagnostics.buildInfo} />
+            </div>
+          )}
+        </Activity>
+        <Activity
+          mode={
+            !error && !isLoading && selectedTab === "server"
+              ? "visible"
+              : "hidden"
+          }
+        >
+          {diagnostics?.serverInfo && (
+            <div className="tab-panel">
+              <ServerInfo {...diagnostics.serverInfo} />
+            </div>
+          )}
+        </Activity>
       </div>
     </ThemeProvider>
   );
