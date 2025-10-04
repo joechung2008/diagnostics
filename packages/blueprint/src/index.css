@@ -11,6 +11,13 @@ body {
   background-color: #252a31;
 }
 
+.button-group-separator {
+  margin: 0 8px;
+  border-left: 1px solid #ccc;
+  height: 24px;
+  align-self: center;
+}
+
 .extension-root {
   box-sizing: border-box;
   display: flex;

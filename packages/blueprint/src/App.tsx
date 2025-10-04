@@ -1,99 +1,109 @@
-import { Button, ButtonGroup, Tab, Tabs } from "@blueprintjs/core";
-import { useEffect, useMemo, useState } from "react";
+import {
+  Button,
+  ButtonGroup,
+  NonIdealState,
+  Spinner,
+  Tab,
+  Tabs,
+} from "@blueprintjs/core";
+import clsx from "clsx";
+import { useCallback, useMemo, useState } from "react";
+import useSWR from "swr";
 import BuildInfo from "./BuildInfo";
 import Extension from "./Extension";
 import Extensions from "./Extensions";
 import ServerInfo from "./ServerInfo";
 import { isExtensionInfo } from "./utils";
 
-type Environment =
+const Environment = {
+  Public: "https://hosting.portal.azure.net/api/diagnostics",
+  Fairfax: "https://hosting.azureportal.usgovcloudapi.net/api/diagnostics",
+  Mooncake: "https://hosting.azureportal.chinacloudapi.cn/api/diagnostics",
+} as const;
+
+type EnvironmentUrl =
   | "https://hosting.portal.azure.net/api/diagnostics"
   | "https://hosting.azureportal.usgovcloudapi.net/api/diagnostics"
   | "https://hosting.azureportal.chinacloudapi.cn/api/diagnostics";
 
-const ENVIRONMENT_PUBLIC: Environment =
-  "https://hosting.portal.azure.net/api/diagnostics";
-const ENVIRONMENT_FAIRFAX: Environment =
-  "https://hosting.azureportal.usgovcloudapi.net/api/diagnostics";
-const ENVIRONMENT_MOONCAKE: Environment =
-  "https://hosting.azureportal.chinacloudapi.cn/api/diagnostics";
+interface AppProps {
+  className?: string;
+}
 
-const App: React.FC = () => {
-  const [diagnostics, setDiagnostics] = useState<Diagnostics>();
+const App = ({ className }: AppProps) => {
+  const [environment, setEnvironment] = useState<EnvironmentUrl>(
+    Environment.Public
+  );
   const [extension, setExtension] = useState<ExtensionInfo>();
-  const [environment, setEnvironment] =
-    useState<Environment>(ENVIRONMENT_PUBLIC);
   const [selectedTab, setSelectedTab] = useState<string>("extensions");
+
+  const {
+    data: diagnostics,
+    error,
+    isLoading,
+  } = useSWR(environment, async (environment: string) => {
+    const response = await fetch(environment);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch diagnostics: ${response.statusText}`);
+    }
+
+    return response.json();
+  });
 
   const showPaasServerless = useMemo(
     () => isExtensionInfo(diagnostics?.extensions["paasserverless"]),
     [diagnostics?.extensions]
   );
 
-  useEffect(() => {
-    const getDiagnostics = async () => {
-      const response = await fetch(environment);
-      setDiagnostics(await response.json());
-    };
-    getDiagnostics();
-  }, [environment]);
-
-  if (!diagnostics) {
-    return null;
-  }
-
-  const { buildInfo, extensions, serverInfo } = diagnostics;
-
-  const handleLinkClick = (item?: KeyedNavLink) => {
-    if (item) {
-      const extension = extensions[item.key];
-      if (isExtensionInfo(extension)) {
-        setExtension(extension);
+  const handleLinkClick = useCallback(
+    (item?: KeyedNavLink) => {
+      if (item) {
+        const extension = diagnostics?.extensions[item.key];
+        if (isExtensionInfo(extension)) {
+          setExtension(extension);
+        }
       }
-    }
-  };
+    },
+    [diagnostics?.extensions]
+  );
 
   return (
-    <div className="flexbox">
+    <div className={clsx("flexbox", className)}>
       <ButtonGroup>
         <Button
-          active={environment === ENVIRONMENT_PUBLIC}
+          active={environment === Environment.Public}
           variant="minimal"
           onClick={() => {
-            setEnvironment(ENVIRONMENT_PUBLIC);
+            setEnvironment(Environment.Public);
             setExtension(undefined);
+            setSelectedTab("extensions");
           }}
         >
           Public Cloud
         </Button>
         <Button
-          active={environment === ENVIRONMENT_FAIRFAX}
+          active={environment === Environment.Fairfax}
           variant="minimal"
           onClick={() => {
-            setEnvironment(ENVIRONMENT_FAIRFAX);
+            setEnvironment(Environment.Fairfax);
             setExtension(undefined);
+            setSelectedTab("extensions");
           }}
         >
           Fairfax
         </Button>
         <Button
-          active={environment === ENVIRONMENT_MOONCAKE}
+          active={environment === Environment.Mooncake}
           variant="minimal"
           onClick={() => {
-            setEnvironment(ENVIRONMENT_MOONCAKE);
+            setEnvironment(Environment.Mooncake);
             setExtension(undefined);
+            setSelectedTab("extensions");
           }}
         >
           Mooncake
         </Button>
-        <span
-          style={{
-            margin: "0 8px",
-            borderLeft: "1px solid #ccc",
-            height: "24px",
-            alignSelf: "center",
-          }}
-        />
+        <span className="button-group-separator" />
         {showPaasServerless && (
           <Button
             variant="minimal"
@@ -101,6 +111,7 @@ const App: React.FC = () => {
               const paasserverless = diagnostics?.extensions["paasserverless"];
               if (isExtensionInfo(paasserverless)) {
                 setExtension(paasserverless);
+                setSelectedTab("extensions");
               }
             }}
           >
@@ -113,6 +124,7 @@ const App: React.FC = () => {
             const websites = diagnostics?.extensions["websites"];
             if (isExtensionInfo(websites)) {
               setExtension(websites);
+              setSelectedTab("extensions");
             }
           }}
         >
@@ -136,24 +148,31 @@ const App: React.FC = () => {
           title="Server Information"
         />
       </Tabs>
-      {selectedTab === "extensions" && (
+      {isLoading ? (
+        <div className="tab-panel vertical-center">
+          <Spinner aria-label="Loading..." />
+        </div>
+      ) : error ? (
+        <NonIdealState icon="error" title="Error" description={error.message} />
+      ) : selectedTab === "extensions" && diagnostics?.extensions ? (
         <div id="extensions-tab" className="tab-panel">
           <div className="stack">
-            <Extensions extensions={extensions} onLinkClick={handleLinkClick} />
+            <Extensions
+              extensions={diagnostics.extensions}
+              onLinkClick={handleLinkClick}
+            />
             {extension && <Extension {...extension} />}
           </div>
         </div>
-      )}
-      {selectedTab === "build" && (
+      ) : selectedTab === "build" && diagnostics?.buildInfo ? (
         <div id="build-tab" className="tab-panel">
-          <BuildInfo {...buildInfo} />
+          <BuildInfo {...diagnostics.buildInfo} />
         </div>
-      )}
-      {selectedTab === "server" && (
+      ) : selectedTab === "server" && diagnostics?.serverInfo ? (
         <div id="server-tab" className="tab-panel">
-          <ServerInfo {...serverInfo} />
+          <ServerInfo {...diagnostics.serverInfo} />
         </div>
-      )}
+      ) : null}
     </div>
   );
 };

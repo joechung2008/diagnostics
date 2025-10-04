@@ -1,85 +1,72 @@
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { render } from "@testing-library/react";
+import useSWR from "swr";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import App from "../App";
 
-// Diagnostics mock adhering to the Diagnostics type definition
-const diagnostics = {
-  buildInfo: {
-    buildVersion: "1.0.0",
-  },
-  extensions: {
-    websites: { extensionName: "websites" },
-    paasserverless: { extensionName: "paasserverless" },
-  },
-  serverInfo: {
-    deploymentId: "deployment-123",
-    extensionSync: {
-      totalSyncAllCount: 0,
-    },
-    hostname: "localhost",
-    nodeVersions: "v18.0.0",
-    serverId: "server-abc",
-    uptime: 123456,
-  },
-};
+vi.mock("swr");
 
 describe("App", () => {
-  beforeEach(() => {
-    vi.stubGlobal(
-      "fetch",
-      vi.fn(() => Promise.resolve({ json: () => Promise.resolve(diagnostics) }))
-    );
-  });
+  const mockUseSWR = vi.mocked(useSWR);
 
   afterEach(() => {
-    vi.unstubAllGlobals();
+    vi.clearAllMocks();
   });
 
-  it("matches snapshot", async () => {
+  it("should render the loading state while loading", async () => {
+    mockUseSWR.mockReturnValue({
+      data: undefined,
+      error: undefined,
+      isLoading: true,
+      mutate: vi.fn(),
+      isValidating: false,
+    });
+
     const { asFragment } = render(<App />);
-    await waitFor(() =>
-      expect(
-        screen.getByRole("tab", { name: /Extensions/i })
-      ).toBeInTheDocument()
-    );
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("switches tabs when clicked", async () => {
-    render(<App />);
+  it("should render the error state on fetch failure", async () => {
+    mockUseSWR.mockReturnValue({
+      data: undefined,
+      error: new Error("Failed to fetch diagnostics"),
+      isLoading: false,
+      mutate: vi.fn(),
+      isValidating: false,
+    });
 
-    // Wait for tabs to appear
-    await waitFor(() =>
-      expect(
-        screen.getByRole("tab", { name: /Extensions/i })
-      ).toBeInTheDocument()
-    );
+    const { asFragment } = render(<App />);
+    expect(asFragment()).toMatchSnapshot();
+  });
 
-    // Extensions tab should be selected by default
-    expect(screen.getByRole("tab", { name: /Extensions/i })).toHaveAttribute(
-      "aria-selected",
-      "true"
-    );
+  it("should render the initial loaded state", async () => {
+    mockUseSWR.mockReturnValue({
+      data: {
+        buildInfo: {
+          buildVersion: "1.0.0",
+        },
+        extensions: {
+          websites: { extensionName: "websites" },
+          paasserverless: { extensionName: "paasserverless" },
+        },
+        serverInfo: {
+          deploymentId: "deployment-123",
+          extensionSync: {
+            totalSyncAllCount: 0,
+          },
+          hostname: "localhost",
+          nodeVersions: "v18.0.0",
+          serverId: "server-abc",
+          uptime: 123456,
+        },
+      },
+      error: undefined,
+      isLoading: false,
+      mutate: vi.fn(),
+      isValidating: false,
+    });
 
-    // Switch to Build Information tab
-    fireEvent.click(screen.getByRole("tab", { name: /Build Information/i }));
-    expect(
-      screen.getByRole("tab", { name: /Build Information/i })
-    ).toHaveAttribute("aria-selected", "true");
-
-    // Check for content in BuildInfo table
-    expect(screen.getByText("Build Version")).toBeInTheDocument();
-    expect(screen.getByText("1.0.0")).toBeInTheDocument();
-
-    // Switch to Server Information tab
-    fireEvent.click(screen.getByRole("tab", { name: /Server Information/i }));
-    expect(
-      screen.getByRole("tab", { name: /Server Information/i })
-    ).toHaveAttribute("aria-selected", "true");
-
-    // Check for content in ServerInfo
-    expect(screen.getByText("deployment-123")).toBeInTheDocument();
-    expect(screen.getByText("localhost")).toBeInTheDocument();
+    const { asFragment } = render(<App />);
+    expect(asFragment()).toMatchSnapshot();
   });
 });

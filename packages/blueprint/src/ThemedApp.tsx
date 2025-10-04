@@ -7,9 +7,7 @@ const ThemedApp: React.FC = () => {
 
   return (
     <BlueprintProvider>
-      <div className={theme === "dark" ? "bp6-dark" : undefined}>
-        <App />
-      </div>
+      <App className={theme === "dark" ? "bp6-dark" : undefined} />
     </BlueprintProvider>
   );
 };
