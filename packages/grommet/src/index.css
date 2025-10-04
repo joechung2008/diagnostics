@@ -9,6 +9,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.centered {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
 .extension-root {
   display: flex;
   flex-direction: column;

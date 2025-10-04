@@ -1,0 +1,745 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App > renders Extensions tab by default 1`] = `
+<div>
+  <div
+    class="flexbox"
+  >
+    <div
+      class="StyledBox-sc-13pk1d4-0 dLliyK"
+    >
+      <button
+        aria-expanded="false"
+        aria-haspopup="menu"
+        aria-label="Open Menu"
+        class="StyledButton-sc-323bzc-0 jLPXpV"
+        type="button"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 kYyYKN"
+        >
+          <span
+            class="StyledText-sc-1sadyjn-0 jTcNpm"
+          >
+            Public Cloud
+          </span>
+          <div
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kOnJGZ"
+          />
+          <svg
+            aria-label="FormDown"
+            class="StyledIcon-sc-ofa7kd-0 krSgpg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m18 9-6 6-6-6"
+              fill="none"
+              stroke="#000"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
+      </button>
+      <button
+        class="StyledButton-sc-323bzc-0 jLPXpV"
+        type="button"
+      >
+        paasserverless
+      </button>
+      <button
+        class="StyledButton-sc-323bzc-0 jLPXpV"
+        type="button"
+      >
+        websites
+      </button>
+    </div>
+    <div
+      class="StyledBox-sc-13pk1d4-0 fDLUqh StyledTabs-sc-a4fwxl-2 lfIHdT"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 fBuFhc"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 dOjkO StyledTabs__StyledTabsHeader-sc-a4fwxl-0 gBVpTp"
+          role="tablist"
+        >
+          <button
+            aria-expanded="true"
+            aria-selected="true"
+            class="StyledButton-sc-323bzc-0 jLPXpV"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 edndUX StyledTab-sc-1nnwnsb-0 dIJknn"
+            >
+              <span
+                class="StyledText-sc-1sadyjn-0 elmtiN"
+              >
+                Extensions
+              </span>
+            </div>
+          </button>
+          <button
+            aria-expanded="false"
+            aria-selected="false"
+            class="StyledButton-sc-323bzc-0 jLPXpV"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bWNHnf StyledTab-sc-1nnwnsb-0 dIJknn"
+            >
+              <span
+                class="StyledText-sc-1sadyjn-0 bUOfNz"
+              >
+                Build Information
+              </span>
+            </div>
+          </button>
+          <button
+            aria-expanded="false"
+            aria-selected="false"
+            class="StyledButton-sc-323bzc-0 jLPXpV"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bWNHnf StyledTab-sc-1nnwnsb-0 dIJknn"
+            >
+              <span
+                class="StyledText-sc-1sadyjn-0 bUOfNz"
+              >
+                Server Information
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div
+        aria-label="Extensions Tab Contents"
+        class="StyledTabs__StyledTabPanel-sc-a4fwxl-1 kwlwid"
+        role="tabpanel"
+      />
+    </div>
+    <div
+      class="tab-panel"
+      style="display: none;"
+    >
+      <div
+        class="centered"
+      >
+        <div
+          aria-label="Loading..."
+          class="StyledBox-sc-13pk1d4-0 ikriZb"
+        />
+      </div>
+    </div>
+    <div
+      class="tab-panel"
+      style="display: none;"
+    >
+      <div
+        class="centered"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 ehpCpY"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 hidwNH"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 gOfGFJ"
+            >
+              <svg
+                aria-label="Status is critical"
+                class="StyledIcon-sc-ofa7kd-0 eBAFuY"
+                viewBox="0 0 12 12"
+              >
+                <path
+                  d="M6.712 1.263a1.005 1.005 0 0 0-1.424 0L1.263 5.288a1.005 1.005 0 0 0 0 1.424l4.025 4.025a1.005 1.005 0 0 0 1.424 0l4.025-4.025a1.005 1.005 0 0 0 0-1.424L6.712 1.263z"
+                  fill-rule="evenodd"
+                  stroke="#000"
+                />
+              </svg>
+            </div>
+            <div
+              class="StyledBox-sc-13pk1d4-0 fDLUqh"
+            >
+              <p
+                class="StyledParagraph-sc-tbetod-0 dNUDyP"
+              >
+                <span
+                  class="StyledText-sc-1sadyjn-0 gKmPWp"
+                >
+                  Error: Unknown error
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="tab-panel"
+    >
+      <div
+        class="stack"
+      >
+        <nav
+          aria-label="Extensions"
+          class="StyledBox-sc-13pk1d4-0 eznImF extension-root overflow-x-hidden"
+        >
+          <button
+            class="StyledButton-sc-323bzc-0 jLPXpV"
+            type="button"
+          >
+            PaaS Serverless
+          </button>
+          <div
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 hrJqFx"
+          />
+          <button
+            class="StyledButton-sc-323bzc-0 jLPXpV"
+            type="button"
+          >
+            Websites
+          </button>
+        </nav>
+      </div>
+    </div>
+    <div
+      class="tab-panel"
+      style="display: none;"
+    >
+      <table
+        aria-label="Build Info"
+        class="StyledTable-sc-1m3u5g-6 jlczSm"
+      >
+        <thead
+          class="StyledTable__StyledTableHeader-sc-1m3u5g-4"
+        >
+          <tr
+            class="StyledTable__StyledTableRow-sc-1m3u5g-2"
+          >
+            <th
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
+              scope="col"
+            >
+              Name
+            </th>
+            <th
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
+              scope="col"
+            >
+              Value
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="StyledTable__StyledTableBody-sc-1m3u5g-3"
+        >
+          <tr
+            class="StyledTable__StyledTableRow-sc-1m3u5g-2"
+          >
+            <td
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+            >
+              Build Version
+            </td>
+            <td
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+            />
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      class="tab-panel"
+      style="display: none;"
+    >
+      <table
+        aria-label="Server Info"
+        class="StyledTable-sc-1m3u5g-6 jlczSm"
+      >
+        <thead
+          class="StyledTable__StyledTableHeader-sc-1m3u5g-4"
+        >
+          <tr
+            class="StyledTable__StyledTableRow-sc-1m3u5g-2"
+          >
+            <th
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
+              scope="col"
+            >
+              Name
+            </th>
+            <th
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kSxzat"
+              scope="col"
+            >
+              Value
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="StyledTable__StyledTableBody-sc-1m3u5g-3"
+        >
+          <tr
+            class="StyledTable__StyledTableRow-sc-1m3u5g-2"
+          >
+            <td
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+            >
+              Hostname
+            </td>
+            <td
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+            >
+              test-host
+            </td>
+          </tr>
+          <tr
+            class="StyledTable__StyledTableRow-sc-1m3u5g-2"
+          >
+            <td
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+            >
+              Uptime
+            </td>
+            <td
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+            >
+              86400
+            </td>
+          </tr>
+          <tr
+            class="StyledTable__StyledTableRow-sc-1m3u5g-2"
+          >
+            <td
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+            >
+              Server ID
+            </td>
+            <td
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+            >
+              test-server
+            </td>
+          </tr>
+          <tr
+            class="StyledTable__StyledTableRow-sc-1m3u5g-2"
+          >
+            <td
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+            >
+              Deployment ID
+            </td>
+            <td
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+            >
+              test-deployment
+            </td>
+          </tr>
+          <tr
+            class="StyledTable__StyledTableRow-sc-1m3u5g-2"
+          >
+            <td
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+            >
+              Node Versions
+            </td>
+            <td
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+            >
+              v18
+            </td>
+          </tr>
+          <tr
+            class="StyledTable__StyledTableRow-sc-1m3u5g-2"
+          >
+            <td
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+            >
+              Extension Sync | Total Sync All Count
+            </td>
+            <td
+              class="StyledTable__StyledTableCell-sc-1m3u5g-0 kCLlzz"
+            >
+              42
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App > renders error message on fetch error 1`] = `
+<div>
+  <div
+    class="flexbox"
+  >
+    <div
+      class="StyledBox-sc-13pk1d4-0 dLliyK"
+    >
+      <button
+        aria-expanded="false"
+        aria-haspopup="menu"
+        aria-label="Open Menu"
+        class="StyledButton-sc-323bzc-0 jLPXpV"
+        type="button"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 kYyYKN"
+        >
+          <span
+            class="StyledText-sc-1sadyjn-0 jTcNpm"
+          >
+            Public Cloud
+          </span>
+          <div
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kOnJGZ"
+          />
+          <svg
+            aria-label="FormDown"
+            class="StyledIcon-sc-ofa7kd-0 krSgpg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m18 9-6 6-6-6"
+              fill="none"
+              stroke="#000"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
+      </button>
+      <button
+        class="StyledButton-sc-323bzc-0 jLPXpV"
+        style="display: none;"
+        type="button"
+      >
+        paasserverless
+      </button>
+      <button
+        class="StyledButton-sc-323bzc-0 jLPXpV"
+        type="button"
+      >
+        websites
+      </button>
+    </div>
+    <div
+      class="StyledBox-sc-13pk1d4-0 fDLUqh StyledTabs-sc-a4fwxl-2 lfIHdT"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 fBuFhc"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 dOjkO StyledTabs__StyledTabsHeader-sc-a4fwxl-0 gBVpTp"
+          role="tablist"
+        >
+          <button
+            aria-expanded="true"
+            aria-selected="true"
+            class="StyledButton-sc-323bzc-0 jLPXpV"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 edndUX StyledTab-sc-1nnwnsb-0 dIJknn"
+            >
+              <span
+                class="StyledText-sc-1sadyjn-0 elmtiN"
+              >
+                Extensions
+              </span>
+            </div>
+          </button>
+          <button
+            aria-expanded="false"
+            aria-selected="false"
+            class="StyledButton-sc-323bzc-0 jLPXpV"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bWNHnf StyledTab-sc-1nnwnsb-0 dIJknn"
+            >
+              <span
+                class="StyledText-sc-1sadyjn-0 bUOfNz"
+              >
+                Build Information
+              </span>
+            </div>
+          </button>
+          <button
+            aria-expanded="false"
+            aria-selected="false"
+            class="StyledButton-sc-323bzc-0 jLPXpV"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bWNHnf StyledTab-sc-1nnwnsb-0 dIJknn"
+            >
+              <span
+                class="StyledText-sc-1sadyjn-0 bUOfNz"
+              >
+                Server Information
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div
+        aria-label="Extensions Tab Contents"
+        class="StyledTabs__StyledTabPanel-sc-a4fwxl-1 kwlwid"
+        role="tabpanel"
+      />
+    </div>
+    <div
+      class="tab-panel"
+      style="display: none;"
+    >
+      <div
+        class="centered"
+      >
+        <div
+          aria-label="Loading..."
+          class="StyledBox-sc-13pk1d4-0 ikriZb"
+        />
+      </div>
+    </div>
+    <div
+      class="tab-panel"
+    >
+      <div
+        class="centered"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 ehpCpY"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 hidwNH"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 gOfGFJ"
+            >
+              <svg
+                aria-label="Status is critical"
+                class="StyledIcon-sc-ofa7kd-0 eBAFuY"
+                viewBox="0 0 12 12"
+              >
+                <path
+                  d="M6.712 1.263a1.005 1.005 0 0 0-1.424 0L1.263 5.288a1.005 1.005 0 0 0 0 1.424l4.025 4.025a1.005 1.005 0 0 0 1.424 0l4.025-4.025a1.005 1.005 0 0 0 0-1.424L6.712 1.263z"
+                  fill-rule="evenodd"
+                  stroke="#000"
+                />
+              </svg>
+            </div>
+            <div
+              class="StyledBox-sc-13pk1d4-0 fDLUqh"
+            >
+              <p
+                class="StyledParagraph-sc-tbetod-0 dNUDyP"
+              >
+                <span
+                  class="StyledText-sc-1sadyjn-0 gKmPWp"
+                >
+                  Error: Network error
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App > renders nothing while loading 1`] = `
+<div>
+  <div
+    class="flexbox"
+  >
+    <div
+      class="StyledBox-sc-13pk1d4-0 dLliyK"
+    >
+      <button
+        aria-expanded="false"
+        aria-haspopup="menu"
+        aria-label="Open Menu"
+        class="StyledButton-sc-323bzc-0 jLPXpV"
+        type="button"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 kYyYKN"
+        >
+          <span
+            class="StyledText-sc-1sadyjn-0 jTcNpm"
+          >
+            Public Cloud
+          </span>
+          <div
+            class="StyledBox__StyledBoxGap-sc-13pk1d4-1 kOnJGZ"
+          />
+          <svg
+            aria-label="FormDown"
+            class="StyledIcon-sc-ofa7kd-0 krSgpg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m18 9-6 6-6-6"
+              fill="none"
+              stroke="#000"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
+      </button>
+      <button
+        class="StyledButton-sc-323bzc-0 jLPXpV"
+        style="display: none;"
+        type="button"
+      >
+        paasserverless
+      </button>
+      <button
+        class="StyledButton-sc-323bzc-0 jLPXpV"
+        type="button"
+      >
+        websites
+      </button>
+    </div>
+    <div
+      class="StyledBox-sc-13pk1d4-0 fDLUqh StyledTabs-sc-a4fwxl-2 lfIHdT"
+    >
+      <div
+        class="StyledBox-sc-13pk1d4-0 fBuFhc"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 dOjkO StyledTabs__StyledTabsHeader-sc-a4fwxl-0 gBVpTp"
+          role="tablist"
+        >
+          <button
+            aria-expanded="true"
+            aria-selected="true"
+            class="StyledButton-sc-323bzc-0 jLPXpV"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 edndUX StyledTab-sc-1nnwnsb-0 dIJknn"
+            >
+              <span
+                class="StyledText-sc-1sadyjn-0 elmtiN"
+              >
+                Extensions
+              </span>
+            </div>
+          </button>
+          <button
+            aria-expanded="false"
+            aria-selected="false"
+            class="StyledButton-sc-323bzc-0 jLPXpV"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bWNHnf StyledTab-sc-1nnwnsb-0 dIJknn"
+            >
+              <span
+                class="StyledText-sc-1sadyjn-0 bUOfNz"
+              >
+                Build Information
+              </span>
+            </div>
+          </button>
+          <button
+            aria-expanded="false"
+            aria-selected="false"
+            class="StyledButton-sc-323bzc-0 jLPXpV"
+            role="tab"
+            type="button"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 bWNHnf StyledTab-sc-1nnwnsb-0 dIJknn"
+            >
+              <span
+                class="StyledText-sc-1sadyjn-0 bUOfNz"
+              >
+                Server Information
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div
+        aria-label="Extensions Tab Contents"
+        class="StyledTabs__StyledTabPanel-sc-a4fwxl-1 kwlwid"
+        role="tabpanel"
+      />
+    </div>
+    <div
+      class="tab-panel"
+    >
+      <div
+        class="centered"
+      >
+        <div
+          aria-label="Loading..."
+          class="StyledBox-sc-13pk1d4-0 ikriZb"
+        />
+      </div>
+    </div>
+    <div
+      class="tab-panel"
+      style="display: none;"
+    >
+      <div
+        class="centered"
+      >
+        <div
+          class="StyledBox-sc-13pk1d4-0 ehpCpY"
+        >
+          <div
+            class="StyledBox-sc-13pk1d4-0 hidwNH"
+          >
+            <div
+              class="StyledBox-sc-13pk1d4-0 gOfGFJ"
+            >
+              <svg
+                aria-label="Status is critical"
+                class="StyledIcon-sc-ofa7kd-0 eBAFuY"
+                viewBox="0 0 12 12"
+              >
+                <path
+                  d="M6.712 1.263a1.005 1.005 0 0 0-1.424 0L1.263 5.288a1.005 1.005 0 0 0 0 1.424l4.025 4.025a1.005 1.005 0 0 0 1.424 0l4.025-4.025a1.005 1.005 0 0 0 0-1.424L6.712 1.263z"
+                  fill-rule="evenodd"
+                  stroke="#000"
+                />
+              </svg>
+            </div>
+            <div
+              class="StyledBox-sc-13pk1d4-0 fDLUqh"
+            >
+              <p
+                class="StyledParagraph-sc-tbetod-0 dNUDyP"
+              >
+                <span
+                  class="StyledText-sc-1sadyjn-0 gKmPWp"
+                >
+                  Error: Unknown error
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

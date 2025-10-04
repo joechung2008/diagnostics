@@ -1,18 +1,16 @@
-import { Grommet } from "grommet";
-import { grommet } from "grommet/themes";
 import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import ThemedApp from "./ThemedApp";
 
 import "./index.css";
 
-const root = document.getElementById("root") as HTMLElement;
-createRoot(root).render(
+createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <Grommet theme={grommet}>
+    <ThemedApp>
       <App />
-    </Grommet>
+    </ThemedApp>
   </React.StrictMode>
 );
 
