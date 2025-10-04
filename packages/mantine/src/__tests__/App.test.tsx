@@ -17,17 +17,15 @@ describe("App", () => {
     globalThis.fetch = originalFetch;
   });
 
-  it("should render null when diagnostics is not loaded", async () => {
-    mockFetch.mockResolvedValue({
-      json: () => Promise.resolve(null),
-    });
+  it("should render error when diagnostics fetch fails", async () => {
+    mockFetch.mockRejectedValue(new Error("Network error"));
 
     render(<App />);
 
     // Wait for the async fetch to complete and state to update
     await waitFor(() => {
-      // Check that no content is rendered (App returns null)
-      expect(screen.queryByText(/./)).toBeNull();
+      expect(screen.getByText("Error")).toBeInTheDocument();
+      expect(screen.getByText("Network error")).toBeInTheDocument();
     });
   });
 

@@ -1,7 +1,7 @@
-import { MantineProvider } from "@mantine/core";
 import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
+import { ThemedMantineProvider } from "./ThemedMantineProvider";
 import reportWebVitals from "./reportWebVitals";
 
 import "@mantine/core/styles.css";
@@ -11,9 +11,9 @@ const container = document.getElementById("root") as HTMLElement;
 const root = createRoot(container);
 root.render(
   <React.StrictMode>
-    <MantineProvider>
+    <ThemedMantineProvider>
       <App />
-    </MantineProvider>
+    </ThemedMantineProvider>
   </React.StrictMode>
 );
 

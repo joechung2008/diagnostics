@@ -9,6 +9,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 .chevron-icon {
   transition: transform 0.15s ease;
 }
