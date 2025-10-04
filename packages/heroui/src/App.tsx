@@ -1,4 +1,5 @@
 import {
+  Alert,
   Button,
   Dropdown,
   DropdownItem,
@@ -6,11 +7,13 @@ import {
   DropdownTrigger,
   Navbar,
   NavbarContent,
+  Spinner,
   Tab,
   Tabs,
   type PressEvent,
 } from "@heroui/react";
-import { useEffect, useMemo, useState } from "react";
+import { Activity, useCallback, useMemo, useState } from "react";
+import useSWR from "swr";
 import BuildInfo from "./BuildInfo";
 import Extension from "./Extension";
 import Extensions from "./Extensions";
@@ -24,7 +27,6 @@ const enum Environment {
 }
 
 const App: React.FC = () => {
-  const [diagnostics, setDiagnostics] = useState<Diagnostics>();
   const [extension, setExtension] = useState<ExtensionInfo>();
   const [environment, setEnvironment] = useState<Environment>(
     Environment.Public
@@ -44,6 +46,19 @@ const App: React.FC = () => {
     }
   }, [environment]);
 
+  const {
+    data: diagnostics,
+    error,
+    isLoading,
+  } = useSWR<Diagnostics>(environment, async (environment: string) => {
+    const response = await fetch(environment);
+    if (!response.ok) {
+      throw new Error(`Error fetching diagnostics: ${response.statusText}`);
+    }
+
+    return response.json();
+  });
+
   const showPaasServerless = useMemo(
     () => isExtensionInfo(diagnostics?.extensions["paasserverless"]),
     [diagnostics?.extensions]
@@ -58,6 +73,7 @@ const App: React.FC = () => {
         onClick: () => {
           setEnvironment(Environment.Public);
           setExtension(undefined);
+          setSelectedTab("extensions");
         },
       },
       {
@@ -67,6 +83,7 @@ const App: React.FC = () => {
         onClick: () => {
           setEnvironment(Environment.Fairfax);
           setExtension(undefined);
+          setSelectedTab("extensions");
         },
       },
       {
@@ -76,37 +93,27 @@ const App: React.FC = () => {
         onClick: () => {
           setEnvironment(Environment.Mooncake);
           setExtension(undefined);
+          setSelectedTab("extensions");
         },
       },
     ],
     [environment]
   );
 
-  useEffect(() => {
-    const getDiagnostics = async () => {
-      const response = await fetch(environment);
-      setDiagnostics(await response.json());
-    };
-    getDiagnostics();
-  }, [environment]);
-
-  if (!diagnostics) {
-    return null;
-  }
-
-  const { buildInfo, extensions, serverInfo } = diagnostics;
-
-  const handleLinkClick = (_?: PressEvent, item?: KeyedNavLink) => {
-    if (item) {
-      const extension = extensions[item.key];
-      if (isExtensionInfo(extension)) {
-        setExtension(extension);
+  const handleLinkClick = useCallback(
+    (_?: PressEvent, item?: KeyedNavLink) => {
+      if (item) {
+        const extension = diagnostics?.extensions[item.key];
+        if (isExtensionInfo(extension)) {
+          setExtension(extension);
+        }
       }
-    }
-  };
+    },
+    [diagnostics?.extensions]
+  );
 
   return (
-    <div className="flex flex-col gap-2 h-screen">
+    <div className="flex flex-col h-screen">
       <Navbar maxWidth="full">
         <NavbarContent as="nav" justify="start">
           <Dropdown>
@@ -125,7 +132,7 @@ const App: React.FC = () => {
               ))}
             </DropdownMenu>
           </Dropdown>
-          {showPaasServerless && (
+          <Activity mode={showPaasServerless ? "visible" : "hidden"}>
             <Button
               key="paasserverless"
               variant="flat"
@@ -134,12 +141,13 @@ const App: React.FC = () => {
                   diagnostics?.extensions["paasserverless"];
                 if (isExtensionInfo(paasserverless)) {
                   setExtension(paasserverless);
+                  setSelectedTab("extensions");
                 }
               }}
             >
               paasserverless
             </Button>
-          )}
+          </Activity>
           <Button
             key="websites"
             variant="flat"
@@ -147,6 +155,7 @@ const App: React.FC = () => {
               const websites = diagnostics?.extensions["websites"];
               if (isExtensionInfo(websites)) {
                 setExtension(websites);
+                setSelectedTab("extensions");
               }
             }}
           >
@@ -159,24 +168,61 @@ const App: React.FC = () => {
         <Tab key="build" title="Build Information" />
         <Tab key="server" title="Server Information" />
       </Tabs>
-      {selectedTab === "extensions" && (
-        <div className="box-border flex-1 overflow-y-auto">
-          <div className="flex flex-row gap-2 h-full">
-            <Extensions extensions={extensions} onLinkClick={handleLinkClick} />
-            {extension && <Extension {...extension} />}
+      <Activity mode={!error && isLoading ? "visible" : "hidden"}>
+        <div className="flex justify-center items-center h-full">
+          <Spinner size="lg" aria-label="Loading..." className="mx-auto" />
+        </div>
+      </Activity>
+      <Activity mode={error && !isLoading ? "visible" : "hidden"}>
+        <div className="flex justify-center items-center h-full">
+          <Alert color="danger">
+            Error loading diagnostics: {error?.message ?? "Unknown error"}
+          </Alert>
+        </div>
+      </Activity>
+      <Activity
+        mode={
+          !error && !isLoading && selectedTab === "extensions"
+            ? "visible"
+            : "hidden"
+        }
+      >
+        {diagnostics?.extensions && (
+          <div className="box-border flex-1 overflow-y-auto">
+            <div className="flex flex-row gap-2 h-full">
+              <Extensions
+                extensions={diagnostics.extensions}
+                onLinkClick={handleLinkClick}
+              />
+              {extension && <Extension {...extension} />}
+            </div>
           </div>
-        </div>
-      )}
-      {selectedTab === "build" && (
-        <div className="box-border flex-1 overflow-y-auto">
-          <BuildInfo {...buildInfo} />
-        </div>
-      )}
-      {selectedTab === "server" && (
-        <div className="box-border flex-1 overflow-y-auto">
-          <ServerInfo {...serverInfo} />
-        </div>
-      )}
+        )}
+      </Activity>
+      <Activity
+        mode={
+          !error && !isLoading && selectedTab === "build" ? "visible" : "hidden"
+        }
+      >
+        {diagnostics?.buildInfo && (
+          <div className="box-border flex-1 overflow-y-auto">
+            <BuildInfo {...diagnostics.buildInfo} />
+          </div>
+        )}
+      </Activity>
+      <Activity
+        mode={
+          !error && !isLoading && selectedTab === "server"
+            ? "visible"
+            : "hidden"
+        }
+      >
+        {diagnostics?.serverInfo && (
+          <div className="box-border flex-1 overflow-y-auto">
+            <ServerInfo {...diagnostics.serverInfo} />
+          </div>
+        )}
+      </Activity>
     </div>
   );
 };

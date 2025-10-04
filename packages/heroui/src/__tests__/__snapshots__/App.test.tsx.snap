@@ -1,3 +1,717 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`App > matches snapshot 1`] = `<DocumentFragment />`;
+exports[`App > matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-col h-screen"
+  >
+    <nav
+      class="flex z-40 w-full h-auto items-center justify-center data-[menu-open=true]:border-none sticky top-0 inset-x-0 backdrop-blur-lg data-[menu-open=true]:backdrop-blur-xl backdrop-saturate-150 bg-background/70"
+      style="--navbar-height: 4rem;"
+    >
+      <header
+        class="z-40 flex px-6 gap-4 w-full flex-row relative flex-nowrap items-center justify-between h-[var(--navbar-height)] max-w-full"
+      >
+        <nav
+          class="flex gap-4 h-full flex-row flex-nowrap items-center data-[justify=start]:justify-start data-[justify=start]:flex-grow data-[justify=start]:basis-0 data-[justify=center]:justify-center data-[justify=end]:justify-end data-[justify=end]:flex-grow data-[justify=end]:basis-0"
+          data-justify="start"
+        >
+          <button
+            aria-expanded="false"
+            aria-haspopup="true"
+            class="group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 border-medium px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-transparent border-default text-foreground data-[hover=true]:opacity-hover z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
+            data-react-aria-pressable="true"
+            data-slot="trigger"
+            id="react-aria-_r_0_"
+            tabindex="0"
+            type="button"
+          >
+            Public Cloud
+          </button>
+          <button
+            class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default/40 text-default-700 data-[hover=true]:opacity-hover"
+            data-react-aria-pressable="true"
+            style="display: none;"
+            tabindex="0"
+            type="button"
+          >
+            paasserverless
+          </button>
+          <button
+            class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default/40 text-default-700 data-[hover=true]:opacity-hover"
+            data-react-aria-pressable="true"
+            tabindex="0"
+            type="button"
+          >
+            websites
+          </button>
+        </nav>
+      </header>
+    </nav>
+    <div
+      class="inline-flex"
+      data-slot="base"
+    >
+      <div
+        aria-orientation="horizontal"
+        class="flex p-1 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide bg-default-100 rounded-medium"
+        data-collection="react-aria-_r_3_"
+        data-slot="tabList"
+        id="react-aria-_r_4_"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+          data-collection="react-aria-_r_3_"
+          data-key="extensions"
+          data-react-aria-pressable="true"
+          data-selected="true"
+          data-slot="tab"
+          id="react-aria-_r_4_-tab-extensions"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="absolute z-0 inset-0 rounded-small bg-background dark:bg-default shadow-small"
+            data-slot="cursor"
+          />
+          <div
+            class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+            data-slot="tabContent"
+          >
+            Extensions
+          </div>
+        </button>
+        <button
+          aria-selected="false"
+          class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+          data-collection="react-aria-_r_3_"
+          data-key="build"
+          data-react-aria-pressable="true"
+          data-slot="tab"
+          id="react-aria-_r_4_-tab-build"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <div
+            class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+            data-slot="tabContent"
+          >
+            Build Information
+          </div>
+        </button>
+        <button
+          aria-selected="false"
+          class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+          data-collection="react-aria-_r_3_"
+          data-key="server"
+          data-react-aria-pressable="true"
+          data-slot="tab"
+          id="react-aria-_r_4_-tab-server"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <div
+            class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+            data-slot="tabContent"
+          >
+            Server Information
+          </div>
+        </button>
+      </div>
+    </div>
+    <div
+      class="flex justify-center items-center h-full"
+    >
+      <div
+        aria-label="Loading..."
+        class="relative inline-flex flex-col gap-2 items-center justify-center mx-auto"
+      >
+        <div
+          class="relative flex w-10 h-10"
+        >
+          <i
+            class="absolute w-full h-full rounded-full border-3 border-b-primary animate-spinner-ease-spin border-solid border-t-transparent border-l-transparent border-r-transparent"
+          />
+          <i
+            class="absolute w-full h-full rounded-full border-3 border-b-primary opacity-75 animate-spinner-linear-spin border-dotted border-t-transparent border-l-transparent border-r-transparent"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex justify-center items-center h-full"
+      style="display: none;"
+    >
+      <div
+        class="flex flex-grow flex-row w-full items-center py-3 px-4 gap-x-1 rounded-medium text-danger-600 dark:text-danger-500 bg-danger-50 dark:bg-danger-50/50"
+        data-visible="true"
+        role="alert"
+      >
+        <div
+          class="flex-none relative w-9 h-9 rounded-full grid place-items-center bg-danger-50 dark:bg-danger-100 border-danger-100 shadow-small border-1"
+        >
+          <svg
+            class="fill-current w-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            fill="none"
+            height="20"
+            viewBox="0 0 20 20"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.51 3.85L11.57 0.42C10.6 -0.14 9.4 -0.14 8.42 0.42L2.49 3.85C1.52 4.41 0.919998 5.45 0.919998 6.58V13.42C0.919998 14.54 1.52 15.58 2.49 16.15L8.43 19.58C9.4 20.14 10.6 20.14 11.58 19.58L17.52 16.15C18.49 15.59 19.09 14.55 19.09 13.42V6.58C19.08 5.45 18.48 4.42 17.51 3.85ZM9.25 5.75C9.25 5.34 9.59 5 10 5C10.41 5 10.75 5.34 10.75 5.75V11C10.75 11.41 10.41 11.75 10 11.75C9.59 11.75 9.25 11.41 9.25 11V5.75ZM10.92 14.63C10.87 14.75 10.8 14.86 10.71 14.96C10.52 15.15 10.27 15.25 10 15.25C9.87 15.25 9.74 15.22 9.62 15.17C9.49 15.12 9.39 15.05 9.29 14.96C9.2 14.86 9.13 14.75 9.07 14.63C9.02 14.51 9 14.38 9 14.25C9 13.99 9.1 13.73 9.29 13.54C9.39 13.45 9.49 13.38 9.62 13.33C9.99 13.17 10.43 13.26 10.71 13.54C10.8 13.64 10.87 13.74 10.92 13.87C10.97 13.99 11 14.12 11 14.25C11 14.38 10.97 14.51 10.92 14.63Z"
+            />
+          </svg>
+        </div>
+        <div
+          class="h-full flex-grow min-h-10 ms-2 flex flex-col box-border items-start text-inherit justify-center"
+        >
+          Error loading diagnostics: Unknown error
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`App > shows content when loaded 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-col h-screen"
+  >
+    <nav
+      class="flex z-40 w-full h-auto items-center justify-center data-[menu-open=true]:border-none sticky top-0 inset-x-0 backdrop-blur-lg data-[menu-open=true]:backdrop-blur-xl backdrop-saturate-150 bg-background/70"
+      style="--navbar-height: 4rem;"
+    >
+      <header
+        class="z-40 flex px-6 gap-4 w-full flex-row relative flex-nowrap items-center justify-between h-[var(--navbar-height)] max-w-full"
+      >
+        <nav
+          class="flex gap-4 h-full flex-row flex-nowrap items-center data-[justify=start]:justify-start data-[justify=start]:flex-grow data-[justify=start]:basis-0 data-[justify=center]:justify-center data-[justify=end]:justify-end data-[justify=end]:flex-grow data-[justify=end]:basis-0"
+          data-justify="start"
+        >
+          <button
+            aria-expanded="false"
+            aria-haspopup="true"
+            class="group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 border-medium px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-transparent border-default text-foreground data-[hover=true]:opacity-hover z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
+            data-react-aria-pressable="true"
+            data-slot="trigger"
+            id="react-aria-_r_1g_"
+            tabindex="0"
+            type="button"
+          >
+            Public Cloud
+          </button>
+          <button
+            class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default/40 text-default-700 data-[hover=true]:opacity-hover"
+            data-react-aria-pressable="true"
+            style="display: none;"
+            tabindex="0"
+            type="button"
+          >
+            paasserverless
+          </button>
+          <button
+            class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default/40 text-default-700 data-[hover=true]:opacity-hover"
+            data-react-aria-pressable="true"
+            tabindex="0"
+            type="button"
+          >
+            websites
+          </button>
+        </nav>
+      </header>
+    </nav>
+    <div
+      class="inline-flex"
+      data-slot="base"
+    >
+      <div
+        aria-orientation="horizontal"
+        class="flex p-1 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide bg-default-100 rounded-medium"
+        data-collection="react-aria-_r_1j_"
+        data-slot="tabList"
+        id="react-aria-_r_1k_"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+          data-collection="react-aria-_r_1j_"
+          data-key="extensions"
+          data-react-aria-pressable="true"
+          data-selected="true"
+          data-slot="tab"
+          id="react-aria-_r_1k_-tab-extensions"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="absolute z-0 inset-0 rounded-small bg-background dark:bg-default shadow-small"
+            data-slot="cursor"
+          />
+          <div
+            class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+            data-slot="tabContent"
+          >
+            Extensions
+          </div>
+        </button>
+        <button
+          aria-selected="false"
+          class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+          data-collection="react-aria-_r_1j_"
+          data-key="build"
+          data-react-aria-pressable="true"
+          data-slot="tab"
+          id="react-aria-_r_1k_-tab-build"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <div
+            class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+            data-slot="tabContent"
+          >
+            Build Information
+          </div>
+        </button>
+        <button
+          aria-selected="false"
+          class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+          data-collection="react-aria-_r_1j_"
+          data-key="server"
+          data-react-aria-pressable="true"
+          data-slot="tab"
+          id="react-aria-_r_1k_-tab-server"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <div
+            class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+            data-slot="tabContent"
+          >
+            Server Information
+          </div>
+        </button>
+      </div>
+    </div>
+    <div
+      class="flex justify-center items-center h-full"
+    >
+      <div
+        aria-label="Loading..."
+        class="relative inline-flex flex-col gap-2 items-center justify-center mx-auto"
+      >
+        <div
+          class="relative flex w-10 h-10"
+        >
+          <i
+            class="absolute w-full h-full rounded-full border-3 border-b-primary animate-spinner-ease-spin border-solid border-t-transparent border-l-transparent border-r-transparent"
+          />
+          <i
+            class="absolute w-full h-full rounded-full border-3 border-b-primary opacity-75 animate-spinner-linear-spin border-dotted border-t-transparent border-l-transparent border-r-transparent"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex justify-center items-center h-full"
+      style="display: none;"
+    >
+      <div
+        class="flex flex-grow flex-row w-full items-center py-3 px-4 gap-x-1 rounded-medium text-danger-600 dark:text-danger-500 bg-danger-50 dark:bg-danger-50/50"
+        data-visible="true"
+        role="alert"
+      >
+        <div
+          class="flex-none relative w-9 h-9 rounded-full grid place-items-center bg-danger-50 dark:bg-danger-100 border-danger-100 shadow-small border-1"
+        >
+          <svg
+            class="fill-current w-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            fill="none"
+            height="20"
+            viewBox="0 0 20 20"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.51 3.85L11.57 0.42C10.6 -0.14 9.4 -0.14 8.42 0.42L2.49 3.85C1.52 4.41 0.919998 5.45 0.919998 6.58V13.42C0.919998 14.54 1.52 15.58 2.49 16.15L8.43 19.58C9.4 20.14 10.6 20.14 11.58 19.58L17.52 16.15C18.49 15.59 19.09 14.55 19.09 13.42V6.58C19.08 5.45 18.48 4.42 17.51 3.85ZM9.25 5.75C9.25 5.34 9.59 5 10 5C10.41 5 10.75 5.34 10.75 5.75V11C10.75 11.41 10.41 11.75 10 11.75C9.59 11.75 9.25 11.41 9.25 11V5.75ZM10.92 14.63C10.87 14.75 10.8 14.86 10.71 14.96C10.52 15.15 10.27 15.25 10 15.25C9.87 15.25 9.74 15.22 9.62 15.17C9.49 15.12 9.39 15.05 9.29 14.96C9.2 14.86 9.13 14.75 9.07 14.63C9.02 14.51 9 14.38 9 14.25C9 13.99 9.1 13.73 9.29 13.54C9.39 13.45 9.49 13.38 9.62 13.33C9.99 13.17 10.43 13.26 10.71 13.54C10.8 13.64 10.87 13.74 10.92 13.87C10.97 13.99 11 14.12 11 14.25C11 14.38 10.97 14.51 10.92 14.63Z"
+            />
+          </svg>
+        </div>
+        <div
+          class="h-full flex-grow min-h-10 ms-2 flex flex-col box-border items-start text-inherit justify-center"
+        >
+          Error loading diagnostics: Unknown error
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`App > shows error alert when error occurs 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-col h-screen"
+  >
+    <nav
+      class="flex z-40 w-full h-auto items-center justify-center data-[menu-open=true]:border-none sticky top-0 inset-x-0 backdrop-blur-lg data-[menu-open=true]:backdrop-blur-xl backdrop-saturate-150 bg-background/70"
+      style="--navbar-height: 4rem;"
+    >
+      <header
+        class="z-40 flex px-6 gap-4 w-full flex-row relative flex-nowrap items-center justify-between h-[var(--navbar-height)] max-w-full"
+      >
+        <nav
+          class="flex gap-4 h-full flex-row flex-nowrap items-center data-[justify=start]:justify-start data-[justify=start]:flex-grow data-[justify=start]:basis-0 data-[justify=center]:justify-center data-[justify=end]:justify-end data-[justify=end]:flex-grow data-[justify=end]:basis-0"
+          data-justify="start"
+        >
+          <button
+            aria-expanded="false"
+            aria-haspopup="true"
+            class="group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 border-medium px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-transparent border-default text-foreground data-[hover=true]:opacity-hover z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
+            data-react-aria-pressable="true"
+            data-slot="trigger"
+            id="react-aria-_r_10_"
+            tabindex="0"
+            type="button"
+          >
+            Public Cloud
+          </button>
+          <button
+            class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default/40 text-default-700 data-[hover=true]:opacity-hover"
+            data-react-aria-pressable="true"
+            style="display: none;"
+            tabindex="0"
+            type="button"
+          >
+            paasserverless
+          </button>
+          <button
+            class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default/40 text-default-700 data-[hover=true]:opacity-hover"
+            data-react-aria-pressable="true"
+            tabindex="0"
+            type="button"
+          >
+            websites
+          </button>
+        </nav>
+      </header>
+    </nav>
+    <div
+      class="inline-flex"
+      data-slot="base"
+    >
+      <div
+        aria-orientation="horizontal"
+        class="flex p-1 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide bg-default-100 rounded-medium"
+        data-collection="react-aria-_r_13_"
+        data-slot="tabList"
+        id="react-aria-_r_14_"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+          data-collection="react-aria-_r_13_"
+          data-key="extensions"
+          data-react-aria-pressable="true"
+          data-selected="true"
+          data-slot="tab"
+          id="react-aria-_r_14_-tab-extensions"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="absolute z-0 inset-0 rounded-small bg-background dark:bg-default shadow-small"
+            data-slot="cursor"
+          />
+          <div
+            class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+            data-slot="tabContent"
+          >
+            Extensions
+          </div>
+        </button>
+        <button
+          aria-selected="false"
+          class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+          data-collection="react-aria-_r_13_"
+          data-key="build"
+          data-react-aria-pressable="true"
+          data-slot="tab"
+          id="react-aria-_r_14_-tab-build"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <div
+            class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+            data-slot="tabContent"
+          >
+            Build Information
+          </div>
+        </button>
+        <button
+          aria-selected="false"
+          class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+          data-collection="react-aria-_r_13_"
+          data-key="server"
+          data-react-aria-pressable="true"
+          data-slot="tab"
+          id="react-aria-_r_14_-tab-server"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <div
+            class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+            data-slot="tabContent"
+          >
+            Server Information
+          </div>
+        </button>
+      </div>
+    </div>
+    <div
+      class="flex justify-center items-center h-full"
+    >
+      <div
+        aria-label="Loading..."
+        class="relative inline-flex flex-col gap-2 items-center justify-center mx-auto"
+      >
+        <div
+          class="relative flex w-10 h-10"
+        >
+          <i
+            class="absolute w-full h-full rounded-full border-3 border-b-primary animate-spinner-ease-spin border-solid border-t-transparent border-l-transparent border-r-transparent"
+          />
+          <i
+            class="absolute w-full h-full rounded-full border-3 border-b-primary opacity-75 animate-spinner-linear-spin border-dotted border-t-transparent border-l-transparent border-r-transparent"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex justify-center items-center h-full"
+      style="display: none;"
+    >
+      <div
+        class="flex flex-grow flex-row w-full items-center py-3 px-4 gap-x-1 rounded-medium text-danger-600 dark:text-danger-500 bg-danger-50 dark:bg-danger-50/50"
+        data-visible="true"
+        role="alert"
+      >
+        <div
+          class="flex-none relative w-9 h-9 rounded-full grid place-items-center bg-danger-50 dark:bg-danger-100 border-danger-100 shadow-small border-1"
+        >
+          <svg
+            class="fill-current w-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            fill="none"
+            height="20"
+            viewBox="0 0 20 20"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.51 3.85L11.57 0.42C10.6 -0.14 9.4 -0.14 8.42 0.42L2.49 3.85C1.52 4.41 0.919998 5.45 0.919998 6.58V13.42C0.919998 14.54 1.52 15.58 2.49 16.15L8.43 19.58C9.4 20.14 10.6 20.14 11.58 19.58L17.52 16.15C18.49 15.59 19.09 14.55 19.09 13.42V6.58C19.08 5.45 18.48 4.42 17.51 3.85ZM9.25 5.75C9.25 5.34 9.59 5 10 5C10.41 5 10.75 5.34 10.75 5.75V11C10.75 11.41 10.41 11.75 10 11.75C9.59 11.75 9.25 11.41 9.25 11V5.75ZM10.92 14.63C10.87 14.75 10.8 14.86 10.71 14.96C10.52 15.15 10.27 15.25 10 15.25C9.87 15.25 9.74 15.22 9.62 15.17C9.49 15.12 9.39 15.05 9.29 14.96C9.2 14.86 9.13 14.75 9.07 14.63C9.02 14.51 9 14.38 9 14.25C9 13.99 9.1 13.73 9.29 13.54C9.39 13.45 9.49 13.38 9.62 13.33C9.99 13.17 10.43 13.26 10.71 13.54C10.8 13.64 10.87 13.74 10.92 13.87C10.97 13.99 11 14.12 11 14.25C11 14.38 10.97 14.51 10.92 14.63Z"
+            />
+          </svg>
+        </div>
+        <div
+          class="h-full flex-grow min-h-10 ms-2 flex flex-col box-border items-start text-inherit justify-center"
+        >
+          Error loading diagnostics: Unknown error
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`App > shows loading spinner when loading 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-col h-screen"
+  >
+    <nav
+      class="flex z-40 w-full h-auto items-center justify-center data-[menu-open=true]:border-none sticky top-0 inset-x-0 backdrop-blur-lg data-[menu-open=true]:backdrop-blur-xl backdrop-saturate-150 bg-background/70"
+      style="--navbar-height: 4rem;"
+    >
+      <header
+        class="z-40 flex px-6 gap-4 w-full flex-row relative flex-nowrap items-center justify-between h-[var(--navbar-height)] max-w-full"
+      >
+        <nav
+          class="flex gap-4 h-full flex-row flex-nowrap items-center data-[justify=start]:justify-start data-[justify=start]:flex-grow data-[justify=start]:basis-0 data-[justify=center]:justify-center data-[justify=end]:justify-end data-[justify=end]:flex-grow data-[justify=end]:basis-0"
+          data-justify="start"
+        >
+          <button
+            aria-expanded="false"
+            aria-haspopup="true"
+            class="group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 border-medium px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-transparent border-default text-foreground data-[hover=true]:opacity-hover z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
+            data-react-aria-pressable="true"
+            data-slot="trigger"
+            id="react-aria-_r_g_"
+            tabindex="0"
+            type="button"
+          >
+            Public Cloud
+          </button>
+          <button
+            class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default/40 text-default-700 data-[hover=true]:opacity-hover"
+            data-react-aria-pressable="true"
+            style="display: none;"
+            tabindex="0"
+            type="button"
+          >
+            paasserverless
+          </button>
+          <button
+            class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-default/40 text-default-700 data-[hover=true]:opacity-hover"
+            data-react-aria-pressable="true"
+            tabindex="0"
+            type="button"
+          >
+            websites
+          </button>
+        </nav>
+      </header>
+    </nav>
+    <div
+      class="inline-flex"
+      data-slot="base"
+    >
+      <div
+        aria-orientation="horizontal"
+        class="flex p-1 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide bg-default-100 rounded-medium"
+        data-collection="react-aria-_r_j_"
+        data-slot="tabList"
+        id="react-aria-_r_k_"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+          data-collection="react-aria-_r_j_"
+          data-key="extensions"
+          data-react-aria-pressable="true"
+          data-selected="true"
+          data-slot="tab"
+          id="react-aria-_r_k_-tab-extensions"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="absolute z-0 inset-0 rounded-small bg-background dark:bg-default shadow-small"
+            data-slot="cursor"
+          />
+          <div
+            class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+            data-slot="tabContent"
+          >
+            Extensions
+          </div>
+        </button>
+        <button
+          aria-selected="false"
+          class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+          data-collection="react-aria-_r_j_"
+          data-key="build"
+          data-react-aria-pressable="true"
+          data-slot="tab"
+          id="react-aria-_r_k_-tab-build"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <div
+            class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+            data-slot="tabContent"
+          >
+            Build Information
+          </div>
+        </button>
+        <button
+          aria-selected="false"
+          class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
+          data-collection="react-aria-_r_j_"
+          data-key="server"
+          data-react-aria-pressable="true"
+          data-slot="tab"
+          id="react-aria-_r_k_-tab-server"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <div
+            class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
+            data-slot="tabContent"
+          >
+            Server Information
+          </div>
+        </button>
+      </div>
+    </div>
+    <div
+      class="flex justify-center items-center h-full"
+    >
+      <div
+        aria-label="Loading..."
+        class="relative inline-flex flex-col gap-2 items-center justify-center mx-auto"
+      >
+        <div
+          class="relative flex w-10 h-10"
+        >
+          <i
+            class="absolute w-full h-full rounded-full border-3 border-b-primary animate-spinner-ease-spin border-solid border-t-transparent border-l-transparent border-r-transparent"
+          />
+          <i
+            class="absolute w-full h-full rounded-full border-3 border-b-primary opacity-75 animate-spinner-linear-spin border-dotted border-t-transparent border-l-transparent border-r-transparent"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex justify-center items-center h-full"
+      style="display: none;"
+    >
+      <div
+        class="flex flex-grow flex-row w-full items-center py-3 px-4 gap-x-1 rounded-medium text-danger-600 dark:text-danger-500 bg-danger-50 dark:bg-danger-50/50"
+        data-visible="true"
+        role="alert"
+      >
+        <div
+          class="flex-none relative w-9 h-9 rounded-full grid place-items-center bg-danger-50 dark:bg-danger-100 border-danger-100 shadow-small border-1"
+        >
+          <svg
+            class="fill-current w-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            fill="none"
+            height="20"
+            viewBox="0 0 20 20"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.51 3.85L11.57 0.42C10.6 -0.14 9.4 -0.14 8.42 0.42L2.49 3.85C1.52 4.41 0.919998 5.45 0.919998 6.58V13.42C0.919998 14.54 1.52 15.58 2.49 16.15L8.43 19.58C9.4 20.14 10.6 20.14 11.58 19.58L17.52 16.15C18.49 15.59 19.09 14.55 19.09 13.42V6.58C19.08 5.45 18.48 4.42 17.51 3.85ZM9.25 5.75C9.25 5.34 9.59 5 10 5C10.41 5 10.75 5.34 10.75 5.75V11C10.75 11.41 10.41 11.75 10 11.75C9.59 11.75 9.25 11.41 9.25 11V5.75ZM10.92 14.63C10.87 14.75 10.8 14.86 10.71 14.96C10.52 15.15 10.27 15.25 10 15.25C9.87 15.25 9.74 15.22 9.62 15.17C9.49 15.12 9.39 15.05 9.29 14.96C9.2 14.86 9.13 14.75 9.07 14.63C9.02 14.51 9 14.38 9 14.25C9 13.99 9.1 13.73 9.29 13.54C9.39 13.45 9.49 13.38 9.62 13.33C9.99 13.17 10.43 13.26 10.71 13.54C10.8 13.64 10.87 13.74 10.92 13.87C10.97 13.99 11 14.12 11 14.25C11 14.38 10.97 14.51 10.92 14.63Z"
+            />
+          </svg>
+        </div>
+        <div
+          class="h-full flex-grow min-h-10 ms-2 flex flex-col box-border items-start text-inherit justify-center"
+        >
+          Error loading diagnostics: Unknown error
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
