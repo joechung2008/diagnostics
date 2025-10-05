@@ -4,30 +4,32 @@ import reactDom from "eslint-plugin-react-dom";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import reactX from "eslint-plugin-react-x";
-import { globalIgnores } from "eslint/config";
+import { defineConfig, globalIgnores } from "eslint/config";
 import tseslint from "typescript-eslint";
 
-export default [
+export default defineConfig([
   globalIgnores(["coverage", "dist", "src/components", "src/lib"]),
   ...tseslint.configs.recommended,
-  reactHooks.configs["recommended-latest"],
   reactX.configs["recommended-typescript"],
   reactDom.configs.recommended,
   reactRefresh.configs.vite,
   prettierConfig,
   {
+    extends: ["react-hooks/recommended"],
     files: ["**/*.{ts,tsx}"],
     plugins: {
       prettier: prettierPlugin,
+      "react-hooks": reactHooks,
     },
     languageOptions: {
-      ecmaVersion: 2020,
+      ecmaVersion: 2023,
       parserOptions: {
-        tsconfigRootDir: process.cwd(),
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
       },
     },
     rules: {
       "prettier/prettier": "error",
     },
   },
-];
+]);
