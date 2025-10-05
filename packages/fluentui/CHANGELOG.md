@@ -2,6 +2,47 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2025-10-05
+
+- Update outdated packages in fluentui
+
+## 2025-10-01
+
+- Add instructions for E2E testing in fluentui
+- Do not confuse E2E for unit tests in fluentui
+- Enable Playwright testing in fluentui
+- Fix build in fluentui
+
+## 2025-09-29
+
+- Add Dockerfile for fluentui
+
+## 2025-09-28
+
+- Remove no longer used package-lock.json files
+- Update outdated packages for fluentui
+
+## 2025-09-20
+
+- Improve error and pending rendering in fluentui
+- Use useSWR in fluentui
+
+## 2025-09-19
+
+- Remove engines config from fluentui
+- Revert "Turn off shared pnpm-lock.yaml"
+- Turn off shared pnpm-lock.yaml
+
+## 2025-09-18
+
+- Add @types/node to fluentui
+- Add diagnostics-spectrum as spectrum
+- Fix lint config in React projects
+- Pin jsdom to 26.1.0
+- Remove flaky tests
+- Update outdated packages
+- Use pnpm and Turborepo
+
 ## 2025-09-06
 
 - Add tests for reportWebVitals
