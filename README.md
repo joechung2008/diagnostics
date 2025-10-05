@@ -9,10 +9,10 @@ A Turborepo monorepo containing diagnostic implementations and examples for vari
 pnpm install
 
 # Build all packages
-pnpm run build
+pnpm build
 
 # Test all packages
-pnpm run test
+pnpm test
 ```
 
 ## Packages
@@ -57,24 +57,14 @@ This monorepo includes diagnostic implementations for:
 - `vuetify/` - Vuetify components [🔗](https://atdiagnostics-vuetify.onrender.com/)
 
 ### SolidJS
+
 - `solidjs-suid/` - SolidJS SUID components [🔗](https://atdiagnostics-solidjs-suid.onrender.com/)
 
 ## Development
 
 Each package provides its own scripts:
 
-- `pnpm run dev` - Start development server
-- `pnpm run build` - Build for production
-- `pnpm run format` - Format code
-- `pnpm run lint` - Lint code
-
-## Troubleshooting
-
-### React Type Conflicts
-
-Some packages target React 18 and others React 19. pnpm may install multiple `@types/react` majors which breaks TypeScript composite builds.
-
-**Quick fixes:**
-
-- Add package-local `@types/react` pin to React 19 packages (e.g., `"@types/react": "19.1.12"`)
-- Add type shim in `src/types/*.d.ts` to declare problematic modules as `React.ComponentType`
+- `pnpm build` - Build for production
+- `pnpm format` - Format code
+- `pnpm lint` - Lint code
+- `pnpm test` - Run unit tests
