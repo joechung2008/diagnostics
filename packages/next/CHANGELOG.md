@@ -1,5 +1,28 @@
 # Changelog
 
+## 2025-10-05
+
+- Update outdated packages in next
+
+## 2025-09-29
+
+- Add Dockerfile to next
+- Undo React Compiler in next
+
+## 2025-09-28
+
+- Remove no longer used package-lock.json files
+
+## 2025-09-20
+
+- Add support for Chrome Devtools workspaces in next
+- Improve error and pending rendering in next
+
+## 2025-09-19
+
+- Revert "Turn off shared pnpm-lock.yaml"
+- Turn off shared pnpm-lock.yaml
+
 ## 2025-09-06
 
 - Consolidate type definitions into types.d.ts
