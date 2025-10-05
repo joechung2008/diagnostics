@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2025-10-05
+
+- Fix ESLint config in antd
+- Update README in antd
+
 ## 2025-10-03
 
 - Use React 19.2 in antd
