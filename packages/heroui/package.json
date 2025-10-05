@@ -1,8 +1,8 @@
 {
   "author": "Joe Chung",
   "devDependencies": {
-    "@heroui/react": "^2.8.4",
-    "@heroui/theme": "^2.4.22",
+    "@heroui/react": "^2.8.5",
+    "@heroui/theme": "^2.4.23",
     "@tailwindcss/postcss": "^4.1.14",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
@@ -16,7 +16,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react-dom": "^2.0.6",
-    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-hooks": "^6.1.1",
     "eslint-plugin-react-refresh": "^0.4.23",
     "eslint-plugin-react-x": "^2.0.6",
     "framer-motion": "^12.23.22",

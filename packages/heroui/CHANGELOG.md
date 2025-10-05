@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025-10-05
+
+- Update outdated packages in heroui
+
 ## 2025-10-03
 
 - Add `useSystemTheme` hook for system color scheme detection

@@ -54,12 +54,17 @@ exports[`App > matches snapshot 1`] = `
     >
       <div
         aria-orientation="horizontal"
-        class="flex p-1 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide bg-default-100 rounded-medium"
+        class="relative flex p-1 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide bg-default-100 rounded-medium"
         data-collection="react-aria-_r_3_"
         data-slot="tabList"
         id="react-aria-_r_4_"
         role="tablist"
       >
+        <span
+          class="absolute z-0 will-change-[transform,width,height] transition-[left,top,width,height] duration-250 ease-out inset-0 rounded-small bg-background dark:bg-default shadow-small"
+          data-slot="cursor"
+          style="transition: none; left: 0px; top: 0px; width: 0px; height: 0px;"
+        />
         <button
           aria-selected="true"
           class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
@@ -73,10 +78,6 @@ exports[`App > matches snapshot 1`] = `
           tabindex="0"
           type="button"
         >
-          <span
-            class="absolute z-0 inset-0 rounded-small bg-background dark:bg-default shadow-small"
-            data-slot="cursor"
-          />
           <div
             class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
             data-slot="tabContent"
@@ -201,7 +202,7 @@ exports[`App > shows content when loaded 1`] = `
             class="group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 border-medium px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-transparent border-default text-foreground data-[hover=true]:opacity-hover z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
             data-react-aria-pressable="true"
             data-slot="trigger"
-            id="react-aria-_r_1g_"
+            id="react-aria-_r_14_"
             tabindex="0"
             type="button"
           >
@@ -233,29 +234,30 @@ exports[`App > shows content when loaded 1`] = `
     >
       <div
         aria-orientation="horizontal"
-        class="flex p-1 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide bg-default-100 rounded-medium"
-        data-collection="react-aria-_r_1j_"
+        class="relative flex p-1 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide bg-default-100 rounded-medium"
+        data-collection="react-aria-_r_17_"
         data-slot="tabList"
-        id="react-aria-_r_1k_"
+        id="react-aria-_r_18_"
         role="tablist"
       >
+        <span
+          class="absolute z-0 will-change-[transform,width,height] transition-[left,top,width,height] duration-250 ease-out inset-0 rounded-small bg-background dark:bg-default shadow-small"
+          data-slot="cursor"
+          style="transition: none; left: 0px; top: 0px; width: 0px; height: 0px;"
+        />
         <button
           aria-selected="true"
           class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
-          data-collection="react-aria-_r_1j_"
+          data-collection="react-aria-_r_17_"
           data-key="extensions"
           data-react-aria-pressable="true"
           data-selected="true"
           data-slot="tab"
-          id="react-aria-_r_1k_-tab-extensions"
+          id="react-aria-_r_18_-tab-extensions"
           role="tab"
           tabindex="0"
           type="button"
         >
-          <span
-            class="absolute z-0 inset-0 rounded-small bg-background dark:bg-default shadow-small"
-            data-slot="cursor"
-          />
           <div
             class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
             data-slot="tabContent"
@@ -266,11 +268,11 @@ exports[`App > shows content when loaded 1`] = `
         <button
           aria-selected="false"
           class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
-          data-collection="react-aria-_r_1j_"
+          data-collection="react-aria-_r_17_"
           data-key="build"
           data-react-aria-pressable="true"
           data-slot="tab"
-          id="react-aria-_r_1k_-tab-build"
+          id="react-aria-_r_18_-tab-build"
           role="tab"
           tabindex="-1"
           type="button"
@@ -285,11 +287,11 @@ exports[`App > shows content when loaded 1`] = `
         <button
           aria-selected="false"
           class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
-          data-collection="react-aria-_r_1j_"
+          data-collection="react-aria-_r_17_"
           data-key="server"
           data-react-aria-pressable="true"
           data-slot="tab"
-          id="react-aria-_r_1k_-tab-server"
+          id="react-aria-_r_18_-tab-server"
           role="tab"
           tabindex="-1"
           type="button"
@@ -380,7 +382,7 @@ exports[`App > shows error alert when error occurs 1`] = `
             class="group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 border-medium px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-transparent border-default text-foreground data-[hover=true]:opacity-hover z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
             data-react-aria-pressable="true"
             data-slot="trigger"
-            id="react-aria-_r_10_"
+            id="react-aria-_r_o_"
             tabindex="0"
             type="button"
           >
@@ -412,29 +414,30 @@ exports[`App > shows error alert when error occurs 1`] = `
     >
       <div
         aria-orientation="horizontal"
-        class="flex p-1 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide bg-default-100 rounded-medium"
-        data-collection="react-aria-_r_13_"
+        class="relative flex p-1 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide bg-default-100 rounded-medium"
+        data-collection="react-aria-_r_r_"
         data-slot="tabList"
-        id="react-aria-_r_14_"
+        id="react-aria-_r_s_"
         role="tablist"
       >
+        <span
+          class="absolute z-0 will-change-[transform,width,height] transition-[left,top,width,height] duration-250 ease-out inset-0 rounded-small bg-background dark:bg-default shadow-small"
+          data-slot="cursor"
+          style="transition: none; left: 0px; top: 0px; width: 0px; height: 0px;"
+        />
         <button
           aria-selected="true"
           class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
-          data-collection="react-aria-_r_13_"
+          data-collection="react-aria-_r_r_"
           data-key="extensions"
           data-react-aria-pressable="true"
           data-selected="true"
           data-slot="tab"
-          id="react-aria-_r_14_-tab-extensions"
+          id="react-aria-_r_s_-tab-extensions"
           role="tab"
           tabindex="0"
           type="button"
         >
-          <span
-            class="absolute z-0 inset-0 rounded-small bg-background dark:bg-default shadow-small"
-            data-slot="cursor"
-          />
           <div
             class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
             data-slot="tabContent"
@@ -445,11 +448,11 @@ exports[`App > shows error alert when error occurs 1`] = `
         <button
           aria-selected="false"
           class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
-          data-collection="react-aria-_r_13_"
+          data-collection="react-aria-_r_r_"
           data-key="build"
           data-react-aria-pressable="true"
           data-slot="tab"
-          id="react-aria-_r_14_-tab-build"
+          id="react-aria-_r_s_-tab-build"
           role="tab"
           tabindex="-1"
           type="button"
@@ -464,11 +467,11 @@ exports[`App > shows error alert when error occurs 1`] = `
         <button
           aria-selected="false"
           class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
-          data-collection="react-aria-_r_13_"
+          data-collection="react-aria-_r_r_"
           data-key="server"
           data-react-aria-pressable="true"
           data-slot="tab"
-          id="react-aria-_r_14_-tab-server"
+          id="react-aria-_r_s_-tab-server"
           role="tab"
           tabindex="-1"
           type="button"
@@ -559,7 +562,7 @@ exports[`App > shows loading spinner when loading 1`] = `
             class="group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] cursor-pointer outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 border-medium px-4 min-w-20 h-10 text-small gap-2 rounded-medium [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-transparent border-default text-foreground data-[hover=true]:opacity-hover z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased"
             data-react-aria-pressable="true"
             data-slot="trigger"
-            id="react-aria-_r_g_"
+            id="react-aria-_r_c_"
             tabindex="0"
             type="button"
           >
@@ -591,29 +594,30 @@ exports[`App > shows loading spinner when loading 1`] = `
     >
       <div
         aria-orientation="horizontal"
-        class="flex p-1 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide bg-default-100 rounded-medium"
-        data-collection="react-aria-_r_j_"
+        class="relative flex p-1 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide bg-default-100 rounded-medium"
+        data-collection="react-aria-_r_f_"
         data-slot="tabList"
-        id="react-aria-_r_k_"
+        id="react-aria-_r_g_"
         role="tablist"
       >
+        <span
+          class="absolute z-0 will-change-[transform,width,height] transition-[left,top,width,height] duration-250 ease-out inset-0 rounded-small bg-background dark:bg-default shadow-small"
+          data-slot="cursor"
+          style="transition: none; left: 0px; top: 0px; width: 0px; height: 0px;"
+        />
         <button
           aria-selected="true"
           class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
-          data-collection="react-aria-_r_j_"
+          data-collection="react-aria-_r_f_"
           data-key="extensions"
           data-react-aria-pressable="true"
           data-selected="true"
           data-slot="tab"
-          id="react-aria-_r_k_-tab-extensions"
+          id="react-aria-_r_g_-tab-extensions"
           role="tab"
           tabindex="0"
           type="button"
         >
-          <span
-            class="absolute z-0 inset-0 rounded-small bg-background dark:bg-default shadow-small"
-            data-slot="cursor"
-          />
           <div
             class="relative z-10 whitespace-nowrap transition-colors text-default-500 group-data-[selected=true]:text-default-foreground"
             data-slot="tabContent"
@@ -624,11 +628,11 @@ exports[`App > shows loading spinner when loading 1`] = `
         <button
           aria-selected="false"
           class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
-          data-collection="react-aria-_r_j_"
+          data-collection="react-aria-_r_f_"
           data-key="build"
           data-react-aria-pressable="true"
           data-slot="tab"
-          id="react-aria-_r_k_-tab-build"
+          id="react-aria-_r_g_-tab-build"
           role="tab"
           tabindex="-1"
           type="button"
@@ -643,11 +647,11 @@ exports[`App > shows loading spinner when loading 1`] = `
         <button
           aria-selected="false"
           class="z-0 w-full px-3 py-1 flex group relative justify-center items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-solid outline-transparent data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-8 text-small rounded-small"
-          data-collection="react-aria-_r_j_"
+          data-collection="react-aria-_r_f_"
           data-key="server"
           data-react-aria-pressable="true"
           data-slot="tab"
-          id="react-aria-_r_k_-tab-server"
+          id="react-aria-_r_g_-tab-server"
           role="tab"
           tabindex="-1"
           type="button"
