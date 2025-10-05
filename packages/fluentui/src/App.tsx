@@ -99,6 +99,7 @@ const App: React.FC = () => {
           [data.name]: data.checkedItems as Environment[],
         }));
         setExtension(undefined);
+        setSelectedTab("extensions");
       });
     }
   }, []);
@@ -130,6 +131,7 @@ const App: React.FC = () => {
               const paasserverless = diagnostics?.extensions["paasserverless"];
               if (isExtensionInfo(paasserverless)) {
                 setExtension(paasserverless);
+                setSelectedTab("extensions");
               }
             }}
           >
@@ -142,6 +144,7 @@ const App: React.FC = () => {
             const websites = diagnostics?.extensions["websites"];
             if (isExtensionInfo(websites)) {
               setExtension(websites);
+              setSelectedTab("extensions");
             }
           }}
         >

@@ -31,7 +31,6 @@ exports[`Extension > matches snapshot 1`] = `
             >
               <div
                 class="fui-TableHeaderCell__button ___1g9gf5i_12fejcs fq6nmtn f1e4lqlz f1u2r49w f1ym3bx4 f1mo0ibp fjoy568 fytdu2e f1gl81tg f1mk8lai f3bhgqh fgusgyc f10pi13n fly5x3f f22iagw f1l02sjl f122n59 fkln5zr f1nxs5xn f1izfyrr f1s6fcnf"
-                role="presentation"
               >
                 Key
               </div>
@@ -41,7 +40,6 @@ exports[`Extension > matches snapshot 1`] = `
             >
               <div
                 class="fui-TableHeaderCell__button ___1g9gf5i_12fejcs fq6nmtn f1e4lqlz f1u2r49w f1ym3bx4 f1mo0ibp fjoy568 fytdu2e f1gl81tg f1mk8lai f3bhgqh fgusgyc f10pi13n fly5x3f f22iagw f1l02sjl f122n59 fkln5zr f1nxs5xn f1izfyrr f1s6fcnf"
-                role="presentation"
               >
                 Value
               </div>
@@ -89,7 +87,6 @@ exports[`Extension > matches snapshot 1`] = `
             >
               <div
                 class="fui-TableHeaderCell__button ___1g9gf5i_12fejcs fq6nmtn f1e4lqlz f1u2r49w f1ym3bx4 f1mo0ibp fjoy568 fytdu2e f1gl81tg f1mk8lai f3bhgqh fgusgyc f10pi13n fly5x3f f22iagw f1l02sjl f122n59 fkln5zr f1nxs5xn f1izfyrr f1s6fcnf"
-                role="presentation"
               >
                 Key
               </div>
@@ -99,7 +96,6 @@ exports[`Extension > matches snapshot 1`] = `
             >
               <div
                 class="fui-TableHeaderCell__button ___1g9gf5i_12fejcs fq6nmtn f1e4lqlz f1u2r49w f1ym3bx4 f1mo0ibp fjoy568 fytdu2e f1gl81tg f1mk8lai f3bhgqh fgusgyc f10pi13n fly5x3f f22iagw f1l02sjl f122n59 fkln5zr f1nxs5xn f1izfyrr f1s6fcnf"
-                role="presentation"
               >
                 Value
               </div>
