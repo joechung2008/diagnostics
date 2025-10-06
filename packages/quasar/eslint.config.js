@@ -1,4 +1,3 @@
-import js from '@eslint/js';
 import pluginQuasar from '@quasar/app-vite/eslint';
 import prettierSkipFormatting from '@vue/eslint-config-prettier/skip-formatting';
 import { defineConfigWithVueTs, vueTsConfigs } from '@vue/eslint-config-typescript';
@@ -19,7 +18,6 @@ export default defineConfigWithVueTs(
   },
 
   pluginQuasar.configs.recommended(),
-  js.configs.recommended,
 
   /**
    * https://eslint.vuejs.org

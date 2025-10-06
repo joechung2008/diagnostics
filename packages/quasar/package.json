@@ -9,7 +9,6 @@
   },
   "description": "Information about extensions in the Azure portal",
   "devDependencies": {
-    "@eslint/js": "^9.36.0",
     "@quasar/app-vite": "^2.4.0",
     "@quasar/quasar-app-extension-testing-unit-vitest": "^1.2.3",
     "@quasar/vite-plugin": "^1.10.0",
