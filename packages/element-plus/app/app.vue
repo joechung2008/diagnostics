@@ -65,6 +65,11 @@ const environment = ref<Environment>(Environment.Public)
 const selectedTab = ref<string>("extensions")
 const selectedExtension = ref<ExtensionInfo>()
 
+watch(environment, () => {
+    selectedTab.value = "extensions"
+    selectedExtension.value = undefined
+})
+
 const { data, error, pending } = await useFetch<Diagnostics>(
     () => environment.value
 )
@@ -88,6 +93,7 @@ function handlePassServerlessClick() {
     const ext = diagnostics.value?.extensions["paasserverless"]
     if (isExtensionInfo(ext)) {
         selectedExtension.value = ext
+        selectedTab.value = "extensions"
     }
 }
 
@@ -95,6 +101,7 @@ function handleWebsitesClick() {
     const ext = diagnostics.value?.extensions["websites"]
     if (isExtensionInfo(ext)) {
         selectedExtension.value = ext
+        selectedTab.value = "extensions"
     }
 }
 
