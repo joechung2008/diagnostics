@@ -6,9 +6,6 @@ packageExtensions:
     dependencies:
       "jsdom": "26.1.0"
 
-publicHoistPattern:
-  - "@vue/compiler-dom"
-
 onlyBuiltDependencies:
   - "@heroui/shared-utils"
   - "@parcel/watcher"

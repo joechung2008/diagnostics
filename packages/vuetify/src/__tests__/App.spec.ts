@@ -1,4 +1,4 @@
-import { mount } from '@vue/test-utils'
+import { flushPromises, mount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { ref } from 'vue'
 import App from '../App.vue'
@@ -77,8 +77,9 @@ describe('App.vue', () => {
     expect(useFetchMock).toHaveBeenCalledTimes(1)
   })
 
-  it('displays diagnostics data from useFetch', () => {
+  it('displays diagnostics data from useFetch', async () => {
     const wrapper = mount(App)
+    await flushPromises()
 
     // Check that extensions are rendered
     const extensionItems = wrapper.findComponent({ name: 'ExtensionItems' })
@@ -106,8 +107,9 @@ describe('App.vue', () => {
     expect(wrapper.exists()).toBe(true)
   })
 
-  it('renders extensions and responds to link click', () => {
+  it('renders extensions and responds to link click', async () => {
     const wrapper = mount(App)
+    await flushPromises()
 
     // Find extension items component
     const extensionItems = wrapper.findComponent({ name: 'ExtensionItems' })
