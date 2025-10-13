@@ -1,0 +1,27 @@
+# Changelog
+
+## 2025-10-13
+
+- Switch to jsdom and update outdated packages
+
+## 2025-10-01
+
+- Deploy SvelteKit and Nuxt sites to Render
+
+## 2025-09-29
+
+- Add Dockerfile
+
+## 2025-09-28
+
+- Remove @nuxt/image
+- Remove no longer used package-lock.json
+
+## 2025-09-20
+
+- Use useFetch
+
+## 2025-09-19
+
+- Revert "Turn off shared pnpm-lock.yaml"
+- Turn off shared pnpm-lock.yaml

@@ -128,6 +128,7 @@ const tabs = computed<TabsItem[]>(() => [
 function switchEnvironment(env: Environment) {
   currentEnvironment.value = env;
   selectedExtension.value = undefined;
+  selectedTab.value = "extensions";
 }
 
 function handleLinkClick(_: MouseEvent, item?: KeyedNavLink) {
@@ -143,6 +144,7 @@ function selectExtension(key: string) {
   const extension = diagnostics.value?.extensions[key];
   if (isExtensionInfo(extension)) {
     selectedExtension.value = extension;
+    selectedTab.value = "extensions";
   }
 }
 

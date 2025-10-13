@@ -39,6 +39,7 @@ export default defineConfig({
           environmentOptions: {
             nuxt: {
               rootDir: process.cwd(),
+              domEnvironment: "jsdom",
             },
           },
           include: ["tests/nuxt/**/*.spec.ts"],
