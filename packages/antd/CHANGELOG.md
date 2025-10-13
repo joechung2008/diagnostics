@@ -1,23 +1,27 @@
 # CHANGELOG
 
+## 2025-10-13
+
+- Update outdated packages
+
 ## 2025-10-05
 
-- Fix ESLint config in antd
-- Update README in antd
+- Fix ESLint config
+- Update README
 
 ## 2025-10-03
 
-- Use React 19.2 in antd
+- Use React 19.2
 
 ## 2025-09-29
 
-- Add Dockerfile for antd
+- Add Dockerfile
 
 ## 2025-09-28
 
 - Remove no longer used package-lock.json files
-- Update outdated packages in antd
-- Use @testing-library/jest-dom/vitest in antd and solidjs-suid
+- Update outdated packages
+- Use @testing-library/jest-dom/vitest and solidjs-suid
 
 ## 2025-09-21
 
@@ -33,7 +37,7 @@
 - Add diagnostics-ant as antd
 - Fix antd build due to misplaced index.d.ts
 - Fix lint config in React projects
-- Partially fix code splitting in antd
+- Partially fix code splitting
 - Pin jsdom to 26.1.0
 - Remove flaky tests
 - Rename packages
