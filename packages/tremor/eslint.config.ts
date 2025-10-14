@@ -13,13 +13,12 @@ export default defineConfig([
   reactX.configs["recommended-typescript"],
   reactDom.configs.recommended,
   reactRefresh.configs.vite,
+  reactHooks.configs.flat.recommended,
   prettierConfig,
   {
-    extends: ["react-hooks/recommended"],
     files: ["**/*.{ts,tsx}"],
     plugins: {
       prettier: prettierPlugin,
-      "react-hooks": reactHooks,
     },
     languageOptions: {
       ecmaVersion: 2023,
