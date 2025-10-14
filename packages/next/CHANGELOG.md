@@ -2,12 +2,12 @@
 
 ## 2025-10-05
 
-- Update outdated packages in next
+- Update outdated packages
 
 ## 2025-09-29
 
-- Add Dockerfile to next
-- Undo React Compiler in next
+- Add Dockerfile
+- Undo React Compiler
 
 ## 2025-09-28
 
@@ -15,8 +15,8 @@
 
 ## 2025-09-20
 
-- Add support for Chrome Devtools workspaces in next
-- Improve error and pending rendering in next
+- Add support for Chrome Devtools workspaces
+- Improve error and pending rendering
 
 ## 2025-09-19
 
