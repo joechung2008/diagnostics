@@ -13,20 +13,19 @@ export default defineConfig([
   reactPlugin.configs["recommended-typescript"],
   reactDomPlugin.configs.recommended,
   reactRefresh.configs.vite,
+  reactHooks.configs.flat.recommended,
   prettierConfig,
   {
-    extends: ["react-hooks/recommended"],
     files: ["**/*.{ts,tsx}"],
-    plugins: {
-      prettier: prettierPlugin,
-      "react-hooks": reactHooks,
-    },
     languageOptions: {
       ecmaVersion: 2020,
       parserOptions: {
         projectService: true,
         tsconfigdir: import.meta.dirname,
       },
+    },
+    plugins: {
+      prettier: prettierPlugin,
     },
     rules: {
       "prettier/prettier": "error",

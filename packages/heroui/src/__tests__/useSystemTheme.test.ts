@@ -44,10 +44,18 @@ describe("useSystemTheme", () => {
     expect(document.body.classList.contains("dark")).toBe(false);
   });
 
-  it("returns 'dark' and sets body class to 'dark' when prefers-color-scheme is dark", () => {
+  it("returns 'dark' and sets body class to 'dark' when prefers-color-scheme is dark", async () => {
     mockMediaQueryList.matches = true;
 
-    const { result } = renderHook(() => useSystemTheme());
+    // Reset modules to force re-evaluation of initialTheme
+    vi.resetModules();
+
+    // Need to reimport the module to pick up the new mock state
+    const { useSystemTheme: useSystemThemeReloaded } = await import(
+      "../hooks/useSystemTheme"
+    );
+
+    const { result } = renderHook(() => useSystemThemeReloaded());
 
     expect(result.current).toBe("dark");
     expect(document.body.classList.contains("dark")).toBe(true);

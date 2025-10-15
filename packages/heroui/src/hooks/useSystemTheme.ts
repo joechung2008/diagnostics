@@ -1,25 +1,18 @@
 import { useEffect, useState } from "react";
 
+const initialTheme = window?.matchMedia("(prefers-color-scheme: dark)").matches
+  ? "dark"
+  : "light";
+
 export function useSystemTheme() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [theme, setTheme] = useState<"light" | "dark">(initialTheme);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
     const handleChange = (e: MediaQueryListEvent) => {
-      const newTheme = e.matches ? "dark" : "light";
-      setTheme(newTheme);
-      // Remove existing theme classes and add the new one
-      document.body.classList.remove("light", "dark");
-      document.body.classList.add(newTheme);
+      setTheme(e.matches ? "dark" : "light");
     };
-
-    // Initial check
-    const initialTheme = mediaQuery.matches ? "dark" : "light";
-    setTheme(initialTheme);
-    // Remove existing theme classes and add the new one
-    document.body.classList.remove("light", "dark");
-    document.body.classList.add(initialTheme);
 
     // Listen for changes
     mediaQuery.addEventListener("change", handleChange);
@@ -28,6 +21,11 @@ export function useSystemTheme() {
       mediaQuery.removeEventListener("change", handleChange);
     };
   }, []);
+
+  useEffect(() => {
+    document.body.classList.remove("light", "dark");
+    document.body.classList.add(theme);
+  }, [theme]);
 
   return theme;
 }
