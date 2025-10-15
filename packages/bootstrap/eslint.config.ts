@@ -12,7 +12,7 @@ export default [
   ...tseslint.configs.recommended,
   reactPlugin.configs["recommended-typescript"],
   reactDomPlugin.configs.recommended,
-  reactHooks.configs["recommended-latest"],
+  reactHooks.configs.flat.recommended,
   reactRefresh.configs.vite,
   prettierConfig,
   {
@@ -20,6 +20,7 @@ export default [
     languageOptions: {
       ecmaVersion: 2023,
       parserOptions: {
+        projectService: true,
         tsconfigRootDir: process.cwd(),
       },
     },

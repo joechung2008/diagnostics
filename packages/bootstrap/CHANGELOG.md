@@ -1,17 +1,21 @@
 # Changelog
 
+## 2025-10-15
+
+- Update outdated packages
+
 ## 2025-10-03
 
-- Use React 19.2 in bootstrap
+- Use React 19.2
 
 ## 2025-09-29
 
-- Add Dockerfile for bootstrap
+- Add Dockerfile
 
 ## 2025-09-28
 
 - Remove no longer used package-lock.json files
-- Update outdated packages in bootstrap
+- Update outdated packages
 
 ## 2025-09-19
 
@@ -21,7 +25,7 @@
 ## 2025-09-18
 
 - Add diagnostics-bootstrap as bootstrap
-- Fix lint config and remove redundant tests in bootstrap
+- Fix lint config and remove redundant tests
 - Pin jsdom to 26.1.0
 - Remove flaky tests
-- Update outdated packages in bootstrap
+- Update outdated packages
