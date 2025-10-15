@@ -9,3 +9,6 @@ build/
 
 # WebStorm
 .idea/
+
+# Claude AI settings
+.claude/
