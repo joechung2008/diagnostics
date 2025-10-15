@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2025-10-15
+
+- Update outdated packages
+
 ## 2025-10-13
 
 - Update outdated packages
@@ -21,7 +25,7 @@
 
 - Remove no longer used package-lock.json files
 - Update outdated packages
-- Use @testing-library/jest-dom/vitest and solidjs-suid
+- Use @testing-library/jest-dom/vitest
 
 ## 2025-09-21
 
@@ -35,7 +39,7 @@
 ## 2025-09-18
 
 - Add diagnostics-ant as antd
-- Fix antd build due to misplaced index.d.ts
+- Fix build due to misplaced index.d.ts
 - Fix lint config in React projects
 - Partially fix code splitting
 - Pin jsdom to 26.1.0
