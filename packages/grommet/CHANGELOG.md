@@ -1,17 +1,21 @@
 # Changelog
 
+## 2025-10-15
+
+- Update outdated packages
+
 ## 2025-10-03
 
-- Use React 19.2 in grommet
+- Use React 19.2
 
 ## 2025-09-29
 
-- Add Dockerfile for grommet
+- Add Dockerfile
 
 ## 2025-09-28
 
 - Remove no longer used package-lock.json files
-- Update outdated packages in grommet
+- Update outdated packages
 
 ## 2025-09-19
 
@@ -25,4 +29,4 @@
 - Pin jsdom to 26.1.0
 - Remove flaky tests
 - Try to fix flaky tests
-- Update snapshots in Grommet
+- Update snapshots

@@ -6,8 +6,14 @@ interface ThemedAppProps {
   children: React.ReactNode;
 }
 
+const initialTheme = window?.matchMedia
+  ? window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? dark
+    : grommet
+  : grommet;
+
 const ThemedApp: React.FC<ThemedAppProps> = ({ children }) => {
-  const [theme, setTheme] = useState(grommet);
+  const [theme, setTheme] = useState(initialTheme);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
@@ -15,9 +21,6 @@ const ThemedApp: React.FC<ThemedAppProps> = ({ children }) => {
     const handleChange = (e: MediaQueryListEvent) => {
       setTheme(e.matches ? dark : grommet);
     };
-
-    // Set initial theme
-    setTheme(mediaQuery.matches ? dark : grommet);
 
     // Listen for changes
     mediaQuery.addEventListener("change", handleChange);

@@ -4,15 +4,15 @@ import reactDom from "eslint-plugin-react-dom";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import react from "eslint-plugin-react-x";
-import { globalIgnores } from "eslint/config";
-import tseslint, { type Config } from "typescript-eslint";
+import { defineConfig, globalIgnores } from "eslint/config";
+import tseslint from "typescript-eslint";
 
-const config: Config = [
+export default defineConfig([
   globalIgnores(["coverage", "dist"]),
   ...tseslint.configs.recommended,
   react.configs["recommended-typescript"],
   reactDom.configs.recommended,
-  reactHooks.configs["recommended-latest"],
+  reactHooks.configs.flat.recommended,
   reactRefresh.configs.vite,
   prettierConfig,
   {
@@ -20,6 +20,7 @@ const config: Config = [
     languageOptions: {
       ecmaVersion: 2020,
       parserOptions: {
+        projectService: true,
         tsconfigRootDir: process.cwd(),
       },
     },
@@ -30,6 +31,4 @@ const config: Config = [
       "prettier/prettier": "error",
     },
   },
-];
-
-export default config;
+]);
