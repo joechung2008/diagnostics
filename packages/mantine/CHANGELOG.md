@@ -1,17 +1,21 @@
 # Changelog
 
+## 2025-10-16
+
+- Update outdated packages
+
 ## 2025-10-03
 
-- Use React 19.2 for mantine
+- Use React 19.2
 
 ## 2025-09-29
 
-- Add Dockerfile for mantine
+- Add Dockerfile
 
 ## 2025-09-28
 
-- Update outdated packages in mantine
 - Remove no longer used package-lock.json files
+- Update outdated packages
 
 ## 2025-09-19
 
@@ -20,8 +24,8 @@
 
 ## 2025-09-18
 
-- Remove flaky tests
-- Fix lint config in React projects
-- Pin @types/react to 19.1.12 for mantine
 - Add diagnostics-next as next
+- Fix lint config in React projects
+- Pin @types/react to 19.1.12
 - Pin jsdom to 26.1.0
+- Remove flaky tests
