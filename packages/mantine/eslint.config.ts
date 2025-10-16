@@ -20,7 +20,8 @@ export default defineConfig([
     languageOptions: {
       ecmaVersion: 2020,
       parserOptions: {
-        tsconfigRootDir: process.cwd(),
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
       },
     },
     plugins: {
