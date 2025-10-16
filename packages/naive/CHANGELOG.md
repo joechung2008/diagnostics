@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2025-10-16
+
+- Update happy-dom to >=20.0.2
+- Update outdated packages
+
 ## 2025-10-13
 
 - Fix lint configuration and update outdated packages
