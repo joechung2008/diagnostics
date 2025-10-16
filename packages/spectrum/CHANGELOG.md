@@ -1,12 +1,16 @@
 # Changelog
 
+## 2025-10-16
+
+- Update outdated packages
+
 ## 2025-10-04
 
-- Use React 19.2 in spectrum
+- Use React 19.2
 
 ## 2025-09-29
 
-- Add Dockerfile for spectrum
+- Add Dockerfile
 
 ## 2025-09-28
 
@@ -15,7 +19,7 @@
 
 ## 2025-09-19
 
-- Add missing prettier package to spectrum
+- Add missing prettier package
 - Revert "Turn off shared pnpm-lock.yaml"
 - Turn off shared pnpm-lock.yaml
 
