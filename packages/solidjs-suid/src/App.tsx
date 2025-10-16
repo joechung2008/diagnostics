@@ -38,6 +38,7 @@ function App() {
       onClick: () => {
         setEnvironment(Environment.Public);
         setExtension(undefined);
+        setSelectedTab("extensions");
       },
     },
     {
@@ -47,6 +48,7 @@ function App() {
       onClick: () => {
         setEnvironment(Environment.Fairfax);
         setExtension(undefined);
+        setSelectedTab("extensions");
       },
     },
     {
@@ -56,6 +58,7 @@ function App() {
       onClick: () => {
         setEnvironment(Environment.Mooncake);
         setExtension(undefined);
+        setSelectedTab("extensions");
       },
     },
   ];
@@ -136,6 +139,7 @@ function App() {
                 diagnostics()?.extensions?.["paasserverless"];
               if (isExtensionInfo(paasserverless)) {
                 setExtension(paasserverless);
+                setSelectedTab("extensions");
               }
             }}
           >
@@ -147,6 +151,7 @@ function App() {
             const websites = diagnostics()?.extensions?.["websites"];
             if (isExtensionInfo(websites)) {
               setExtension(websites);
+              setSelectedTab("extensions");
             }
           }}
         >
