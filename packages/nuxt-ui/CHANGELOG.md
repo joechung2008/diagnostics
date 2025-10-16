@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025-10-16
+
+- Update happy-dom to >=20.0.2
+
 ## 2025-10-13
 
 - Switch to jsdom and update outdated packages
