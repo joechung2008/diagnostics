@@ -1,17 +1,21 @@
 # Changelog
 
+## 2025-10-16
+
+- Update outdated packages
+
 ## 2025-10-03
 
-- Use React 19.2 in mui
+- Use React 19.2
 
 ## 2025-09-29
 
-- Add Dockerfile for mui
+- Add Dockerfile
 
 ## 2025-09-28
 
 - Remove no longer used package-lock.json files
-- Update outdated packages in mui
+- Update outdated packages
 
 ## 2025-09-18
 
