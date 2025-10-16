@@ -2,18 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2025-10-16]
+
+- Update outdated packages
+
 ## [2025-10-03]
 
-- Use React 19.2 in shadcn
+- Use React 19.2
 
 ## [2025-09-29]
 
-- Add Dockerfile for shadcn
+- Add Dockerfile
 
 ## [2025-09-28]
 
 - Remove no longer used package-lock.json files
-- Update outdated packages for shadcn
+- Update outdated packages
 
 ## [2025-09-19]
 

@@ -3,22 +3,23 @@ import prettierPlugin from "eslint-plugin-prettier";
 import reactDomPlugin from "eslint-plugin-react-dom";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactPlugin from "eslint-plugin-react-x";
-import { globalIgnores } from "eslint/config";
+import { defineConfig, globalIgnores } from "eslint/config";
 import tseslint from "typescript-eslint";
 
-export default [
+export default defineConfig([
   globalIgnores(["dist", "coverage", "src/**/*.d.ts"]),
   ...tseslint.configs.recommended,
   reactPlugin.configs["recommended-typescript"],
   reactDomPlugin.configs.recommended,
-  reactHooks.configs["recommended-latest"],
+  reactHooks.configs.flat.recommended,
   prettierConfig,
   {
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2020,
       parserOptions: {
-        tsconfigRootDir: process.cwd(),
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
       },
     },
     plugins: {
@@ -28,4 +29,4 @@ export default [
       "prettier/prettier": "error",
     },
   },
-];
+]);
