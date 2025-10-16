@@ -8,6 +8,7 @@
     "overrides": {
       "cookie": ">=0.7.0",
       "esbuild": "^0.25.10",
+      "happy-dom": ">=20.0.2",
       "scheduler": ">=0.26.0"
     }
   },
